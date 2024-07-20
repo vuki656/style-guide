@@ -3,7 +3,7 @@
  * @param {import("prettier/index").Options} options
  * @returns
  */
-const animals = await sql`
+export const animals = await sql`
     SELECT
         first_name,
         species

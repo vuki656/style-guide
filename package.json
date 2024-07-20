@@ -1,22 +1,29 @@
 {
     "name": "@dvukovic/style-guide",
+    "type": "module",
     "scripts": {
-        "lint": "yarn lint:prettier",
-        "lint:fix": "yarn lint:prettier --write",
+        "lint": "yarn lint:prettier && yarn lint:eslint",
+        "lint:eslint": "eslint ./",
+        "lint:fix": "yarn lint:prettier --write && yarn lint:eslint --fix",
         "lint:prettier": "prettier --log-level=warn --check .",
         "test": "yarn test:prettier",
         "test:prettier": "prettier --log-level=warn --check ./src/__test__"
     },
     "dependencies": {
         "@prettier/plugin-xml": "^3.4.1",
+        "@typescript-eslint/parser": "^7.16.1",
+        "eslint": "^9.7.0",
         "prettier-plugin-embed": "^0.4.15",
         "prettier-plugin-jsdoc": "^1.3.0",
         "prettier-plugin-packagejson": "^2.5.1",
         "prettier-plugin-prisma": "^5.0.0",
         "prettier-plugin-sh": "^0.14.0",
-        "prettier-plugin-sql": "^0.18.1"
+        "prettier-plugin-sql": "^0.18.1",
+        "typescript-eslint": "^7.16.1"
     },
     "devDependencies": {
+        "@total-typescript/tsconfig": "^1.0.4",
+        "@types/eslint": "^8.56.10",
         "prettier": "^3.3.3",
         "typescript": "^5.5.3"
     },
