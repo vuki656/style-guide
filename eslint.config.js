@@ -1,23 +1,30 @@
 import { eslintRules } from "./src/eslint/eslint.js"
 import { typescriptEslintRules } from "./src/eslint/typescript-eslint.js"
 import { eslintCommentsRules } from "./src/eslint/eslint-comments.js"
-
-import typescriptEslintPlugin from "typescript-eslint"
-import eslintCommentsPlugin from "@eslint-community/eslint-plugin-eslint-comments"
+import { eslintUnicornRules } from "./src/eslint/unicorn.js"
 
 import typescriptEslintParser from "@typescript-eslint/parser"
-import ESLintPluginESLintCommentsConfigs from "@eslint-community/eslint-plugin-eslint-comments/configs"
+
+import typescriptEslintPlugin from "typescript-eslint"
+import eslintPluginUnicorn from "eslint-plugin-unicorn"
+import eslintPluginEslintComments from "@eslint-community/eslint-plugin-eslint-comments/configs"
+import globals from "globals"
 
 export default typescriptEslintPlugin.config({
+    languageOptions: {
+        globals: globals.builtin,
+    },
     rules: {
         ...eslintRules.rules,
         ...typescriptEslintRules.rules,
         ...eslintCommentsRules.rules,
+        ...eslintUnicornRules.rules,
     }, // TODO: should this be here or in plugin file
     plugins: {
         "@typescript-eslint": typescriptEslintPlugin.plugin,
+        unicorn: eslintPluginUnicorn,
         "@eslint-community/eslint-comments":
-            ESLintPluginESLintCommentsConfigs.recommended.plugins[
+            eslintPluginEslintComments.recommended.plugins[
                 "@eslint-community/eslint-comments"
             ],
     },

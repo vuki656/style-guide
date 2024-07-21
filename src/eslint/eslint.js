@@ -1,7 +1,12 @@
 /** @type {import("@types/eslint").Linter.FlatConfig} */
 export const eslintRules = {
     rules: {
-        "array-callback-return": "error",
+        "array-callback-return": [
+            "error",
+            {
+                allowImplicit: true,
+            },
+        ],
         "for-direction": "error",
         "no-async-promise-executor": "error",
         "no-await-in-loop": "error",
