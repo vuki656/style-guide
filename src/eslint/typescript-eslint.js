@@ -1,5 +1,5 @@
 /** @type {import("@types/eslint").Linter.FlatConfig} */
-export const typescriptEslintRules = {
+export const eslintTypescriptRules = {
     rules: {
         "@typescript-eslint/adjacent-overload-signatures": "error",
         "@typescript-eslint/array-type": "error",
