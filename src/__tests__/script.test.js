@@ -3,10 +3,12 @@ describe("This", () => {
 
         expect(1).toBe(3)
     })
+
     it("should test", () => {
         expect(1).toBe(1)
     })
-    it.skip("should test another", () => {
+
+    it("should test another", () => {
         expect(1).toBe(2)
     })
 })
