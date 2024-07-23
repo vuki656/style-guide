@@ -1,10 +1,10 @@
 import { eslintRules } from "./src/eslint/eslint.js"
 import { eslintTypescriptRules } from "./src/eslint/typescript-eslint.js"
-import { eslintCommentsRules } from "./src/eslint/eslint-comments.js"
+import { eslintCommentsRules } from "./src/eslint/plugins/eslint-comments.js"
 import { eslintUnicornRules } from "./src/eslint/unicorn.js"
 import { eslintPluginPromiseRules } from "./src/eslint/promise.js"
-import { eslintPluginJestRules } from "./src/eslint/jest.js"
-import { eslintPluginJestFormattingRules } from "./src/eslint/jest-formatting.js"
+import { eslintPluginJestRules } from "./src/eslint/plugins/jest.js"
+import { eslintPluginJestFormattingRules } from "./src/eslint/plugins/jest-formatting.js"
 
 import typescriptEslintParser from "@typescript-eslint/parser"
 
@@ -28,7 +28,8 @@ export default typescriptEslintPlugin.config({
         ...eslintPluginPromiseRules.rules,
         ...eslintPluginJestRules.rules,
         ...eslintPluginJestFormattingRules.rules,
-    }, // TODO: should this be here or in plugin file
+    },
+    // TODO: should this be here or in plugin file
     plugins: {
         "@typescript-eslint": typescriptEslintPlugin.plugin,
         unicorn: eslintPluginUnicorn,

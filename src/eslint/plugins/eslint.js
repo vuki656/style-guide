@@ -1,5 +1,5 @@
-/** @type {import("@types/eslint").Linter.FlatConfig} */
-export const eslintRules = {
+/** @type {import("@types/eslint").ESLint.ConfigData} */
+module.exports = {
     rules: {
         "array-callback-return": [
             "error",
@@ -45,7 +45,7 @@ export const eslintRules = {
         "no-unused-private-class-members": "error",
         "no-unused-vars": "error",
         "no-use-before-define": "error",
-        "no-useless-assignment": "error",
+        // "no-useless-assignment": "error", NOTE: available in eslint 9
         "no-useless-backreference": "error",
         "require-atomic-updates": "error",
         "use-isnan": "error",

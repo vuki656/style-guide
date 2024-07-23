@@ -1,5 +1,6 @@
-/** @type {import("@types/eslint").Linter.FlatConfig} */
-export const eslintCommentsRules = {
+/** @type {import("@types/eslint").ESLint.ConfigData} */
+module.exports = {
+    plugins: ["@eslint-community/eslint-comments"],
     rules: {
         "@eslint-community/eslint-comments/disable-enable-pair": [
             "error",

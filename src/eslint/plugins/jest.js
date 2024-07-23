@@ -1,5 +1,6 @@
-/** @type {import("@types/eslint").Linter.FlatConfig} */
-export const eslintPluginJestRules = {
+/** @type {import("@types/eslint").ESLint.ConfigData} */
+module.exports = {
+    plugins: ["jest"],
     rules: {
         "jest/consistent-test-it": "error",
         "jest/expect-expect": "error",

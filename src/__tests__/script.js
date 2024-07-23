@@ -12,3 +12,9 @@ export const animals = await sql`
     WHERE
         id = ${id}
 `
+
+const value = 3
+
+if (value === 5) {
+    animals = 'test'
+}

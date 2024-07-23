@@ -1,5 +1,6 @@
-/** @type {import("@types/eslint").Linter.FlatConfig} */
-export const eslintPluginJestFormattingRules = {
+/** @type {import("@types/eslint").ESLint.ConfigData} */
+module.exports = {
+    plugins: ["jest-formatting"],
     rules: {
         "jest-formatting/padding-around-after-all-blocks": "error",
         "jest-formatting/padding-around-after-each-blocks": "error",

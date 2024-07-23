@@ -1,7 +1,0 @@
-{
-    "name": "test",
-    "scripts": {
-        "format": "prettier ./ --write"
-    },
-    "dependencies": {}
-}
