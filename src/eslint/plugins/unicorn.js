@@ -1,5 +1,8 @@
-/** @type {import("@types/eslint").Linter.FlatConfig} */
-export const eslintUnicornRules = {
+/** @type {import("@types/eslint").ESLint.ConfigData} */
+module.exports = {
+    plugins: [
+        'unicorn',
+    ],
     rules: {
         "unicorn/better-regex": "error",
         "unicorn/catch-error-name": "error",
@@ -37,7 +40,7 @@ export const eslintUnicornRules = {
         "unicorn/no-instanceof-array": "error",
         "unicorn/no-invalid-fetch-options": "error",
         "unicorn/no-invalid-remove-event-listener": "error",
-        // "unicorn/no-length-as-slice-end": "error",
+        // "unicorn/no-length-as-slice-end": "error", NOTE: not released yet
         "unicorn/no-lonely-if": "error",
         "unicorn/no-magic-array-flat-depth": "error",
         "unicorn/no-negation-in-equality-check": "error",
@@ -55,7 +58,7 @@ export const eslintUnicornRules = {
         "unicorn/no-unnecessary-await": "error",
         "unicorn/no-unnecessary-polyfills": "error",
         "unicorn/no-unreadable-array-destructuring": "error",
-        // "unicorn/no-unreadable-iffe": "error",
+        "unicorn/no-unreadable-iife": "error",
         "unicorn/no-unused-properties": "error",
         "unicorn/no-useless-fallback-in-spread": "error",
         "unicorn/no-useless-length-check": "error",
@@ -88,7 +91,6 @@ export const eslintUnicornRules = {
         "unicorn/prefer-math-trunc": "error",
         "unicorn/prefer-modern-dom-apis": "error",
         "unicorn/prefer-modern-math-apis": "error",
-        "unicorn/prefer-module": "error",
         "unicorn/prefer-native-coercion-functions": "error",
         "unicorn/prefer-negative-index": "error",
         "unicorn/prefer-node-protocol": "error",

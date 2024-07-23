@@ -5,5 +5,6 @@ module.exports = {
         "../plugins/typescript-eslint.js",
         "../plugins/eslint-comments.js",
         "../plugins/promise.js",
+        "../plugins/unicorn.js",
     ],
 }
