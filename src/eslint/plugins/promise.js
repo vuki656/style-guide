@@ -1,5 +1,6 @@
-/** @type {import("@types/eslint").Linter.FlatConfig} */
-export const eslintPluginPromiseRules = {
+/** @type {import("@types/eslint").ESLint.ConfigData} */
+module.exports = {
+    plugins: ["promise"],
     rules: {
         "promise/always-return": [
             "error",
