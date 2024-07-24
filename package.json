@@ -3,7 +3,7 @@
     "scripts": {
         "lint": "yarn lint:prettier && yarn lint:eslint",
         "lint:eslint": "eslint . --ext .js,.ts,.tsx",
-        "lint:fix": "yarn lint:prettier --write && yarn lint:eslint --fix && yarn lint:stylelint --fix",
+        "lint:fix": "yarn lint:prettier --write && yarn lint:stylelint --fix && yarn lint:eslint --fix",
         "lint:prettier": "prettier --log-level=warn --check .",
         "lint:stylelint": "stylelint ./**/*.css",
         "test": "yarn test:prettier",
@@ -33,6 +33,7 @@
         "prettier-plugin-prisma": "^5.0.0",
         "prettier-plugin-sh": "^0.14.0",
         "prettier-plugin-sql": "^0.18.1",
+        "stylelint-order": "^6.0.4",
         "typescript-eslint": "^7.17.0"
     },
     "devDependencies": {

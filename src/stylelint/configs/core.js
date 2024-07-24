@@ -1,4 +1,5 @@
 const { stylelint } = require("../plugins/stylelint")
+const { stylelintOrder } = require("../plugins/order")
 
 /** @type {import("stylelint").Config} */
 module.exports = {
@@ -7,7 +8,9 @@ module.exports = {
     reportInvalidScopeDisables: true,
     reportNeedlessDisables: true,
     allowEmptyInput: true,
+    plugins: ["stylelint-order"],
     rules: {
         ...stylelint.rules,
+        ...stylelintOrder.rules,
     },
 }
