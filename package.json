@@ -50,8 +50,10 @@
         "typescript": "^5.5.4"
     },
     "peerDependencies": {
+        "cspell": "8",
         "eslint": "8.57",
-        "prettier": "3"
+        "prettier": "3",
+        "stylelint": "16"
     },
     "packageManager": "yarn@4.3.1"
 }
