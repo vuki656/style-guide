@@ -6,5 +6,6 @@ module.exports = {
         "../plugins/eslint-comments.js",
         "../plugins/promise.js",
         "../plugins/unicorn.js",
+        "../plugins/unused-imports.js",
     ],
 }
