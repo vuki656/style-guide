@@ -2,5 +2,6 @@
 module.exports = {
     extends: [
         "../plugins/n.js",
+        "../plugins/security-node.js",
     ],
 }

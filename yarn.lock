@@ -428,6 +428,7 @@ __metadata:
     eslint-plugin-jest-formatting: "npm:^3.1.0"
     eslint-plugin-n: "npm:^17.9.0"
     eslint-plugin-promise: "npm:^6.6.0"
+    eslint-plugin-security-node: "npm:^1.1.4"
     eslint-plugin-unicorn: "npm:^54.0.0"
     jest: "npm:^29.7.0"
     prettier: "npm:^3.3.3"
@@ -2194,6 +2195,13 @@ __metadata:
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
   checksum: 10c0/93a667dbc9ff15c4d586b0d40a31c7828314cbbb31b2b9a75802aa4ef536e9457bb3e1a89b384b07aa336dd61b315ae8b0aadc0870210378023dd018819b59b3
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-security-node@npm:^1.1.4":
+  version: 1.1.4
+  resolution: "eslint-plugin-security-node@npm:1.1.4"
+  checksum: 10c0/503b0071249c697c81e6e707a56496a01843f648a79c9596d399cb132ade6f567a0558f2cdf8c1f85295e7c307690a4d44073df89f96dc104d6a418a237e655d
   languageName: node
   linkType: hard
 
