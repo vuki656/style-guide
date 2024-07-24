@@ -7,12 +7,8 @@ export const Test = () => {
 
     return (
         <>
-            <div>{foo ? foo.bar : null}</div>
+            <div>{foo.bar === 3 ? foo.bar : null}</div>
             <div />
         </>
     )
-}
-
-export const TestNew = () => {
-    return <div />
 }

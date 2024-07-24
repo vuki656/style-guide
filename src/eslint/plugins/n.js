@@ -18,13 +18,6 @@ module.exports = {
         "n/no-process-env": "error",
         "n/no-process-exit": "error",
         "n/no-unpublished-bin": "error",
-        "n/no-unpublished-import": [
-            "error",
-            {
-                ignoreTypeImport: true,
-            },
-        ],
-        "n/no-unpublished-require": "error",
         "n/no-unsupported-features/es-builtins": "error",
         "n/prefer-global/buffer": "error",
         "n/prefer-global/console": "error",

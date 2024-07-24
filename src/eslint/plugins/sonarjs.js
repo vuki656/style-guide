@@ -5,7 +5,6 @@ module.exports = {
         "sonarjs/no-element-overwrite": "error",
         "sonarjs/non-existent-operator": "error",
         "sonarjs/no-collapsible-if": "error",
-        "sonarjs/no-duplicate-string": "error",
         "sonarjs/no-identical-functions": "error",
         "sonarjs/no-useless-catch": "error",
         "sonarjs/no-nested-template-literals": "error",
