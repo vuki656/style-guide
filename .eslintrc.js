@@ -2,7 +2,7 @@
 module.exports = {
     root: true,
     parser: "@typescript-eslint/parser",
-    ignorePatterns: ['node_modules'],
+    ignorePatterns: ["node_modules"],
     extends: [
         "./src/eslint/configs/core.js",
         "./src/eslint/configs/jest.js",

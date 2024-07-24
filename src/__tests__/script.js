@@ -16,5 +16,5 @@ export const animals = await sql`
 const value = 3
 
 if (value === 5) {
-    animals = 'test'
+    animals = "test"
 }

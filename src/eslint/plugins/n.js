@@ -32,9 +32,9 @@ module.exports = {
         "n/prefer-global/text-decoder": "error",
         "n/prefer-global/text-encoder": "error",
         "n/prefer-global/url": "error",
-        "n/prefer-global/url-search-params": "error", 
-        "n/prefer-node-protocol":'error',
-        'n/prefer-promises/dns':'error',
-        'n/prefer-promises/fs':'error'
+        "n/prefer-global/url-search-params": "error",
+        "n/prefer-node-protocol": "error",
+        "n/prefer-promises/dns": "error",
+        "n/prefer-promises/fs": "error",
     },
 }

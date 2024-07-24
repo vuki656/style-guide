@@ -1,8 +1,6 @@
 /** @type {import("@types/eslint").ESLint.ConfigData} */
 module.exports = {
-    plugins: [
-        'unicorn',
-    ],
+    plugins: ["unicorn"],
     rules: {
         "unicorn/better-regex": "error",
         "unicorn/catch-error-name": "error",

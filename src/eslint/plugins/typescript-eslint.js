@@ -1,8 +1,6 @@
 /** @type {import("@types/eslint").ESLint.ConfigData} */
 module.exports = {
-    plugins: [
-        '@typescript-eslint',
-    ],
+    plugins: ["@typescript-eslint"],
     rules: {
         "@typescript-eslint/adjacent-overload-signatures": "error",
         "@typescript-eslint/array-type": "error",
