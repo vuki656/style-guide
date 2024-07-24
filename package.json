@@ -3,8 +3,9 @@
     "scripts": {
         "lint": "yarn lint:prettier && yarn lint:eslint",
         "lint:eslint": "eslint . --ext .js,.ts,.tsx",
-        "lint:fix": "yarn lint:prettier --write && yarn lint:eslint --fix",
+        "lint:fix": "yarn lint:prettier --write && yarn lint:eslint --fix && yarn lint:stylelint --fix",
         "lint:prettier": "prettier --log-level=warn --check .",
+        "lint:stylelint": "stylelint ./**/*.css",
         "test": "yarn test:prettier",
         "test:prettier": "prettier --log-level=warn --check ./src/__test__"
     },
@@ -44,6 +45,7 @@
         "jest": "^29.7.0",
         "prettier": "^3.3.3",
         "react": "^18.3.1",
+        "stylelint": "^16.7.0",
         "typescript": "^5.5.4"
     },
     "peerDependencies": {

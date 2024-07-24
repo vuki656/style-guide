@@ -1,0 +1,74 @@
+:root {
+    --orange-1: #ffa500;
+    --yellow-1: #f9b916;
+    --black: #000000;
+    --gray-1: #c6c6c6;
+    --gray-2: #515151;
+    --gray-3: #e5e5e5;
+    --gray-4: #f2f4f4;
+    --gray-5: #767676;
+    --green-1: #2aa83f;
+    --blue-1: #307cff;
+    --pink-1: #f6eeff;
+    --purple-1: #be16f9;
+    --purple-2: #7e30f5;
+    --purple-3: #312665;
+    --purple-4: #f6eeff;
+    --red-1: #fc3e1c;
+    --white: #ffffff;
+    --shadow-1: 0 4px 4px 0 rgb(0 0 0 / 8%);
+}
+
+.container {
+    display: flex;
+    padding: 25px;
+    row-gap: 23px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.infoContainer {
+    font-weight: 400;
+}
+
+.infoLink {
+    color: var(--gray-2);
+    text-decoration: underline;
+}
+
+.header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerLeftSection {
+    align-items: center;
+    column-gap: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.map {
+    height: 550px;
+    width: 100%;
+}
+
+.mapContainer {
+    background-color: var(--white);
+    padding: 13px;
+}
+
+.itemsContainer {
+    background-color: var(--white);
+    min-height: 200px;
+}
+
+a {
+    color: #ffffff;
+}
