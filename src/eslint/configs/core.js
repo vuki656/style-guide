@@ -9,5 +9,6 @@ module.exports = {
         "../plugins/unused-imports.js",
         "../plugins/import-x.js",
         "../plugins/sonarjs.js",
+        "../plugins/etc.js",
     ],
 }
