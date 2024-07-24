@@ -424,6 +424,7 @@ __metadata:
     "@types/node": "npm:^20.14.11"
     "@typescript-eslint/parser": "npm:^7.17.0"
     eslint: "npm:^8.57.0"
+    eslint-plugin-import-x: "npm:^3.1.0"
     eslint-plugin-jest: "npm:^28.6.0"
     eslint-plugin-jest-formatting: "npm:^3.1.0"
     eslint-plugin-n: "npm:^17.9.0"
@@ -1272,7 +1273,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:7.17.0":
+"@typescript-eslint/utils@npm:7.17.0, @typescript-eslint/utils@npm:^7.4.0":
   version: 7.17.0
   resolution: "@typescript-eslint/utils@npm:7.17.0"
   dependencies:
@@ -1912,6 +1913,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"debug@npm:^3.2.7":
+  version: 3.2.7
+  resolution: "debug@npm:3.2.7"
+  dependencies:
+    ms: "npm:^2.1.1"
+  checksum: 10c0/37d96ae42cbc71c14844d2ae3ba55adf462ec89fd3a999459dec3833944cd999af6007ff29c780f1c61153bcaaf2c842d1e4ce1ec621e4fc4923244942e4a02a
+  languageName: node
+  linkType: hard
+
 "decode-named-character-reference@npm:^1.0.0":
   version: 1.0.2
   resolution: "decode-named-character-reference@npm:1.0.2"
@@ -2132,6 +2142,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-import-resolver-node@npm:^0.3.9":
+  version: 0.3.9
+  resolution: "eslint-import-resolver-node@npm:0.3.9"
+  dependencies:
+    debug: "npm:^3.2.7"
+    is-core-module: "npm:^2.13.0"
+    resolve: "npm:^1.22.4"
+  checksum: 10c0/0ea8a24a72328a51fd95aa8f660dcca74c1429806737cf10261ab90cfcaaf62fd1eff664b76a44270868e0a932711a81b250053942595bcd00a93b1c1575dd61
+  languageName: node
+  linkType: hard
+
 "eslint-plugin-es-x@npm:^7.5.0":
   version: 7.8.0
   resolution: "eslint-plugin-es-x@npm:7.8.0"
@@ -2142,6 +2163,26 @@ __metadata:
   peerDependencies:
     eslint: ">=8"
   checksum: 10c0/002fda8c029bc5da41e24e7ac11654062831d675fc4f5f20d0de460e24bf1e05cd559000678ef3e46c48641190f4fc07ae3d57aa5e8b085ef5f67e5f63742614
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-import-x@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "eslint-plugin-import-x@npm:3.1.0"
+  dependencies:
+    "@typescript-eslint/utils": "npm:^7.4.0"
+    debug: "npm:^4.3.4"
+    doctrine: "npm:^3.0.0"
+    eslint-import-resolver-node: "npm:^0.3.9"
+    get-tsconfig: "npm:^4.7.3"
+    is-glob: "npm:^4.0.3"
+    minimatch: "npm:^9.0.3"
+    semver: "npm:^7.6.0"
+    stable-hash: "npm:^0.0.4"
+    tslib: "npm:^2.6.2"
+  peerDependencies:
+    eslint: ^8.56.0 || ^9.0.0-0
+  checksum: 10c0/7da1010fa8313778c5144e3cf5e4e6393ea7392a3b54a31c5f3314b4f9e2d05635e2c8ed23c9175e1b2a0542b64ac37e0c16e014ec518d88fd87af42342d5dee
   languageName: node
   linkType: hard
 
@@ -2652,7 +2693,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-tsconfig@npm:^4.7.0":
+"get-tsconfig@npm:^4.7.0, get-tsconfig@npm:^4.7.3":
   version: 4.7.6
   resolution: "get-tsconfig@npm:4.7.6"
   dependencies:
@@ -4106,7 +4147,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^9.0.0, minimatch@npm:^9.0.4":
+"minimatch@npm:^9.0.0, minimatch@npm:^9.0.3, minimatch@npm:^9.0.4":
   version: 9.0.5
   resolution: "minimatch@npm:9.0.5"
   dependencies:
@@ -4219,6 +4260,13 @@ __metadata:
   version: 2.1.2
   resolution: "ms@npm:2.1.2"
   checksum: 10c0/a437714e2f90dbf881b5191d35a6db792efbca5badf112f87b9e1c712aace4b4b9b742dd6537f3edf90fd6f684de897cec230abde57e87883766712ddda297cc
+  languageName: node
+  linkType: hard
+
+"ms@npm:^2.1.1":
+  version: 2.1.3
+  resolution: "ms@npm:2.1.3"
+  checksum: 10c0/d924b57e7312b3b63ad21fc5b3dc0af5e78d61a1fc7cfb5457edaf26326bf62be5307cc87ffb6862ef1c2b33b0233cdb5d4f01c4c958cc0d660948b65a287a48
   languageName: node
   linkType: hard
 
@@ -4817,7 +4865,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@npm:^1.10.0, resolve@npm:^1.20.0":
+"resolve@npm:^1.10.0, resolve@npm:^1.20.0, resolve@npm:^1.22.4":
   version: 1.22.8
   resolution: "resolve@npm:1.22.8"
   dependencies:
@@ -4830,7 +4878,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@npm%3A^1.10.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.20.0#optional!builtin<compat/resolve>":
+"resolve@patch:resolve@npm%3A^1.10.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.20.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.4#optional!builtin<compat/resolve>":
   version: 1.22.8
   resolution: "resolve@patch:resolve@npm%3A1.22.8#optional!builtin<compat/resolve>::version=1.22.8&hash=c3c19d"
   dependencies:
@@ -5115,6 +5163,13 @@ __metadata:
   dependencies:
     minipass: "npm:^7.0.3"
   checksum: 10c0/e5a1e23a4057a86a97971465418f22ea89bd439ac36ade88812dd920e4e61873e8abd6a9b72a03a67ef50faa00a2daf1ab745c5a15b46d03e0544a0296354227
+  languageName: node
+  linkType: hard
+
+"stable-hash@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "stable-hash@npm:0.0.4"
+  checksum: 10c0/53d010d2a1b014fb60d398c095f43912c353b7b44774e55222bb26fd428bc75b73d7bdfcae509ce927c23ca9c5aff2dc1bc82f191d30e57a879550bc2952bdb0
   languageName: node
   linkType: hard
 

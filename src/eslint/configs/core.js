@@ -7,5 +7,6 @@ module.exports = {
         "../plugins/promise.js",
         "../plugins/unicorn.js",
         "../plugins/unused-imports.js",
+        "../plugins/import-x.js",
     ],
 }
