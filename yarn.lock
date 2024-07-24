@@ -959,8 +959,8 @@ __metadata:
     "@total-typescript/tsconfig": "npm:^1.0.4"
     "@types/eslint": "npm:^8.56.11"
     "@types/jest": "npm:^29.5.12"
-    "@types/node": "npm:^20.14.11"
-    "@types/react": "npm:^18"
+    "@types/node": "npm:^20.14.12"
+    "@types/react": "npm:^18.3.3"
     "@typescript-eslint/parser": "npm:^7.17.0"
     cspell: "npm:^8.12.1"
     eslint: "npm:^8.57.0"
@@ -970,7 +970,7 @@ __metadata:
     eslint-plugin-jest-formatting: "npm:^3.1.0"
     eslint-plugin-mobx: "npm:^0.0.10"
     eslint-plugin-n: "npm:^17.9.0"
-    eslint-plugin-promise: "npm:^6.6.0"
+    eslint-plugin-promise: "npm:^7.0.0"
     eslint-plugin-react: "npm:^7.35.0"
     eslint-plugin-react-hooks: "npm:^4.6.2"
     eslint-plugin-security-node: "npm:^1.1.4"
@@ -1665,12 +1665,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^20.14.11":
+"@types/node@npm:*":
   version: 20.14.11
   resolution: "@types/node@npm:20.14.11"
   dependencies:
     undici-types: "npm:~5.26.4"
   checksum: 10c0/5306becc0ff41d81b1e31524bd376e958d0741d1ce892dffd586b9ae0cb6553c62b0d62abd16da8bea6b9a2c17572d360450535d7c073794b0cef9cb4e39691e
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^20.14.12":
+  version: 20.14.12
+  resolution: "@types/node@npm:20.14.12"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 10c0/59bc5fa11fdd23fd517f859063118f54a1ab53d3399ef63c926f8902429d7453abc0db22ef4b0a6110026b6ab81b6472fee894e1d235c24b01a0b3e10cfae0bb
   languageName: node
   linkType: hard
 
@@ -1688,7 +1697,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18":
+"@types/react@npm:^18.3.3":
   version: 18.3.3
   resolution: "@types/react@npm:18.3.3"
   dependencies:
@@ -3537,12 +3546,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-promise@npm:^6.6.0":
-  version: 6.6.0
-  resolution: "eslint-plugin-promise@npm:6.6.0"
+"eslint-plugin-promise@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "eslint-plugin-promise@npm:7.0.0"
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
-  checksum: 10c0/93a667dbc9ff15c4d586b0d40a31c7828314cbbb31b2b9a75802aa4ef536e9457bb3e1a89b384b07aa336dd61b315ae8b0aadc0870210378023dd018819b59b3
+  checksum: 10c0/9a9b5e057ed2d109aabe0d38f98142df0b02f555a2660fbacc58a7ea473f170dcd02ab2f88e514b7a4cbae314945343fbb26cdc04cd36d4f082bfcd6d5a2c650
   languageName: node
   linkType: hard
 
