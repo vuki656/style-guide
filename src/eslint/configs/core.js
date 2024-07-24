@@ -8,5 +8,6 @@ module.exports = {
         "../plugins/unicorn.js",
         "../plugins/unused-imports.js",
         "../plugins/import-x.js",
+        "../plugins/sonarjs.js",
     ],
 }

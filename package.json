@@ -19,6 +19,7 @@
         "eslint-plugin-n": "^17.9.0",
         "eslint-plugin-promise": "^6.6.0",
         "eslint-plugin-security-node": "^1.1.4",
+        "eslint-plugin-sonarjs": "^1.0.4",
         "eslint-plugin-unicorn": "^54.0.0",
         "eslint-plugin-unused-imports": "^4.0.1",
         "prettier-plugin-embed": "^0.4.15",

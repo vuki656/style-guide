@@ -431,6 +431,7 @@ __metadata:
     eslint-plugin-n: "npm:^17.9.0"
     eslint-plugin-promise: "npm:^6.6.0"
     eslint-plugin-security-node: "npm:^1.1.4"
+    eslint-plugin-sonarjs: "npm:^1.0.4"
     eslint-plugin-unicorn: "npm:^54.0.0"
     eslint-plugin-unused-imports: "npm:^4.0.1"
     jest: "npm:^29.7.0"
@@ -2254,6 +2255,15 @@ __metadata:
   version: 1.1.4
   resolution: "eslint-plugin-security-node@npm:1.1.4"
   checksum: 10c0/503b0071249c697c81e6e707a56496a01843f648a79c9596d399cb132ade6f567a0558f2cdf8c1f85295e7c307690a4d44073df89f96dc104d6a418a237e655d
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-sonarjs@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "eslint-plugin-sonarjs@npm:1.0.4"
+  peerDependencies:
+    eslint: ^8.0.0 || ^9.0.0
+  checksum: 10c0/37d0229ea16158dfaa6ea8cd11e467b085fa26c35478fa37c33103810e753ba2d8f8eb8612fde8c8c375b9a2ec21b2a530ba612c669d71fb1605c768e5119b14
   languageName: node
   linkType: hard
 
