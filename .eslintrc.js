@@ -9,6 +9,7 @@ module.exports = {
         "./src/eslint/configs/node.js",
         "./src/eslint/configs/mobx.js",
         "./src/eslint/configs/react.js",
+        "./src/eslint/configs/next.js",
     ],
     parserOptions: {
         project: "./tsconfig.json",

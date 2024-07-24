@@ -10,6 +10,7 @@
     },
     "dependencies": {
         "@eslint-community/eslint-plugin-eslint-comments": "^4.3.0",
+        "@next/eslint-plugin-next": "^14.2.5",
         "@prettier/plugin-xml": "^3.4.1",
         "@typescript-eslint/parser": "^7.17.0",
         "eslint-plugin-import-x": "^3.1.0",
