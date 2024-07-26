@@ -1,16 +1,29 @@
 {
     "name": "@dvukovic/style-guide",
     "version": "0.2.0",
+    "private": false,
+    "description": "My own style guide",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vuki656/style-guide"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Domagoj Vukovic"
+    },
+    "type": "commonjs",
     "files": [
         "src/eslint",
         "src/cspell",
         "src/prettier",
-        "src/stylelint"
+        "src/stylelint",
+        "src/package-json"
     ],
     "scripts": {
-        "lint": "yarn lint:prettier && yarn lint:eslint && yarn lint:stylelint && yarn lint:spell",
+        "lint": "yarn lint:prettier && yarn lint:eslint && yarn lint:stylelint && yarn lint:spell && lint:package-json",
         "lint:eslint": "eslint . --ext .js,.ts,.tsx",
-        "lint:fix": "yarn lint:prettier --write && yarn lint:stylelint --fix && yarn lint:eslint --fix",
+        "lint:fix": "yarn lint:prettier --write && yarn lint:stylelint --fix && yarn lint:eslint --fix && lint:package-json && yarn lint:spell",
+        "lint:package-json": "npmPkgJsonLint --configFile ./.packagerc.js .",
         "lint:prettier": "prettier --log-level=warn --check .",
         "lint:spell": "cspell --no-progress --no-summary --unique '**'",
         "lint:stylelint": "stylelint ./**/*.css",
@@ -47,28 +60,47 @@
         "typescript-eslint": "7.17.0"
     },
     "devDependencies": {
-        "@release-it/conventional-changelog": "^8.0.1",
-        "@total-typescript/tsconfig": "^1.0.4",
-        "@types/eslint": "^8.56.11",
-        "@types/jest": "^29.5.12",
-        "@types/node": "^20.14.12",
-        "@types/react": "^18.3.3",
-        "cspell": "^8.12.1",
-        "eslint": "^8.57.0",
-        "jest": "^29.7.0",
-        "prettier": "^3.3.3",
-        "react": "^18.3.1",
-        "release-it": "^17.6.0",
-        "stylelint": "^16.7.0",
-        "typescript": "^5.5.4"
+        "@release-it/conventional-changelog": "8.0.1",
+        "@total-typescript/tsconfig": "1.0.4",
+        "@types/eslint": "8.56.11",
+        "@types/jest": "29.5.12",
+        "@types/node": "20.14.12",
+        "@types/react": "18.3.3",
+        "cspell": "8.12.1",
+        "eslint": "8.57.0",
+        "jest": "29.7.0",
+        "npm-package-json-lint": "8.0.0",
+        "prettier": "3.3.3",
+        "react": "18.3.1",
+        "release-it": "17.6.0",
+        "stylelint": "16.7.0",
+        "typescript": "5.5.4"
     },
     "peerDependencies": {
         "cspell": "8",
         "eslint": "8.57",
+        "npm-package-json-lint": "8",
         "prettier": "3",
         "stylelint": "16"
     },
+    "peerDependenciesMeta": {
+        "eslint": {
+            "optional": true
+        },
+        "npm-package-json-lint": {
+            "optional": true
+        },
+        "prettier": {
+            "optional": true
+        },
+        "stylelint": {
+            "optional": true
+        }
+    },
     "packageManager": "yarn@4.3.1",
+    "engines": {
+        "node": ">20.0.0"
+    },
     "publishConfig": {
         "access": "public",
         "registry": "https://registry.npmjs.org"
