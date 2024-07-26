@@ -6,7 +6,6 @@ module.exports = {
         "etc/no-commented-out-code": "error",
         "etc/no-deprecated": "error",
         "etc/no-enum": "error",
-        "etc/no-implicit-any-catch": "error",
         "etc/no-internal": "error",
         "etc/no-t": "error",
         "etc/throw-error": "error",

@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "jsx": "react",
-        "target": "es2016",
+        "target": "ES2023",
         "module": "commonjs",
         "esModuleInterop": true,
         "noUncheckedIndexedAccess": true,

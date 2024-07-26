@@ -1,7 +1,6 @@
 {
     "name": "@dvukovic/style-guide",
     "version": "0.2.0",
-    "private": false,
     "description": "My own style guide",
     "repository": {
         "type": "git",
