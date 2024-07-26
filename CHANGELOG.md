@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0 (2024-07-26)
+
+
+### Features
+
+* readme ([339421d](https://github.com/vuki656/style-guide/commit/339421d3c0d356ec8be8788603ff234309a42c69))
+
 ## 0.2.0 (2024-07-26)
 
 
