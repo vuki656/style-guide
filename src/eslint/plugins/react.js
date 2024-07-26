@@ -34,7 +34,6 @@ module.exports = {
         ],
         "react/jsx-first-prop-new-line": ["error", "multiline"],
         "react/jsx-fragments": "error",
-        "react/jsx-handler-names": "error",
         "react/jsx-key": "error",
         "react/jsx-newline": [
             "error",
@@ -43,7 +42,6 @@ module.exports = {
                 prevent: true,
             },
         ],
-        "react/jsx-no-bind": "error",
         "react/jsx-no-comment-textnodes": "error",
         "react/jsx-no-constructed-context-values": "error",
         "react/jsx-no-leaked-render": [
@@ -86,7 +84,7 @@ module.exports = {
         "react/no-render-return-value": "error",
         "react/no-this-in-sfc": "error",
         "react/no-unescaped-entities": "error",
-        "react/no-unknown-property": "error",
+        "react/no-unknown-property": ["error", { ignore: ["global", "jsx"] }],
         "react/no-unsafe": "error",
         "react/no-unstable-nested-components": "error",
         "react/no-unused-class-component-methods": "error",
