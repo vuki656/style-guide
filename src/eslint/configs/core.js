@@ -11,5 +11,6 @@ module.exports = {
         "../plugins/etc.js",
         "../plugins/sort-keys-fix.js",
         "../plugins/sort-destructure-keys.js",
+        "../plugins/stylistic.js",
     ],
 }
