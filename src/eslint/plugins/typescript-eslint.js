@@ -124,9 +124,12 @@ module.exports = {
         "@typescript-eslint/prefer-includes": "error",
         "@typescript-eslint/prefer-literal-enum-member": "error",
         "@typescript-eslint/prefer-namespace-keyword": "error",
-        "@typescript-eslint/prefer-nullish-coalescing": ["error", {
-            ignoreConditionalTests: true
-        }],
+        "@typescript-eslint/prefer-nullish-coalescing": [
+            "error",
+            {
+                ignoreConditionalTests: true,
+            },
+        ],
         "@typescript-eslint/prefer-optional-chain": "error",
         "prefer-promise-reject-errors": "off",
         "@typescript-eslint/prefer-promise-reject-errors": "error",
@@ -178,17 +181,17 @@ module.exports = {
         ],
         "@typescript-eslint/triple-slash-reference": "error",
         "@typescript-eslint/use-unknown-in-catch-callback-variable": "error",
-        '@typescript-eslint/naming-convention': [
-            'error',
+        "@typescript-eslint/naming-convention": [
+            "error",
             {
-                format: ['PascalCase'],
-                selector: 'typeAlias',
-                suffix: ['Type', 'Props'],
+                format: ["PascalCase"],
+                selector: "typeAlias",
+                suffix: ["Type", "Props"],
             },
             {
-                format: ['PascalCase'],
-                prefix: ['T'],
-                selector: 'typeParameter',
+                format: ["PascalCase"],
+                prefix: ["T"],
+                selector: "typeParameter",
             },
         ],
     },

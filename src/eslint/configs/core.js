@@ -10,5 +10,8 @@ module.exports = {
         "../plugins/import-x.js",
         "../plugins/sonarjs.js",
         "../plugins/etc.js",
+        "../plugins/typescript-sort-keys.js",
+        "../plugins/sort-keys-fix.js",
+        "../plugins/sort-destructure-keys.js",
     ],
 }
