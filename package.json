@@ -1,6 +1,12 @@
 {
     "name": "@dvukovic/style-guide",
     "version": "0.1.1",
+    "files": [
+        "src/eslint",
+        "src/cspell",
+        "src/prettier",
+        "src/stylelint"
+    ],
     "scripts": {
         "lint": "yarn lint:prettier && yarn lint:eslint && yarn lint:stylelint && yarn lint:spell",
         "lint:eslint": "eslint . --ext .js,.ts,.tsx",
