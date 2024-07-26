@@ -953,48 +953,48 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@dvukovic/style-guide@workspace:."
   dependencies:
-    "@eslint-community/eslint-plugin-eslint-comments": "npm:^4.3.0"
-    "@next/eslint-plugin-next": "npm:^14.2.5"
-    "@prettier/plugin-xml": "npm:^3.4.1"
+    "@eslint-community/eslint-plugin-eslint-comments": "npm:4.3.0"
+    "@next/eslint-plugin-next": "npm:14.2.5"
+    "@prettier/plugin-xml": "npm:3.4.1"
     "@release-it/conventional-changelog": "npm:^8.0.1"
     "@total-typescript/tsconfig": "npm:^1.0.4"
     "@types/eslint": "npm:^8.56.11"
     "@types/jest": "npm:^29.5.12"
     "@types/node": "npm:^20.14.12"
     "@types/react": "npm:^18.3.3"
-    "@typescript-eslint/parser": "npm:^7.17.0"
+    "@typescript-eslint/parser": "npm:7.17.0"
     cspell: "npm:^8.12.1"
     eslint: "npm:^8.57.0"
-    eslint-plugin-etc: "npm:^2.0.3"
-    eslint-plugin-import-x: "npm:^3.1.0"
-    eslint-plugin-jest: "npm:^28.6.0"
-    eslint-plugin-jest-formatting: "npm:^3.1.0"
-    eslint-plugin-mobx: "npm:^0.0.10"
-    eslint-plugin-n: "npm:^17.9.0"
-    eslint-plugin-promise: "npm:^7.0.0"
-    eslint-plugin-react: "npm:^7.35.0"
-    eslint-plugin-react-hooks: "npm:^4.6.2"
-    eslint-plugin-security-node: "npm:^1.1.4"
-    eslint-plugin-sonarjs: "npm:^1.0.4"
-    eslint-plugin-sort-destructure-keys: "npm:^2.0.0"
-    eslint-plugin-sort-keys-fix: "npm:^1.1.2"
-    eslint-plugin-typescript-sort-keys: "npm:^3.2.0"
-    eslint-plugin-unicorn: "npm:^54.0.0"
-    eslint-plugin-unused-imports: "npm:^4.0.1"
+    eslint-plugin-etc: "npm:2.0.3"
+    eslint-plugin-import-x: "npm:3.1.0"
+    eslint-plugin-jest: "npm:28.6.0"
+    eslint-plugin-jest-formatting: "npm:3.1.0"
+    eslint-plugin-mobx: "npm:0.0.10"
+    eslint-plugin-n: "npm:17.9.0"
+    eslint-plugin-promise: "npm:7.0.0"
+    eslint-plugin-react: "npm:7.35.0"
+    eslint-plugin-react-hooks: "npm:4.6.2"
+    eslint-plugin-security-node: "npm:1.1.4"
+    eslint-plugin-sonarjs: "npm:1.0.4"
+    eslint-plugin-sort-destructure-keys: "npm:2.0.0"
+    eslint-plugin-sort-keys-fix: "npm:1.1.2"
+    eslint-plugin-typescript-sort-keys: "npm:3.2.0"
+    eslint-plugin-unicorn: "npm:54.0.0"
+    eslint-plugin-unused-imports: "npm:4.0.1"
     jest: "npm:^29.7.0"
     prettier: "npm:^3.3.3"
-    prettier-plugin-embed: "npm:^0.4.15"
-    prettier-plugin-jsdoc: "npm:^1.3.0"
-    prettier-plugin-packagejson: "npm:^2.5.1"
-    prettier-plugin-prisma: "npm:^5.0.0"
-    prettier-plugin-sh: "npm:^0.14.0"
-    prettier-plugin-sql: "npm:^0.18.1"
+    prettier-plugin-embed: "npm:0.4.15"
+    prettier-plugin-jsdoc: "npm:1.3.0"
+    prettier-plugin-packagejson: "npm:2.5.1"
+    prettier-plugin-prisma: "npm:5.0.0"
+    prettier-plugin-sh: "npm:0.14.0"
+    prettier-plugin-sql: "npm:0.18.1"
     react: "npm:^18.3.1"
     release-it: "npm:^17.6.0"
     stylelint: "npm:^16.7.0"
-    stylelint-order: "npm:^6.0.4"
+    stylelint-order: "npm:6.0.4"
     typescript: "npm:^5.5.4"
-    typescript-eslint: "npm:^7.17.0"
+    typescript-eslint: "npm:7.17.0"
   peerDependencies:
     cspell: 8
     eslint: 8.57
@@ -1003,7 +1003,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@eslint-community/eslint-plugin-eslint-comments@npm:^4.3.0":
+"@eslint-community/eslint-plugin-eslint-comments@npm:4.3.0":
   version: 4.3.0
   resolution: "@eslint-community/eslint-plugin-eslint-comments@npm:4.3.0"
   dependencies:
@@ -1426,7 +1426,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:^14.2.5":
+"@next/eslint-plugin-next@npm:14.2.5":
   version: 14.2.5
   resolution: "@next/eslint-plugin-next@npm:14.2.5"
   dependencies:
@@ -1661,7 +1661,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prettier/plugin-xml@npm:^3.4.1":
+"@prettier/plugin-xml@npm:3.4.1":
   version: 3.4.1
   resolution: "@prettier/plugin-xml@npm:3.4.1"
   dependencies:
@@ -2009,7 +2009,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:7.17.0, @typescript-eslint/parser@npm:^7.17.0":
+"@typescript-eslint/parser@npm:7.17.0":
   version: 7.17.0
   resolution: "@typescript-eslint/parser@npm:7.17.0"
   dependencies:
@@ -4262,7 +4262,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-etc@npm:^2.0.3":
+"eslint-plugin-etc@npm:2.0.3":
   version: 2.0.3
   resolution: "eslint-plugin-etc@npm:2.0.3"
   dependencies:
@@ -4279,7 +4279,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import-x@npm:^3.1.0":
+"eslint-plugin-import-x@npm:3.1.0":
   version: 3.1.0
   resolution: "eslint-plugin-import-x@npm:3.1.0"
   dependencies:
@@ -4299,7 +4299,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest-formatting@npm:^3.1.0":
+"eslint-plugin-jest-formatting@npm:3.1.0":
   version: 3.1.0
   resolution: "eslint-plugin-jest-formatting@npm:3.1.0"
   peerDependencies:
@@ -4308,7 +4308,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:^28.6.0":
+"eslint-plugin-jest@npm:28.6.0":
   version: 28.6.0
   resolution: "eslint-plugin-jest@npm:28.6.0"
   dependencies:
@@ -4326,7 +4326,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-mobx@npm:^0.0.10":
+"eslint-plugin-mobx@npm:0.0.10":
   version: 0.0.10
   resolution: "eslint-plugin-mobx@npm:0.0.10"
   peerDependencies:
@@ -4335,7 +4335,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-n@npm:^17.9.0":
+"eslint-plugin-n@npm:17.9.0":
   version: 17.9.0
   resolution: "eslint-plugin-n@npm:17.9.0"
   dependencies:
@@ -4353,7 +4353,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-promise@npm:^7.0.0":
+"eslint-plugin-promise@npm:7.0.0":
   version: 7.0.0
   resolution: "eslint-plugin-promise@npm:7.0.0"
   peerDependencies:
@@ -4362,7 +4362,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react-hooks@npm:^4.6.2":
+"eslint-plugin-react-hooks@npm:4.6.2":
   version: 4.6.2
   resolution: "eslint-plugin-react-hooks@npm:4.6.2"
   peerDependencies:
@@ -4371,7 +4371,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:^7.35.0":
+"eslint-plugin-react@npm:7.35.0":
   version: 7.35.0
   resolution: "eslint-plugin-react@npm:7.35.0"
   dependencies:
@@ -4399,14 +4399,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-security-node@npm:^1.1.4":
+"eslint-plugin-security-node@npm:1.1.4":
   version: 1.1.4
   resolution: "eslint-plugin-security-node@npm:1.1.4"
   checksum: 10c0/503b0071249c697c81e6e707a56496a01843f648a79c9596d399cb132ade6f567a0558f2cdf8c1f85295e7c307690a4d44073df89f96dc104d6a418a237e655d
   languageName: node
   linkType: hard
 
-"eslint-plugin-sonarjs@npm:^1.0.4":
+"eslint-plugin-sonarjs@npm:1.0.4":
   version: 1.0.4
   resolution: "eslint-plugin-sonarjs@npm:1.0.4"
   peerDependencies:
@@ -4415,7 +4415,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-sort-destructure-keys@npm:^2.0.0":
+"eslint-plugin-sort-destructure-keys@npm:2.0.0":
   version: 2.0.0
   resolution: "eslint-plugin-sort-destructure-keys@npm:2.0.0"
   dependencies:
@@ -4426,7 +4426,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-sort-keys-fix@npm:^1.1.2":
+"eslint-plugin-sort-keys-fix@npm:1.1.2":
   version: 1.1.2
   resolution: "eslint-plugin-sort-keys-fix@npm:1.1.2"
   dependencies:
@@ -4438,7 +4438,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-typescript-sort-keys@npm:^3.2.0":
+"eslint-plugin-typescript-sort-keys@npm:3.2.0":
   version: 3.2.0
   resolution: "eslint-plugin-typescript-sort-keys@npm:3.2.0"
   dependencies:
@@ -4453,7 +4453,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-unicorn@npm:^54.0.0":
+"eslint-plugin-unicorn@npm:54.0.0":
   version: 54.0.0
   resolution: "eslint-plugin-unicorn@npm:54.0.0"
   dependencies:
@@ -4479,7 +4479,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-unused-imports@npm:^4.0.1":
+"eslint-plugin-unused-imports@npm:4.0.1":
   version: 4.0.1
   resolution: "eslint-plugin-unused-imports@npm:4.0.1"
   dependencies:
@@ -8450,7 +8450,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-embed@npm:^0.4.15":
+"prettier-plugin-embed@npm:0.4.15":
   version: 0.4.15
   resolution: "prettier-plugin-embed@npm:0.4.15"
   dependencies:
@@ -8464,7 +8464,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-jsdoc@npm:^1.3.0":
+"prettier-plugin-jsdoc@npm:1.3.0":
   version: 1.3.0
   resolution: "prettier-plugin-jsdoc@npm:1.3.0"
   dependencies:
@@ -8477,7 +8477,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-packagejson@npm:^2.5.1":
+"prettier-plugin-packagejson@npm:2.5.1":
   version: 2.5.1
   resolution: "prettier-plugin-packagejson@npm:2.5.1"
   dependencies:
@@ -8492,7 +8492,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-prisma@npm:^5.0.0":
+"prettier-plugin-prisma@npm:5.0.0":
   version: 5.0.0
   resolution: "prettier-plugin-prisma@npm:5.0.0"
   dependencies:
@@ -8503,7 +8503,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-sh@npm:^0.14.0":
+"prettier-plugin-sh@npm:0.14.0":
   version: 0.14.0
   resolution: "prettier-plugin-sh@npm:0.14.0"
   dependencies:
@@ -8515,7 +8515,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-sql@npm:^0.18.1":
+"prettier-plugin-sql@npm:0.18.1":
   version: 0.18.1
   resolution: "prettier-plugin-sql@npm:0.18.1"
   dependencies:
@@ -9679,7 +9679,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-order@npm:^6.0.4":
+"stylelint-order@npm:6.0.4":
   version: 6.0.4
   resolution: "stylelint-order@npm:6.0.4"
   dependencies:
@@ -10103,7 +10103,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript-eslint@npm:^7.17.0":
+"typescript-eslint@npm:7.17.0":
   version: 7.17.0
   resolution: "typescript-eslint@npm:7.17.0"
   dependencies:
