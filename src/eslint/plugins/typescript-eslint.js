@@ -86,8 +86,6 @@ module.exports = {
         "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "error",
         "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
         "@typescript-eslint/no-non-null-assertion": "error",
-        "no-redeclare": "off",
-        "@typescript-eslint/no-redeclare": "error",
         "@typescript-eslint/no-redundant-type-constituents": "error",
         "no-shadow": "off",
         "@typescript-eslint/no-shadow": "error",
@@ -126,7 +124,9 @@ module.exports = {
         "@typescript-eslint/prefer-includes": "error",
         "@typescript-eslint/prefer-literal-enum-member": "error",
         "@typescript-eslint/prefer-namespace-keyword": "error",
-        "@typescript-eslint/prefer-nullish-coalescing": "error",
+        "@typescript-eslint/prefer-nullish-coalescing": ["error", {
+            ignoreConditionalTests: true
+        }],
         "@typescript-eslint/prefer-optional-chain": "error",
         "prefer-promise-reject-errors": "off",
         "@typescript-eslint/prefer-promise-reject-errors": "error",
@@ -169,7 +169,6 @@ module.exports = {
         ],
         "no-return-await": "off",
         "@typescript-eslint/return-await": "error",
-        "@typescript-eslint/strict-boolean-expressions": "error",
         "@typescript-eslint/switch-exhaustiveness-check": [
             "error",
             {

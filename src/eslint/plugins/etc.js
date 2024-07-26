@@ -8,9 +8,7 @@ module.exports = {
         "etc/no-enum": "error",
         "etc/no-implicit-any-catch": "error",
         "etc/no-internal": "error",
-        "etc/no-misused-generics": "error",
         "etc/no-t": "error",
-        "etc/prefer-less-than": "error",
         "etc/throw-error": "error",
     },
 }
