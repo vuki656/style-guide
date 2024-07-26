@@ -71,3 +71,6 @@ httpsrequest
 missconfiguration
 mischeck
 descriptionless
+typeorm
+domagoj
+vukovic

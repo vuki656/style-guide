@@ -10,6 +10,10 @@ module.exports = {
     ignorePatterns: ["node_modules"],
     overrides: [
         {
+            extends: ["./src/eslint/configs/typescript.js"],
+            files: ["*.ts"],
+        },
+        {
             extends: ["./src/eslint/configs/jest.js"],
             files: ["*.test.ts", "*.test.js"],
         },

@@ -2,7 +2,6 @@
 module.exports = {
     extends: [
         "../plugins/eslint.js",
-        "../plugins/typescript-eslint.js",
         "../plugins/eslint-comments.js",
         "../plugins/promise.js",
         "../plugins/unicorn.js",
@@ -10,7 +9,6 @@ module.exports = {
         "../plugins/import-x.js",
         "../plugins/sonarjs.js",
         "../plugins/etc.js",
-        "../plugins/typescript-sort-keys.js",
         "../plugins/sort-keys-fix.js",
         "../plugins/sort-destructure-keys.js",
     ],
