@@ -1,7 +1,7 @@
 /** @type {import("prettier-plugin-sql").SqlBaseOptions} */
 const prettierPluginSql = {
-    language: "postgresql",
     keywordCase: "upper",
+    language: "postgresql",
 }
 
 module.exports = {

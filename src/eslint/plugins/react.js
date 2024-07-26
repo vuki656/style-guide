@@ -30,7 +30,7 @@ module.exports = {
         "react/jsx-filename-extension": "error",
         "react/jsx-filename-extension": [
             "error",
-            { extensions: [".tsx", ".jsx"], allow: "as-needed" },
+            { allow: "as-needed", extensions: [".tsx", ".jsx"] },
         ],
         "react/jsx-first-prop-new-line": ["error", "multiline"],
         "react/jsx-fragments": "error",
@@ -39,8 +39,8 @@ module.exports = {
         "react/jsx-newline": [
             "error",
             {
-                prevent: true,
                 allowMultilines: false,
+                prevent: true,
             },
         ],
         "react/jsx-no-bind": "error",

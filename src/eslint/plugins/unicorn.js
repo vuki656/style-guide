@@ -2,6 +2,7 @@
 module.exports = {
     plugins: ["unicorn"],
     rules: {
+        "no-nested-ternary": "off",
         "unicorn/better-regex": "error",
         "unicorn/catch-error-name": "error",
         "unicorn/consistent-destructuring": "error",
@@ -17,8 +18,8 @@ module.exports = {
             {
                 cases: {
                     camelCase: true,
-                    pascalCase: true,
                     kebabCase: true,
+                    pascalCase: true,
                 },
             },
         ],
@@ -37,12 +38,12 @@ module.exports = {
         "unicorn/no-for-loop": "error",
         "unicorn/no-instanceof-array": "error",
         "unicorn/no-invalid-fetch-options": "error",
+
         "unicorn/no-invalid-remove-event-listener": "error",
         // "unicorn/no-length-as-slice-end": "error", NOTE: not released yet
         "unicorn/no-lonely-if": "error",
         "unicorn/no-magic-array-flat-depth": "error",
         "unicorn/no-negation-in-equality-check": "error",
-        "no-nested-ternary": "off",
         "unicorn/no-nested-ternary": "error",
         "unicorn/no-new-array": "error",
         "unicorn/no-new-buffer": "error",
@@ -110,19 +111,6 @@ module.exports = {
         "unicorn/prefer-ternary": "error",
         "unicorn/prefer-top-level-await": "error",
         "unicorn/prefer-type-error": "error",
-        "unicorn/relative-url-style": ["error", "always"],
-        "unicorn/require-array-join-separator": "error",
-        "unicorn/require-number-to-fixed-digits-argument": "error",
-        "unicorn/require-post-message-target-origin": "error",
-        "unicorn/switch-case-braces": ["error", "always"],
-        "unicorn/template-indent": [
-            "warn",
-            {
-                indent: 4,
-            },
-        ],
-        "unicorn/text-encoding-identifier-case": "error",
-        "unicorn/throw-new-error": "error",
         "unicorn/prevent-abbreviations": [
             "error",
             {
@@ -149,5 +137,18 @@ module.exports = {
                 },
             },
         ],
+        "unicorn/relative-url-style": ["error", "always"],
+        "unicorn/require-array-join-separator": "error",
+        "unicorn/require-number-to-fixed-digits-argument": "error",
+        "unicorn/require-post-message-target-origin": "error",
+        "unicorn/switch-case-braces": ["error", "always"],
+        "unicorn/template-indent": [
+            "warn",
+            {
+                indent: 4,
+            },
+        ],
+        "unicorn/text-encoding-identifier-case": "error",
+        "unicorn/throw-new-error": "error",
     },
 }

@@ -2,7 +2,6 @@
 module.exports = {
     plugins: ["@next/eslint-plugin-next"],
     rules: {
-        "@next/next/no-typos": "error",
         "@next/next/google-font-display": "error",
         "@next/next/google-font-preconnect": "error",
         "@next/next/inline-script-id": "error",
@@ -22,6 +21,7 @@ module.exports = {
         "@next/next/no-styled-jsx-in-document": "error",
         "@next/next/no-sync-scripts": "error",
         "@next/next/no-title-in-document-head": "error",
+        "@next/next/no-typos": "error",
         "@next/next/no-typos": "error",
         "@next/next/no-unwanted-polyfillio": "error",
     },
