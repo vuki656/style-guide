@@ -74,3 +74,4 @@ descriptionless
 typeorm
 domagoj
 vukovic
+cspellrc

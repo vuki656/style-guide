@@ -92,7 +92,7 @@ module.exports = {
 
 ### CSpell
 
-Create a `cspell.config.js` in root with the following:
+Create a `.cspellrc.js` in root with the following:
 
 ```javascript
 /** @type {import("cspell").FileSettings} */
