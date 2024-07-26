@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.4 (2024-07-26)
+
+
+### Bug Fixes
+
+* lock file ([a3e7e82](https://github.com/vuki656/style-guide/commit/a3e7e823492ec967e009ae2e8c5f627502983a46))
+
 ## 0.3.3 (2024-07-26)
 
 
