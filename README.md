@@ -56,7 +56,7 @@ module.exports = {
     },
     overrides: [
         {
-            files: ["./**/*.{tsx,ts}"],
+            files: ["*.ts", "*.tsx"],
             extends: [
                 require.resolve(
                     "@dvukovic/style-guide/src/eslint/configs/typescript",
@@ -64,7 +64,7 @@ module.exports = {
             ],
         },
         {
-            files: ["./**/*.test.ts"],
+            files: ["*.test.ts"],
             extends: [
                 require.resolve(
                     "@dvukovic/style-guide/src/eslint/configs/jest",
@@ -72,6 +72,50 @@ module.exports = {
             ],
         },
     ],
+}
+```
+
+If you need graphql config, everything has to be configured trough `overrides`
+
+```javascript
+/** @type {import("@types/eslint").ESLint.ConfigData} */
+module.exports = {
+    ignorePatterns: ["node_modules"],
+    overrides: [
+        {
+            extends: [
+                "./src/eslint/configs/core.js",
+                "./src/eslint/configs/node.js",
+                "./src/eslint/configs/mobx.js",
+                "./src/eslint/configs/react.js",
+                "./src/eslint/configs/next.js",
+            ],
+            files: ["*.js", ".ts", ".*.cjs", "*.tsx"],
+        },
+        {
+            extends: ["./src/eslint/configs/typescript.js"],
+            files: ["*.ts", "*.tsx"],
+        },
+        {
+            extends: ["./src/eslint/configs/jest.js"],
+            files: ["*.test.ts", "*.test.js"],
+        },
+        {
+            extends: ["./src/graphql/configs/core.js"],
+            files: ["*.graphql"],
+            parser: "@graphql-eslint/eslint-plugin",
+            parserOptions: {
+                project: "./tsconfig.json",
+                schema: "./**/*.graphql",
+            },
+        },
+    ],
+    parser: "@typescript-eslint/parser",
+    parserOptions: {
+        ecmaVersion: 2024,
+        project: "./tsconfig.json",
+    },
+    root: true,
 }
 ```
 
