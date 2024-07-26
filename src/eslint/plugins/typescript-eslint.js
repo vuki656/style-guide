@@ -178,5 +178,18 @@ module.exports = {
         ],
         "@typescript-eslint/triple-slash-reference": "error",
         "@typescript-eslint/use-unknown-in-catch-callback-variable": "error",
+        '@typescript-eslint/naming-convention': [
+            'error',
+            {
+                format: ['PascalCase'],
+                selector: 'typeAlias',
+                suffix: ['Type', 'Props'],
+            },
+            {
+                format: ['PascalCase'],
+                prefix: ['T'],
+                selector: 'typeParameter',
+            },
+        ],
     },
 }
