@@ -38,9 +38,8 @@ module.exports = {
         "unicorn/no-for-loop": "error",
         "unicorn/no-instanceof-array": "error",
         "unicorn/no-invalid-fetch-options": "error",
-
         "unicorn/no-invalid-remove-event-listener": "error",
-        // "unicorn/no-length-as-slice-end": "error", NOTE: not released yet
+        "unicorn/no-length-as-slice-end": "error",
         "unicorn/no-lonely-if": "error",
         "unicorn/no-magic-array-flat-depth": "error",
         "unicorn/no-negation-in-equality-check": "error",
