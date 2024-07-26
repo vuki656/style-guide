@@ -58,8 +58,6 @@ const stylelint = {
         "no-invalid-position-at-import-rule": true,
         "no-irregular-whitespace": true,
         "no-unknown-animations": true,
-        "no-unknown-custom-media": true,
-        "no-unknown-custom-properties": true,
         "number-max-precision": 3,
         "property-no-unknown": true,
         "property-no-vendor-prefix": true,
