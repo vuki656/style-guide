@@ -81,7 +81,7 @@ const stylelint = {
         "selector-type-no-unknown": true,
         "shorthand-property-no-redundant-values": true,
         "string-no-newline": true,
-        "unit-allowed-list": ["px", "rem", "%"],
+        "unit-allowed-list": ["px", "rem", "%", "fr"],
         "unit-no-unknown": true,
         "value-keyword-case": "lower",
         "value-no-vendor-prefix": true,
