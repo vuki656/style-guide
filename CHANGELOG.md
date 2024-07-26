@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.3 (2024-07-26)
+
+
+### Bug Fixes
+
+* remove empty lines in eslint plugin ([c246742](https://github.com/vuki656/style-guide/commit/c246742ec46bc5be8447ac1e8f5c50d73bc3aeb7))
+
 ## 0.3.2 (2024-07-26)
 
 ## 0.3.1 (2024-07-26)
