@@ -1,5 +1,6 @@
 {
     "name": "@dvukovic/style-guide",
+    "version": "0.0.0",
     "scripts": {
         "lint": "yarn lint:prettier && yarn lint:eslint && yarn lint:stylelint && yarn lint:spell",
         "lint:eslint": "eslint . --ext .js,.ts,.tsx",
