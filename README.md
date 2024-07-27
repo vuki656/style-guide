@@ -24,6 +24,13 @@ add the following scripts
 }
 ```
 
+add the following to `.gitignore`
+
+```
+.eslintcache
+.stylelintcache
+```
+
 ### ESLint
 
 Create a `.eslintrc.js` in root with the following:
