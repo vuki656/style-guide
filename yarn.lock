@@ -975,6 +975,7 @@ __metadata:
     eslint-plugin-react: "npm:7.35.0"
     eslint-plugin-react-hooks: "npm:4.6.2"
     eslint-plugin-security-node: "npm:1.1.4"
+    eslint-plugin-simple-import-sort: "npm:12.1.1"
     eslint-plugin-sonarjs: "npm:1.0.4"
     eslint-plugin-sort-destructure-keys: "npm:2.0.0"
     eslint-plugin-sort-keys-fix: "npm:1.1.2"
@@ -4282,6 +4283,15 @@ __metadata:
   version: 1.1.4
   resolution: "eslint-plugin-security-node@npm:1.1.4"
   checksum: 10c0/503b0071249c697c81e6e707a56496a01843f648a79c9596d399cb132ade6f567a0558f2cdf8c1f85295e7c307690a4d44073df89f96dc104d6a418a237e655d
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-simple-import-sort@npm:12.1.1":
+  version: 12.1.1
+  resolution: "eslint-plugin-simple-import-sort@npm:12.1.1"
+  peerDependencies:
+    eslint: ">=5.0.0"
+  checksum: 10c0/0ad1907ad9ddbadd1db655db0a9d0b77076e274b793a77b982c8525d808d868e6ecfce24f3a411e8a1fa551077387f9ebb38c00956073970ebd7ee6a029ce2b3
   languageName: node
   linkType: hard
 

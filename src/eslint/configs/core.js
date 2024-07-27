@@ -12,5 +12,6 @@ module.exports = {
         "../plugins/sort-keys-fix.js",
         "../plugins/sort-destructure-keys.js",
         "../plugins/stylistic.js",
+        "../plugins/simple-import-sort.js",
     ],
 }
