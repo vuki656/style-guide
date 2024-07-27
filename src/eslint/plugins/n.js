@@ -11,7 +11,6 @@ module.exports = {
         "n/no-exports-assign": "error",
         "n/no-extraneous-import": "error",
         "n/no-extraneous-require": "error",
-        "n/no-missing-import": "error",
         "n/no-missing-require": "error",
         "n/no-new-require": "error",
         "n/no-path-concat": "error",
