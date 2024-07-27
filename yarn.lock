@@ -957,7 +957,6 @@ __metadata:
     "@next/eslint-plugin-next": "npm:14.2.5"
     "@prettier/plugin-xml": "npm:3.4.1"
     "@stylistic/eslint-plugin": "npm:2.3.0"
-    "@total-typescript/tsconfig": "npm:1.0.4"
     "@types/eslint": "npm:8.56.11"
     "@types/jest": "npm:29.5.12"
     "@types/node": "npm:20.14.12"
@@ -999,11 +998,13 @@ __metadata:
     typescript-eslint: "npm:7.17.0"
   peerDependencies:
     cspell: 8
-    eslint: 8.57
+    eslint: 8.57.0
     npm-package-json-lint: 8
     prettier: 3
     stylelint: 16
   peerDependenciesMeta:
+    cspell:
+      optional: true
     eslint:
       optional: true
     npm-package-json-lint:
@@ -1787,13 +1788,6 @@ __metadata:
   version: 0.23.0
   resolution: "@tootallnate/quickjs-emscripten@npm:0.23.0"
   checksum: 10c0/2a939b781826fb5fd3edd0f2ec3b321d259d760464cf20611c9877205aaca3ccc0b7304dea68416baa0d568e82cd86b17d29548d1e5139fa3155a4a86a2b4b49
-  languageName: node
-  linkType: hard
-
-"@total-typescript/tsconfig@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@total-typescript/tsconfig@npm:1.0.4"
-  checksum: 10c0/44802aa9a7befbb4c7b065cc3bc09cc3facc334c0c058f1f45472d48e557a8ad171c06724219de29b3c5b100448e4772ccf291764647263320abe74926af597b
   languageName: node
   linkType: hard
 

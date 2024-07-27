@@ -61,7 +61,6 @@
         "typescript-eslint": "7.17.0"
     },
     "devDependencies": {
-        "@total-typescript/tsconfig": "1.0.4",
         "@types/eslint": "8.56.11",
         "@types/jest": "29.5.12",
         "@types/node": "20.14.12",
