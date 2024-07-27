@@ -9,7 +9,6 @@ module.exports = {
         ],
         "arrow-body-style": ["error", "always"],
         "block-scoped-var": "error",
-        "capitalized-comments": "error",
         "consistent-this": "error",
         curly: ["error", "all"],
         "default-case-last": "error",
