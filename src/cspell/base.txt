@@ -75,3 +75,6 @@ typeorm
 domagoj
 vukovic
 cspellrc
+zipkip
+envalid
+openzipkin
