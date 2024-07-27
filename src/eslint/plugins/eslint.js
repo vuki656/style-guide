@@ -145,6 +145,14 @@ module.exports = {
         "require-atomic-updates": "error",
         "require-await": "error",
         "require-yield": "error",
+        "sort-imports": [
+            "error",
+            {
+                ignoreCase: true,
+                ignoreDeclarationSort: true,
+                ignoreMemberSort: false,
+            },
+        ],
         "symbol-description": "error",
         "use-isnan": "error",
         yoda: "error",
