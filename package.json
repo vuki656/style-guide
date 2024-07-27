@@ -84,6 +84,9 @@
         "stylelint": "16"
     },
     "peerDependenciesMeta": {
+        "cspell": {
+            "optional": true
+        },
         "eslint": {
             "optional": true
         },
