@@ -42,7 +42,7 @@ module.exports = {
                 },
             },
         ],
-        "@typescript-eslint/max-params": ["error", { max: 2 }],
+        "@typescript-eslint/max-params": ["error", { max: 3 }],
         "@typescript-eslint/method-signature-style": "error",
         "@typescript-eslint/naming-convention": [
             "error",
