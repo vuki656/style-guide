@@ -1070,6 +1070,7 @@ __metadata:
     prettier-plugin-prisma: "npm:5.0.0"
     prettier-plugin-sh: "npm:0.14.0"
     prettier-plugin-sql: "npm:0.18.1"
+    prettier-plugin-toml: "npm:2.0.1"
     react: "npm:18.3.1"
     release-it: "npm:17.6.0"
     stylelint: "npm:16.7.0"
@@ -2197,6 +2198,22 @@ __metadata:
   dependencies:
     defer-to-connect: "npm:^2.0.1"
   checksum: 10c0/4629d2fbb2ea67c2e9dc03af235c0991c79ebdddcbc19aed5d5732fb29ce01c13331e9b1a491584b9069bd6ecde6581dcbf871f11b7eefdebbab34de6cf2197e
+  languageName: node
+  linkType: hard
+
+"@taplo/core@npm:^0.1.0":
+  version: 0.1.1
+  resolution: "@taplo/core@npm:0.1.1"
+  checksum: 10c0/c36f761431b2e959742d8e186e74306fb8991d84589e2f03b6481244cc407275fa448a217ef87b8aa1e226615fd7ba85c60e6f0221f01d891b90dd30b45cb13b
+  languageName: node
+  linkType: hard
+
+"@taplo/lib@npm:^0.4.0-alpha.2":
+  version: 0.4.0-alpha.2
+  resolution: "@taplo/lib@npm:0.4.0-alpha.2"
+  dependencies:
+    "@taplo/core": "npm:^0.1.0"
+  checksum: 10c0/650ed35ba949054eb8dcfbaf77d6154d9639f5d8fa96d89546c399a95e699d7e01f65e308f89478d41e0120baa3572f25595fe088d19e62cc56ad3eb2b5acbb5
   languageName: node
   linkType: hard
 
@@ -9041,6 +9058,17 @@ __metadata:
   peerDependencies:
     prettier: ^3.0.3
   checksum: 10c0/876c36f5de041bf21142d8fa451f962e0693bced41aeda113edddb0d44b54f6c32eaff0e2043004522adbb775bb249f84b72ee380a04c8c5a0097f4ce98685aa
+  languageName: node
+  linkType: hard
+
+"prettier-plugin-toml@npm:2.0.1":
+  version: 2.0.1
+  resolution: "prettier-plugin-toml@npm:2.0.1"
+  dependencies:
+    "@taplo/lib": "npm:^0.4.0-alpha.2"
+  peerDependencies:
+    prettier: ^3.0.3
+  checksum: 10c0/8a67133b1a71d82f6fe20fe92e18251ae2930d0fe96d18af8c2333cc8fffce408642b6d6f21441932a97a248815cc82b3f372971eae84aab80cad2f0d78bdc68
   languageName: node
   linkType: hard
 
