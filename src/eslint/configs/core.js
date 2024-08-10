@@ -13,5 +13,6 @@ module.exports = {
         "../plugins/sort-destructure-keys.js",
         "../plugins/stylistic.js",
         "../plugins/simple-import-sort.js",
+        "../plugins/rimac.js",
     ],
 }

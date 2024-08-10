@@ -34,6 +34,7 @@
         "@graphql-eslint/eslint-plugin": "3.20.1",
         "@next/eslint-plugin-next": "14.2.5",
         "@prettier/plugin-xml": "3.4.1",
+        "@rimac-technology/eslint-plugin": "1.5.0",
         "@stylistic/eslint-plugin": "2.3.0",
         "@typescript-eslint/parser": "7.17.0",
         "eslint-plugin-etc": "2.0.3",
