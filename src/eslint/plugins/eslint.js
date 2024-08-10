@@ -19,7 +19,7 @@ module.exports = {
         "func-name-matching": "error",
         "func-names": ["error", "as-needed"],
         "func-style": ["error", "declaration", { allowArrowFunctions: true }],
-        "id-length": ["error", { min: 2 }],
+        "id-length": ["error", { min: 2, properties: "never" }],
         "logical-assignment-operators": ["error", "never"],
         "max-classes-per-file": ["error", 1],
         "max-depth": ["error", 4],
