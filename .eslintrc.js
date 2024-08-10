@@ -13,7 +13,10 @@ module.exports = {
             files: ["*.js", ".ts", ".*.cjs", "*.tsx"],
         },
         {
-            extends: ["./src/eslint/configs/typescript.js"],
+            extends: [
+                "./src/eslint/configs/typescript.js",
+                "./src/eslint/configs/typescript-strict.js",
+            ],
             files: ["*.ts", "*.tsx"],
         },
         {

@@ -104,14 +104,6 @@ module.exports = {
         "@typescript-eslint/no-unnecessary-type-assertion": "error",
         "@typescript-eslint/no-unnecessary-type-constraint": "error",
         "@typescript-eslint/no-unnecessary-type-parameters": "error",
-        "@typescript-eslint/no-unsafe-argument": "error",
-        "@typescript-eslint/no-unsafe-assignment": "error",
-        "@typescript-eslint/no-unsafe-call": "error",
-        "@typescript-eslint/no-unsafe-declaration-merging": "error",
-        "@typescript-eslint/no-unsafe-enum-comparison": "error",
-        "@typescript-eslint/no-unsafe-member-access": "error",
-        "@typescript-eslint/no-unsafe-return": "error",
-        "@typescript-eslint/no-unsafe-unary-minus": "error",
         "@typescript-eslint/no-unused-expressions": "error",
         "@typescript-eslint/no-unused-vars": [
             "error",
@@ -155,17 +147,6 @@ module.exports = {
         "@typescript-eslint/require-array-sort-compare": "error",
         "@typescript-eslint/require-await": "error",
         "@typescript-eslint/restrict-plus-operands": "error",
-        "@typescript-eslint/restrict-template-expressions": [
-            "error",
-            {
-                allowAny: false,
-                allowBoolean: false,
-                allowNever: false,
-                allowNullish: false,
-                allowNumber: true,
-                allowRegExp: false,
-            },
-        ],
         "@typescript-eslint/return-await": "error",
         "@typescript-eslint/switch-exhaustiveness-check": [
             "error",
