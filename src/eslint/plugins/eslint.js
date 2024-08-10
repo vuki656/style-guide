@@ -23,7 +23,7 @@ module.exports = {
         "logical-assignment-operators": ["error", "never"],
         "max-classes-per-file": ["error", 1],
         "max-depth": ["error", 4],
-        "max-lines": ["error", 700],
+        "max-lines": ["error", 1000],
         "max-params": ["error", 3],
         "no-alert": "error",
         "no-array-constructor": "error",
