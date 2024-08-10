@@ -87,7 +87,6 @@ module.exports = {
         "no-octal": "error",
         "no-octal-escape": "error",
         "no-param-reassign": "error",
-        "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
         "no-promise-executor-return": "error",
         "no-proto": "error",
         "no-prototype-builtins": "error",
