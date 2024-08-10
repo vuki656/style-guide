@@ -74,7 +74,7 @@ const packageJsonCore = {
         "type-type": "error",
         "valid-values-engines": [
             "error",
-            [{ node: ">18.0.0" }, { node: ">20.0.0" }, { node: ">22.0.0" }],
+            [{ node: ">=18.0.0" }, { node: ">=20.0.0" }, { node: ">=22.0.0" }],
         ],
         "version-type": "error",
     },
