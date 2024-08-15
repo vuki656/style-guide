@@ -5,7 +5,7 @@
 To get the kitchen sink install the required dependencies:
 
 ```
-yarn add -D eslint@8.57.0 prettier cspell stylelint npm-package-json-lint
+yarn add -D eslint@8.57.0 prettier cspell stylelint npm-package-json-lint @dvukovic/style-guide
 ```
 
 add the following scripts
