@@ -24,6 +24,5 @@ module.exports = {
         "import-x/no-relative-packages": "error",
         "import-x/no-self-import": "error",
         "import-x/no-useless-path-segments": "error",
-        "import-x/order": "error",
     },
 }
