@@ -56,7 +56,6 @@ const packageJsonCore = {
         "optionalDependencies-type": "error",
         "os-type": "error",
         "peerDependencies-type": "error",
-        "prefer-absolute-version-dependencies": "error",
         "prefer-absolute-version-devDependencies": "error",
         "prefer-alphabetical-dependencies": "error",
         "preferGlobal-type": "error",
