@@ -79,3 +79,10 @@ zipkin
 envalid
 openzipkin
 mantine
+highcharts
+dynamodblocal
+gloock
+highchart
+mdxeditor
+posthog
+overscan
