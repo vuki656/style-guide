@@ -38,7 +38,7 @@ module.exports = {
         "no-console": "error",
         "no-constant-binary-expression": "error",
         "no-constant-condition": "error",
-        "no-constructor-return": "error",
+        "no-constant-condition": ["error", { checkLoops: false }],
         "no-control-regex": "error",
         "no-debugger": "error",
         "no-delete-var": "error",

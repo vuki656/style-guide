@@ -3,3 +3,10 @@ export const file = {
         return "hi"
     },
 }
+
+let _temp = 2
+
+while (true) {
+    _temp = 3
+    break
+}
