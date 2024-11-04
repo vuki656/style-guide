@@ -67,7 +67,6 @@ const packageJsonCore = {
         "require-license": "error",
         "require-name": "error",
         "require-repository": "error",
-        "require-type": "error",
         "require-version": "error",
         "scripts-type": "error",
         "type-type": "error",
