@@ -86,6 +86,7 @@ module.exports = {
         "unicorn/prefer-json-parse-buffer": "error",
         "unicorn/prefer-keyboard-event-key": "error",
         "unicorn/prefer-logical-operator-over-ternary": "error",
+        "unicorn/prefer-math-min-max": "error",
         "unicorn/prefer-math-trunc": "error",
         "unicorn/prefer-modern-dom-apis": "error",
         "unicorn/prefer-modern-math-apis": "error",
