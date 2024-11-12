@@ -1083,7 +1083,7 @@ __metadata:
     eslint-plugin-etc: "npm:2.0.3"
     eslint-plugin-import-x: "npm:4.4.2"
     eslint-plugin-jest: "npm:28.9.0"
-    eslint-plugin-mobx: "npm:0.0.11"
+    eslint-plugin-mobx: "npm:0.0.13"
     eslint-plugin-n: "npm:17.10.2"
     eslint-plugin-promise: "npm:7.0.0"
     eslint-plugin-react: "npm:7.35.0"
@@ -4655,12 +4655,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-mobx@npm:0.0.11":
-  version: 0.0.11
-  resolution: "eslint-plugin-mobx@npm:0.0.11"
+"eslint-plugin-mobx@npm:0.0.13":
+  version: 0.0.13
+  resolution: "eslint-plugin-mobx@npm:0.0.13"
   peerDependencies:
-    eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
-  checksum: 10c0/c8f0811ff64021d90ee29cfec66ca2460e3529ed06e99a7afd334a0b210b2e359568b07726bf0d8fee12778a8c9ace8c34f3dfe4b52e46346de815244fe81c77
+    eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
+  checksum: 10c0/41d705be45b8b83c7be0abe92d3643927a0695946cacf9b9b1e2cc9d0cd9479d4f924d21f59a1ca8f56954a7f01547286be0c7c39cede6e99c870b531e7aec32
   languageName: node
   linkType: hard
 
