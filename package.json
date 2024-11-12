@@ -65,10 +65,10 @@
         "typescript-eslint": "7.18.0"
     },
     "devDependencies": {
-        "@types/eslint": "8.56.11",
-        "@types/jest": "29.5.12",
-        "@types/node": "20.16.1",
-        "@types/react": "18.3.3",
+        "@types/eslint": "8.56.12",
+        "@types/jest": "29.5.14",
+        "@types/node": "22.9.0",
+        "@types/react": "18.3.12",
         "cspell": "8.14.1",
         "eslint": "8.57.0",
         "graphql": "16.9.0",
