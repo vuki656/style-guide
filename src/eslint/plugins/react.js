@@ -7,6 +7,7 @@ module.exports = {
         "react/checked-requires-onchange-or-readonly": "error",
         "react/destructuring-assignment": "error",
         "react/display-name": "error",
+        "react/forward-ref-uses-ref": "error",
         "react/function-component-definition": [
             "error",
             {
