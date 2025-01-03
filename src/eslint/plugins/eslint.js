@@ -38,7 +38,12 @@ module.exports = {
         "no-class-assign": "error",
         "no-compare-neg-zero": "error",
         "no-cond-assign": ["error", "always"],
-        "no-console": "error",
+        "no-console": [
+            "error",
+            {
+                allow: ["warn", "error"],
+            },
+        ],
         "no-constant-binary-expression": "error",
         "no-constant-condition": ["error", { checkLoops: false }],
         "no-control-regex": "error",
