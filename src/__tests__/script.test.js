@@ -1,13 +1,13 @@
-describe("This", () => {
-    it("should test that", () => {
+describe("this", () => {
+    test("should test that", () => {
         expect(1).toBe(3)
     })
 
-    it("should test", () => {
+    test("should test", () => {
         expect(1).toBe(1)
     })
 
-    it("should test another", () => {
+    test("should test another", () => {
         expect(1).toBe(2)
     })
 })

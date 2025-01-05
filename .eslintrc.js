@@ -20,7 +20,10 @@ module.exports = {
             files: ["*.ts", "*.tsx"],
         },
         {
-            extends: ["./src/eslint/configs/jest.js"],
+            extends: [
+                "./src/eslint/configs/jest.js",
+                "./src/eslint/configs/vitest.js",
+            ],
             files: ["*.test.ts", "*.test.js"],
         },
         {
