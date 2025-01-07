@@ -86,24 +86,50 @@ module.exports = {
     overrides: [
         {
             extends: [
-                "./src/eslint/configs/core.js",
-                "./src/eslint/configs/node.js",
-                "./src/eslint/configs/mobx.js",
-                "./src/eslint/configs/react.js",
-                "./src/eslint/configs/next.js",
+                require.resolve(
+                    "@dvukovic/style-guide/src/eslint/configs/core",
+                ),
+                require.resolve(
+                    "@dvukovic/style-guide/src/eslint/configs/node",
+                ),
+                require.resolve(
+                    "@dvukovic/style-guide/src/eslint/configs/mobx",
+                ),
+                require.resolve(
+                    "@dvukovic/style-guide/src/eslint/configs/react",
+                ),
+                require.resolve(
+                    "@dvukovic/style-guide/src/eslint/configs/next",
+                ),
             ],
             files: ["*.js", ".ts", ".*.cjs", "*.tsx"],
         },
         {
-            extends: ["./src/eslint/configs/typescript.js"],
+            extends: [
+                require.resolve(
+                    "@dvukovic/style-guide/src/eslint/configs/typescript",
+                ),
+            ],
             files: ["*.ts", "*.tsx"],
         },
         {
-            extends: ["./src/eslint/configs/jest.js"],
+            extends: [
+                require.resolve(
+                    "@dvukovic/style-guide/src/eslint/configs/jest",
+                ),
+                // OR
+                require.resolve(
+                    "@dvukovic/style-guide/src/eslint/configs/vitest",
+                ),
+            ],
             files: ["*.test.ts", "*.test.js"],
         },
         {
-            extends: ["./src/graphql/configs/core.js"],
+            extends: [
+                require.resolve(
+                    "@dvukovic/style-guide/src/graphql/configs/core",
+                ),
+            ],
             files: ["*.graphql"],
             parser: "@graphql-eslint/eslint-plugin",
             parserOptions: {
