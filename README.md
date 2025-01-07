@@ -15,7 +15,7 @@ add the following scripts
     "scripts": {
         "lint": "yarn lint:prettier && yarn lint:eslint && yarn lint:stylelint && yarn lint:spell && yarn lint:package-json",
         "lint:eslint": "eslint . --cache",
-        "lint:fix": "yarn lint:eslint --fix && yarn lint:prettier --write  && yarn lint:stylelint --fix && yarn lint:spell && yarn lint:package-json",
+        "lint:fix": "yarn lint:eslint --fix && yarn lint:prettier --write && yarn lint:stylelint --fix && yarn lint:spell && yarn lint:package-json",
         "lint:package-json": "npmPkgJsonLint --configFile ./.packagerc.js .",
         "lint:prettier": "prettier --log-level=warn --check --cache .",
         "lint:spell": "cspell --config ./.cspellrc.js --no-progress --no-summary --unique '**'",
