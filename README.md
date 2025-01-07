@@ -68,6 +68,8 @@ module.exports = {
             extends: [
                 require.resolve(
                     "@dvukovic/style-guide/src/eslint/configs/jest",
+                    // OR
+                    "@dvukovic/style-guide/src/eslint/configs/vitest",
                 ),
             ],
         },
