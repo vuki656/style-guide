@@ -73,6 +73,14 @@ module.exports = {
                 ),
             ],
         },
+        {
+            files: ["*.ui.test.ts"],
+            extends: [
+                require.resolve(
+                    "@dvukovic/style-guide/src/eslint/configs/playwright",
+                ),
+            ],
+        },
     ],
 }
 ```
@@ -123,6 +131,14 @@ module.exports = {
                 ),
             ],
             files: ["*.test.ts", "*.test.js"],
+        },
+        {
+            files: ["*.ui.test.ts"],
+            extends: [
+                require.resolve(
+                    "@dvukovic/style-guide/src/eslint/configs/playwright",
+                ),
+            ],
         },
         {
             extends: [

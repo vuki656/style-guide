@@ -23,6 +23,7 @@ module.exports = {
             extends: [
                 "./src/eslint/configs/jest.js",
                 "./src/eslint/configs/vitest.js",
+                "./src/eslint/configs/playwright.js",
             ],
             files: ["*.test.ts", "*.test.js"],
         },
