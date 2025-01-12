@@ -17,7 +17,6 @@ module.exports = {
         "playwright/no-get-by-title": "error",
         "playwright/no-nested-step": "error",
         "playwright/no-page-pause": "error",
-        "playwright/no-raw-locators": "error",
         "playwright/no-skipped-test": "error",
         "playwright/no-standalone-expect": "error",
         "playwright/no-unsafe-references": "error",
