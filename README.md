@@ -57,11 +57,7 @@ module.exports = {
     overrides: [
         {
             files: ["*.ts", "*.tsx"],
-            extends: [
-                require.resolve(
-                    "@dvukovic/style-guide/src/eslint/configs/typescript",
-                ),
-            ],
+            extends: [require.resolve("@dvukovic/style-guide/src/eslint/configs/typescript")],
         },
         {
             files: ["*.test.ts"],
@@ -75,11 +71,7 @@ module.exports = {
         },
         {
             files: ["*.ui.test.ts"],
-            extends: [
-                require.resolve(
-                    "@dvukovic/style-guide/src/eslint/configs/playwright",
-                ),
-            ],
+            extends: [require.resolve("@dvukovic/style-guide/src/eslint/configs/playwright")],
         },
     ],
 }
@@ -94,58 +86,32 @@ module.exports = {
     overrides: [
         {
             extends: [
-                require.resolve(
-                    "@dvukovic/style-guide/src/eslint/configs/core",
-                ),
-                require.resolve(
-                    "@dvukovic/style-guide/src/eslint/configs/node",
-                ),
-                require.resolve(
-                    "@dvukovic/style-guide/src/eslint/configs/mobx",
-                ),
-                require.resolve(
-                    "@dvukovic/style-guide/src/eslint/configs/react",
-                ),
-                require.resolve(
-                    "@dvukovic/style-guide/src/eslint/configs/next",
-                ),
+                require.resolve("@dvukovic/style-guide/src/eslint/configs/core"),
+                require.resolve("@dvukovic/style-guide/src/eslint/configs/node"),
+                require.resolve("@dvukovic/style-guide/src/eslint/configs/mobx"),
+                require.resolve("@dvukovic/style-guide/src/eslint/configs/react"),
+                require.resolve("@dvukovic/style-guide/src/eslint/configs/next"),
             ],
             files: ["*.js", ".ts", ".*.cjs", "*.tsx"],
         },
         {
-            extends: [
-                require.resolve(
-                    "@dvukovic/style-guide/src/eslint/configs/typescript",
-                ),
-            ],
+            extends: [require.resolve("@dvukovic/style-guide/src/eslint/configs/typescript")],
             files: ["*.ts", "*.tsx"],
         },
         {
             extends: [
-                require.resolve(
-                    "@dvukovic/style-guide/src/eslint/configs/jest",
-                ),
+                require.resolve("@dvukovic/style-guide/src/eslint/configs/jest"),
                 // OR
-                require.resolve(
-                    "@dvukovic/style-guide/src/eslint/configs/vitest",
-                ),
+                require.resolve("@dvukovic/style-guide/src/eslint/configs/vitest"),
             ],
             files: ["*.test.ts", "*.test.js"],
         },
         {
             files: ["*.ui.test.ts"],
-            extends: [
-                require.resolve(
-                    "@dvukovic/style-guide/src/eslint/configs/playwright",
-                ),
-            ],
+            extends: [require.resolve("@dvukovic/style-guide/src/eslint/configs/playwright")],
         },
         {
-            extends: [
-                require.resolve(
-                    "@dvukovic/style-guide/src/graphql/configs/core",
-                ),
-            ],
+            extends: [require.resolve("@dvukovic/style-guide/src/graphql/configs/core")],
             files: ["*.graphql"],
             parser: "@graphql-eslint/eslint-plugin",
             parserOptions: {

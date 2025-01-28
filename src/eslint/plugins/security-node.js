@@ -2,8 +2,7 @@
 module.exports = {
     plugins: ["security-node"],
     rules: {
-        "security-node/detect-absence-of-name-option-in-exrpress-session":
-            "error",
+        "security-node/detect-absence-of-name-option-in-exrpress-session": "error",
         "security-node/detect-buffer-unsafe-allocation": "error",
         "security-node/detect-child-process": "error",
         "security-node/detect-crlf": "error",
@@ -15,10 +14,8 @@ module.exports = {
         "security-node/detect-non-literal-require-calls": "error",
         "security-node/detect-nosql-injection": "error",
         "security-node/detect-option-multiplestatements-in-mysql": "error",
-        "security-node/detect-option-rejectunauthorized-in-nodejs-httpsrequest":
-            "error",
-        "security-node/detect-option-unsafe-in-serialize-javascript-npm-package":
-            "error",
+        "security-node/detect-option-rejectunauthorized-in-nodejs-httpsrequest": "error",
+        "security-node/detect-option-unsafe-in-serialize-javascript-npm-package": "error",
         "security-node/detect-possible-timing-attacks": "error",
         "security-node/detect-runinthiscontext-method-in-nodes-vm": "error",
         "security-node/detect-security-missconfiguration-cookie": "error",

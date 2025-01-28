@@ -2,10 +2,7 @@
 module.exports = {
     plugins: ["jest"],
     rules: {
-        "jest/consistent-test-it": [
-            "error",
-            { fn: "test", withinDescribe: "test" },
-        ],
+        "jest/consistent-test-it": ["error", { fn: "test", withinDescribe: "test" }],
         "jest/expect-expect": "error",
         "jest/max-nested-describe": ["error", { max: 3 }],
         "jest/no-alias-methods": "error",
@@ -42,10 +39,7 @@ module.exports = {
         "jest/prefer-hooks-in-order": "error",
         "jest/prefer-hooks-on-top": "error",
         "jest/prefer-jest-mocked": "error",
-        "jest/prefer-lowercase-title": [
-            "error",
-            { ignoreTopLevelDescribe: true },
-        ],
+        "jest/prefer-lowercase-title": ["error", { ignoreTopLevelDescribe: true }],
         "jest/prefer-mock-promise-shorthand": "error",
         "jest/prefer-spy-on": "error",
         "jest/prefer-strict-equal": "error",

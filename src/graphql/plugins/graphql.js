@@ -5,12 +5,7 @@ module.exports = {
         "@graphql-eslint/alphabetize": [
             "error",
             {
-                arguments: [
-                    "FieldDefinition",
-                    "Field",
-                    "DirectiveDefinition",
-                    "Directive",
-                ],
+                arguments: ["FieldDefinition", "Field", "DirectiveDefinition", "Directive"],
                 fields: [
                     "InputObjectTypeDefinition",
                     "InterfaceTypeDefinition",

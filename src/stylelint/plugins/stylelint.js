@@ -3,10 +3,7 @@ const stylelint = {
     rules: {
         "alpha-value-notation": "percentage",
         "annotation-no-unknown": true,
-        "at-rule-empty-line-before": [
-            "always",
-            { ignore: ["first-nested", "after-comment"] },
-        ],
+        "at-rule-empty-line-before": ["always", { ignore: ["first-nested", "after-comment"] }],
         "at-rule-no-unknown": true,
         "at-rule-no-vendor-prefix": true,
         "block-no-empty": true,

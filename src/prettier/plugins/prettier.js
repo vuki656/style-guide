@@ -7,7 +7,7 @@ const prettierPlugin = {
     endOfLine: "lf",
     htmlWhitespaceSensitivity: "css",
     jsxSingleQuote: false,
-    printWidth: 80,
+    printWidth: 100,
     proseWrap: "always",
     quoteProps: "as-needed",
     semi: false,

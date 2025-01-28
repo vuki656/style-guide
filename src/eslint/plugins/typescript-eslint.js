@@ -101,8 +101,7 @@ module.exports = {
                 allowConstantLoopConditions: true,
             },
         ],
-        "@typescript-eslint/no-unnecessary-parameter-property-assignment":
-            "error",
+        "@typescript-eslint/no-unnecessary-parameter-property-assignment": "error",
         "@typescript-eslint/no-unnecessary-qualifier": "error",
         "@typescript-eslint/no-unnecessary-template-expression": "error",
         "@typescript-eslint/no-unnecessary-type-arguments": "error",
