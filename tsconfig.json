@@ -4,10 +4,12 @@
         "target": "ES2023",
         "module": "commonjs",
         "esModuleInterop": true,
+        "allowJs": true,
+        "checkJs": true,
         "noUncheckedIndexedAccess": true,
         "forceConsistentCasingInFileNames": true,
         "strict": true,
         "skipLibCheck": true
     },
-    "include": ["src/**/*", "*.js", ".*.js"]
+    "include": ["*.js", ".*.js", "*.ts", ".*.ts", "src", ".eslintrc.js"]
 }
