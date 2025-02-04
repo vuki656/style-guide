@@ -109,6 +109,7 @@ module.exports = {
         "@typescript-eslint/no-unnecessary-type-constraint": "error",
         "@typescript-eslint/no-unnecessary-type-parameters": "error",
         "@typescript-eslint/no-unsafe-function-type": "error",
+        "@typescript-eslint/no-unsafe-type-assertion": "off",
         "@typescript-eslint/no-unused-expressions": [
             "error",
             {
