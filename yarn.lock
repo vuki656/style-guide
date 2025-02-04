@@ -1098,7 +1098,7 @@ __metadata:
     "@types/node": "npm:22.13.1"
     "@types/react": "npm:19.0.8"
     "@typescript-eslint/parser": "npm:7.18.0"
-    "@vitest/eslint-plugin": "npm:1.1.24"
+    "@vitest/eslint-plugin": "npm:1.1.25"
     cspell: "npm:8.17.3"
     eslint: "npm:8.57.1"
     eslint-plugin-etc: "npm:2.0.3"
@@ -3009,9 +3009,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/eslint-plugin@npm:1.1.24":
-  version: 1.1.24
-  resolution: "@vitest/eslint-plugin@npm:1.1.24"
+"@vitest/eslint-plugin@npm:1.1.25":
+  version: 1.1.25
+  resolution: "@vitest/eslint-plugin@npm:1.1.25"
   peerDependencies:
     "@typescript-eslint/utils": ">= 8.0"
     eslint: ">= 8.57.0"
@@ -3022,7 +3022,7 @@ __metadata:
       optional: true
     vitest:
       optional: true
-  checksum: 10c0/3c7d2a491a56f66bbac208b3659e81f0e6cc3aec9784057bef9c8d662f84df26cff1536d0844953e5f9af3a381270d3364bd07e94dc184faad48faf22c366dea
+  checksum: 10c0/9707dbad11d86136a36c6c820fea063cb96e5fa6f8111ad24d3a9894df5594154da9a28ab51858a158ccaff4f49fbd79baada57b49d4891f98d5251cd53c90cb
   languageName: node
   linkType: hard
 
