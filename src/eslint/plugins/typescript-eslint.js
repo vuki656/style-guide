@@ -107,6 +107,7 @@ module.exports = {
         "@typescript-eslint/no-unnecessary-type-assertion": "error",
         "@typescript-eslint/no-unnecessary-type-constraint": "error",
         "@typescript-eslint/no-unnecessary-type-parameters": "error",
+        "@typescript-eslint/no-unsafe-function-type": "error",
         "@typescript-eslint/no-unused-expressions": [
             "error",
             {
@@ -128,6 +129,7 @@ module.exports = {
         "@typescript-eslint/no-use-before-define": "error",
         "@typescript-eslint/no-useless-constructor": "error",
         "@typescript-eslint/no-useless-empty-export": "error",
+        "@typescript-eslint/no-wrapper-object-types": "error",
         "@typescript-eslint/non-nullable-type-assertion-style": "error",
         "@typescript-eslint/only-throw-error": "error",
         "@typescript-eslint/prefer-as-const": "error",
