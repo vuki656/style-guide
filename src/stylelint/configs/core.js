@@ -9,6 +9,7 @@ module.exports = {
     reportDescriptionlessDisables: true,
     reportInvalidScopeDisables: true,
     reportNeedlessDisables: true,
+    reportUnscopedDisables: true,
     rules: {
         ...stylelint.rules,
         ...stylelintOrder.rules,
