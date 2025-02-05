@@ -1,4 +1,4 @@
-/** @type {import("@types/eslint").ESLint.ConfigData} */
+/** @type {import("eslint").ESLint.ConfigData} */
 module.exports = {
     plugins: ["@next/eslint-plugin-next"],
     rules: {

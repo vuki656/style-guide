@@ -36,7 +36,7 @@ add the following to `.gitignore`
 Create a `.eslintrc.js` in root with the following:
 
 ```javascript
-/** @type {import("@types/eslint").ESLint.ConfigData} */
+/** @type {import("eslint").ESLint.ConfigData} */
 module.exports = {
     root: true,
     extends: [
@@ -80,7 +80,7 @@ module.exports = {
 If you need graphql config, everything has to be configured trough `overrides`
 
 ```javascript
-/** @type {import("@types/eslint").ESLint.ConfigData} */
+/** @type {import("eslint").ESLint.ConfigData} */
 module.exports = {
     ignorePatterns: ["node_modules"],
     overrides: [
