@@ -164,6 +164,7 @@ module.exports = {
             "error",
             {
                 allowDefaultCaseForExhaustiveSwitch: true,
+                considerDefaultExhaustiveForUnions: true,
                 requireDefaultForNonUnion: false,
             },
         ],
