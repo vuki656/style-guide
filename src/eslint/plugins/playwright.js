@@ -3,7 +3,7 @@ module.exports = {
     plugins: ["playwright"],
     rules: {
         "playwright/expect-expect": "error",
-        "playwright/max-expects": ["error", { max: 10 }],
+        "playwright/max-expects": ["error", { max: 15 }],
         "playwright/max-nested-describe": ["error", { max: 4 }],
         "playwright/missing-playwright-await": "error",
         "playwright/no-commented-out-tests": "error",
