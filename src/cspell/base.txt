@@ -87,3 +87,4 @@ mdxeditor
 posthog
 overscan
 codegen
+turbopack
