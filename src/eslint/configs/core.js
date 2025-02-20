@@ -2,6 +2,7 @@
 module.exports = {
     extends: [
         "../plugins/eslint.js",
+        "../plugins/es-x.js",
         "../plugins/eslint-comments.js",
         "../plugins/promise.js",
         "../plugins/unicorn.js",
