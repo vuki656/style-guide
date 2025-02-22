@@ -89,3 +89,5 @@ overscan
 codegen
 turbopack
 toarray
+nodenext
+maxage
