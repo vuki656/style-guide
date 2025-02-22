@@ -32,6 +32,5 @@ module.exports = {
             },
         ],
         "@stylistic/spaced-comment": ["error", "always", { markers: ["/"] }],
-        "@stylistic/wrap-regex": "error",
     },
 }
