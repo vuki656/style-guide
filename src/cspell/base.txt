@@ -92,3 +92,5 @@ toarray
 nodenext
 maxage
 pkey
+atproto
+bsky
