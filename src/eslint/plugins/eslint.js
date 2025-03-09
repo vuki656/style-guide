@@ -81,7 +81,6 @@ module.exports = {
         "no-misleading-character-class": "error",
         "no-multi-assign": "error",
         "no-multi-str": "error",
-        "no-nested-ternary": "error",
         "no-new": "error",
         "no-new-func": "error",
         "no-new-native-nonconstructor": "error",

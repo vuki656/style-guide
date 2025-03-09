@@ -2,7 +2,6 @@
 module.exports = {
     plugins: ["unicorn"],
     rules: {
-        "no-nested-ternary": "off",
         "unicorn/better-regex": "error",
         "unicorn/catch-error-name": "error",
         "unicorn/consistent-destructuring": "error",
@@ -44,7 +43,6 @@ module.exports = {
         "unicorn/no-lonely-if": "error",
         "unicorn/no-magic-array-flat-depth": "error",
         "unicorn/no-negation-in-equality-check": "error",
-        "unicorn/no-nested-ternary": "error",
         "unicorn/no-new-array": "error",
         "unicorn/no-new-buffer": "error",
         "unicorn/no-object-as-default-parameter": "error",
