@@ -95,3 +95,12 @@ pkey
 atproto
 bsky
 cellspacing
+nutriscore
+revenuecat
+cocoapods
+logrocket
+resizer
+mmkv
+deintegrate
+pressable
+intolerances
