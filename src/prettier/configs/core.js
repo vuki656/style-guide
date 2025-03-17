@@ -13,6 +13,7 @@ module.exports = {
         "prettier-plugin-packagejson",
         "prettier-plugin-sh",
         "prettier-plugin-toml",
+        "prettier-plugin-tailwindcss",
     ],
     ...prettierPlugin,
     ...prettierPluginSql,
