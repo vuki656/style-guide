@@ -53,6 +53,7 @@
         "eslint-plugin-sonarjs": "1.0.4",
         "eslint-plugin-sort-destructure-keys": "2.0.0",
         "eslint-plugin-sort-keys-fix": "1.1.2",
+        "eslint-plugin-storybook": "0.11.6",
         "eslint-plugin-typescript-sort-keys": "3.3.0",
         "eslint-plugin-unicorn": "56.0.1",
         "eslint-plugin-unused-imports": "4.1.4",
@@ -68,6 +69,7 @@
         "typescript-eslint": "8.23.0"
     },
     "devDependencies": {
+        "@storybook/react": "8.6.7",
         "@types/eslint": "8.56.12",
         "@types/jest": "29.5.14",
         "@types/node": "22.13.1",
@@ -107,7 +109,7 @@
             "optional": true
         }
     },
-    "packageManager": "yarn@4.6.0",
+    "packageManager": "yarn@4.7.0",
     "engines": {
         "node": ">=20.0.0"
     },
