@@ -73,6 +73,10 @@ module.exports = {
             files: ["*.ui.test.ts"],
             extends: [require.resolve("@dvukovic/style-guide/src/eslint/configs/playwright")],
         },
+        {
+            extends: [require.resolve("@dvukovic/style-guide/src/eslint/configs/storybook")],
+            files: ["./**/*.stories.@(ts|tsx)"],
+        },
     ],
 }
 ```
