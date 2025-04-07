@@ -106,3 +106,5 @@ pressable
 intolerances
 autodocs
 msal
+xlink
+kniprc
