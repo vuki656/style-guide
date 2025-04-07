@@ -54,7 +54,6 @@ module.exports = {
         "no-dupe-else-if": "error",
         "no-duplicate-case": "error",
         "no-else-return": ["error", { allowElseIf: false }],
-        "no-empty": "error",
         "no-empty": ["error", { allowEmptyCatch: false }],
         "no-empty-character-class": "error",
         "no-empty-function": ["error", { allow: ["functions"] }],
