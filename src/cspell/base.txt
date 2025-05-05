@@ -109,3 +109,5 @@ msal
 xlink
 kniprc
 webrtc
+speculationrules
+hrefs
