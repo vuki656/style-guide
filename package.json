@@ -1,14 +1,14 @@
 {
-    "name": "@dvukovic/style-guide",
+    "name": "@medforall/style-guide",
     "version": "0.3.84",
-    "description": "My own style guide",
+    "description": "Style guide",
     "repository": {
         "type": "git",
-        "url": "https://github.com/vuki656/style-guide"
+        "url": "https://github.com/Medforall/mfa-style-guide"
     },
     "license": "MIT",
     "author": {
-        "name": "Domagoj Vukovic"
+        "name": "Medforall"
     },
     "type": "commonjs",
     "files": [
@@ -109,7 +109,7 @@
             "optional": true
         }
     },
-    "packageManager": "yarn@4.7.0",
+    "packageManager": "yarn@4.9.1",
     "engines": {
         "node": ">=20.0.0"
     },

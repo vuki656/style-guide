@@ -5,7 +5,7 @@
 To get the kitchen sink install the required dependencies:
 
 ```
-yarn add -D eslint@8.57.0 prettier cspell stylelint npm-package-json-lint @dvukovic/style-guide
+yarn add -D eslint@8.57.0 prettier cspell stylelint npm-package-json-lint @medforall/style-guide
 ```
 
 add the following scripts
@@ -41,13 +41,13 @@ module.exports = {
     root: true,
     extends: [
         // JS/TS
-        require.resolve("@dvukovic/style-guide/src/eslint/configs/core"),
-        require.resolve("@dvukovic/style-guide/src/eslint/configs/node"),
+        require.resolve("@medforall/style-guide/src/eslint/configs/core"),
+        require.resolve("@medforall/style-guide/src/eslint/configs/node"),
 
         // Libraries
-        require.resolve("@dvukovic/style-guide/src/eslint/configs/next"),
-        require.resolve("@dvukovic/style-guide/src/eslint/configs/mobx"),
-        require.resolve("@dvukovic/style-guide/src/eslint/configs/react"),
+        require.resolve("@medforall/style-guide/src/eslint/configs/next"),
+        require.resolve("@medforall/style-guide/src/eslint/configs/mobx"),
+        require.resolve("@medforall/style-guide/src/eslint/configs/react"),
     ],
     parser: "@typescript-eslint/parser",
     parserOptions: {
@@ -57,24 +57,24 @@ module.exports = {
     overrides: [
         {
             files: ["*.ts", "*.tsx"],
-            extends: [require.resolve("@dvukovic/style-guide/src/eslint/configs/typescript")],
+            extends: [require.resolve("@medforall/style-guide/src/eslint/configs/typescript")],
         },
         {
             files: ["*.test.ts"],
             extends: [
                 require.resolve(
-                    "@dvukovic/style-guide/src/eslint/configs/jest",
+                    "@medforall/style-guide/src/eslint/configs/jest",
                     // OR
-                    "@dvukovic/style-guide/src/eslint/configs/vitest",
+                    "@medforall/style-guide/src/eslint/configs/vitest",
                 ),
             ],
         },
         {
             files: ["*.ui.test.ts"],
-            extends: [require.resolve("@dvukovic/style-guide/src/eslint/configs/playwright")],
+            extends: [require.resolve("@medforall/style-guide/src/eslint/configs/playwright")],
         },
         {
-            extends: [require.resolve("@dvukovic/style-guide/src/eslint/configs/storybook")],
+            extends: [require.resolve("@medforall/style-guide/src/eslint/configs/storybook")],
             files: ["./**/*.stories.@(ts|tsx)"],
         },
     ],
@@ -90,32 +90,32 @@ module.exports = {
     overrides: [
         {
             extends: [
-                require.resolve("@dvukovic/style-guide/src/eslint/configs/core"),
-                require.resolve("@dvukovic/style-guide/src/eslint/configs/node"),
-                require.resolve("@dvukovic/style-guide/src/eslint/configs/mobx"),
-                require.resolve("@dvukovic/style-guide/src/eslint/configs/react"),
-                require.resolve("@dvukovic/style-guide/src/eslint/configs/next"),
+                require.resolve("@medforall/style-guide/src/eslint/configs/core"),
+                require.resolve("@medforall/style-guide/src/eslint/configs/node"),
+                require.resolve("@medforall/style-guide/src/eslint/configs/mobx"),
+                require.resolve("@medforall/style-guide/src/eslint/configs/react"),
+                require.resolve("@medforall/style-guide/src/eslint/configs/next"),
             ],
             files: ["*.js", ".ts", ".*.cjs", "*.tsx"],
         },
         {
-            extends: [require.resolve("@dvukovic/style-guide/src/eslint/configs/typescript")],
+            extends: [require.resolve("@medforall/style-guide/src/eslint/configs/typescript")],
             files: ["*.ts", "*.tsx"],
         },
         {
             extends: [
-                require.resolve("@dvukovic/style-guide/src/eslint/configs/jest"),
+                require.resolve("@medforall/style-guide/src/eslint/configs/jest"),
                 // OR
-                require.resolve("@dvukovic/style-guide/src/eslint/configs/vitest"),
+                require.resolve("@medforall/style-guide/src/eslint/configs/vitest"),
             ],
             files: ["*.test.ts", "*.test.js"],
         },
         {
             files: ["*.ui.test.ts"],
-            extends: [require.resolve("@dvukovic/style-guide/src/eslint/configs/playwright")],
+            extends: [require.resolve("@medforall/style-guide/src/eslint/configs/playwright")],
         },
         {
-            extends: [require.resolve("@dvukovic/style-guide/src/graphql/configs/core")],
+            extends: [require.resolve("@medforall/style-guide/src/graphql/configs/core")],
             files: ["*.graphql"],
             parser: "@graphql-eslint/eslint-plugin",
             parserOptions: {
@@ -140,7 +140,7 @@ Create a `.prettierrc.js` in root with the following:
 ```javascript
 /** @type {import("prettier").Config} */
 module.exports = {
-    ...require("@dvukovic/style-guide/src/prettier/configs/core"),
+    ...require("@medforall/style-guide/src/prettier/configs/core"),
 }
 ```
 
@@ -151,7 +151,7 @@ Create a `.stylelintrc.js` in root with the following:
 ```javascript
 /** @type {import("stylelint").Config} */
 module.exports = {
-    extends: "@dvukovic/style-guide/src/stylelint/configs/core",
+    extends: "@medforall/style-guide/src/stylelint/configs/core",
 }
 ```
 
@@ -171,7 +171,7 @@ module.exports = {
     dictionaryDefinitions: [
         {
             name: "shared",
-            path: "./node_modules/@dvukovic/style-guide/src/cspell/base.txt",
+            path: "./node_modules/@medforall/style-guide/src/cspell/base.txt",
         },
     ],
     useGitignore: true,
@@ -185,6 +185,6 @@ Create a `.packagerc.js` in root with the following:
 ```javascript
 /** @type {import("npm-package-json-lint").NpmPackageJsonLint} */
 module.exports = {
-    extends: "@dvukovic/style-guide/src/package-json/configs/core",
+    extends: "@medforall/style-guide/src/package-json/configs/core",
 }
 ```
