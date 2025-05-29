@@ -1,4 +1,4 @@
-# Style Guide
+# Medforall Style Guide
 
 ## Getting Started
 
