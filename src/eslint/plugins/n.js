@@ -17,7 +17,12 @@ module.exports = {
         "n/no-process-env": "error",
         "n/no-process-exit": "error",
         "n/no-unpublished-bin": "error",
-        "n/no-unsupported-features/es-builtins": "error",
+        "n/no-unsupported-features/es-builtins": [
+            "error",
+            {
+                version: ">=22.0.0",
+            },
+        ],
         "n/prefer-global/buffer": "error",
         "n/prefer-global/console": "error",
         "n/prefer-global/process": "error",
