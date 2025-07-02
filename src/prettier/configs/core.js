@@ -5,7 +5,6 @@ const { prettierPlugin } = require("../plugins/prettier.js")
 /** @type {import("prettier").Config} */
 module.exports = {
     plugins: [
-        "@prettier/plugin-xml",
         "prettier-plugin-prisma",
         "prettier-plugin-sql",
         "prettier-plugin-embed",
