@@ -4,7 +4,7 @@ const stylelint = {
         "alpha-value-notation": "percentage",
         "annotation-no-unknown": true,
         "at-rule-empty-line-before": ["always", { ignore: ["first-nested", "after-comment"] }],
-        "at-rule-no-unknown": [true, { ignoreAtRules: "theme" }],
+        "at-rule-no-unknown": [true, { ignoreAtRules: ["theme", "mixin"] }],
         "at-rule-no-vendor-prefix": true,
         "block-no-empty": true,
         "color-function-notation": "modern",
