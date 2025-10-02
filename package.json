@@ -86,7 +86,7 @@
         "typescript": "5.7.3"
     },
     "peerDependencies": {
-        "cspell": "8",
+        "cspell": "8 || 9",
         "eslint": "8.57.1",
         "npm-package-json-lint": "8",
         "prettier": "3",
