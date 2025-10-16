@@ -22,7 +22,6 @@ module.exports = {
         "@next/next/no-sync-scripts": "error",
         "@next/next/no-title-in-document-head": "error",
         "@next/next/no-typos": "error",
-        "@next/next/no-typos": "error",
         "@next/next/no-unwanted-polyfillio": "error",
     },
 }
