@@ -19,11 +19,9 @@
         "src/package-json"
     ],
     "scripts": {
-        "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:stylelint && yarn lint:spell && yarn lint:package-json",
+        "lint": "yarn lint:eslint && yarn lint:stylelint && yarn lint:spell",
         "lint:eslint": "eslint . --cache --concurrency=auto",
-        "lint:fix": "yarn lint:eslint --fix --concurrency=auto --cache && yarn lint:prettier --write  && yarn lint:stylelint --fix && yarn lint:spell && yarn lint:package-json",
-        "lint:package-json": "npmPkgJsonLint --configFile ./.packagerc.js .",
-        "lint:prettier": "prettier --log-level=warn --check --cache .",
+        "lint:fix": "yarn lint:eslint --fix && yarn lint:stylelint --fix",
         "lint:spell": "cspell --config ./.cspellrc.js --no-progress --no-summary --unique '**'",
         "lint:stylelint": "stylelint ./**/*.css --cache",
         "release": "release-it",
@@ -44,6 +42,7 @@
         "eslint-plugin-mobx": "0.0.13",
         "eslint-plugin-n": "17.23.1",
         "eslint-plugin-playwright": "2.4.0",
+        "eslint-plugin-prettier": "5.4.1",
         "eslint-plugin-promise": "7.2.1",
         "eslint-plugin-react": "7.37.5",
         "eslint-plugin-react-hooks": "7.0.1",

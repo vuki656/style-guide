@@ -1,58 +1,62 @@
 # Style Guide
 
-## Getting Started
+Linting and formatting configuration for TypeScript/JavaScript projects.
 
-To get the kitchen sink install the required dependencies:
+## Installation
 
+```bash
+yarn add -D @dvukovic/style-guide eslint prettier cspell stylelint npm-package-json-lint
 ```
-yarn add -D eslint@^9.0.0 prettier cspell stylelint npm-package-json-lint @dvukovic/style-guide
-```
 
-add the following scripts
+## Setup
+
+Add these scripts to your `package.json`:
 
 ```json
 {
     "scripts": {
-        "lint": "yarn lint:prettier && yarn lint:eslint && yarn lint:stylelint && yarn lint:spell && yarn lint:package-json",
-        "lint:eslint": "eslint . --cache",
-        "lint:fix": "yarn lint:eslint --fix && yarn lint:prettier --write && yarn lint:stylelint --fix && yarn lint:spell && yarn lint:package-json",
+        "lint": "yarn lint:eslint && yarn lint:stylelint && yarn lint:spell && yarn lint:package-json",
+        "lint:eslint": "eslint . --cache --concurrency=auto",
+        "lint:fix": "yarn lint:eslint --fix && yarn lint:stylelint --fix",
         "lint:package-json": "npmPkgJsonLint --configFile ./.packagerc.js .",
-        "lint:prettier": "prettier --log-level=warn --check --cache .",
         "lint:spell": "cspell --config ./.cspellrc.js --no-progress --no-summary --unique '**'",
         "lint:stylelint": "stylelint ./**/*.css --cache"
     }
 }
 ```
 
-add the following to `.gitignore`
+Add to `.gitignore`:
 
 ```
 .eslintcache
 .stylelintcache
 ```
 
-### ESLint
+---
 
-Create a `eslint.config.js` in root with the following:
+## ESLint
+
+Prettier is integrated into ESLint via `eslint-plugin-prettier`. Running `eslint --fix` will also format code.
+
+Create `eslint.config.js`:
 
 ```javascript
 import tseslint from "typescript-eslint"
 
 import core from "@dvukovic/style-guide/src/eslint/configs/core.js"
-import node from "@dvukovic/style-guide/src/eslint/configs/node.js"
-import next from "@dvukovic/style-guide/src/eslint/configs/next.js"
-import mobx from "@dvukovic/style-guide/src/eslint/configs/mobx.js"
-import react from "@dvukovic/style-guide/src/eslint/configs/react.js"
-import typescript from "@dvukovic/style-guide/src/eslint/configs/typescript.js"
 import jest from "@dvukovic/style-guide/src/eslint/configs/jest.js"
-import vitest from "@dvukovic/style-guide/src/eslint/configs/vitest.js"
+import mobx from "@dvukovic/style-guide/src/eslint/configs/mobx.js"
+import next from "@dvukovic/style-guide/src/eslint/configs/next.js"
+import node from "@dvukovic/style-guide/src/eslint/configs/node.js"
 import playwright from "@dvukovic/style-guide/src/eslint/configs/playwright.js"
+import react from "@dvukovic/style-guide/src/eslint/configs/react.js"
 import storybook from "@dvukovic/style-guide/src/eslint/configs/storybook.js"
+import typescript from "@dvukovic/style-guide/src/eslint/configs/typescript.js"
+import typescriptStrict from "@dvukovic/style-guide/src/eslint/configs/typescript-strict.js"
+import vitest from "@dvukovic/style-guide/src/eslint/configs/vitest.js"
 
 export default tseslint.config(
-    {
-        ignores: ["node_modules", ".next", "dist", "build"],
-    },
+    { ignores: ["node_modules", ".next", "dist", "build"] },
     ...core,
     ...node,
     ...next,
@@ -68,13 +72,15 @@ export default tseslint.config(
     },
     {
         files: ["**/*.ts", "**/*.tsx"],
-        extends: [...typescript],
+        extends: [...typescript, ...typescriptStrict],
     },
     {
         files: ["**/*.test.ts"],
         extends: [...jest],
-        // OR
-        // extends: [...vitest],
+    },
+    {
+        files: ["**/*.test.ts"],
+        extends: [...vitest],
     },
     {
         files: ["**/*.ui.test.ts"],
@@ -87,9 +93,27 @@ export default tseslint.config(
 )
 ```
 
-### Prettier
+### Available Configs
 
-Create a `.prettierrc.js` in root with the following:
+| Config              | Description                  |
+| ------------------- | ---------------------------- |
+| `core`              | Base JavaScript rules + Prettier |
+| `node`              | Node.js specific rules       |
+| `react`             | React and JSX rules          |
+| `next`              | Next.js specific rules       |
+| `mobx`              | MobX state management rules  |
+| `typescript`        | TypeScript rules             |
+| `typescript-strict` | Strict TypeScript rules      |
+| `jest`              | Jest testing rules           |
+| `vitest`            | Vitest testing rules         |
+| `playwright`        | Playwright E2E testing rules |
+| `storybook`         | Storybook rules              |
+
+---
+
+## Prettier
+
+Create `prettier.config.js`:
 
 ```javascript
 import prettierConfig from "@dvukovic/style-guide/src/prettier/configs/core.js"
@@ -100,9 +124,11 @@ export default {
 }
 ```
 
-### Stylelint
+---
 
-Create a `.stylelintrc.js` in root with the following:
+## Stylelint
+
+Create `.stylelintrc.js`:
 
 ```javascript
 /** @type {import("stylelint").Config} */
@@ -111,9 +137,11 @@ export default {
 }
 ```
 
-### CSpell
+---
 
-Create a `.cspellrc.js` in root with the following:
+## CSpell
+
+Create `.cspellrc.js`:
 
 ```javascript
 /** @type {import("cspell").FileSettings} */
@@ -134,9 +162,11 @@ export default {
 }
 ```
 
-### Package Json Lint
+---
 
-Create a `.packagerc.js` in root with the following:
+## Package JSON Lint
+
+Create `.packagerc.js`:
 
 ```javascript
 /** @type {import("npm-package-json-lint").NpmPackageJsonLint} */
@@ -144,3 +174,12 @@ export default {
     extends: "@dvukovic/style-guide/src/package-json/configs/core.js",
 }
 ```
+
+---
+
+## Requirements
+
+- Node.js >= 20.0.0
+- ESLint 9+
+- Prettier 3+
+- Stylelint 16+
