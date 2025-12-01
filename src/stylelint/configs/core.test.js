@@ -1,6 +1,6 @@
-const stylelint = require("stylelint")
+import stylelint from "stylelint"
 
-const config = require("./core.js")
+import config from "./core.js"
 
 describe("stylelint core", () => {
     test("loads without errors", async () => {
@@ -22,4 +22,3 @@ describe("stylelint core", () => {
         expect(result.errored).toBe(true)
     })
 })
-

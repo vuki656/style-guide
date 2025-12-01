@@ -1,6 +1,6 @@
-const promise = require("eslint-plugin-promise")
+import promise from "eslint-plugin-promise"
 
-module.exports = {
+const plugin = {
     plugins: {
         promise,
     },
@@ -18,3 +18,5 @@ module.exports = {
         "promise/valid-params": "error",
     },
 }
+
+export default plugin

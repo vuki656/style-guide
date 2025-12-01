@@ -1,3 +1,5 @@
-const nextPlugin = require("../plugins/next.js")
+import nextPlugin from "../plugins/next.js"
 
-module.exports = [nextPlugin]
+const nextConfig = [nextPlugin]
+
+export default nextConfig

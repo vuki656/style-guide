@@ -1,6 +1,6 @@
-const unusedImports = require("eslint-plugin-unused-imports")
+import unusedImports from "eslint-plugin-unused-imports"
 
-module.exports = {
+const plugin = {
     plugins: {
         "unused-imports": unusedImports,
     },
@@ -8,3 +8,5 @@ module.exports = {
         "unused-imports/no-unused-imports": "error",
     },
 }
+
+export default plugin

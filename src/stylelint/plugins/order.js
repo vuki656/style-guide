@@ -1,5 +1,5 @@
 /** @type {import("stylelint").Config} */
-const stylelintOrder = {
+const plugin = {
     rules: {
         "order/order": [
             "custom-properties",
@@ -14,6 +14,4 @@ const stylelintOrder = {
     },
 }
 
-module.exports = {
-    stylelintOrder,
-}
+export default plugin

@@ -1,3 +1,5 @@
-const vitestPlugin = require("../plugins/vitest.js")
+import vitestPlugin from "../plugins/vitest.js"
 
-module.exports = [vitestPlugin]
+const vitestConfig = [vitestPlugin]
+
+export default vitestConfig

@@ -1,3 +1,5 @@
-const mobxPlugin = require("../plugins/mobx.js")
+import mobxPlugin from "../plugins/mobx.js"
 
-module.exports = [mobxPlugin]
+const mobxConfig = [mobxPlugin]
+
+export default mobxConfig

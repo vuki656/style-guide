@@ -10,7 +10,7 @@
     "author": {
         "name": "Domagoj Vukovic"
     },
-    "type": "commonjs",
+    "type": "module",
     "files": [
         "src/eslint",
         "src/cspell",
@@ -20,7 +20,7 @@
         "src/package-json"
     ],
     "scripts": {
-        "lint": "yarn lint:prettier && yarn lint:eslint && yarn lint:stylelint && yarn lint:spell && yarn lint:package-json",
+        "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:stylelint && yarn lint:spell && yarn lint:package-json",
         "lint:eslint": "eslint . --cache --concurrency=auto",
         "lint:fix": "yarn lint:eslint --fix --concurrency=auto --cache && yarn lint:prettier --write  && yarn lint:stylelint --fix && yarn lint:spell && yarn lint:package-json",
         "lint:package-json": "npmPkgJsonLint --configFile ./.packagerc.js .",

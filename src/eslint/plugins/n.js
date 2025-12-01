@@ -1,6 +1,6 @@
-const pluginNode = require("eslint-plugin-n")
+import pluginNode from "eslint-plugin-n"
 
-module.exports = {
+const plugin = {
     plugins: {
         n: pluginNode,
     },
@@ -38,3 +38,5 @@ module.exports = {
         "n/prefer-promises/fs": "error",
     },
 }
+
+export default plugin

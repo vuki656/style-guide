@@ -1,6 +1,6 @@
-const typescriptSortKeys = require("eslint-plugin-typescript-sort-keys")
+import typescriptSortKeys from "eslint-plugin-typescript-sort-keys"
 
-module.exports = {
+const plugin = {
     plugins: {
         "typescript-sort-keys": typescriptSortKeys,
     },
@@ -9,3 +9,5 @@ module.exports = {
         "typescript-sort-keys/string-enum": "error",
     },
 }
+
+export default plugin

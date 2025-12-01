@@ -1,3 +1,5 @@
-const jestPlugin = require("../plugins/jest.js")
+import jestPlugin from "../plugins/jest.js"
 
-module.exports = [jestPlugin]
+const jestConfig = [jestPlugin]
+
+export default jestConfig

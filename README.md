@@ -36,20 +36,20 @@ add the following to `.gitignore`
 Create a `eslint.config.js` in root with the following:
 
 ```javascript
-const tseslint = require("typescript-eslint")
+import tseslint from "typescript-eslint"
 
-const core = require("@dvukovic/style-guide/src/eslint/configs/core")
-const node = require("@dvukovic/style-guide/src/eslint/configs/node")
-const next = require("@dvukovic/style-guide/src/eslint/configs/next")
-const mobx = require("@dvukovic/style-guide/src/eslint/configs/mobx")
-const react = require("@dvukovic/style-guide/src/eslint/configs/react")
-const typescript = require("@dvukovic/style-guide/src/eslint/configs/typescript")
-const jest = require("@dvukovic/style-guide/src/eslint/configs/jest")
-const vitest = require("@dvukovic/style-guide/src/eslint/configs/vitest")
-const playwright = require("@dvukovic/style-guide/src/eslint/configs/playwright")
-const storybook = require("@dvukovic/style-guide/src/eslint/configs/storybook")
+import core from "@dvukovic/style-guide/src/eslint/configs/core.js"
+import node from "@dvukovic/style-guide/src/eslint/configs/node.js"
+import next from "@dvukovic/style-guide/src/eslint/configs/next.js"
+import mobx from "@dvukovic/style-guide/src/eslint/configs/mobx.js"
+import react from "@dvukovic/style-guide/src/eslint/configs/react.js"
+import typescript from "@dvukovic/style-guide/src/eslint/configs/typescript.js"
+import jest from "@dvukovic/style-guide/src/eslint/configs/jest.js"
+import vitest from "@dvukovic/style-guide/src/eslint/configs/vitest.js"
+import playwright from "@dvukovic/style-guide/src/eslint/configs/playwright.js"
+import storybook from "@dvukovic/style-guide/src/eslint/configs/storybook.js"
 
-module.exports = tseslint.config(
+export default tseslint.config(
     {
         ignores: ["node_modules", ".next", "dist", "build"],
     },
@@ -90,21 +90,21 @@ module.exports = tseslint.config(
 If you need graphql config:
 
 ```javascript
-const tseslint = require("typescript-eslint")
-const graphqlEslint = require("@graphql-eslint/eslint-plugin")
+import tseslint from "typescript-eslint"
+import graphqlEslint from "@graphql-eslint/eslint-plugin"
 
-const core = require("@dvukovic/style-guide/src/eslint/configs/core")
-const node = require("@dvukovic/style-guide/src/eslint/configs/node")
-const mobx = require("@dvukovic/style-guide/src/eslint/configs/mobx")
-const react = require("@dvukovic/style-guide/src/eslint/configs/react")
-const next = require("@dvukovic/style-guide/src/eslint/configs/next")
-const typescript = require("@dvukovic/style-guide/src/eslint/configs/typescript")
-const jest = require("@dvukovic/style-guide/src/eslint/configs/jest")
-const vitest = require("@dvukovic/style-guide/src/eslint/configs/vitest")
-const playwright = require("@dvukovic/style-guide/src/eslint/configs/playwright")
-const graphql = require("@dvukovic/style-guide/src/graphql/configs/core")
+import core from "@dvukovic/style-guide/src/eslint/configs/core.js"
+import node from "@dvukovic/style-guide/src/eslint/configs/node.js"
+import mobx from "@dvukovic/style-guide/src/eslint/configs/mobx.js"
+import react from "@dvukovic/style-guide/src/eslint/configs/react.js"
+import next from "@dvukovic/style-guide/src/eslint/configs/next.js"
+import typescript from "@dvukovic/style-guide/src/eslint/configs/typescript.js"
+import jest from "@dvukovic/style-guide/src/eslint/configs/jest.js"
+import vitest from "@dvukovic/style-guide/src/eslint/configs/vitest.js"
+import playwright from "@dvukovic/style-guide/src/eslint/configs/playwright.js"
+import graphql from "@dvukovic/style-guide/src/graphql/configs/core.js"
 
-module.exports = tseslint.config(
+export default tseslint.config(
     {
         ignores: ["node_modules", ".next", "dist", "build"],
     },
@@ -150,9 +150,11 @@ module.exports = tseslint.config(
 Create a `.prettierrc.js` in root with the following:
 
 ```javascript
+import prettierConfig from "@dvukovic/style-guide/src/prettier/configs/core.js"
+
 /** @type {import("prettier").Config} */
-module.exports = {
-    ...require("@dvukovic/style-guide/src/prettier/configs/core"),
+export default {
+    ...prettierConfig,
 }
 ```
 
@@ -162,8 +164,8 @@ Create a `.stylelintrc.js` in root with the following:
 
 ```javascript
 /** @type {import("stylelint").Config} */
-module.exports = {
-    extends: "@dvukovic/style-guide/src/stylelint/configs/core",
+export default {
+    extends: "@dvukovic/style-guide/src/stylelint/configs/core.js",
 }
 ```
 
@@ -173,7 +175,7 @@ Create a `.cspellrc.js` in root with the following:
 
 ```javascript
 /** @type {import("cspell").FileSettings} */
-module.exports = {
+export default {
     cache: {
         cacheLocation: "./node_modules/.cache/cspell",
         useCache: true,
@@ -196,7 +198,7 @@ Create a `.packagerc.js` in root with the following:
 
 ```javascript
 /** @type {import("npm-package-json-lint").NpmPackageJsonLint} */
-module.exports = {
-    extends: "@dvukovic/style-guide/src/package-json/configs/core",
+export default {
+    extends: "@dvukovic/style-guide/src/package-json/configs/core.js",
 }
 ```

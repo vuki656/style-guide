@@ -1,6 +1,6 @@
-const { ESLint } = require("eslint")
+import { ESLint } from "eslint"
 
-const config = require("./core.js")
+import config from "./core.js"
 
 const eslint = new ESLint({
     overrideConfig: config,
@@ -21,4 +21,3 @@ describe("core", () => {
         expect(results[0].errorCount).toBeGreaterThan(0)
     })
 })
-

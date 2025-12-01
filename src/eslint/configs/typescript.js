@@ -1,4 +1,6 @@
-const typescriptEslintPlugin = require("../plugins/typescript-eslint.js")
-const typescriptSortKeysPlugin = require("../plugins/typescript-sort-keys.js")
+import typescriptEslintPlugin from "../plugins/typescript-eslint.js"
+import typescriptSortKeysPlugin from "../plugins/typescript-sort-keys.js"
 
-module.exports = [typescriptEslintPlugin, typescriptSortKeysPlugin]
+const typescriptConfig = [typescriptEslintPlugin, typescriptSortKeysPlugin]
+
+export default typescriptConfig

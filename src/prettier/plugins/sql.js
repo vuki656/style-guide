@@ -1,9 +1,7 @@
 /** @type {import("prettier-plugin-sql").SqlBaseOptions} */
-const prettierPluginSql = {
+const plugin = {
     keywordCase: "upper",
     language: "postgresql",
 }
 
-module.exports = {
-    prettierPluginSql,
-}
+export default plugin

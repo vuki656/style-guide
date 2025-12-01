@@ -5,6 +5,6 @@
 - Docs for using the .config folder by default
 
 # TBD plugin
+
 - eslint-plugin-etc
 - eslint-plugin-sonarjs
-

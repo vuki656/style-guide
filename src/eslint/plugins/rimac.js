@@ -1,6 +1,6 @@
-const rimac = require("@rimac-technology/eslint-plugin")
+import rimac from "@rimac-technology/eslint-plugin"
 
-module.exports = {
+const plugin = {
     plugins: {
         "@rimac-technology": rimac,
     },
@@ -9,3 +9,5 @@ module.exports = {
         "@rimac-technology/document-todos": ["error", { url: "http" }],
     },
 }
+
+export default plugin

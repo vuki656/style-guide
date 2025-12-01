@@ -1,6 +1,6 @@
-const { ESLint } = require("eslint")
+import { ESLint } from "eslint"
 
-const config = require("./vitest.js")
+import config from "./vitest.js"
 
 const eslint = new ESLint({
     overrideConfig: config,
@@ -15,4 +15,3 @@ describe("vitest", () => {
         expect(results[0].fatalErrorCount).toBe(0)
     })
 })
-

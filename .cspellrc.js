@@ -1,5 +1,5 @@
 /** @type {import("cspell").FileSettings} */
-module.exports = {
+const config = {
     cache: {
         cacheLocation: "./node_modules/.cache/cspell",
         useCache: true,
@@ -16,3 +16,5 @@ module.exports = {
     ignoreWords: [],
     useGitignore: true,
 }
+
+export default config

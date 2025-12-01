@@ -1,6 +1,6 @@
-const stylistic = require("@stylistic/eslint-plugin")
+import stylistic from "@stylistic/eslint-plugin"
 
-module.exports = {
+const plugin = {
     plugins: {
         "@stylistic": stylistic,
     },
@@ -37,3 +37,5 @@ module.exports = {
         "@stylistic/spaced-comment": ["error", "always", { markers: ["/"] }],
     },
 }
+
+export default plugin

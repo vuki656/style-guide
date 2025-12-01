@@ -1,6 +1,6 @@
-const storybook = require("eslint-plugin-storybook")
+import storybook from "eslint-plugin-storybook"
 
-module.exports = {
+const plugin = {
     plugins: {
         storybook,
     },
@@ -20,3 +20,5 @@ module.exports = {
         "storybook/use-storybook-testing-library": "error",
     },
 }
+
+export default plugin

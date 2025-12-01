@@ -1,6 +1,6 @@
-const securityNode = require("eslint-plugin-security-node")
+import securityNode from "eslint-plugin-security-node"
 
-module.exports = {
+const plugin = {
     plugins: {
         "security-node": securityNode,
     },
@@ -29,3 +29,5 @@ module.exports = {
         "security-node/non-literal-reg-expr": "error",
     },
 }
+
+export default plugin

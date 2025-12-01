@@ -1,7 +1,7 @@
-const { ESLint } = require("eslint")
-const graphqlEslint = require("@graphql-eslint/eslint-plugin")
+import graphqlEslint from "@graphql-eslint/eslint-plugin"
+import { ESLint } from "eslint"
 
-const config = require("./core.js")
+import config from "./core.js"
 
 const eslint = new ESLint({
     overrideConfig: [

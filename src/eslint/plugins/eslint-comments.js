@@ -1,6 +1,6 @@
-const eslintComments = require("@eslint-community/eslint-plugin-eslint-comments")
+import eslintComments from "@eslint-community/eslint-plugin-eslint-comments"
 
-module.exports = {
+const plugin = {
     plugins: {
         "@eslint-community/eslint-comments": eslintComments,
     },
@@ -14,3 +14,5 @@ module.exports = {
         "@eslint-community/eslint-comments/require-description": "error",
     },
 }
+
+export default plugin

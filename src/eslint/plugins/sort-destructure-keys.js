@@ -1,6 +1,6 @@
-const sortDestructureKeys = require("eslint-plugin-sort-destructure-keys")
+import sortDestructureKeys from "eslint-plugin-sort-destructure-keys"
 
-module.exports = {
+const plugin = {
     plugins: {
         "sort-destructure-keys": sortDestructureKeys,
     },
@@ -8,3 +8,5 @@ module.exports = {
         "sort-destructure-keys/sort-destructure-keys": "error",
     },
 }
+
+export default plugin

@@ -1,6 +1,6 @@
-const playwright = require("eslint-plugin-playwright")
+import playwright from "eslint-plugin-playwright"
 
-module.exports = {
+const plugin = {
     plugins: {
         playwright,
     },
@@ -56,3 +56,5 @@ module.exports = {
         "playwright/valid-title": "error",
     },
 }
+
+export default plugin

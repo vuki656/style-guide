@@ -1,6 +1,6 @@
-const mobx = require("eslint-plugin-mobx")
+import mobx from "eslint-plugin-mobx"
 
-module.exports = {
+const plugin = {
     plugins: {
         mobx,
     },
@@ -10,3 +10,5 @@ module.exports = {
         "mobx/unconditional-make-observable": "error",
     },
 }
+
+export default plugin

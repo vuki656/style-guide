@@ -1,10 +1,8 @@
 /** @type {import("stylelint").Config} */
-const stylelintNoUnusedSelectors = {
+const plugin = {
     rules: {
         "plugin/no-unused-selectors": true,
     },
 }
 
-module.exports = {
-    stylelintNoUnusedSelectors,
-}
+export default plugin

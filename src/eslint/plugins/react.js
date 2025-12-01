@@ -1,6 +1,6 @@
-const react = require("eslint-plugin-react")
+import react from "eslint-plugin-react"
 
-module.exports = {
+const plugin = {
     plugins: {
         react,
     },
@@ -106,3 +106,5 @@ module.exports = {
         },
     },
 }
+
+export default plugin
