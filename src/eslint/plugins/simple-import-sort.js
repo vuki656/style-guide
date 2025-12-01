@@ -1,6 +1,6 @@
-const simpleImportSort = require("eslint-plugin-simple-import-sort")
+import simpleImportSort from "eslint-plugin-simple-import-sort"
 
-module.exports = {
+const plugin = {
     plugins: {
         "simple-import-sort": simpleImportSort,
     },
@@ -9,3 +9,5 @@ module.exports = {
         "simple-import-sort/imports": "error",
     },
 }
+
+export default plugin

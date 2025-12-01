@@ -1,6 +1,6 @@
-const reactHooks = require("eslint-plugin-react-hooks")
+import reactHooks from "eslint-plugin-react-hooks"
 
-module.exports = {
+const plugin = {
     plugins: {
         "react-hooks": reactHooks,
     },
@@ -8,3 +8,5 @@ module.exports = {
         "react-hooks/rules-of-hooks": "error",
     },
 }
+
+export default plugin

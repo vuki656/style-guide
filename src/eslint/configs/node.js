@@ -1,4 +1,6 @@
-const nPlugin = require("../plugins/n.js")
-const securityNodePlugin = require("../plugins/security-node.js")
+import nPlugin from "../plugins/n.js"
+import securityNodePlugin from "../plugins/security-node.js"
 
-module.exports = [nPlugin, securityNodePlugin]
+const nodeConfig = [nPlugin, securityNodePlugin]
+
+export default nodeConfig

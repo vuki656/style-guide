@@ -1,8 +1,8 @@
-const importX = require("eslint-plugin-import-x")
+import importXPlugin from "eslint-plugin-import-x"
 
-module.exports = {
+const plugin = {
     plugins: {
-        "import-x": importX,
+        "import-x": importXPlugin,
     },
     rules: {
         "import-x/default": "error",
@@ -13,7 +13,6 @@ module.exports = {
         "import-x/namespace": "error",
         "import-x/newline-after-import": "error",
         "import-x/no-absolute-path": "error",
-        "import-x/no-anonymous-default-export": "error",
         "import-x/no-cycle": "error",
         "import-x/no-deprecated": "error",
         "import-x/no-duplicates": "error",
@@ -29,3 +28,5 @@ module.exports = {
         "import-x/no-useless-path-segments": "error",
     },
 }
+
+export default plugin

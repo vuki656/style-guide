@@ -1,6 +1,6 @@
-const unicorn = require("eslint-plugin-unicorn").default
+import unicorn from "eslint-plugin-unicorn"
 
-module.exports = {
+const plugin = {
     plugins: {
         unicorn,
     },
@@ -166,3 +166,5 @@ module.exports = {
         "unicorn/throw-new-error": "error",
     },
 }
+
+export default plugin

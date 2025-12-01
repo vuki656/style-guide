@@ -1,5 +1,5 @@
 /** @type {import("prettier").Config} */
-const prettierPlugin = {
+const plugin = {
     arrowParens: "always",
     bracketSameLine: false,
     bracketSpacing: true,
@@ -18,6 +18,4 @@ const prettierPlugin = {
     useTabs: false,
 }
 
-module.exports = {
-    prettierPlugin,
-}
+export default plugin

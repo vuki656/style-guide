@@ -1,6 +1,6 @@
-const storybookPlugin = require("../plugins/storybook.js")
+import storybookPlugin from "../plugins/storybook.js"
 
-module.exports = [
+const storybookConfig = [
     storybookPlugin,
     {
         rules: {
@@ -12,3 +12,5 @@ module.exports = [
         },
     },
 ]
+
+export default storybookConfig

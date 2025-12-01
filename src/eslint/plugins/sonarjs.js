@@ -1,7 +1,7 @@
 // sonarjs v3 changed rules significantly - needs manual review
-// const sonarjs = require("eslint-plugin-sonarjs")
+// import sonarjs from "eslint-plugin-sonarjs"
 
-module.exports = {
+const plugin = {
     // plugins: {
     //     sonarjs,
     // },
@@ -35,3 +35,5 @@ module.exports = {
     //     "sonarjs/prefer-while": "error",
     // },
 }
+
+export default plugin

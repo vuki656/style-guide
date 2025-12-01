@@ -1,6 +1,6 @@
-const { ESLint } = require("eslint")
+import { ESLint } from "eslint"
 
-const config = require("./playwright.js")
+import config from "./playwright.js"
 
 const eslint = new ESLint({
     overrideConfig: config,
@@ -15,4 +15,3 @@ describe("playwright", () => {
         expect(results[0].fatalErrorCount).toBe(0)
     })
 })
-

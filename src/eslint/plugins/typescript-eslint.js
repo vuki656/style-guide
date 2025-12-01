@@ -1,6 +1,6 @@
-const typescriptEslint = require("typescript-eslint")
+import typescriptEslint from "typescript-eslint"
 
-module.exports = {
+const plugin = {
     plugins: {
         "@typescript-eslint": typescriptEslint.plugin,
     },
@@ -192,3 +192,5 @@ module.exports = {
         "require-await": "off",
     },
 }
+
+export default plugin

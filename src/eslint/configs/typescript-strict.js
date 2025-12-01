@@ -1,6 +1,6 @@
-const typescriptEslint = require("typescript-eslint")
+import typescriptEslint from "typescript-eslint"
 
-module.exports = [
+const typescriptStrictConfig = [
     {
         plugins: {
             "@typescript-eslint": typescriptEslint.plugin,
@@ -28,3 +28,5 @@ module.exports = [
         },
     },
 ]
+
+export default typescriptStrictConfig

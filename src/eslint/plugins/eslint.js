@@ -1,6 +1,6 @@
-const globals = require("globals")
+import globals from "globals"
 
-module.exports = {
+const plugin = {
     languageOptions: {
         ecmaVersion: 2024,
         globals: {
@@ -166,3 +166,5 @@ module.exports = {
         yoda: "error",
     },
 }
+
+export default plugin

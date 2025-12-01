@@ -1,3 +1,3 @@
-const graphqlPlugin = require("../plugins/graphql.js")
+import graphqlPlugin from "../plugins/graphql.js"
 
-module.exports = [graphqlPlugin]
+export default [graphqlPlugin]

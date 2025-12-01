@@ -1,18 +1,18 @@
-const { defineConfig, globalIgnores } = require("eslint/config")
-const tseslint = require("typescript-eslint")
+import { defineConfig, globalIgnores } from "eslint/config"
+import tseslint from "typescript-eslint"
 
-const core = require("./src/eslint/configs/core.js")
-const node = require("./src/eslint/configs/node.js")
-const mobx = require("./src/eslint/configs/mobx.js")
-const react = require("./src/eslint/configs/react.js")
-const next = require("./src/eslint/configs/next.js")
-const typescript = require("./src/eslint/configs/typescript.js")
-const typescriptStrict = require("./src/eslint/configs/typescript-strict.js")
-const jest = require("./src/eslint/configs/jest.js")
-const vitest = require("./src/eslint/configs/vitest.js")
-const playwright = require("./src/eslint/configs/playwright.js")
+import core from "./src/eslint/configs/core.js"
+import jest from "./src/eslint/configs/jest.js"
+import mobx from "./src/eslint/configs/mobx.js"
+import next from "./src/eslint/configs/next.js"
+import node from "./src/eslint/configs/node.js"
+import playwright from "./src/eslint/configs/playwright.js"
+import react from "./src/eslint/configs/react.js"
+import typescript from "./src/eslint/configs/typescript.js"
+import typescriptStrict from "./src/eslint/configs/typescript-strict.js"
+import vitest from "./src/eslint/configs/vitest.js"
 
-module.exports = defineConfig(
+export default defineConfig(
     globalIgnores(["node_modules", "**/*.graphql"]),
     core,
     node,

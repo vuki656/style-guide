@@ -1,6 +1,6 @@
-const sortKeysFix = require("eslint-plugin-sort-keys-fix")
+import sortKeysFix from "eslint-plugin-sort-keys-fix"
 
-module.exports = {
+const plugin = {
     plugins: {
         "sort-keys-fix": sortKeysFix,
     },
@@ -8,3 +8,5 @@ module.exports = {
         "sort-keys-fix/sort-keys-fix": "error",
     },
 }
+
+export default plugin

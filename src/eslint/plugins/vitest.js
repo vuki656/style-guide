@@ -1,7 +1,6 @@
-const vitest = require("@vitest/eslint-plugin")
+import vitest from "@vitest/eslint-plugin"
 
-// TODO: add new rules from open tabs
-module.exports = {
+const plugin = {
     plugins: {
         "@vitest": vitest,
     },
@@ -69,9 +68,7 @@ module.exports = {
         "@vitest/prefer-strict-boolean-matchers": "error",
         "@vitest/prefer-strict-equal": "error",
         "@vitest/prefer-to-be": "error",
-        "@vitest/prefer-to-be-falsy": "error",
         "@vitest/prefer-to-be-object": "error",
-        "@vitest/prefer-to-be-truthy": "error",
         "@vitest/prefer-to-contain": "error",
         "@vitest/prefer-to-have-length": "error",
         "@vitest/prefer-todo": "error",
@@ -98,3 +95,5 @@ module.exports = {
         "@vitest/warn-todo": "warn",
     },
 }
+
+export default plugin

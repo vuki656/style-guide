@@ -1,6 +1,6 @@
-const { ESLint } = require("eslint")
+import { ESLint } from "eslint"
 
-const config = require("./typescript-strict.js")
+import config from "./typescript-strict.js"
 
 const eslint = new ESLint({
     overrideConfig: config,
@@ -15,4 +15,3 @@ describe("typescript-strict", () => {
         expect(results[0].fatalErrorCount).toBe(0)
     })
 })
-

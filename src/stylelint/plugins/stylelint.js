@@ -1,5 +1,5 @@
 /** @type {import("stylelint").Config} */
-const stylelint = {
+const plugin = {
     rules: {
         "alpha-value-notation": "percentage",
         "annotation-no-unknown": true,
@@ -89,6 +89,4 @@ const stylelint = {
     },
 }
 
-module.exports = {
-    stylelint,
-}
+export default plugin

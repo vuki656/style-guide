@@ -1,9 +1,9 @@
-const { stylelint } = require("../plugins/stylelint")
-const { stylelintOrder } = require("../plugins/order")
-const { stylelintNoUnusedSelectors } = require("../plugins/no-unused-selectors")
+import stylelintNoUnusedSelectors from "../plugins/no-unused-selectors.js"
+import stylelintOrder from "../plugins/order.js"
+import stylelint from "../plugins/stylelint.js"
 
 /** @type {import("stylelint").Config} */
-module.exports = {
+const config = {
     allowEmptyInput: true,
     defaultSeverity: "error",
     plugins: ["stylelint-order", "stylelint-no-unused-selectors"],
@@ -17,3 +17,5 @@ module.exports = {
         ...stylelintNoUnusedSelectors.rules,
     },
 }
+
+export default config

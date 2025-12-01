@@ -1,5 +1,5 @@
 /** @type {import("npm-package-json-lint/dist/src/configuration").Config} */
-const packageJsonCore = {
+const plugin = {
     rules: {
         "bin-type": "error",
         "bundledDependencies-type": "error",
@@ -78,6 +78,4 @@ const packageJsonCore = {
     },
 }
 
-module.exports = {
-    packageJsonCore,
-}
+export default plugin

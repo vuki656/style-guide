@@ -1,4 +1,6 @@
 /** @type {import("stylelint").Config} */
-module.exports = {
+const config = {
     extends: ["./src/stylelint/configs/core.js"],
 }
+
+export default config

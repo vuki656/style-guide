@@ -1,6 +1,6 @@
-const { ESLint } = require("eslint")
+import { ESLint } from "eslint"
 
-const config = require("./next.js")
+import config from "./next.js"
 
 const eslint = new ESLint({
     overrideConfig: config,
@@ -15,4 +15,3 @@ describe("next", () => {
         expect(results[0].fatalErrorCount).toBe(0)
     })
 })
-

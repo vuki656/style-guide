@@ -1,3 +1,5 @@
-const playwrightPlugin = require("../plugins/playwright.js")
+import playwrightPlugin from "../plugins/playwright.js"
 
-module.exports = [playwrightPlugin]
+const playwrightConfig = [playwrightPlugin]
+
+export default playwrightConfig

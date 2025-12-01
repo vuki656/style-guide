@@ -1,6 +1,6 @@
-const graphqlEslint = require("@graphql-eslint/eslint-plugin")
+import graphqlEslint from "@graphql-eslint/eslint-plugin"
 
-module.exports = {
+const plugin = {
     plugins: {
         "@graphql-eslint": graphqlEslint,
     },
@@ -96,3 +96,5 @@ module.exports = {
         "@graphql-eslint/unique-operation-name": "error",
     },
 }
+
+export default plugin

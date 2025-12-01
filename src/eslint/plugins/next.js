@@ -1,6 +1,6 @@
-const next = require("@next/eslint-plugin-next")
+import next from "@next/eslint-plugin-next"
 
-module.exports = {
+const plugin = {
     plugins: {
         "@next/next": next,
     },
@@ -28,3 +28,5 @@ module.exports = {
         "@next/next/no-unwanted-polyfillio": "error",
     },
 }
+
+export default plugin

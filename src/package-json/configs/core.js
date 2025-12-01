@@ -1,10 +1,8 @@
-const { packageJsonCore } = require("../plugins/package-json.js")
+import packageJsonCore from "../plugins/package-json.js"
 
 /** @type {import("npm-package-json-lint/dist/src/configuration").Config} */
 const config = {
-    rules: {
-        ...packageJsonCore.rules,
-    },
+    ...packageJsonCore,
 }
 
-module.exports = config
+export default config

@@ -1,8 +1,6 @@
 /** @type {import("prettier-plugin-embed").PrettierPluginEmbedOptions} */
-const prettierPluginEmbed = {
+const plugin = {
     embeddedSqlTags: ["sql"],
 }
 
-module.exports = {
-    prettierPluginEmbed,
-}
+export default plugin

@@ -1,6 +1,6 @@
-const jest = require("eslint-plugin-jest")
+import jest from "eslint-plugin-jest"
 
-module.exports = {
+const plugin = {
     plugins: {
         jest,
     },
@@ -60,3 +60,5 @@ module.exports = {
         "jest/valid-title": "error",
     },
 }
+
+export default plugin

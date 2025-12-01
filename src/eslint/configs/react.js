@@ -1,4 +1,6 @@
-const reactPlugin = require("../plugins/react.js")
-const reactHooksPlugin = require("../plugins/react-hooks.js")
+import reactPlugin from "../plugins/react.js"
+import reactHooksPlugin from "../plugins/react-hooks.js"
 
-module.exports = [reactPlugin, reactHooksPlugin]
+const reactConfig = [reactPlugin, reactHooksPlugin]
+
+export default reactConfig

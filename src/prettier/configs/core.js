@@ -1,9 +1,9 @@
-const { prettierPluginEmbed } = require("../plugins/embed.js")
-const { prettierPluginSql } = require("../plugins/sql.js")
-const { prettierPlugin } = require("../plugins/prettier.js")
+import prettierPluginEmbed from "../plugins/embed.js"
+import prettierPlugin from "../plugins/prettier.js"
+import prettierPluginSql from "../plugins/sql.js"
 
 /** @type {import("prettier").Config} */
-module.exports = {
+const config = {
     plugins: [
         "prettier-plugin-prisma",
         "prettier-plugin-sql",
@@ -18,3 +18,5 @@ module.exports = {
     ...prettierPluginSql,
     ...prettierPluginEmbed,
 }
+
+export default config

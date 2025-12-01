@@ -1,10 +1,10 @@
-const prettier = require("prettier")
+import { format } from "prettier"
 
-const config = require("./core.js")
+import config from "./core.js"
 
 describe("prettier core", () => {
     test("loads without errors", async () => {
-        const result = await prettier.format("const x = 1", {
+        const result = await format("const x = 1", {
             ...config,
             parser: "babel",
         })
@@ -14,7 +14,7 @@ describe("prettier core", () => {
     })
 
     test("formats code correctly", async () => {
-        const result = await prettier.format("const x=1", {
+        const result = await format("const x=1", {
             ...config,
             parser: "babel",
         })
@@ -22,4 +22,3 @@ describe("prettier core", () => {
         expect(result).toContain("const x = 1")
     })
 })
-
