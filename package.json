@@ -27,7 +27,8 @@
         "lint:prettier": "prettier --log-level=warn --check --cache .",
         "lint:spell": "cspell --config ./.cspellrc.js --no-progress --no-summary --unique '**'",
         "lint:stylelint": "stylelint ./**/*.css --cache",
-        "release": "release-it"
+        "release": "release-it",
+        "test": "vitest run"
     },
     "dependencies": {
         "@eslint-community/eslint-plugin-eslint-comments": "4.5.0",
@@ -84,8 +85,10 @@
         "prettier": "3.7.3",
         "react": "19.2.0",
         "release-it": "19.0.6",
+        "storybook": "^10.1.2",
         "stylelint": "16.26.1",
-        "typescript": "5.9.3"
+        "typescript": "5.9.3",
+        "vitest": "^4.0.14"
     },
     "peerDependencies": {
         "cspell": "9",
