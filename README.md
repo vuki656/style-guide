@@ -15,10 +15,11 @@ Add these scripts to your `package.json`:
 ```json
 {
     "scripts": {
-        "lint": "yarn lint:eslint && yarn lint:stylelint && yarn lint:spell && yarn lint:package-json",
+        "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:stylelint && yarn lint:spell && yarn lint:package-json",
         "lint:eslint": "eslint . --cache --concurrency=auto",
-        "lint:fix": "yarn lint:eslint --fix && yarn lint:stylelint --fix",
+        "lint:fix": "yarn lint:eslint --fix && yarn lint:prettier --write && yarn lint:stylelint --fix",
         "lint:package-json": "npmPkgJsonLint --configFile ./.packagerc.js .",
+        "lint:prettier": "prettier --check --cache '**/*.{json,yaml,yml,md,css,html}'",
         "lint:spell": "cspell --config ./.cspellrc.js --no-progress --no-summary --unique '**'",
         "lint:stylelint": "stylelint ./**/*.css --cache"
     }
@@ -36,7 +37,8 @@ Add to `.gitignore`:
 
 ## ESLint
 
-Prettier is integrated into ESLint via `eslint-plugin-prettier`. Running `eslint --fix` will also format code.
+Prettier is integrated into ESLint via `eslint-plugin-prettier` for JS/TS files. The separate
+`lint:prettier` script handles JSON, YAML, MD, and other files.
 
 Create `eslint.config.js`:
 
@@ -95,19 +97,19 @@ export default tseslint.config(
 
 ### Available Configs
 
-| Config              | Description                  |
-| ------------------- | ---------------------------- |
+| Config              | Description                      |
+| ------------------- | -------------------------------- |
 | `core`              | Base JavaScript rules + Prettier |
-| `node`              | Node.js specific rules       |
-| `react`             | React and JSX rules          |
-| `next`              | Next.js specific rules       |
-| `mobx`              | MobX state management rules  |
-| `typescript`        | TypeScript rules             |
-| `typescript-strict` | Strict TypeScript rules      |
-| `jest`              | Jest testing rules           |
-| `vitest`            | Vitest testing rules         |
-| `playwright`        | Playwright E2E testing rules |
-| `storybook`         | Storybook rules              |
+| `node`              | Node.js specific rules           |
+| `react`             | React and JSX rules              |
+| `next`              | Next.js specific rules           |
+| `mobx`              | MobX state management rules      |
+| `typescript`        | TypeScript rules                 |
+| `typescript-strict` | Strict TypeScript rules          |
+| `jest`              | Jest testing rules               |
+| `vitest`            | Vitest testing rules             |
+| `playwright`        | Playwright E2E testing rules     |
+| `storybook`         | Storybook rules                  |
 
 ---
 
