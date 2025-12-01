@@ -1,4 +1,3 @@
-/** @type {import("eslint").ESLint.ConfigData} */
-module.exports = {
-    extends: ["../plugins/jest.js"],
-}
+const jestPlugin = require("../plugins/jest.js")
+
+module.exports = [jestPlugin]

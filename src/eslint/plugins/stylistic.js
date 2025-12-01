@@ -1,6 +1,9 @@
-/** @type {import("eslint").ESLint.ConfigData} */
+const stylistic = require("@stylistic/eslint-plugin")
+
 module.exports = {
-    plugins: ["@stylistic"],
+    plugins: {
+        "@stylistic": stylistic,
+    },
     rules: {
         "@stylistic/lines-between-class-members": ["error", "always"],
         "@stylistic/padding-line-between-statements": [

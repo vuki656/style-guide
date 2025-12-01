@@ -1,6 +1,9 @@
-/** @type {import("eslint").ESLint.ConfigData} */
+const mobx = require("eslint-plugin-mobx")
+
 module.exports = {
-    plugins: ["mobx"],
+    plugins: {
+        mobx,
+    },
     rules: {
         "mobx/exhaustive-make-observable": "error",
         "mobx/missing-make-observable": "error",

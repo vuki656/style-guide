@@ -1,4 +1,3 @@
-/** @type {import("eslint").ESLint.ConfigData} */
-module.exports = {
-    extends: ["../plugins/mobx.js"],
-}
+const mobxPlugin = require("../plugins/mobx.js")
+
+module.exports = [mobxPlugin]

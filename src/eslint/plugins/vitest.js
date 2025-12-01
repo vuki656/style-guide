@@ -1,7 +1,20 @@
-/** @type {import("eslint").ESLint.ConfigData} */
+const vitest = require("@vitest/eslint-plugin")
+
+// TODO: add new rules from open tabs
 module.exports = {
-    plugins: ["@vitest"],
+    plugins: {
+        "@vitest": vitest,
+    },
     rules: {
+        "@vitest/consistent-each-for": [
+            "error",
+            {
+                describe: "each",
+                it: "for",
+                suite: "each",
+                test: "for",
+            },
+        ],
         "@vitest/consistent-test-it": [
             "error",
             {
@@ -28,6 +41,7 @@ module.exports = {
         "@vitest/no-focused-tests": "error",
         "@vitest/no-identical-title": "error",
         "@vitest/no-import-node-test": "error",
+        "@vitest/no-importing-vitest-globals": "error",
         "@vitest/no-interpolation-in-snapshots": "error",
         "@vitest/no-large-snapshots": "error",
         "@vitest/no-mocks-import": "error",
@@ -40,6 +54,8 @@ module.exports = {
         "@vitest/no-test-prefixes": "error",
         "@vitest/no-test-return-statement": "error",
         "@vitest/padding-around-all": "error",
+        "@vitest/prefer-called-exactly-once-with": "error",
+        "@vitest/prefer-called-once": "error",
         "@vitest/prefer-called-with": "error",
         "@vitest/prefer-comparison-matcher": "error",
         "@vitest/prefer-each": "error",
@@ -50,6 +66,7 @@ module.exports = {
         "@vitest/prefer-lowercase-title": "error",
         "@vitest/prefer-mock-promise-shorthand": "error",
         "@vitest/prefer-spy-on": "error",
+        "@vitest/prefer-strict-boolean-matchers": "error",
         "@vitest/prefer-strict-equal": "error",
         "@vitest/prefer-to-be": "error",
         "@vitest/prefer-to-be-falsy": "error",
@@ -59,6 +76,14 @@ module.exports = {
         "@vitest/prefer-to-have-length": "error",
         "@vitest/prefer-todo": "error",
         "@vitest/prefer-vi-mocked": "error",
+        "@vitest/require-awaited-expect-poll": "error",
+        "@vitest/require-import-vi-mock": "error",
+        "@vitest/require-mock-type-parameters": [
+            "error",
+            {
+                checkImportFunctions: false,
+            },
+        ],
         "@vitest/require-to-throw-message": "error",
         "@vitest/require-top-level-describe": [
             "error",
@@ -70,5 +95,6 @@ module.exports = {
         "@vitest/valid-expect": "error",
         "@vitest/valid-expect-in-promise": "error",
         "@vitest/valid-title": "error",
+        "@vitest/warn-todo": "warn",
     },
 }

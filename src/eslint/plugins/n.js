@@ -1,6 +1,9 @@
-/** @type {import("eslint").ESLint.ConfigData} */
+const pluginNode = require("eslint-plugin-n")
+
 module.exports = {
-    plugins: ["n"],
+    plugins: {
+        n: pluginNode,
+    },
     rules: {
         "n/callback-return": "error",
         "n/exports-style": "error",

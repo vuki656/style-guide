@@ -1,6 +1,9 @@
-/** @type {import("eslint").ESLint.ConfigData} */
+const playwright = require("eslint-plugin-playwright")
+
 module.exports = {
-    plugins: ["playwright"],
+    plugins: {
+        playwright,
+    },
     rules: {
         "playwright/expect-expect": "error",
         "playwright/max-expects": ["error", { max: 15 }],
@@ -21,6 +24,7 @@ module.exports = {
         "playwright/no-slowed-test": "error",
         "playwright/no-standalone-expect": "error",
         "playwright/no-unsafe-references": "error",
+        "playwright/no-unused-locators": "error",
         "playwright/no-useless-await": "error",
         "playwright/no-useless-not": "error",
         "playwright/no-wait-for-selector": "error",

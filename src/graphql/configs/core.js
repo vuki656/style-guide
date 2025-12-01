@@ -1,4 +1,3 @@
-/** @type {import("eslint").ESLint.ConfigData} */
-module.exports = {
-    extends: ["../plugins/graphql.js"],
-}
+const graphqlPlugin = require("../plugins/graphql.js")
+
+module.exports = [graphqlPlugin]

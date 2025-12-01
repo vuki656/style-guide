@@ -1,8 +1,13 @@
-/** @type {import("eslint").ESLint.ConfigData} */
+const globals = require("globals")
+
 module.exports = {
-    env: {
-        es6: true,
-        node: true,
+    languageOptions: {
+        ecmaVersion: 2024,
+        globals: {
+            ...globals.es2024,
+            ...globals.node,
+        },
+        sourceType: "module",
     },
     rules: {
         "array-callback-return": [
@@ -80,7 +85,6 @@ module.exports = {
         "no-lone-blocks": "error",
         "no-lonely-if": "error",
         "no-loop-func": "error",
-        "no-loss-of-precision": "error",
         "no-misleading-character-class": "error",
         "no-multi-assign": "error",
         "no-multi-str": "error",
@@ -115,10 +119,9 @@ module.exports = {
         "no-unsafe-optional-chaining": "error",
         "no-unused-expressions": "error",
         "no-unused-labels": "error",
-        "no-unused-private-class-members": "error",
         "no-unused-vars": "error",
         "no-use-before-define": "error",
-        // "no-useless-assignment": "error", NOTE: available in eslint 9
+        "no-useless-assignment": "error",
         "no-useless-backreference": "error",
         "no-useless-call": "error",
         "no-useless-catch": "error",

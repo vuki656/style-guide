@@ -4,9 +4,9 @@ export const file = {
     },
 }
 
-let _temp = 2
+let _temporary = 2
 
 while (true) {
-    _temp = 3
+    _temporary = 3
     break
 }

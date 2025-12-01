@@ -1,11 +1,15 @@
-/** @type {import("eslint").ESLint.ConfigData} */
+const graphqlEslint = require("@graphql-eslint/eslint-plugin")
+
 module.exports = {
-    plugins: ["@graphql-eslint"],
+    plugins: {
+        "@graphql-eslint": graphqlEslint,
+    },
     rules: {
         "@graphql-eslint/alphabetize": [
             "error",
             {
                 arguments: ["FieldDefinition", "Field", "DirectiveDefinition", "Directive"],
+                definitions: true,
                 fields: [
                     "InputObjectTypeDefinition",
                     "InterfaceTypeDefinition",
@@ -13,7 +17,8 @@ module.exports = {
                 ],
                 groups: ["id", "*", "createdAt", "updatedAt"],
                 selections: ["FragmentDefinition", "OperationDefinition"],
-                variables: ["OperationDefinition"],
+                values: true,
+                variables: true,
             },
         ],
         "@graphql-eslint/description-style": ["error", { style: "block" }],
@@ -60,17 +65,14 @@ module.exports = {
                     forbiddenPrefixes: ["mutation"],
                     forbiddenSuffixes: ["Mutation"],
                 },
-
                 "FieldDefinition[parent.name.value=Query]": {
                     forbiddenPrefixes: ["query", "get"],
                     forbiddenSuffixes: ["Query"],
                 },
-
                 "FieldDefinition[parent.name.value=Subscription]": {
                     forbiddenPrefixes: ["subscription"],
                     forbiddenSuffixes: ["Subscription"],
                 },
-
                 InputValueDefinition: "camelCase",
                 InterfaceTypeDefinition: {
                     requiredSuffixes: ["Interface"],

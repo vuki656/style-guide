@@ -5,7 +5,7 @@
 To get the kitchen sink install the required dependencies:
 
 ```
-yarn add -D eslint@8.57.0 prettier cspell stylelint npm-package-json-lint @dvukovic/style-guide
+yarn add -D eslint@^9.0.0 prettier cspell stylelint npm-package-json-lint @dvukovic/style-guide
 ```
 
 add the following scripts
@@ -33,104 +33,116 @@ add the following to `.gitignore`
 
 ### ESLint
 
-Create a `.eslintrc.js` in root with the following:
+Create a `eslint.config.js` in root with the following:
 
 ```javascript
-/** @type {import("eslint").ESLint.ConfigData} */
-module.exports = {
-    root: true,
-    extends: [
-        // JS/TS
-        require.resolve("@dvukovic/style-guide/src/eslint/configs/core"),
-        require.resolve("@dvukovic/style-guide/src/eslint/configs/node"),
+const tseslint = require("typescript-eslint")
 
-        // Libraries
-        require.resolve("@dvukovic/style-guide/src/eslint/configs/next"),
-        require.resolve("@dvukovic/style-guide/src/eslint/configs/mobx"),
-        require.resolve("@dvukovic/style-guide/src/eslint/configs/react"),
-    ],
-    parser: "@typescript-eslint/parser",
-    parserOptions: {
-        ecmaVersion: 2024,
-        project: "./tsconfig.json",
+const core = require("@dvukovic/style-guide/src/eslint/configs/core")
+const node = require("@dvukovic/style-guide/src/eslint/configs/node")
+const next = require("@dvukovic/style-guide/src/eslint/configs/next")
+const mobx = require("@dvukovic/style-guide/src/eslint/configs/mobx")
+const react = require("@dvukovic/style-guide/src/eslint/configs/react")
+const typescript = require("@dvukovic/style-guide/src/eslint/configs/typescript")
+const jest = require("@dvukovic/style-guide/src/eslint/configs/jest")
+const vitest = require("@dvukovic/style-guide/src/eslint/configs/vitest")
+const playwright = require("@dvukovic/style-guide/src/eslint/configs/playwright")
+const storybook = require("@dvukovic/style-guide/src/eslint/configs/storybook")
+
+module.exports = tseslint.config(
+    {
+        ignores: ["node_modules", ".next", "dist", "build"],
     },
-    overrides: [
-        {
-            files: ["*.ts", "*.tsx"],
-            extends: [require.resolve("@dvukovic/style-guide/src/eslint/configs/typescript")],
-        },
-        {
-            files: ["*.test.ts"],
-            extends: [
-                require.resolve(
-                    "@dvukovic/style-guide/src/eslint/configs/jest",
-                    // OR
-                    "@dvukovic/style-guide/src/eslint/configs/vitest",
-                ),
-            ],
-        },
-        {
-            files: ["*.ui.test.ts"],
-            extends: [require.resolve("@dvukovic/style-guide/src/eslint/configs/playwright")],
-        },
-        {
-            extends: [require.resolve("@dvukovic/style-guide/src/eslint/configs/storybook")],
-            files: ["./**/*.stories.@(ts|tsx)"],
-        },
-    ],
-}
-```
-
-If you need graphql config, everything has to be configured trough `overrides`
-
-```javascript
-/** @type {import("eslint").ESLint.ConfigData} */
-module.exports = {
-    ignorePatterns: ["node_modules"],
-    overrides: [
-        {
-            extends: [
-                require.resolve("@dvukovic/style-guide/src/eslint/configs/core"),
-                require.resolve("@dvukovic/style-guide/src/eslint/configs/node"),
-                require.resolve("@dvukovic/style-guide/src/eslint/configs/mobx"),
-                require.resolve("@dvukovic/style-guide/src/eslint/configs/react"),
-                require.resolve("@dvukovic/style-guide/src/eslint/configs/next"),
-            ],
-            files: ["*.js", ".ts", ".*.cjs", "*.tsx"],
-        },
-        {
-            extends: [require.resolve("@dvukovic/style-guide/src/eslint/configs/typescript")],
-            files: ["*.ts", "*.tsx"],
-        },
-        {
-            extends: [
-                require.resolve("@dvukovic/style-guide/src/eslint/configs/jest"),
-                // OR
-                require.resolve("@dvukovic/style-guide/src/eslint/configs/vitest"),
-            ],
-            files: ["*.test.ts", "*.test.js"],
-        },
-        {
-            files: ["*.ui.test.ts"],
-            extends: [require.resolve("@dvukovic/style-guide/src/eslint/configs/playwright")],
-        },
-        {
-            extends: [require.resolve("@dvukovic/style-guide/src/graphql/configs/core")],
-            files: ["*.graphql"],
-            parser: "@graphql-eslint/eslint-plugin",
+    ...core,
+    ...node,
+    ...next,
+    ...mobx,
+    ...react,
+    {
+        languageOptions: {
+            parser: tseslint.parser,
             parserOptions: {
                 project: "./tsconfig.json",
-                schema: "./**/*.graphql",
             },
         },
-    ],
-    parser: "@typescript-eslint/parser",
-    parserOptions: {
-        ecmaVersion: 2024,
-        project: "./tsconfig.json",
     },
-    root: true,
-}
+    {
+        files: ["**/*.ts", "**/*.tsx"],
+        extends: [...typescript],
+    },
+    {
+        files: ["**/*.test.ts"],
+        extends: [...jest],
+        // OR
+        // extends: [...vitest],
+    },
+    {
+        files: ["**/*.ui.test.ts"],
+        extends: [...playwright],
+    },
+    {
+        files: ["**/*.stories.ts", "**/*.stories.tsx"],
+        extends: [...storybook],
+    },
+)
+```
+
+If you need graphql config:
+
+```javascript
+const tseslint = require("typescript-eslint")
+const graphqlEslint = require("@graphql-eslint/eslint-plugin")
+
+const core = require("@dvukovic/style-guide/src/eslint/configs/core")
+const node = require("@dvukovic/style-guide/src/eslint/configs/node")
+const mobx = require("@dvukovic/style-guide/src/eslint/configs/mobx")
+const react = require("@dvukovic/style-guide/src/eslint/configs/react")
+const next = require("@dvukovic/style-guide/src/eslint/configs/next")
+const typescript = require("@dvukovic/style-guide/src/eslint/configs/typescript")
+const jest = require("@dvukovic/style-guide/src/eslint/configs/jest")
+const vitest = require("@dvukovic/style-guide/src/eslint/configs/vitest")
+const playwright = require("@dvukovic/style-guide/src/eslint/configs/playwright")
+const graphql = require("@dvukovic/style-guide/src/graphql/configs/core")
+
+module.exports = tseslint.config(
+    {
+        ignores: ["node_modules", ".next", "dist", "build"],
+    },
+    ...core,
+    ...node,
+    ...mobx,
+    ...react,
+    ...next,
+    {
+        languageOptions: {
+            parser: tseslint.parser,
+            parserOptions: {
+                project: "./tsconfig.json",
+            },
+        },
+    },
+    {
+        files: ["**/*.ts", "**/*.tsx"],
+        extends: [...typescript],
+    },
+    {
+        files: ["**/*.test.ts", "**/*.test.js"],
+        extends: [...jest],
+        // OR
+        // extends: [...vitest],
+    },
+    {
+        files: ["**/*.ui.test.ts"],
+        extends: [...playwright],
+    },
+    {
+        files: ["**/*.graphql"],
+        extends: [...graphql],
+        languageOptions: {
+            parser: graphqlEslint,
+        },
+    },
+)
 ```
 
 ### Prettier

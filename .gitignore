@@ -10,9 +10,6 @@
 # Node
 node_modules
 
-# Misc
-TODO.md
-
 # Generated
 .eslintcache
 .stylelintcache

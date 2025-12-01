@@ -1,6 +1,9 @@
-/** @type {import("eslint").ESLint.ConfigData} */
+const typescriptEslint = require("typescript-eslint")
+
 module.exports = {
-    plugins: ["@typescript-eslint"],
+    plugins: {
+        "@typescript-eslint": typescriptEslint.plugin,
+    },
     rules: {
         "@typescript-eslint/adjacent-overload-signatures": "error",
         "@typescript-eslint/array-type": "error",
@@ -66,7 +69,6 @@ module.exports = {
         "@typescript-eslint/no-duplicate-type-constituents": "error",
         "@typescript-eslint/no-dynamic-delete": "error",
         "@typescript-eslint/no-empty-function": "error",
-        "@typescript-eslint/no-empty-interface": "error",
         "@typescript-eslint/no-empty-object-type": "error",
         "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/no-extra-non-null-assertion": "error",
@@ -78,7 +80,6 @@ module.exports = {
         "@typescript-eslint/no-inferrable-types": "error",
         "@typescript-eslint/no-invalid-void-type": "error",
         "@typescript-eslint/no-loop-func": "error",
-        "@typescript-eslint/no-loss-of-precision": "error",
         "@typescript-eslint/no-meaningless-void-operator": [
             "error",
             {
@@ -107,6 +108,7 @@ module.exports = {
         "@typescript-eslint/no-unnecessary-type-arguments": "error",
         "@typescript-eslint/no-unnecessary-type-assertion": "error",
         "@typescript-eslint/no-unnecessary-type-constraint": "error",
+        "@typescript-eslint/no-unnecessary-type-conversion": "error",
         "@typescript-eslint/no-unnecessary-type-parameters": "error",
         "@typescript-eslint/no-unsafe-function-type": "error",
         "@typescript-eslint/no-unsafe-type-assertion": "off",
@@ -116,6 +118,7 @@ module.exports = {
                 allowTernary: true,
             },
         ],
+        "@typescript-eslint/no-unused-private-class-members": "error",
         "@typescript-eslint/no-unused-vars": [
             "error",
             {
@@ -178,7 +181,6 @@ module.exports = {
         "no-empty-function": "off",
         "no-implied-eval": "off",
         "no-loop-func": "off",
-        "no-loss-of-precision": "off",
         "no-return-await": "off",
         "no-shadow": "off",
         "no-throw-literal": "off",

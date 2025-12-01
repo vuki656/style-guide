@@ -13,6 +13,6 @@ module.exports = {
         },
     ],
     ignorePaths: ["./src/cspell/base.txt"],
-    useGitignore: true,
     ignoreWords: [],
+    useGitignore: true,
 }
