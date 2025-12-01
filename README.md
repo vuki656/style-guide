@@ -87,64 +87,6 @@ export default tseslint.config(
 )
 ```
 
-If you need graphql config:
-
-```javascript
-import tseslint from "typescript-eslint"
-import graphqlEslint from "@graphql-eslint/eslint-plugin"
-
-import core from "@dvukovic/style-guide/src/eslint/configs/core.js"
-import node from "@dvukovic/style-guide/src/eslint/configs/node.js"
-import mobx from "@dvukovic/style-guide/src/eslint/configs/mobx.js"
-import react from "@dvukovic/style-guide/src/eslint/configs/react.js"
-import next from "@dvukovic/style-guide/src/eslint/configs/next.js"
-import typescript from "@dvukovic/style-guide/src/eslint/configs/typescript.js"
-import jest from "@dvukovic/style-guide/src/eslint/configs/jest.js"
-import vitest from "@dvukovic/style-guide/src/eslint/configs/vitest.js"
-import playwright from "@dvukovic/style-guide/src/eslint/configs/playwright.js"
-import graphql from "@dvukovic/style-guide/src/graphql/configs/core.js"
-
-export default tseslint.config(
-    {
-        ignores: ["node_modules", ".next", "dist", "build"],
-    },
-    ...core,
-    ...node,
-    ...mobx,
-    ...react,
-    ...next,
-    {
-        languageOptions: {
-            parser: tseslint.parser,
-            parserOptions: {
-                project: "./tsconfig.json",
-            },
-        },
-    },
-    {
-        files: ["**/*.ts", "**/*.tsx"],
-        extends: [...typescript],
-    },
-    {
-        files: ["**/*.test.ts", "**/*.test.js"],
-        extends: [...jest],
-        // OR
-        // extends: [...vitest],
-    },
-    {
-        files: ["**/*.ui.test.ts"],
-        extends: [...playwright],
-    },
-    {
-        files: ["**/*.graphql"],
-        extends: [...graphql],
-        languageOptions: {
-            parser: graphqlEslint,
-        },
-    },
-)
-```
-
 ### Prettier
 
 Create a `.prettierrc.js` in root with the following:

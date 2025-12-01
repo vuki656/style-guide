@@ -14,7 +14,6 @@
     "files": [
         "src/eslint",
         "src/cspell",
-        "src/graphql",
         "src/prettier",
         "src/stylelint",
         "src/package-json"
@@ -32,7 +31,6 @@
     },
     "dependencies": {
         "@eslint-community/eslint-plugin-eslint-comments": "4.5.0",
-        "@graphql-eslint/eslint-plugin": "4.4.0",
         "@next/eslint-plugin-next": "16.0.6",
         "@prettier/plugin-xml": "3.4.2",
         "@rimac-technology/eslint-plugin": "1.5.0",
@@ -79,7 +77,6 @@
         "@types/react": "19.2.7",
         "cspell": "9.3.2",
         "eslint": "9.39.1",
-        "graphql": "16.12.0",
         "jest": "30.2.0",
         "npm-package-json-lint": "9.0.0",
         "prettier": "3.7.3",
