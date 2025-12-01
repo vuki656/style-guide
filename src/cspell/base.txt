@@ -111,3 +111,5 @@ kniprc
 webrtc
 speculationrules
 hrefs
+supabase
+tslog
