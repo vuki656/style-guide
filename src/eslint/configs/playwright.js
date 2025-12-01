@@ -1,4 +1,3 @@
-/** @type {import("eslint").ESLint.ConfigData} */
-module.exports = {
-    extends: ["../plugins/playwright.js"],
-}
+const playwrightPlugin = require("../plugins/playwright.js")
+
+module.exports = [playwrightPlugin]

@@ -1,6 +1,9 @@
-/** @type {import("eslint").ESLint.ConfigData} */
+const importX = require("eslint-plugin-import-x")
+
 module.exports = {
-    plugins: ["import-x"],
+    plugins: {
+        "import-x": importX,
+    },
     rules: {
         "import-x/default": "error",
         "import-x/export": "error",

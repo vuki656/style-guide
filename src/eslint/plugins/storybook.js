@@ -1,6 +1,9 @@
-/** @type {import("eslint").ESLint.ConfigData} */
+const storybook = require("eslint-plugin-storybook")
+
 module.exports = {
-    plugins: ["storybook"],
+    plugins: {
+        storybook,
+    },
     rules: {
         "storybook/await-interactions": "error",
         "storybook/context-in-play-function": "error",

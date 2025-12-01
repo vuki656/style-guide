@@ -1,4 +1,4 @@
-/** @type {import("eslint").ESLint.ConfigData} */
-module.exports = {
-    extends: ["../plugins/react.js", "../plugins/react-hooks.js"],
-}
+const reactPlugin = require("../plugins/react.js")
+const reactHooksPlugin = require("../plugins/react-hooks.js")
+
+module.exports = [reactPlugin, reactHooksPlugin]

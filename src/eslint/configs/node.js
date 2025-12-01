@@ -1,4 +1,4 @@
-/** @type {import("eslint").ESLint.ConfigData} */
-module.exports = {
-    extends: ["../plugins/n.js", "../plugins/security-node.js"],
-}
+const nPlugin = require("../plugins/n.js")
+const securityNodePlugin = require("../plugins/security-node.js")
+
+module.exports = [nPlugin, securityNodePlugin]

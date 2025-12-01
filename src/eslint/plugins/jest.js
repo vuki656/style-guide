@@ -1,6 +1,9 @@
-/** @type {import("eslint").ESLint.ConfigData} */
+const jest = require("eslint-plugin-jest")
+
 module.exports = {
-    plugins: ["jest"],
+    plugins: {
+        jest,
+    },
     rules: {
         "jest/consistent-test-it": ["error", { fn: "test", withinDescribe: "test" }],
         "jest/expect-expect": "error",
@@ -53,6 +56,7 @@ module.exports = {
         "jest/valid-describe-callback": "error",
         "jest/valid-expect": "error",
         "jest/valid-expect-in-promise": "error",
+        "jest/valid-mock-module-path": "error",
         "jest/valid-title": "error",
     },
 }

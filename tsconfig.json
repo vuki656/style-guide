@@ -11,5 +11,5 @@
         "strict": true,
         "skipLibCheck": true
     },
-    "include": ["*.js", ".*.js", "*.ts", ".*.ts", "src", ".eslintrc.js"]
+    "include": ["*.js", ".*.js", "*.ts", ".*.ts", "src", "eslint.config.js"]
 }

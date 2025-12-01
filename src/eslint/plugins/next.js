@@ -1,6 +1,9 @@
-/** @type {import("eslint").ESLint.ConfigData} */
+const next = require("@next/eslint-plugin-next")
+
 module.exports = {
-    plugins: ["@next/eslint-plugin-next"],
+    plugins: {
+        "@next/next": next,
+    },
     rules: {
         "@next/next/google-font-display": "error",
         "@next/next/google-font-preconnect": "error",

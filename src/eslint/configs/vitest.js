@@ -1,4 +1,3 @@
-/** @type {import("eslint").ESLint.ConfigData} */
-module.exports = {
-    extends: ["../plugins/vitest.js"],
-}
+const vitestPlugin = require("../plugins/vitest.js")
+
+module.exports = [vitestPlugin]

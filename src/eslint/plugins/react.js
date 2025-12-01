@@ -1,6 +1,9 @@
-/** @type {import("eslint").ESLint.ConfigData} */
+const react = require("eslint-plugin-react")
+
 module.exports = {
-    plugins: ["react"],
+    plugins: {
+        react,
+    },
     rules: {
         "react/boolean-prop-naming": "error",
         "react/button-has-type": "error",
@@ -28,7 +31,6 @@ module.exports = {
                 props: "never",
             },
         ],
-        "react/jsx-filename-extension": "error",
         "react/jsx-filename-extension": [
             "error",
             { allow: "as-needed", extensions: [".tsx", ".jsx"] },
@@ -97,5 +99,10 @@ module.exports = {
         ],
         "react/style-prop-object": "error",
         "react/void-dom-elements-no-children": "error",
+    },
+    settings: {
+        react: {
+            version: "detect",
+        },
     },
 }

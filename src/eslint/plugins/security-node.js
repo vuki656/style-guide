@@ -1,6 +1,9 @@
-/** @type {import("eslint").ESLint.ConfigData} */
+const securityNode = require("eslint-plugin-security-node")
+
 module.exports = {
-    plugins: ["security-node"],
+    plugins: {
+        "security-node": securityNode,
+    },
     rules: {
         "security-node/detect-absence-of-name-option-in-exrpress-session": "error",
         "security-node/detect-buffer-unsafe-allocation": "error",

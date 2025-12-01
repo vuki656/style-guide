@@ -1,4 +1,4 @@
-/** @type {import("eslint").ESLint.ConfigData} */
-module.exports = {
-    extends: ["../plugins/typescript-eslint.js", "../plugins/typescript-sort-keys.js"],
-}
+const typescriptEslintPlugin = require("../plugins/typescript-eslint.js")
+const typescriptSortKeysPlugin = require("../plugins/typescript-sort-keys.js")
+
+module.exports = [typescriptEslintPlugin, typescriptSortKeysPlugin]

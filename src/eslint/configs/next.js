@@ -1,4 +1,3 @@
-/** @type {import("eslint").ESLint.ConfigData} */
-module.exports = {
-    extends: ["../plugins/next.js"],
-}
+const nextPlugin = require("../plugins/next.js")
+
+module.exports = [nextPlugin]
