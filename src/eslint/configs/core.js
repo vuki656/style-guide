@@ -3,7 +3,6 @@ import eslintPlugin from "../plugins/eslint.js"
 import eslintCommentsPlugin from "../plugins/eslint-comments.js"
 import etcPlugin from "../plugins/etc.js"
 import importXPlugin from "../plugins/import-x.js"
-import prettierPlugin from "../plugins/prettier.js"
 import promisePlugin from "../plugins/promise.js"
 import rimacPlugin from "../plugins/rimac.js"
 import simpleImportSortPlugin from "../plugins/simple-import-sort.js"
@@ -29,7 +28,6 @@ const coreConfig = [
     stylisticPlugin,
     simpleImportSortPlugin,
     rimacPlugin,
-    prettierPlugin,
 ]
 
 export default coreConfig
