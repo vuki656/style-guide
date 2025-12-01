@@ -5,7 +5,6 @@ const plugin = {
         "@eslint-community/eslint-comments": eslintComments,
     },
     rules: {
-        "@eslint-community/eslint-comments/disable-enable-pair": "error",
         "@eslint-community/eslint-comments/no-aggregating-enable": "error",
         "@eslint-community/eslint-comments/no-duplicate-disable": "error",
         "@eslint-community/eslint-comments/no-unlimited-disable": "error",

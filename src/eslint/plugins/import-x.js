@@ -18,7 +18,12 @@ const plugin = {
         "import-x/no-duplicates": "error",
         "import-x/no-dynamic-require": "error",
         "import-x/no-empty-named-blocks": "error",
-        "import-x/no-extraneous-dependencies": "error",
+        "import-x/no-extraneous-dependencies": [
+            "error",
+            {
+                whitelist: ["typescript-eslint"],
+            },
+        ],
         "import-x/no-mutable-exports": "error",
         "import-x/no-named-as-default": "error",
         "import-x/no-named-as-default-member": "error",
