@@ -1,44 +1,38 @@
-name: Default
+name: CI
 
 on:
     push:
-        branches:
-            - master
+        branches: [master]
     pull_request:
-    workflow_dispatch:
 
 jobs:
-    lint:
-        name: Lint
+    ci:
         runs-on: ubuntu-latest
         steps:
-            - name: Enable Corepack
-              run: corepack enable
+            - run: corepack enable
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
               with:
-                  registry-url: "https://registry.npmjs.org"
-                  node-version: 20.x
+                  registry-url: https://registry.npmjs.org
+                  node-version: 22.x
                   cache: yarn
             - run: yarn
             - run: yarn lint
+            - run: yarn test
 
     release:
-        name: Release
-        needs: [lint]
+        needs: ci
         if: github.ref == 'refs/heads/master'
         runs-on: ubuntu-latest
         steps:
-            - name: Enable Corepack
-              run: corepack enable
+            - run: corepack enable
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
               with:
-                  registry-url: "https://registry.npmjs.org"
-                  node-version: 20.x
+                  registry-url: https://registry.npmjs.org
+                  node-version: 22.x
                   cache: yarn
-            - name: git config
-              run: |
+            - run: |
                   git config user.name "${GITHUB_ACTOR}"
                   git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
             - run: yarn
