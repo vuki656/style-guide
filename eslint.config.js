@@ -13,7 +13,7 @@ import typescriptStrict from "./src/eslint/configs/typescript-strict.js"
 import vitest from "./src/eslint/configs/vitest.js"
 
 export default defineConfig(
-    globalIgnores(["node_modules", "**/*.graphql"]),
+    globalIgnores(["node_modules"]),
     core,
     node,
     mobx,
