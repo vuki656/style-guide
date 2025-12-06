@@ -1,7 +1,7 @@
-import storybookPlugin from "../plugins/storybook.js"
+import {storybook} from "../plugins/storybook.js"
 
 const storybookConfig = [
-    storybookPlugin,
+    storybook,
     {
         rules: {
             "no-console": "off",

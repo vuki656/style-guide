@@ -1,8 +1,8 @@
-import securityNode from "eslint-plugin-security-node"
+import plugin from "eslint-plugin-security-node"
 
-const plugin = {
+export const securityNode = {
     plugins: {
-        "security-node": securityNode,
+        "security-node": plugin,
     },
     rules: {
         "security-node/detect-absence-of-name-option-in-exrpress-session": "error",
@@ -30,4 +30,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

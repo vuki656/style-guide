@@ -1,8 +1,8 @@
-import sonarjs from "eslint-plugin-sonarjs"
+import plugin from "eslint-plugin-sonarjs"
 
-const plugin = {
+export const sonarjs = {
     plugins: {
-        sonarjs,
+        sonarjs: plugin,
     },
     rules: {
         "sonarjs/anchor-precedence": "error",
@@ -69,7 +69,6 @@ const plugin = {
         "sonarjs/enforce-trailing-comma": "error",
         "sonarjs/existing-groups": "error",
         "sonarjs/expression-complexity": "error",
-        "sonarjs/file-name-differ-from-class": "error",
         "sonarjs/file-permissions": "error",
         "sonarjs/file-uploads": "error",
         "sonarjs/fixme-tag": "error",
@@ -263,4 +262,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

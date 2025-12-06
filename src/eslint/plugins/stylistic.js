@@ -1,8 +1,8 @@
-import stylistic from "@stylistic/eslint-plugin"
+import plugin from "@stylistic/eslint-plugin"
 
-const plugin = {
+export const stylistic = {
     plugins: {
-        "@stylistic": stylistic,
+        "@stylistic": plugin,
     },
     rules: {
         "@stylistic/lines-between-class-members": ["error", "always"],
@@ -38,4 +38,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

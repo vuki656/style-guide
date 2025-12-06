@@ -1,6 +1,6 @@
-import nPlugin from "../plugins/n.js"
-import securityNodePlugin from "../plugins/security-node.js"
+import {nodeN} from "../plugins/n.js"
+import {securityNode} from "../plugins/security-node.js"
 
-const nodeConfig = [nPlugin, securityNodePlugin]
+const nodeConfig = [nodeN, securityNode]
 
 export default nodeConfig

@@ -1,6 +1,6 @@
 import pluginNode from "eslint-plugin-n"
 
-const plugin = {
+export const nodeN = {
     plugins: {
         n: pluginNode,
     },
@@ -38,4 +38,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

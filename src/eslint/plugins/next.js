@@ -1,8 +1,8 @@
-import next from "@next/eslint-plugin-next"
+import plugin from "@next/eslint-plugin-next"
 
-const plugin = {
+export const next = {
     plugins: {
-        "@next/next": next,
+        "@next/next": plugin,
     },
     rules: {
         "@next/next/google-font-display": "error",
@@ -29,4 +29,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

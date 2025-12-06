@@ -1,10 +1,10 @@
-import esX from "eslint-plugin-es-x"
+import plugin from "eslint-plugin-es-x"
 
-const plugin = {
+export const esX = {
     plugins: {
-        "es-x": esX,
+        "es-x": plugin,
     },
     rules: {},
 }
 
-export default plugin
+

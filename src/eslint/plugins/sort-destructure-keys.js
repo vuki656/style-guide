@@ -1,12 +1,12 @@
-import sortDestructureKeys from "eslint-plugin-sort-destructure-keys"
+import plugin from "eslint-plugin-sort-destructure-keys"
 
-const plugin = {
+export const sortDestructureKeys = {
     plugins: {
-        "sort-destructure-keys": sortDestructureKeys,
+        "sort-destructure-keys": plugin,
     },
     rules: {
         "sort-destructure-keys/sort-destructure-keys": "error",
     },
 }
 
-export default plugin
+

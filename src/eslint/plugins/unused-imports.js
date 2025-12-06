@@ -1,12 +1,12 @@
-import unusedImports from "eslint-plugin-unused-imports"
+import plugin from "eslint-plugin-unused-imports"
 
-const plugin = {
+export const unusedImports = {
     plugins: {
-        "unused-imports": unusedImports,
+        "unused-imports": plugin,
     },
     rules: {
         "unused-imports/no-unused-imports": "error",
     },
 }
 
-export default plugin
+
