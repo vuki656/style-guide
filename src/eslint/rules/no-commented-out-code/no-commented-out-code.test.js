@@ -1,7 +1,7 @@
 import { ESLint } from "eslint"
 import tseslint from "typescript-eslint"
 
-import dvukovicPlugin from "../../plugins/dvukovic.js"
+import { dvukovic } from "../../plugins/dvukovic.js"
 
 const eslint = new ESLint({
     overrideConfig: [
@@ -11,7 +11,7 @@ const eslint = new ESLint({
                 parser: tseslint.parser,
             },
         },
-        dvukovicPlugin,
+        dvukovic,
     ],
     overrideConfigFile: true,
 })

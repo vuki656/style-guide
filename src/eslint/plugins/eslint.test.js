@@ -1,7 +1,7 @@
 import { ESLint } from "eslint"
 import tseslint from "typescript-eslint"
 
-import eslintPlugin from "./eslint.js"
+import { eslint as base } from "./eslint.js"
 
 const eslint = new ESLint({
     overrideConfig: [
@@ -11,7 +11,7 @@ const eslint = new ESLint({
                 parser: tseslint.parser,
             },
         },
-        eslintPlugin,
+        base,
     ],
     overrideConfigFile: true,
 })
