@@ -1,5 +1,5 @@
-import playwrightPlugin from "../plugins/playwright.js"
+import {playwright} from "../plugins/playwright.js"
 
-const playwrightConfig = [playwrightPlugin]
+const playwrightConfig = [playwright]
 
 export default playwrightConfig

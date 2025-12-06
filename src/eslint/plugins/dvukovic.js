@@ -1,6 +1,6 @@
-import noCommentedOutCode from "../rules/no-commented-out-code/no-commented-out-code.js"
+import { noCommentedOutCode } from "../rules/no-commented-out-code/no-commented-out-code.js"
 
-const plugin = {
+export const dvukovic = {
     plugins: {
         dvukovic: {
             rules: {
@@ -13,5 +13,5 @@ const plugin = {
     },
 }
 
-export default plugin
+
 

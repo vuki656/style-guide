@@ -1,8 +1,8 @@
-import rimac from "@rimac-technology/eslint-plugin"
+import plugin from "@rimac-technology/eslint-plugin"
 
-const plugin = {
+export const rimac = {
     plugins: {
-        "@rimac-technology": rimac,
+        "@rimac-technology": plugin,
     },
     rules: {
         "@rimac-technology/class-element-sorting": "error",
@@ -10,4 +10,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

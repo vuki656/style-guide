@@ -1,8 +1,8 @@
-import storybook from "eslint-plugin-storybook"
+import plugin from "eslint-plugin-storybook"
 
-const plugin = {
+export const storybook = {
     plugins: {
-        storybook,
+        storybook: plugin,
     },
     rules: {
         "storybook/await-interactions": "error",
@@ -21,4 +21,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

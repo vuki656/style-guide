@@ -1,8 +1,8 @@
-import react from "eslint-plugin-react"
+import plugin from "eslint-plugin-react"
 
-const plugin = {
+export const react = {
     plugins: {
-        react,
+        react: plugin,
     },
     rules: {
         "react/boolean-prop-naming": "error",
@@ -107,4 +107,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

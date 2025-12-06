@@ -1,8 +1,8 @@
-import mobx from "eslint-plugin-mobx"
+import plugin from "eslint-plugin-mobx"
 
-const plugin = {
+export const mobx = {
     plugins: {
-        mobx,
+        mobx: plugin,
     },
     rules: {
         "mobx/exhaustive-make-observable": "error",
@@ -11,4 +11,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

@@ -1,5 +1,5 @@
-import mobxPlugin from "../plugins/mobx.js"
+import {mobx} from "../plugins/mobx.js"
 
-const mobxConfig = [mobxPlugin]
+const mobxConfig = [mobx]
 
 export default mobxConfig

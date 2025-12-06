@@ -1,6 +1,6 @@
-import typescriptEslintPlugin from "../plugins/typescript-eslint.js"
-import typescriptSortKeysPlugin from "../plugins/typescript-sort-keys.js"
+import {typescriptEslint} from "../plugins/typescript-eslint.js"
+import {typescriptSortKeys} from "../plugins/typescript-sort-keys.js"
 
-const typescriptConfig = [typescriptEslintPlugin, typescriptSortKeysPlugin]
+const typescriptConfig = [typescriptEslint, typescriptSortKeys]
 
 export default typescriptConfig

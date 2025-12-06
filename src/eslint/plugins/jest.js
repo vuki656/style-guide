@@ -1,8 +1,8 @@
-import jest from "eslint-plugin-jest"
+import plugin from "eslint-plugin-jest"
 
-const plugin = {
+export const jest = {
     plugins: {
-        jest,
+        jest: plugin,
     },
     rules: {
         "jest/consistent-test-it": ["error", { fn: "test", withinDescribe: "test" }],
@@ -61,4 +61,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

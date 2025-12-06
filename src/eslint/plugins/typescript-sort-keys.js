@@ -1,8 +1,8 @@
-import typescriptSortKeys from "eslint-plugin-typescript-sort-keys"
+import plugin from "eslint-plugin-typescript-sort-keys"
 
-const plugin = {
+export const typescriptSortKeys = {
     plugins: {
-        "typescript-sort-keys": typescriptSortKeys,
+        "typescript-sort-keys": plugin,
     },
     rules: {
         "typescript-sort-keys/interface": "error",
@@ -10,4 +10,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

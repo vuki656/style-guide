@@ -1,8 +1,8 @@
-import vitest from "@vitest/eslint-plugin"
+import plugin from "@vitest/eslint-plugin"
 
-const plugin = {
+export const vitest = {
     plugins: {
-        "@vitest": vitest,
+        "@vitest": plugin,
     },
     rules: {
         "@vitest/consistent-each-for": [
@@ -96,4 +96,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

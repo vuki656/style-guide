@@ -1,5 +1,5 @@
-import jestPlugin from "../plugins/jest.js"
+import {jest} from "../plugins/jest.js"
 
-const jestConfig = [jestPlugin]
+const jestConfig = [jest]
 
 export default jestConfig

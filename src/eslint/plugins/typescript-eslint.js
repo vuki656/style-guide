@@ -1,8 +1,8 @@
-import typescriptEslint from "typescript-eslint"
+import plugin from "typescript-eslint"
 
-const plugin = {
+export const typescriptEslint = {
     plugins: {
-        "@typescript-eslint": typescriptEslint.plugin,
+        "@typescript-eslint": plugin.plugin,
     },
     rules: {
         "@typescript-eslint/adjacent-overload-signatures": "error",
@@ -193,4 +193,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

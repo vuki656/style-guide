@@ -1,6 +1,6 @@
 import globals from "globals"
 
-const plugin = {
+export const eslint = {
     languageOptions: {
         ecmaVersion: 2024,
         globals: {
@@ -174,4 +174,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

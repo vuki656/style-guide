@@ -9,7 +9,7 @@ import {
     wrapContent,
 } from "./no-commented-out-code.utils.js"
 
-const rule = {
+export const noCommentedOutCode = {
     create(context) {
         const sourceCode = context.sourceCode
         const parserOptions = { ...context.parserOptions, project: undefined }
@@ -78,5 +78,3 @@ const rule = {
         type: "problem",
     },
 }
-
-export default rule

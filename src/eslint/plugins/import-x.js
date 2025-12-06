@@ -1,8 +1,8 @@
-import importXPlugin from "eslint-plugin-import-x"
+import plugin from "eslint-plugin-import-x"
 
-const plugin = {
+export const importX = {
     plugins: {
-        "import-x": importXPlugin,
+        "import-x": plugin,
     },
     rules: {
         "import-x/default": "error",
@@ -34,4 +34,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

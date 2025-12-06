@@ -1,12 +1,12 @@
-import reactHooks from "eslint-plugin-react-hooks"
+import plugin from "eslint-plugin-react-hooks"
 
-const plugin = {
+export const reactHooks = {
     plugins: {
-        "react-hooks": reactHooks,
+        "react-hooks": plugin,
     },
     rules: {
         "react-hooks/rules-of-hooks": "error",
     },
 }
 
-export default plugin
+

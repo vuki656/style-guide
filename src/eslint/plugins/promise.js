@@ -1,8 +1,8 @@
-import promise from "eslint-plugin-promise"
+import plugin from "eslint-plugin-promise"
 
-const plugin = {
+export const promise = {
     plugins: {
-        promise,
+        promise: plugin,
     },
     rules: {
         "promise/always-return": "error",
@@ -19,4 +19,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

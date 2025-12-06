@@ -1,8 +1,8 @@
-import eslintComments from "@eslint-community/eslint-plugin-eslint-comments"
+import plugin from "@eslint-community/eslint-plugin-eslint-comments"
 
-const plugin = {
+export const eslintComments = {
     plugins: {
-        "@eslint-community/eslint-comments": eslintComments,
+        "@eslint-community/eslint-comments": plugin,
     },
     rules: {
         "@eslint-community/eslint-comments/no-aggregating-enable": "error",
@@ -14,4 +14,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

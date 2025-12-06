@@ -1,8 +1,8 @@
-import playwright from "eslint-plugin-playwright"
+import plugin from "eslint-plugin-playwright"
 
-const plugin = {
+export const playwright = {
     plugins: {
-        playwright,
+        playwright: plugin,
     },
     rules: {
         "playwright/expect-expect": "error",
@@ -57,4 +57,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

@@ -1,8 +1,8 @@
-import unicorn from "eslint-plugin-unicorn"
+import plugin from "eslint-plugin-unicorn"
 
-const plugin = {
+export const unicorn = {
     plugins: {
-        unicorn,
+        unicorn: plugin,
     },
     rules: {
         "unicorn/better-regex": "error",
@@ -169,4 +169,4 @@ const plugin = {
     },
 }
 
-export default plugin
+

@@ -1,8 +1,8 @@
-import simpleImportSort from "eslint-plugin-simple-import-sort"
+import plugin from "eslint-plugin-simple-import-sort"
 
-const plugin = {
+export const simpleImportSort = {
     plugins: {
-        "simple-import-sort": simpleImportSort,
+        "simple-import-sort": plugin,
     },
     rules: {
         "simple-import-sort/exports": "error",
@@ -10,4 +10,4 @@ const plugin = {
     },
 }
 
-export default plugin
+
