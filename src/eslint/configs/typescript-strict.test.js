@@ -12,6 +12,6 @@ describe("typescript-strict", () => {
         const results = await eslint.lintText("const x: number = 1\n", { filePath: "test.ts" })
 
         expect(results).toBeDefined()
-        expect(results[0].fatalErrorCount).toBe(0)
+        expect(results[0]?.fatalErrorCount).toBe(0)
     })
 })
