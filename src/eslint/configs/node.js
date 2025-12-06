@@ -1,6 +1,18 @@
 import { nodeN } from "../plugins/n.js"
 import { securityNode } from "../plugins/security-node.js"
 
-const nodeConfig = [nodeN, securityNode]
+export const nodeConfig = [nodeN, securityNode]
 
-export default nodeConfig
+/**
+ * Node.js ESLint configuration
+ *
+ * @param {import("@eslint/config-helpers").ConfigWithExtends} [config] - Additional config
+ * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
+ */
+export function node(config) {
+    return {
+        extends: [...nodeConfig, ...(config?.extends ?? [])],
+        files: ["**/*.js", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.cts", "**/*.mts"],
+        ...config,
+    }
+}

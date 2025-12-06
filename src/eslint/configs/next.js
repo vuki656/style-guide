@@ -1,5 +1,17 @@
-import { next } from "../plugins/next.js"
+import { next as nextPlugin } from "../plugins/next.js"
 
-const nextConfig = [next]
+export const nextConfig = [nextPlugin]
 
-export default nextConfig
+/**
+ * Next.js framework configuration
+ *
+ * @param {import("@eslint/config-helpers").ConfigWithExtends} [config] - Additional config
+ * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
+ */
+export function next(config) {
+    return {
+        extends: [...nextConfig, ...(config?.extends ?? [])],
+        files: ["**/*.js", "**/*.ts", "**/*.jsx", "**/*.tsx"],
+        ...config,
+    }
+}

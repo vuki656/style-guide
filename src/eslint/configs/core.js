@@ -13,7 +13,7 @@ import { stylistic } from "../plugins/stylistic.js"
 import { unicorn } from "../plugins/unicorn.js"
 import { unusedImports } from "../plugins/unused-imports.js"
 
-const coreConfig = [
+export const coreConfig = [
     esX,
     eslint,
     eslintComments,
@@ -30,4 +30,16 @@ const coreConfig = [
     dvukovic,
 ]
 
-export default coreConfig
+/**
+ * Core ESLint configuration with essential rules and plugins
+ *
+ * @param {import("@eslint/config-helpers").ConfigWithExtends} [config] - Additional config
+ * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
+ */
+export function core(config) {
+    return {
+        extends: [...coreConfig, ...(config?.extends ?? [])],
+        files: ["**/*.js", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.tsx"],
+        ...config,
+    }
+}
