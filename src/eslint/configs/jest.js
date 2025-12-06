@@ -1,4 +1,4 @@
-import {jest} from "../plugins/jest.js"
+import { jest } from "../plugins/jest.js"
 
 const jestConfig = [jest]
 

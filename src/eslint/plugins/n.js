@@ -37,5 +37,3 @@ export const nodeN = {
         "n/prefer-promises/fs": "error",
     },
 }
-
-

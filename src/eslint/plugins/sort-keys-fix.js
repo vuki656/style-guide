@@ -8,5 +8,3 @@ export const sortKeysFix = {
         "sort-keys-fix/sort-keys-fix": "error",
     },
 }
-
-

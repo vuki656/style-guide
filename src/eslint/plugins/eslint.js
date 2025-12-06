@@ -173,5 +173,3 @@ export const eslint = {
         yoda: "error",
     },
 }
-
-

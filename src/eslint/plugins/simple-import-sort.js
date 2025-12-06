@@ -9,5 +9,3 @@ export const simpleImportSort = {
         "simple-import-sort/imports": "error",
     },
 }
-
-

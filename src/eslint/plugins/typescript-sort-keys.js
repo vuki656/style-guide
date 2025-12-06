@@ -9,5 +9,3 @@ export const typescriptSortKeys = {
         "typescript-sort-keys/string-enum": "error",
     },
 }
-
-

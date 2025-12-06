@@ -56,5 +56,3 @@ export const playwright = {
         "playwright/valid-title": "error",
     },
 }
-
-

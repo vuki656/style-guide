@@ -22,7 +22,7 @@
         "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:stylelint && yarn lint:spell",
         "lint:eslint": "eslint . --cache --concurrency=auto",
         "lint:fix": "yarn lint:eslint --fix && yarn lint:prettier --write && yarn lint:stylelint --fix",
-        "lint:prettier": "prettier --check --cache '**/*.{json,yaml,yml,md,css,html}'",
+        "lint:prettier": "prettier --check --cache .",
         "lint:spell": "cspell --config ./.cspellrc.js --no-progress --no-summary --unique '**'",
         "lint:stylelint": "stylelint ./**/*.css --cache",
         "release": "release-it",

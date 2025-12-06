@@ -1,4 +1,4 @@
-import {storybook} from "../plugins/storybook.js"
+import { storybook } from "../plugins/storybook.js"
 
 const storybookConfig = [
     storybook,

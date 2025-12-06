@@ -1,5 +1,5 @@
-import {react} from "../plugins/react.js"
-import {reactHooks} from "../plugins/react-hooks.js"
+import { react } from "../plugins/react.js"
+import { reactHooks } from "../plugins/react-hooks.js"
 
 const reactConfig = [react, reactHooks]
 

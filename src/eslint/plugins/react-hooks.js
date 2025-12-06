@@ -8,5 +8,3 @@ export const reactHooks = {
         "react-hooks/rules-of-hooks": "error",
     },
 }
-
-

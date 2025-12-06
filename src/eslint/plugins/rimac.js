@@ -9,5 +9,3 @@ export const rimac = {
         "@rimac-technology/document-todos": ["error", { url: "http" }],
     },
 }
-
-

@@ -1,4 +1,4 @@
-import {next} from "../plugins/next.js"
+import { next } from "../plugins/next.js"
 
 const nextConfig = [next]
 

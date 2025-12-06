@@ -33,5 +33,3 @@ export const importX = {
         "import-x/no-useless-path-segments": "error",
     },
 }
-
-

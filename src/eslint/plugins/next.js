@@ -28,5 +28,3 @@ export const next = {
         "@next/next/no-unwanted-polyfillio": "error",
     },
 }
-
-
