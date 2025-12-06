@@ -21,7 +21,7 @@ describe("eslint no-enum", () => {
         const code = `enum Status { Active, Inactive }\n`
         const results = await eslint.lintText(code, { filePath: "test.ts" })
         const enumErrors = results[0]?.messages.filter(
-            (message) => {return message.ruleId === "no-restricted-syntax"}
+            (message) => {return message.ruleId === "no-restricted-syntax"},
         )
 
         expect(enumErrors?.length).toBe(1)
@@ -32,7 +32,7 @@ describe("eslint no-enum", () => {
         const code = `type Status = "active" | "inactive"\n`
         const results = await eslint.lintText(code, { filePath: "test.ts" })
         const restrictedSyntaxErrors = results?.[0]?.messages.filter(
-            (message) => {return message.ruleId === "no-restricted-syntax"}
+            (message) => {return message.ruleId === "no-restricted-syntax"},
         )
 
         expect(restrictedSyntaxErrors?.length).toBe(0)
