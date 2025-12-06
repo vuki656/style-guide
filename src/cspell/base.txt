@@ -113,3 +113,12 @@ speculationrules
 hrefs
 supabase
 tslog
+pablle
+fkey
+msword
+openxmlformats
+officedocument
+wordprocessingml
+presentationml
+spreadsheetml
+pageleave
