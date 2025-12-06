@@ -101,6 +101,13 @@ const plugin = {
         "no-proto": "error",
         "no-prototype-builtins": "error",
         "no-regex-spaces": "error",
+        "no-restricted-syntax": [
+            "error",
+            {
+                message: "Use union types or const objects instead of enums.",
+                selector: "TSEnumDeclaration",
+            },
+        ],
         "no-return-assign": "error",
         "no-script-url": "error",
         "no-self-assign": "error",
