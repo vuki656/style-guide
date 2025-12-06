@@ -1,7 +1,8 @@
 import typescriptEslint from "typescript-eslint"
 
-const typescriptStrictConfig = [
+export const typescriptStrictConfig = [
     {
+        files: ["**/*.ts", "**/*.tsx"],
         plugins: {
             "@typescript-eslint": typescriptEslint.plugin,
         },
@@ -29,4 +30,16 @@ const typescriptStrictConfig = [
     },
 ]
 
-export default typescriptStrictConfig
+/**
+ * Strict TypeScript ESLint configuration with additional safety rules
+ *
+ * @param {import("@eslint/config-helpers").ConfigWithExtends} [config] - Additional config
+ * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
+ */
+export function typescriptStrict(config) {
+    return {
+        extends: [...typescriptStrictConfig, ...(config?.extends ?? [])],
+        files: ["**/*.ts", "**/*.tsx", "**/*.cts", "**/*.mts"],
+        ...config,
+    }
+}

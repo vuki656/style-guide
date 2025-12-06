@@ -1,6 +1,18 @@
-import { react } from "../plugins/react.js"
-import { reactHooks } from "../plugins/react-hooks.js"
+import { react as reactPlugin } from "../plugins/react.js"
+import { reactHooks as reactHooksPlugin } from "../plugins/react-hooks.js"
 
-const reactConfig = [react, reactHooks]
+export const reactConfig = [reactPlugin, reactHooksPlugin]
 
-export default reactConfig
+/**
+ * React framework configuration
+ *
+ * @param {import("@eslint/config-helpers").ConfigWithExtends} [config] - Additional config
+ * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
+ */
+export function react(config) {
+    return {
+        extends: [...reactConfig, ...(config?.extends ?? [])],
+        files: ["**/*.jsx", "**/*.tsx"],
+        ...config,
+    }
+}

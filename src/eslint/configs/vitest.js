@@ -1,5 +1,28 @@
-import { vitest } from "../plugins/vitest.js"
+import { vitest as vitestPlugin } from "../plugins/vitest.js"
 
-const vitestConfig = [vitest]
+export const vitestConfig = [vitestPlugin]
 
-export default vitestConfig
+/**
+ * Vitest testing framework configuration
+ *
+ * @param {import("@eslint/config-helpers").ConfigWithExtends} [config] - Additional config
+ * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
+ */
+export function vitest(config) {
+    return {
+        extends: [...vitestConfig, ...(config?.extends ?? [])],
+        files: [
+            "**/*.test.js",
+            "**/*.test.ts",
+            "**/*.spec.js",
+            "**/*.spec.ts",
+            "**/*.unit.test.js",
+            "**/*.unit.test.ts",
+            "**/*.int.test.js",
+            "**/*.int.test.ts",
+            "**/*.integration.test.js",
+            "**/*.integration.test.ts",
+        ],
+        ...config,
+    }
+}

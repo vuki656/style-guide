@@ -1,7 +1,7 @@
-import { storybook } from "../plugins/storybook.js"
+import { storybook as storybookPlugin } from "../plugins/storybook.js"
 
-const storybookConfig = [
-    storybook,
+export const storybookConfig = [
+    storybookPlugin,
     {
         rules: {
             "no-console": "off",
@@ -13,4 +13,16 @@ const storybookConfig = [
     },
 ]
 
-export default storybookConfig
+/**
+ * Storybook ESLint configuration with relaxed rules for story files
+ *
+ * @param {import("@eslint/config-helpers").ConfigWithExtends} [config] - Additional config
+ * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
+ */
+export function storybook(config) {
+    return {
+        extends: [...storybookConfig, ...(config?.extends ?? [])],
+        files: ["**/*.stories.js", "**/*.stories.ts", "**/*.stories.jsx", "**/*.stories.tsx"],
+        ...config,
+    }
+}

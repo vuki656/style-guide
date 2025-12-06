@@ -1,5 +1,17 @@
-import { mobx } from "../plugins/mobx.js"
+import { mobx as mobxPlugin } from "../plugins/mobx.js"
 
-const mobxConfig = [mobx]
+export const mobxConfig = [mobxPlugin]
 
-export default mobxConfig
+/**
+ * MobX state management configuration
+ *
+ * @param {import("@eslint/config-helpers").ConfigWithExtends} [config] - Additional config
+ * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
+ */
+export function mobx(config) {
+    return {
+        extends: [...mobxConfig, ...(config?.extends ?? [])],
+        files: ["**/*.js", "**/*.ts", "**/*.jsx", "**/*.tsx"],
+        ...config,
+    }
+}

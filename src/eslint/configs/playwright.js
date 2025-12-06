@@ -1,5 +1,28 @@
-import { playwright } from "../plugins/playwright.js"
+import { playwright as playwrightPlugin } from "../plugins/playwright.js"
 
-const playwrightConfig = [playwright]
+export const playwrightConfig = [playwrightPlugin]
 
-export default playwrightConfig
+/**
+ * Playwright testing configuration
+ *
+ * @param {import("@eslint/config-helpers").ConfigWithExtends} [config] - Additional config
+ * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
+ */
+export function playwright(config) {
+    return {
+        extends: [...playwrightConfig, ...(config?.extends ?? [])],
+        files: [
+            "**/*.test.js",
+            "**/*.test.ts",
+            "**/*.spec.js",
+            "**/*.spec.ts",
+            "**/*.unit.test.js",
+            "**/*.unit.test.ts",
+            "**/*.int.test.js",
+            "**/*.int.test.ts",
+            "**/*.integration.test.js",
+            "**/*.integration.test.ts",
+        ],
+        ...config,
+    }
+}
