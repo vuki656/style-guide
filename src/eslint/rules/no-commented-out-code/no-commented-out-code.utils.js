@@ -37,7 +37,7 @@ export function hasLabeledStatementBody(program) {
     return (
         program.type === "Program" &&
         program.body.length === 1 &&
-        program.body[0].type === "LabeledStatement"
+        program.body[0]?.type === "LabeledStatement"
     )
 }
 
