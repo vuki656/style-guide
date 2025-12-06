@@ -1,4 +1,4 @@
-import {mobx} from "../plugins/mobx.js"
+import { mobx } from "../plugins/mobx.js"
 
 const mobxConfig = [mobx]
 

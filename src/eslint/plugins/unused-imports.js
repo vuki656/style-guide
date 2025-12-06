@@ -8,5 +8,3 @@ export const unusedImports = {
         "unused-imports/no-unused-imports": "error",
     },
 }
-
-

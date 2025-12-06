@@ -261,5 +261,3 @@ export const sonarjs = {
         "sonarjs/xpath": "error",
     },
 }
-
-

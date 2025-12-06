@@ -1,4 +1,4 @@
-import {vitest} from "../plugins/vitest.js"
+import { vitest } from "../plugins/vitest.js"
 
 const vitestConfig = [vitest]
 

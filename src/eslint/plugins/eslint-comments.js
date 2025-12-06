@@ -13,5 +13,3 @@ export const eslintComments = {
         "@eslint-community/eslint-comments/require-description": "error",
     },
 }
-
-

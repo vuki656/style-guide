@@ -1,4 +1,4 @@
-import {playwright} from "../plugins/playwright.js"
+import { playwright } from "../plugins/playwright.js"
 
 const playwrightConfig = [playwright]
 

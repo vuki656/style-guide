@@ -192,5 +192,3 @@ export const typescriptEslint = {
         "require-await": "off",
     },
 }
-
-

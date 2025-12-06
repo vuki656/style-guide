@@ -168,5 +168,3 @@ export const unicorn = {
         "unicorn/throw-new-error": "error",
     },
 }
-
-

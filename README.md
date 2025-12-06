@@ -19,7 +19,7 @@ Add these scripts to your `package.json`:
         "lint:eslint": "eslint . --cache --concurrency=auto",
         "lint:fix": "yarn lint:eslint --fix && yarn lint:prettier --write && yarn lint:stylelint --fix",
         "lint:package-json": "npmPkgJsonLint --configFile ./.packagerc.js .",
-        "lint:prettier": "prettier --check --cache '**/*.{json,yaml,yml,md,css,html}'",
+        "lint:prettier": "prettier --check --cache .",
         "lint:spell": "cspell --config ./.cspellrc.js --no-progress --no-summary --unique '**'",
         "lint:stylelint": "stylelint ./**/*.css --cache"
     }

@@ -37,5 +37,3 @@ export const stylistic = {
         "@stylistic/spaced-comment": ["error", "always", { markers: ["/"] }],
     },
 }
-
-

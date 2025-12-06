@@ -12,6 +12,3 @@ export const dvukovic = {
         "dvukovic/no-commented-out-code": "error",
     },
 }
-
-
-

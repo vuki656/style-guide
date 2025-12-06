@@ -20,5 +20,3 @@ export const storybook = {
         "storybook/use-storybook-testing-library": "error",
     },
 }
-
-

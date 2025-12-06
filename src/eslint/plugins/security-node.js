@@ -29,5 +29,3 @@ export const securityNode = {
         "security-node/non-literal-reg-expr": "error",
     },
 }
-
-

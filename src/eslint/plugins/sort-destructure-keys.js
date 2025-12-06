@@ -8,5 +8,3 @@ export const sortDestructureKeys = {
         "sort-destructure-keys/sort-destructure-keys": "error",
     },
 }
-
-

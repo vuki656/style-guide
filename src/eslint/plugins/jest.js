@@ -60,5 +60,3 @@ export const jest = {
         "jest/valid-title": "error",
     },
 }
-
-

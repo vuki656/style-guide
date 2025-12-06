@@ -18,5 +18,3 @@ export const promise = {
         "promise/valid-params": "error",
     },
 }
-
-

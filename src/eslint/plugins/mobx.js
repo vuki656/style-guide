@@ -10,5 +10,3 @@ export const mobx = {
         "mobx/unconditional-make-observable": "error",
     },
 }
-
-
