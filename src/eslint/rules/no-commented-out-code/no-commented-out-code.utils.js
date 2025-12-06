@@ -58,9 +58,10 @@ export function toBlocks(comments) {
             prevLine = undefined
         } else if (comment.type === "Line") {
             if (prevLine && prevLine.loc.start.line === comment.loc.start.line - 1) {
-                const prevBlock = blocks.at(-1)
-                prevBlock.content = `${prevBlock.content}\n${comment.value}`
-                prevBlock.loc.end = comment.loc.end
+                const previousBlock = blocks.at(-1)
+
+                previousBlock.content = `${previousBlock.content}\n${comment.value}`
+                previousBlock.loc.end = comment.loc.end
             } else {
                 blocks.push({
                     content: comment.value,
@@ -69,6 +70,8 @@ export function toBlocks(comments) {
             }
 
             prevLine = comment
+        } else {
+            prevLine = undefined
         }
     }
 
@@ -109,6 +112,8 @@ export function wrapContent(content, node) {
             return `type Wrapper = { ${content} }`
         }
 
-        default:
+        default: {
+            return null
+        }
     }
 }
