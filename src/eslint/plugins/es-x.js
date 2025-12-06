@@ -1,10 +1,10 @@
-import plugin from "eslint-plugin-es-x"
+import plugin from "eslint-plugin-es-x";
 
 export const esX = {
     plugins: {
         "es-x": plugin,
     },
-    rules: {},
-}
-
-
+    rules: {
+        ...plugin.configs["flat/restrict-to-es2022"].rules,
+    },
+};
