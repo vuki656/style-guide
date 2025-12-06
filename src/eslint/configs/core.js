@@ -1,7 +1,7 @@
+import dvukovicPlugin from "../plugins/dvukovic.js"
 import esXPlugin from "../plugins/es-x.js"
 import eslintPlugin from "../plugins/eslint.js"
 import eslintCommentsPlugin from "../plugins/eslint-comments.js"
-import etcPlugin from "../plugins/etc.js"
 import importXPlugin from "../plugins/import-x.js"
 import promisePlugin from "../plugins/promise.js"
 import rimacPlugin from "../plugins/rimac.js"
@@ -22,7 +22,7 @@ const coreConfig = [
     unusedImportsPlugin,
     importXPlugin,
     sonarjsPlugin,
-    etcPlugin,
+    dvukovicPlugin,
     sortKeysFixPlugin,
     sortDestructureKeysPlugin,
     stylisticPlugin,
