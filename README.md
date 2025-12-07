@@ -67,7 +67,7 @@ Add these scripts to your `package.json`:
         "lint:eslint": "eslint . --cache --concurrency=auto",
         "lint:fix": "yarn lint:eslint --fix && yarn lint:prettier --write && yarn lint:stylelint --fix && yarn lint:spell",
         "lint:prettier": "prettier --check --cache .",
-        "lint:spell": "cspell --config ./.cspellrc.js --no-progress --no-summary --unique '**'",
+        "lint:spell": "cspell --no-progress --no-summary --unique '**'",
         "lint:stylelint": "stylelint ./**/*.css --cache",
         "test": "vitest run"
     }
@@ -112,7 +112,7 @@ export default customDefineConfig(
 
 ## Prettier Configuration
 
-```js
+```js prettier.config.ts
 import type { Config } from "prettier"
 
 import core from "@dvukovic/style-guide/src/prettier/configs/core.js"
@@ -126,7 +126,7 @@ export default config
 
 ## Stylelint Configuration
 
-```js
+```js stylelint.config.js
 import { stylelint } from "@dvukovic/style-guide/stylelint"
 
 export default stylelint
