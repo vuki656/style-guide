@@ -1,5 +1,6 @@
 import plugin from "eslint-plugin-sonarjs"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const sonarjs = {
     plugins: {
         sonarjs: plugin,

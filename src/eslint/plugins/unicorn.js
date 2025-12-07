@@ -1,5 +1,6 @@
 import plugin from "eslint-plugin-unicorn"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const unicorn = {
     plugins: {
         unicorn: plugin,

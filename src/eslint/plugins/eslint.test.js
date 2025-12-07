@@ -20,6 +20,7 @@ describe("eslint no-enum", () => {
     test("detects enum declarations", async () => {
         const code = `enum Status { Active, Inactive }\n`
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const enumErrors = results[0]?.messages.filter((message) => {
             return message.ruleId === "no-restricted-syntax"
         })
@@ -31,6 +32,7 @@ describe("eslint no-enum", () => {
     test("allows union types", async () => {
         const code = `type Status = "active" | "inactive"\n`
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const restrictedSyntaxErrors = results?.[0]?.messages.filter((message) => {
             return message.ruleId === "no-restricted-syntax"
         })

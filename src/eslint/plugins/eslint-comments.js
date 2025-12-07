@@ -1,5 +1,6 @@
 import plugin from "@eslint-community/eslint-plugin-eslint-comments"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const eslintComments = {
     plugins: {
         "@eslint-community/eslint-comments": plugin,

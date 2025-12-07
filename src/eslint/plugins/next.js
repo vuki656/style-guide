@@ -1,5 +1,6 @@
 import plugin from "@next/eslint-plugin-next"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const next = {
     plugins: {
         "@next/next": plugin,

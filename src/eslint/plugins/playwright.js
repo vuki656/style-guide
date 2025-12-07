@@ -1,5 +1,6 @@
 import plugin from "eslint-plugin-playwright"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const playwright = {
     plugins: {
         playwright: plugin,

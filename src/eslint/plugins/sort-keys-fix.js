@@ -1,5 +1,6 @@
 import plugin from "eslint-plugin-sort-keys-fix"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const sortKeysFix = {
     plugins: {
         "sort-keys-fix": plugin,

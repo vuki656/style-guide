@@ -1,5 +1,6 @@
 import plugin from "eslint-plugin-mobx"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const mobx = {
     plugins: {
         mobx: plugin,

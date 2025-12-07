@@ -1,8 +1,9 @@
-import pluginNode from "eslint-plugin-n"
+import plugin from "eslint-plugin-n"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const nodeN = {
     plugins: {
-        n: pluginNode,
+        n: plugin,
     },
     rules: {
         "n/callback-return": "error",

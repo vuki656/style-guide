@@ -1,5 +1,6 @@
 import plugin from "eslint-plugin-react"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const react = {
     plugins: {
         react: plugin,

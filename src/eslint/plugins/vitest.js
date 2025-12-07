@@ -1,5 +1,6 @@
 import plugin from "@vitest/eslint-plugin"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const vitest = {
     plugins: {
         "@vitest": plugin,

@@ -1,5 +1,6 @@
 import plugin from "eslint-plugin-jest"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const jest = {
     plugins: {
         jest: plugin,
