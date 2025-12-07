@@ -122,3 +122,6 @@ wordprocessingml
 presentationml
 spreadsheetml
 pageleave
+opensearchservice
+httponly
+unthrown
