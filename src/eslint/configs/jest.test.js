@@ -1,9 +1,9 @@
 import { ESLint } from "eslint"
 
-import config from "./jest.js"
+import { jestConfig } from "./jest.js"
 
 const eslint = new ESLint({
-    overrideConfig: config,
+    overrideConfig: jestConfig,
     overrideConfigFile: true,
 })
 

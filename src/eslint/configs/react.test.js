@@ -1,9 +1,9 @@
 import { ESLint } from "eslint"
 
-import config from "./react.js"
+import { reactConfig } from "./react.js"
 
 const eslint = new ESLint({
-    overrideConfig: config,
+    overrideConfig: reactConfig,
     overrideConfigFile: true,
 })
 

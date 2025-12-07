@@ -1,9 +1,9 @@
 import { ESLint } from "eslint"
 
-import config from "./storybook.js"
+import { storybookConfig } from "./storybook.js"
 
 const eslint = new ESLint({
-    overrideConfig: config,
+    overrideConfig: storybookConfig,
     overrideConfigFile: true,
 })
 

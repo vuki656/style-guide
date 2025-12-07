@@ -1,7 +1,7 @@
 import tseslint from "typescript-eslint"
 
-import { typescriptEslint as typescriptEslintPlugin } from "../plugins/typescript-eslint.js"
-import { typescriptSortKeys as typescriptSortKeysPlugin } from "../plugins/typescript-sort-keys.js"
+import { typescriptEslint } from "../plugins/typescript-eslint.js"
+import { typescriptSortKeys } from "../plugins/typescript-sort-keys.js"
 
 export const typescriptConfig = [
     {
@@ -16,11 +16,11 @@ export const typescriptConfig = [
     },
     {
         files: ["**/*.ts", "**/*.tsx"],
-        ...typescriptEslintPlugin,
+        ...typescriptEslint,
     },
     {
         files: ["**/*.ts", "**/*.tsx"],
-        ...typescriptSortKeysPlugin,
+        ...typescriptSortKeys,
     },
 ]
 

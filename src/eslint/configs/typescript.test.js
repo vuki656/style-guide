@@ -1,15 +1,17 @@
 import { ESLint } from "eslint"
 
-import config from "./typescript.js"
+import { typescriptConfig } from "./typescript.js"
 
 const eslint = new ESLint({
-    overrideConfig: config,
+    overrideConfig: typescriptConfig,
     overrideConfigFile: true,
 })
 
 describe("typescript", () => {
     test("loads without errors", async () => {
-        const results = await eslint.lintText("const x: number = 1\n", { filePath: "test.ts" })
+        const results = await eslint.lintText("const x = 1\n", {
+            filePath: "src/eslint/configs/typescript.test.js",
+        })
 
         expect(results).toBeDefined()
         expect(results[0]?.fatalErrorCount).toBe(0)

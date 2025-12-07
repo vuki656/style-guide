@@ -1,9 +1,9 @@
 import { ESLint } from "eslint"
 
-import config from "./vitest.js"
+import { vitestConfig } from "./vitest.js"
 
 const eslint = new ESLint({
-    overrideConfig: config,
+    overrideConfig: vitestConfig,
     overrideConfigFile: true,
 })
 

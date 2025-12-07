@@ -1,9 +1,9 @@
 import { ESLint } from "eslint"
 
-import config from "./next.js"
+import { nextConfig } from "./next.js"
 
 const eslint = new ESLint({
-    overrideConfig: config,
+    overrideConfig: nextConfig,
     overrideConfigFile: true,
 })
 
@@ -12,6 +12,6 @@ describe("next", () => {
         const results = await eslint.lintText("const x = 1\n", { filePath: "test.tsx" })
 
         expect(results).toBeDefined()
-        expect(results[0].fatalErrorCount).toBe(0)
+        expect(results[0]?.fatalErrorCount).toBe(0)
     })
 })

@@ -1,9 +1,9 @@
 import { ESLint } from "eslint"
 
-import config from "./playwright.js"
+import { playwrightConfig } from "./playwright.js"
 
 const eslint = new ESLint({
-    overrideConfig: config,
+    overrideConfig: playwrightConfig,
     overrideConfigFile: true,
 })
 
