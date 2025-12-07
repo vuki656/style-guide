@@ -127,17 +127,35 @@ export default config
 ## Stylelint Configuration
 
 ```js stylelint.config.js
-import { stylelint } from "@dvukovic/style-guide/stylelint"
-
-export default stylelint
+/** @type {import("stylelint").Config} */
+module.exports = {
+    extends: "@dvukovic/style-guide/src/stylelint/configs/core",
+    allowEmptyInput: true,
+}
 ```
 
-## Package.json Configuration
+## Cspell Configuration
 
-```js
-import { packageJson } from "@dvukovic/style-guide/package-json"
-
-export default packageJson
+```cspell.config.js
+/** @type {import("cspell").FileSettings} */
+module.exports = {
+    cache: {
+        cacheLocation: "./node_modules/.cache/cspell",
+        useCache: true,
+    },
+    caseSensitive: false,
+    ignorePaths: [],
+    dictionaries: ["shared"],
+    dictionaryDefinitions: [
+        {
+            name: "shared",
+            path: "./node_modules/@dvukovic/style-guide/src/cspell/base.txt",
+        },
+    ],
+    useGitignore: true,
+    ignoreWords: [
+    ],
+}
 ```
 
 ## License

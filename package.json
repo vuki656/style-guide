@@ -23,7 +23,7 @@
         "lint:eslint": "eslint . --cache --concurrency=auto",
         "lint:fix": "yarn lint:eslint --fix && yarn lint:prettier --write && yarn lint:stylelint --fix && yarn lint:spell",
         "lint:prettier": "prettier --check --cache .",
-        "lint:spell": "cspell --config ./.cspellrc.js --no-progress --no-summary --unique '**'",
+        "lint:spell": "cspell --no-progress --no-summary --unique '**'",
         "lint:stylelint": "stylelint ./**/*.css --cache",
         "release": "release-it",
         "test": "vitest run"
