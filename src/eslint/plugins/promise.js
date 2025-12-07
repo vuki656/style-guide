@@ -6,7 +6,6 @@ export const promise = {
         promise: plugin,
     },
     rules: {
-        "promise/always-return": "error",
         "promise/catch-or-return": "error",
         "promise/no-callback-in-promise": "error",
         "promise/no-multiple-resolved": "error",

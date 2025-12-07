@@ -30,7 +30,6 @@ export const eslint = {
         "func-names": ["error", "as-needed"],
         "func-style": ["error", "declaration", { allowArrowFunctions: true }],
         "id-length": ["error", { exceptions: ["x", "y", "z"], min: 2, properties: "never" }],
-        "logical-assignment-operators": ["error", "never"],
         "max-classes-per-file": ["error", 1],
         "max-depth": ["error", 4],
         "max-lines": ["error", 1200],

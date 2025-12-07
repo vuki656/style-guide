@@ -9,7 +9,20 @@ import { defineConfig, globalIgnores } from "eslint/config"
  * @returns {Array} ESLint configuration
  */
 export function customDefineConfig(ignores, configs = []) {
-    return defineConfig(globalIgnores(["node_modules", ...ignores]), ...configs)
+    return defineConfig(
+        globalIgnores([
+            "node_modules",
+            "./*.js",
+            "./*.ts",
+            "./*.cjs",
+            "./*.mjs",
+            "./*.config.js",
+            "./*.config.cjs",
+            "./*.config.mjs",
+            ...ignores,
+        ]),
+        ...configs,
+    )
 }
 
 export * from "./configs/core.js"
@@ -19,7 +32,6 @@ export * from "./configs/next.js"
 export * from "./configs/node.js"
 export * from "./configs/playwright.js"
 export * from "./configs/react.js"
-export * from "./configs/storybook.js"
 export * from "./configs/typescript.js"
 export * from "./configs/typescript-strict.js"
 export * from "./configs/vitest.js"

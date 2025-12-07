@@ -113,9 +113,15 @@ export default customDefineConfig(
 ## Prettier Configuration
 
 ```js
-import { prettier } from "@dvukovic/style-guide/prettier"
+import type { Config } from "prettier"
 
-export default prettier
+import core from "@dvukovic/style-guide/src/prettier/configs/core.js"
+
+const config: Config = {
+    ...core,
+}
+
+export default config
 ```
 
 ## Stylelint Configuration
