@@ -56,6 +56,24 @@ export default customDefineConfig(
 )
 ```
 
+### Scripts
+
+Add these scripts to your `package.json`:
+
+```json
+{
+    "scripts": {
+        "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:stylelint && yarn lint:spell",
+        "lint:eslint": "eslint . --cache --concurrency=auto",
+        "lint:fix": "yarn lint:eslint --fix && yarn lint:prettier --write && yarn lint:stylelint --fix && yarn lint:spell",
+        "lint:prettier": "prettier --check --cache .",
+        "lint:spell": "cspell --config ./.cspellrc.js --no-progress --no-summary --unique '**'",
+        "lint:stylelint": "stylelint ./**/*.css --cache",
+        "test": "vitest run"
+    }
+}
+```
+
 ### Complete Example
 
 A full-featured project (this is the actual config used by this package):
