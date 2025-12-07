@@ -1,9 +1,9 @@
 import { ESLint } from "eslint"
 
-import config from "./mobx.js"
+import { mobxConfig } from "./mobx.js"
 
 const eslint = new ESLint({
-    overrideConfig: config,
+    overrideConfig: mobxConfig,
     overrideConfigFile: true,
 })
 

@@ -2,7 +2,6 @@ import typescriptEslint from "typescript-eslint"
 
 export const typescriptStrictConfig = [
     {
-        files: ["**/*.ts", "**/*.tsx"],
         plugins: {
             "@typescript-eslint": typescriptEslint.plugin,
         },

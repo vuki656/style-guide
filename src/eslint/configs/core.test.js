@@ -1,9 +1,9 @@
 import { ESLint } from "eslint"
 
-import config from "./core.js"
+import { coreConfig } from "./core.js"
 
 const eslint = new ESLint({
-    overrideConfig: config,
+    overrideConfig: coreConfig,
     overrideConfigFile: true,
 })
 
