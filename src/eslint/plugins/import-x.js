@@ -1,5 +1,6 @@
 import plugin from "eslint-plugin-import-x"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const importX = {
     plugins: {
         "import-x": plugin,

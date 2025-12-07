@@ -1,5 +1,6 @@
 import plugin from "eslint-plugin-security-node"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const securityNode = {
     plugins: {
         "security-node": plugin,

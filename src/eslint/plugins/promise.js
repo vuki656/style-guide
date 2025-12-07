@@ -1,5 +1,6 @@
 import plugin from "eslint-plugin-promise"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const promise = {
     plugins: {
         promise: plugin,

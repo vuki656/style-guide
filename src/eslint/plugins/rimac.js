@@ -1,5 +1,6 @@
 import plugin from "@rimac-technology/eslint-plugin"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const rimac = {
     plugins: {
         "@rimac-technology": plugin,

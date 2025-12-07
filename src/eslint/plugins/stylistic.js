@@ -1,5 +1,6 @@
 import plugin from "@stylistic/eslint-plugin"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const stylistic = {
     plugins: {
         "@stylistic": plugin,

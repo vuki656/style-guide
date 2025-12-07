@@ -1,5 +1,6 @@
 import plugin from "eslint-plugin-storybook"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const storybook = {
     plugins: {
         storybook: plugin,

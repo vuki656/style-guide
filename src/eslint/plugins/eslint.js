@@ -1,5 +1,6 @@
 import globals from "globals"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const eslint = {
     languageOptions: {
         ecmaVersion: 2024,

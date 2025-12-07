@@ -1,5 +1,6 @@
 import plugin from "typescript-eslint"
 
+/** @type {import("@eslint/config-helpers").Config} */
 export const typescriptEslint = {
     plugins: {
         "@typescript-eslint": plugin.plugin,
