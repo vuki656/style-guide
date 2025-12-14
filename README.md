@@ -1,6 +1,6 @@
 # @dvukovic/style-guide
 
-Personal style guide with ESLint, Prettier, and other code quality tools.
+Personal style guide with ESLint, Prettier, and other code quality tools
 
 ## Installation
 
