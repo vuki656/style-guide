@@ -79,7 +79,6 @@ export const sonarjs = {
         "sonarjs/link-with-target-blank": "error",
         "sonarjs/max-lines": "error",
         "sonarjs/max-switch-cases": "error",
-        "sonarjs/max-union-size": "error",
         "sonarjs/misplaced-loop-counter": "error",
         "sonarjs/nested-control-flow": "error",
         "sonarjs/new-operator-misuse": "error",
