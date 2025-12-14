@@ -49,6 +49,8 @@ export const jest = {
         "jest/prefer-strict-equal": "error",
         "jest/prefer-to-be": "error",
         "jest/prefer-to-contain": "error",
+        "jest/prefer-to-have-been-called": "error",
+        "jest/prefer-to-have-been-called-times": "error",
         "jest/prefer-to-have-length": "error",
         "jest/prefer-todo": "error",
         "jest/require-hook": "error",
