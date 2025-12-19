@@ -82,7 +82,7 @@ const plugin = {
         "shorthand-property-no-redundant-values": true,
         "string-no-newline": true,
         "syntax-string-no-invalid": true,
-        "unit-allowed-list": ["px", "rem", "%", "fr", "vw", "vh", "s", "deg", "ms"],
+        "unit-allowed-list": ["px", "rem", "%", "fr", "vw", "vh", "s", "deg", "ms", "dvh"],
         "unit-no-unknown": true,
         "value-keyword-case": "lower",
         "value-no-vendor-prefix": true,
