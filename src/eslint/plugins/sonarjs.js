@@ -195,7 +195,6 @@ export const sonarjs = {
         "sonarjs/prefer-type-guard": "error",
         "sonarjs/prefer-while": "error",
         "sonarjs/production-debug": "error",
-        "sonarjs/pseudo-random": "error",
         "sonarjs/public-static-readonly": "error",
         "sonarjs/publicly-writable-directories": "error",
         "sonarjs/reduce-initial-value": "error",
