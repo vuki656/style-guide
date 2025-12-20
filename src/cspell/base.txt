@@ -125,3 +125,15 @@ pageleave
 opensearchservice
 httponly
 unthrown
+supabase
+tslog
+fkey
+msword
+openxmlformats
+officedocument
+wordprocessingml
+presentationml
+spreadsheetml
+pageleave
+autocapture
+opensearchservice
