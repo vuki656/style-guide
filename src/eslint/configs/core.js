@@ -1,5 +1,5 @@
+import { baseline } from "../plugins/baseline.js"
 import { dvukovic } from "../plugins/dvukovic.js"
-import { esX } from "../plugins/es-x.js"
 import { eslint } from "../plugins/eslint.js"
 import { eslintComments } from "../plugins/eslint-comments.js"
 import { importX } from "../plugins/import-x.js"
@@ -14,7 +14,7 @@ import { unicorn } from "../plugins/unicorn.js"
 import { unusedImports } from "../plugins/unused-imports.js"
 
 export const coreConfig = [
-    esX,
+    baseline,
     eslint,
     eslintComments,
     importX,

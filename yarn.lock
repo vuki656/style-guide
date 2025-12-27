@@ -1339,7 +1339,7 @@ __metadata:
     "@vitest/eslint-plugin": "npm:1.5.4"
     cspell: "npm:9.4.0"
     eslint: "npm:9.39.2"
-    eslint-plugin-es-x: "npm:9.3.0"
+    eslint-plugin-baseline-js: "npm:0.4.2"
     eslint-plugin-import-x: "npm:4.16.1"
     eslint-plugin-jest: "npm:29.4.0"
     eslint-plugin-mobx: "npm:0.0.13"
@@ -6599,16 +6599,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-es-x@npm:9.3.0":
-  version: 9.3.0
-  resolution: "eslint-plugin-es-x@npm:9.3.0"
+"eslint-plugin-baseline-js@npm:0.4.2":
+  version: 0.4.2
+  resolution: "eslint-plugin-baseline-js@npm:0.4.2"
   dependencies:
-    "@eslint-community/eslint-utils": "npm:^4.1.2"
-    "@eslint-community/regexpp": "npm:^4.12.1"
-    eslint-type-tracer: "npm:^0.4.0"
+    eslint-plugin-es-x: "npm:^9.1.2"
   peerDependencies:
-    eslint: ">=9.29.0"
-  checksum: 10c0/1e6721609668624af0562c8b12e5f47a6aa6c7c694a31dcfe773fa7f558b99ba1b6925d6aaca6f8312474cea40a244aaaa382732ae49b112d6783203209d493e
+    eslint: ">=8.57.0 <10"
+  checksum: 10c0/106b207f26fd9eca065595f43161f6c9f7f1306dfb56c2886c6a2ec15fbbef1c88a65b803acd2423d72e93c1ba9650943e993cf643f5858e721eacc8f4ebc48c
   languageName: node
   linkType: hard
 
@@ -6622,6 +6620,19 @@ __metadata:
   peerDependencies:
     eslint: ">=8"
   checksum: 10c0/002fda8c029bc5da41e24e7ac11654062831d675fc4f5f20d0de460e24bf1e05cd559000678ef3e46c48641190f4fc07ae3d57aa5e8b085ef5f67e5f63742614
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-es-x@npm:^9.1.2":
+  version: 9.3.0
+  resolution: "eslint-plugin-es-x@npm:9.3.0"
+  dependencies:
+    "@eslint-community/eslint-utils": "npm:^4.1.2"
+    "@eslint-community/regexpp": "npm:^4.12.1"
+    eslint-type-tracer: "npm:^0.4.0"
+  peerDependencies:
+    eslint: ">=9.29.0"
+  checksum: 10c0/1e6721609668624af0562c8b12e5f47a6aa6c7c694a31dcfe773fa7f558b99ba1b6925d6aaca6f8312474cea40a244aaaa382732ae49b112d6783203209d493e
   languageName: node
   linkType: hard
 
