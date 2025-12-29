@@ -29,7 +29,7 @@ export const eslint = {
         "func-name-matching": "error",
         "func-names": ["error", "as-needed"],
         "func-style": ["error", "declaration", { allowArrowFunctions: true }],
-        "id-length": ["error", { exceptions: ["x", "y", "z"], min: 2, properties: "never" }],
+        "id-length": ["error", { exceptions: ["x", "y", "z", "t"], min: 2, properties: "never" }],
         "max-classes-per-file": ["error", 1],
         "max-depth": ["error", 4],
         "max-lines": ["error", 1200],
