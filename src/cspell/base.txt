@@ -137,3 +137,6 @@ spreadsheetml
 pageleave
 autocapture
 opensearchservice
+nuqs
+volta
+timeslot
