@@ -109,7 +109,6 @@ export const sonarjs = {
         "sonarjs/no-equals-in-for-termination": "error",
         "sonarjs/no-exclusive-tests": "error",
         "sonarjs/no-extra-arguments": "error",
-        "sonarjs/no-fallthrough": "error",
         "sonarjs/no-for-in-iterable": "error",
         "sonarjs/no-function-declaration-in-block": "error",
         "sonarjs/no-global-this": "error",

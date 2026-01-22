@@ -70,7 +70,6 @@ export const eslint = {
         "no-extra-bind": "error",
         "no-extra-boolean-cast": "error",
         "no-extra-label": "error",
-        "no-fallthrough": "error",
         "no-global-assign": "error",
         "no-implicit-coercion": "error",
         "no-implied-eval": "error",
