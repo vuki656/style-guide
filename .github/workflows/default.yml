@@ -5,23 +5,51 @@ on:
         branches: [master]
     pull_request:
 
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: ${{ github.ref != 'refs/heads/master' }}
+
+env:
+    NODE_VERSION: 24.x
+
 jobs:
-    ci:
+    lint:
         runs-on: ubuntu-latest
         steps:
             - run: corepack enable
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
               with:
-                  registry-url: https://registry.npmjs.org
-                  node-version: 24.x
+                  node-version: ${{ env.NODE_VERSION }}
                   cache: yarn
-            - run: yarn
+            - name: Cache linters
+              uses: actions/cache@v4
+              with:
+                  path: |
+                      .eslintcache
+                      .stylelintcache
+                      node_modules/.cache
+                  key: linters-${{ hashFiles('yarn.lock') }}-${{ github.sha }}
+                  restore-keys: |
+                      linters-${{ hashFiles('yarn.lock') }}-
+                      linters-
+            - run: yarn --immutable
             - run: yarn lint
+
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - run: corepack enable
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ env.NODE_VERSION }}
+                  cache: yarn
+            - run: yarn --immutable
             - run: yarn test
 
     release:
-        needs: ci
+        needs: [lint, test]
         if: github.ref == 'refs/heads/master'
         runs-on: ubuntu-latest
         permissions:
@@ -35,12 +63,12 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                   registry-url: https://registry.npmjs.org
-                  node-version: 24.x
+                  node-version: ${{ env.NODE_VERSION }}
                   cache: yarn
             - run: |
                   git config user.name "${GITHUB_ACTOR}"
                   git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-            - run: yarn
+            - run: yarn --immutable
             - run: yarn release --ci
               env:
                   NPM_CONFIG_PROVENANCE: true

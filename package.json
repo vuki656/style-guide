@@ -19,11 +19,11 @@
         "src/package-json"
     ],
     "scripts": {
-        "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:stylelint && yarn lint:spell",
+        "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:stylelint && yarn lint:cspell",
+        "lint:cspell": "cspell --no-progress --no-summary --unique '**'",
         "lint:eslint": "eslint . --cache --concurrency=auto",
-        "lint:fix": "yarn lint:eslint --fix && yarn lint:prettier --write && yarn lint:stylelint --fix && yarn lint:spell",
+        "lint:fix": "yarn lint:eslint --fix && yarn lint:prettier --write && yarn lint:stylelint --fix && yarn lint:cspell",
         "lint:prettier": "prettier --check --cache .",
-        "lint:spell": "cspell --no-progress --no-summary --unique '**'",
         "lint:stylelint": "stylelint ./**/*.css --cache",
         "release": "release-it",
         "test": "vitest run"
