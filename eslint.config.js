@@ -1,6 +1,23 @@
-import { core, customDefineConfig, node, typescript, typescriptStrict } from "./src/eslint/index.js"
+import {
+    core,
+    customDefineConfig,
+    node,
+    typescript,
+    typescriptStrict,
+    packageJson,
+} from "./src/eslint/index.js"
 
 export default customDefineConfig(
     ["node_modules"],
-    [core(), node(), typescript(), typescriptStrict()],
+    [
+        core(),
+        node(),
+        typescript(),
+        typescriptStrict(),
+        packageJson({
+            rules: {
+                "dvukovic/no-restricted-dependencies": "off",
+            },
+        }),
+    ],
 )
