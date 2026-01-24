@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.10.1](https://github.com/vuki656/style-guide/compare/v0.10.0...v0.10.1) (2026-01-24)
+
+### Bug Fixes
+
+* knip ignore dep list ([9535093](https://github.com/vuki656/style-guide/commit/953509399256d0128ede9d90d021cad3c2e6594b))
+
 ## [0.10.0](https://github.com/vuki656/style-guide/compare/v0.9.0...v0.10.0) (2026-01-24)
 
 ### Features
