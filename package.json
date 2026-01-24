@@ -85,6 +85,7 @@
         "typescript-eslint": "8.50.0"
     },
     "devDependencies": {
+        "@release-it/conventional-changelog": "10.0.4",
         "@types/eslint": "9.6.1",
         "@types/node": "24.10.4",
         "cspell": "9.4.0",

@@ -2,10 +2,10 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:github.com)",
-      "Bash(yarn install:*)",
       "Bash(npm view:*)",
       "Bash(tree:*)",
-      "WebFetch(domain:docs.volta.sh)"
+      "WebFetch(domain:docs.volta.sh)",
+      "Bash(git -C /home/vuki/Projects/personal/style-guide status --short)"
     ]
   }
 }
