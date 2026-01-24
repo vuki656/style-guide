@@ -37,7 +37,6 @@ yarn vitest run src/eslint/configs/core.test.js
 - `src/prettier/` - Prettier configuration
 - `src/stylelint/` - Stylelint configuration
 - `src/cspell/` - Spell checking dictionary
-- `src/package-json/` - npm-package-json-lint configuration
 
 ### ESLint Config Pattern
 

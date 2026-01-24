@@ -17,8 +17,14 @@
             "types": "./dist/src/eslint/index.d.ts",
             "default": "./src/eslint/index.js"
         },
-        "./prettier": "./src/prettier/index.js",
-        "./stylelint": "./src/stylelint/index.js"
+        "./prettier": {
+            "types": "./dist/src/prettier/index.d.ts",
+            "default": "./src/prettier/index.js"
+        },
+        "./stylelint": {
+            "types": "./dist/src/stylelint/index.d.ts",
+            "default": "./src/stylelint/index.js"
+        }
     },
     "files": [
         "dist",
