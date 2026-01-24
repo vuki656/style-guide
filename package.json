@@ -12,14 +12,13 @@
     },
     "type": "module",
     "exports": {
-        "./src/cspell/dictionary.txt": "./src/cspell/dictionary.txt",
-        "./src/eslint/index.js": {
+        "./cspell/dictionary.txt": "./src/cspell/dictionary.txt",
+        "./eslint": {
             "types": "./dist/src/eslint/index.d.ts",
             "default": "./src/eslint/index.js"
         },
-        "./src/package-json/index.js": "./src/package-json/index.js",
-        "./src/prettier/index.js": "./src/prettier/index.js",
-        "./src/stylelint/index.js": "./src/stylelint/index.js"
+        "./prettier": "./src/prettier/index.js",
+        "./stylelint": "./src/stylelint/index.js"
     },
     "files": [
         "dist",
