@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.10.2](https://github.com/vuki656/style-guide/compare/v0.10.1...v0.10.2) (2026-01-24)
+
+### Bug Fixes
+
+* cspell dict path ([1eb595a](https://github.com/vuki656/style-guide/commit/1eb595a29561a59f1c0d6d31c6a84ce9a56eea93))
+
 ## [0.10.1](https://github.com/vuki656/style-guide/compare/v0.10.0...v0.10.1) (2026-01-24)
 
 ### Bug Fixes
