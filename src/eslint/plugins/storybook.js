@@ -1,9 +1,28 @@
-import plugin from "eslint-plugin-storybook"
+import { createRequire } from "node:module"
+
+let cachedPlugin
+
+function getPlugin() {
+    if (!cachedPlugin) {
+        const require = createRequire(import.meta.url)
+
+        try {
+            cachedPlugin = require("eslint-plugin-storybook")
+        } catch {
+            throw new Error(
+                "eslint-plugin-storybook is required for storybook config. " +
+                    "Install it: npm install -D eslint-plugin-storybook",
+            )
+        }
+    }
+
+    return cachedPlugin
+}
 
 /** @type {import("@eslint/config-helpers").Config} */
 export const storybook = {
-    plugins: {
-        storybook: plugin,
+    get plugins() {
+        return { storybook: getPlugin() }
     },
     rules: {
         "storybook/await-interactions": "error",

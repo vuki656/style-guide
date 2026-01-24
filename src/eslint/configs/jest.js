@@ -1,7 +1,5 @@
 import { jest as jestPlugin } from "../plugins/jest.js"
 
-export const jestConfig = [jestPlugin]
-
 /**
  * Jest testing framework configuration
  *
@@ -9,6 +7,8 @@ export const jestConfig = [jestPlugin]
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function jest(config) {
+    const jestConfig = [jestPlugin]
+
     return {
         extends: [...jestConfig, ...(config?.extends ?? [])],
         files: [

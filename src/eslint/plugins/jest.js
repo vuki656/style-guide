@@ -1,9 +1,28 @@
-import plugin from "eslint-plugin-jest"
+import { createRequire } from "node:module"
+
+let cachedPlugin
+
+function getPlugin() {
+    if (!cachedPlugin) {
+        const require = createRequire(import.meta.url)
+
+        try {
+            cachedPlugin = require("eslint-plugin-jest")
+        } catch {
+            throw new Error(
+                "eslint-plugin-jest is required for jest config. " +
+                    "Install it: npm install -D eslint-plugin-jest",
+            )
+        }
+    }
+
+    return cachedPlugin
+}
 
 /** @type {import("@eslint/config-helpers").Config} */
 export const jest = {
-    plugins: {
-        jest: plugin,
+    get plugins() {
+        return { jest: getPlugin() }
     },
     rules: {
         "jest/consistent-test-it": ["error", { fn: "test", withinDescribe: "test" }],
