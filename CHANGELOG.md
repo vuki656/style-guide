@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.5.2](https://github.com/vuki656/style-guide/compare/v0.5.1...v0.5.2) (2026-01-24)
+
+### Bug Fixes
+
+* stylelint export ([71271c1](https://github.com/vuki656/style-guide/commit/71271c1cdf4439cf4eee7559dd559e6585a999f8))
+
 ## [0.5.1](https://github.com/vuki656/style-guide/compare/v0.5.0...v0.5.1) (2026-01-24)
 
 ### Bug Fixes
