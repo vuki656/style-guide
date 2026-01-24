@@ -1,14 +1,7 @@
 /** @type {import("knip").KnipConfig} */
 const config = {
     ignore: [],
-    ignoreDependencies: [
-        "cspell",
-        "eslint",
-        "prettier",
-        "stylelint",
-        "stylelint-no-unused-selectors",
-        "stylelint-order",
-    ],
+    ignoreDependencies: ["stylelint-no-unused-selectors", "stylelint-order", "prettier-plugin-*"],
 }
 
 export default config
