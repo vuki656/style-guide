@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.6.0](https://github.com/vuki656/style-guide/compare/v0.5.2...v0.6.0) (2026-01-24)
+
+### Features
+
+* init cli ([92a4db4](https://github.com/vuki656/style-guide/commit/92a4db49e6374a586be5b40f2f11b9992e9fd2da))
+
 ## [0.5.2](https://github.com/vuki656/style-guide/compare/v0.5.1...v0.5.2) (2026-01-24)
 
 ### Bug Fixes
