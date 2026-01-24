@@ -1,3 +1,7 @@
+import { fileURLToPath } from "node:url"
+
+const dictionaryPath = fileURLToPath(new URL("../base.txt", import.meta.url))
+
 /** @type {import("cspell").FileSettings} */
 const config = {
     cache: {
@@ -9,7 +13,7 @@ const config = {
     dictionaryDefinitions: [
         {
             name: "shared",
-            path: "./node_modules/@dvukovic/style-guide/cspell/base.txt",
+            path: dictionaryPath,
         },
     ],
     ignorePaths: ["TODO.md", "tsconfig.tsbuildinfo", "CHANGELOG.md"],
