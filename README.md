@@ -1,50 +1,61 @@
 # @dvukovic/style-guide
 
-Personal style guide with ESLint, Prettier, and other code quality tools
+Personal style guide with ESLint, Prettier, Stylelint, and CSpell configurations.
 
-## Installation
+## Quick Start
 
 ```bash
-yarn add -D @dvukovic/style-guide eslint prettier cspell stylelint
+npx @dvukovic/style-guide init
 ```
 
-## ESLint Configuration
+This interactive CLI will:
 
-### Basic Usage
+- Let you select which tools to configure (ESLint, Prettier, Stylelint, CSpell)
+- Ask about your project setup (TypeScript, React/Next.js, testing frameworks)
+- Install required dependencies
+- Generate configuration files
 
-Create an `eslint.config.js` file in your project root:
+## Manual Installation
+
+```bash
+yarn add -D @dvukovic/style-guide eslint prettier stylelint cspell
+```
+
+## ESLint
+
+Create `eslint.config.js`:
 
 ```js
 import { customDefineConfig, core, typescript } from "@dvukovic/style-guide/eslint"
 
-export default customDefineConfig(["dist/**", "build/**"], [core(), typescript()])
+export default customDefineConfig(["dist", "build"], [core(), typescript()])
 ```
 
 ### Available Configs
 
-Each config is a factory function that returns ESLint configuration:
-
 - `core()` - Essential rules for all JavaScript/TypeScript projects
-- `node()` - Node.js specific rules
-- `react()` - React framework rules
 - `typescript()` - TypeScript parser and rules
 - `typescriptStrict()` - Additional strict TypeScript rules
+- `react()` - React framework rules
+- `next()` - Next.js framework
+- `node()` - Node.js specific rules
 - `jest()` - Jest testing framework
 - `vitest()` - Vitest testing framework
 - `playwright()` - Playwright e2e testing
 - `mobx()` - MobX state management
-- `next()` - Next.js framework
 - `storybook()` - Storybook
+- `packageJson()` - package.json linting
+- `packageJsonWorkspace()` - package.json linting for monorepos
 
 ### Customizing Configs
 
-Each factory function accepts a `config` parameter to extend or override settings:
+Each factory function accepts a config parameter to extend or override settings:
 
 ```js
 import { customDefineConfig, core, typescript } from "@dvukovic/style-guide/eslint"
 
 export default customDefineConfig(
-    [],
+    ["dist"],
     [
         core(),
         typescript({
@@ -56,66 +67,14 @@ export default customDefineConfig(
 )
 ```
 
-### Scripts
+## Prettier
 
-Add these scripts to your `package.json`:
+Create `prettier.config.ts`:
 
-```json
-{
-    "scripts": {
-        "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:stylelint && yarn lint:spell",
-        "lint:eslint": "eslint . --cache --concurrency=auto",
-        "lint:fix": "yarn lint:eslint --fix && yarn lint:prettier --write && yarn lint:stylelint --fix && yarn lint:spell",
-        "lint:prettier": "prettier --check --cache .",
-        "lint:spell": "cspell --no-progress --no-summary --unique '**'",
-        "lint:stylelint": "stylelint ./**/*.css --cache",
-        "test": "vitest run"
-    }
-}
-```
-
-### Complete Example
-
-A full-featured project (this is the actual config used by this package):
-
-```js
-import {
-    customDefineConfig,
-    core,
-    node,
-    mobx,
-    react,
-    next,
-    typescript,
-    typescriptStrict,
-    jest,
-    vitest,
-    playwright,
-} from "@dvukovic/style-guide/eslint"
-
-export default customDefineConfig(
-    ["node_modules"],
-    [
-        core(),
-        node(),
-        mobx(),
-        react(),
-        next(),
-        typescript(),
-        typescriptStrict(),
-        jest(),
-        vitest(),
-        playwright(),
-    ],
-)
-```
-
-## Prettier Configuration
-
-```js prettier.config.ts
+```ts
 import type { Config } from "prettier"
 
-import core from "@dvukovic/style-guide/src/prettier/configs/core.js"
+import { core } from "@dvukovic/style-guide/prettier"
 
 const config: Config = {
     ...core,
@@ -124,37 +83,52 @@ const config: Config = {
 export default config
 ```
 
-## Stylelint Configuration
+## Stylelint
 
-```js stylelint.config.js
+Create `stylelint.config.js`:
+
+```js
+import stylelintConfig from "@dvukovic/style-guide/stylelint"
+
 /** @type {import("stylelint").Config} */
-module.exports = {
-    extends: "@dvukovic/style-guide/src/stylelint/configs/core",
-    allowEmptyInput: true,
+const config = {
+    ...stylelintConfig,
 }
+
+export default config
 ```
 
-## Cspell Configuration
+## CSpell
 
-```cspell.config.js
+Create `cspell.config.js`:
+
+```js
+import cspellConfig from "@dvukovic/style-guide/cspell"
+
 /** @type {import("cspell").FileSettings} */
-module.exports = {
-    cache: {
-        cacheLocation: "./node_modules/.cache/cspell",
-        useCache: true,
-    },
-    caseSensitive: false,
+const config = {
+    ...cspellConfig,
     ignorePaths: [],
-    dictionaries: ["shared"],
-    dictionaryDefinitions: [
-        {
-            name: "shared",
-            path: "./node_modules/@dvukovic/style-guide/src/cspell/base.txt",
-        },
-    ],
-    useGitignore: true,
-    ignoreWords: [
-    ],
+    ignoreWords: [],
+}
+
+export default config
+```
+
+## Scripts
+
+Add to your `package.json`:
+
+```json
+{
+    "scripts": {
+        "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:stylelint && yarn lint:cspell",
+        "lint:eslint": "eslint . --cache --concurrency=auto",
+        "lint:prettier": "prettier --check --cache .",
+        "lint:stylelint": "stylelint ./**/*.css --cache",
+        "lint:cspell": "cspell --no-progress --no-summary --unique '**'",
+        "lint:fix": "yarn lint:eslint --fix && yarn lint:prettier --write && yarn lint:stylelint --fix"
+    }
 }
 ```
 
