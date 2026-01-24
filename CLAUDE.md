@@ -12,6 +12,7 @@ consumed by other projects.
 ## Commands
 
 ```bash
+yarn build       # Generate TypeScript declaration files (dist/)
 yarn lint        # Run all linters (eslint, prettier, stylelint, cspell)
 yarn lint:eslint # Run ESLint with caching
 yarn lint:fix    # Auto-fix all linting issues
@@ -72,6 +73,8 @@ export const pluginName = {
 - `node()` - Node.js specific rules
 - `jest()` / `vitest()` / `playwright()` - Testing frameworks
 - `mobx()` - MobX state management
+- `storybook()` - Storybook stories
+- `packageJson()` - package.json linting
 
 ### Main Entry Point
 
@@ -85,7 +88,10 @@ export const pluginName = {
 Located in `src/eslint/rules/`:
 
 - `no-commented-out-code` - Prevents commented-out code blocks
+- `no-restricted-dependencies` - Restricts certain package.json dependencies
 - `no-t` - Prevents single-letter 't' variable names
+- `require-properties` - Requires certain properties in package.json
+- `valid-engines-node` - Validates Node.js engine version in package.json
 
 ## Testing
 
