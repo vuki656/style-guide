@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.8.0](https://github.com/vuki656/style-guide/compare/v0.7.0...v0.8.0) (2026-01-24)
+
+### Features
+
+* auto add scripts ([712a523](https://github.com/vuki656/style-guide/commit/712a523814abcb8df13be21865a28e6302ab53d4))
+* better cpsell config setup ([c4bf66e](https://github.com/vuki656/style-guide/commit/c4bf66eb9c92844e3df0ca476439cf3e10e0e6c1))
+
+### Bug Fixes
+
+* knip typedefs ([747aae9](https://github.com/vuki656/style-guide/commit/747aae97d599643738771fbc9de69d8f8b5eb848))
+
 ## [0.7.0](https://github.com/vuki656/style-guide/compare/v0.6.0...v0.7.0) (2026-01-24)
 
 ### Features
