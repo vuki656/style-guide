@@ -12,7 +12,7 @@ const config = {
             path: "./src/cspell/base.txt",
         },
     ],
-    ignorePaths: ["./src/cspell/base.txt"],
+    ignorePaths: ["./src/cspell/base.txt", "./CHANGELOG.md"],
     ignoreWords: [],
     useGitignore: true,
 }

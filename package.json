@@ -14,15 +14,15 @@
     "exports": {
         "./cspell/dictionary.txt": "./src/cspell/dictionary.txt",
         "./eslint": {
-            "types": "./dist/src/eslint/index.d.ts",
+            "types": "./dist/eslint/index.d.ts",
             "default": "./src/eslint/index.js"
         },
         "./prettier": {
-            "types": "./dist/src/prettier/index.d.ts",
+            "types": "./dist/prettier/index.d.ts",
             "default": "./src/prettier/index.js"
         },
         "./stylelint": {
-            "types": "./dist/src/stylelint/index.d.ts",
+            "types": "./dist/stylelint/index.d.ts",
             "default": "./src/stylelint/index.js"
         }
     },

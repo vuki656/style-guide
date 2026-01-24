@@ -11,7 +11,7 @@ All notable changes to this project will be documented in this file.
 
 ### Code Refactoring
 
-* set slow test treshold [skip ci] ([f07c573](https://github.com/vuki656/style-guide/commit/f07c573c23abe25c230ae8d8167bb421482ae244))
+* set slow test threshold [skip ci] ([f07c573](https://github.com/vuki656/style-guide/commit/f07c573c23abe25c230ae8d8167bb421482ae244))
 
 ## [0.4.1](https://github.com/vuki656/style-guide/compare/v0.4.0...v0.4.1) (2026-01-24)
 
