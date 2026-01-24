@@ -12,6 +12,7 @@ const config = {
             path: "./node_modules/@dvukovic/style-guide/cspell/base.txt",
         },
     ],
+    ignorePaths: ["TODO.md", "tsconfig.tsbuildinfo", "CHANGELOG.md"],
     useGitignore: true,
 }
 

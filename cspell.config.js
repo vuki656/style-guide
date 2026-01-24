@@ -1,20 +1,16 @@
+import { core } from "./src/cspell/index.js"
+
 /** @type {import("cspell").FileSettings} */
 const config = {
-    cache: {
-        cacheLocation: "./node_modules/.cache/cspell",
-        useCache: true,
-    },
-    caseSensitive: false,
-    dictionaries: ["shared"],
+    ...core,
     dictionaryDefinitions: [
         {
             name: "shared",
             path: "./src/cspell/base.txt",
         },
     ],
-    ignorePaths: ["./src/cspell/base.txt", "./CHANGELOG.md"],
+    ignorePaths: [...core.ignorePaths, "./src/cspell/base.txt"],
     ignoreWords: [],
-    useGitignore: true,
 }
 
 export default config

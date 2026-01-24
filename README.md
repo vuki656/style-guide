@@ -103,12 +103,12 @@ export default config
 Create `cspell.config.js`:
 
 ```js
-import cspellConfig from "@dvukovic/style-guide/cspell"
+import { core } from "@dvukovic/style-guide/cspell"
 
 /** @type {import("cspell").FileSettings} */
 const config = {
-    ...cspellConfig,
-    ignorePaths: [],
+    ...core,
+    ignorePaths: [...core.ignorePaths],
     ignoreWords: [],
 }
 

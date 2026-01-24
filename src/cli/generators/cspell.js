@@ -1,10 +1,10 @@
 export function generateCspellConfig() {
-    return `import cspellConfig from "@dvukovic/style-guide/cspell"
+    return `import { core } from "@dvukovic/style-guide/cspell"
 
 /** @type {import("cspell").FileSettings} */
 const config = {
-    ...cspellConfig,
-    ignorePaths: [],
+    ...core,
+    ignorePaths: [...core.ignorePaths],
     ignoreWords: [],
 }
 
