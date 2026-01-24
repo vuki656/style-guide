@@ -5,7 +5,7 @@ Personal style guide with ESLint, Prettier, Stylelint, and CSpell configurations
 ## Quick Start
 
 ```bash
-npx @dvukovic/style-guide@latest init
+npx -y @dvukovic/style-guide@latest init
 ```
 
 This interactive CLI will:
