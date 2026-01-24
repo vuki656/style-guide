@@ -1,9 +1,9 @@
 export function generateStylelintConfig() {
-    return `import stylelintConfig from "@dvukovic/style-guide/stylelint"
+    return `import { core } from "@dvukovic/style-guide/stylelint"
 
 /** @type {import("stylelint").Config} */
 const config = {
-    ...stylelintConfig,
+    ...core,
 }
 
 export default config

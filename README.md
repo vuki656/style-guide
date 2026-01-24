@@ -88,11 +88,11 @@ export default config
 Create `stylelint.config.js`:
 
 ```js
-import stylelintConfig from "@dvukovic/style-guide/stylelint"
+import { core } from "@dvukovic/style-guide/stylelint"
 
 /** @type {import("stylelint").Config} */
 const config = {
-    ...stylelintConfig,
+    ...core,
 }
 
 export default config
