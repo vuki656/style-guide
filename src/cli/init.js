@@ -7,7 +7,7 @@ import * as clack from "@clack/prompts"
 import { generateCspellConfig } from "./generators/cspell.js"
 import { generateESLintConfig } from "./generators/eslint.js"
 import { generateKnipConfig } from "./generators/knip.js"
-import { generatePrettierConfig } from "./generators/prettier.js"
+import { generatePrettierConfig, generatePrettierIgnore } from "./generators/prettier.js"
 import { generateScripts } from "./generators/scripts.js"
 import { generateStylelintConfig } from "./generators/stylelint.js"
 import {
@@ -181,9 +181,12 @@ export async function runInit() {
     }
 
     if (tools.includes("prettier")) {
-        const content = generatePrettierConfig()
+        const isNextJs = eslintOptions?.framework === "next"
 
-        results.push({ content, filename: "prettier.config.ts" })
+        results.push(
+            { content: generatePrettierConfig(), filename: "prettier.config.ts" },
+            { content: generatePrettierIgnore({ isNextJs }), filename: ".prettierignore" },
+        )
     }
 
     if (tools.includes("stylelint")) {

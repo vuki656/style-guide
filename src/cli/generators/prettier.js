@@ -10,3 +10,13 @@ const config: Config = {
 export default config
 `
 }
+
+export function generatePrettierIgnore(options = {}) {
+    const lines = ["**/__generated__/**", "**/*.d.json.ts"]
+
+    if (options.isNextJs) {
+        lines.push(".next", "public")
+    }
+
+    return `${lines.join("\n")}\n`
+}
