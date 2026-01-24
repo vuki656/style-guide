@@ -8,9 +8,10 @@ import { jest as jestPlugin } from "../plugins/jest.js"
  */
 export function jest(config) {
     const jestConfig = [jestPlugin]
+    const { extends: extendsConfig, files, ...rest } = config ?? {}
 
     return {
-        extends: [...jestConfig, ...(config?.extends ?? [])],
+        extends: [...jestConfig, ...(extendsConfig ?? [])],
         files: [
             "**/*.test.js",
             "**/*.test.ts",
@@ -22,7 +23,8 @@ export function jest(config) {
             "**/*.int.test.ts",
             "**/*.integration.test.js",
             "**/*.integration.test.ts",
+            ...(files ?? []),
         ],
-        ...config,
+        ...rest,
     }
 }

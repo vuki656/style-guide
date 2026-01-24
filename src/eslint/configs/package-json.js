@@ -11,10 +11,12 @@ export const packageJsonConfigs = [packageJsonRules]
  * @returns {import("@eslint/config-helpers").ConfigWithExtends}
  */
 export function packageJson(config) {
+    const { extends: extendsConfig, files, ...rest } = config ?? {}
+
     return {
-        extends: [...packageJsonConfigs, ...(config?.extends ?? [])],
-        files: ["**/package.json"],
-        ...config,
+        extends: [...packageJsonConfigs, ...(extendsConfig ?? [])],
+        files: ["**/package.json", ...(files ?? [])],
+        ...rest,
     }
 }
 
@@ -30,12 +32,12 @@ export function packageJson(config) {
  * @returns {import("@eslint/config-helpers").ConfigWithExtends[]}
  */
 export function packageJsonWorkspace(config) {
-    const { workspacePatterns = DEFAULT_WORKSPACE_PATTERNS, ...rest } = config ?? {}
+    const { workspacePatterns = DEFAULT_WORKSPACE_PATTERNS, extends: extendsConfig, files, ...rest } = config ?? {}
 
     return [
         {
-            extends: [...packageJsonConfigs, ...(rest?.extends ?? [])],
-            files: ["package.json"],
+            extends: [...packageJsonConfigs, ...(extendsConfig ?? [])],
+            files: ["package.json", ...(files ?? [])],
             ...rest,
         },
         {

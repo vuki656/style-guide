@@ -19,10 +19,11 @@ export function storybook(config) {
             },
         },
     ]
+    const { extends: extendsConfig, files, ...rest } = config ?? {}
 
     return {
-        extends: [...storybookConfig, ...(config?.extends ?? [])],
-        files: ["**/*.stories.js", "**/*.stories.ts", "**/*.stories.jsx", "**/*.stories.tsx"],
-        ...config,
+        extends: [...storybookConfig, ...(extendsConfig ?? [])],
+        files: ["**/*.stories.js", "**/*.stories.ts", "**/*.stories.jsx", "**/*.stories.tsx", ...(files ?? [])],
+        ...rest,
     }
 }

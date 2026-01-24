@@ -37,9 +37,11 @@ export const coreConfig = [
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function core(config) {
+    const { extends: extendsConfig, files, ...rest } = config ?? {}
+
     return {
-        extends: [...coreConfig, ...(config?.extends ?? [])],
-        files: ["**/*.js", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.tsx", ...(config?.files ?? [])],
-        ...config,
+        extends: [...coreConfig, ...(extendsConfig ?? [])],
+        files: ["**/*.js", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.tsx", ...(files ?? [])],
+        ...rest,
     }
 }

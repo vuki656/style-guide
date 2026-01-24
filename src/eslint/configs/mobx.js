@@ -9,9 +9,11 @@ export const mobxConfig = [mobxPlugin]
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function mobx(config) {
+    const { extends: extendsConfig, files, ...rest } = config ?? {}
+
     return {
-        extends: [...mobxConfig, ...(config?.extends ?? [])],
-        files: ["**/*.js", "**/*.ts", "**/*.jsx", "**/*.tsx"],
-        ...config,
+        extends: [...mobxConfig, ...(extendsConfig ?? [])],
+        files: ["**/*.js", "**/*.ts", "**/*.jsx", "**/*.tsx", ...(files ?? [])],
+        ...rest,
     }
 }

@@ -9,9 +9,11 @@ export const nextConfig = [nextPlugin]
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function next(config) {
+    const { extends: extendsConfig, files, ...rest } = config ?? {}
+
     return {
-        extends: [...nextConfig, ...(config?.extends ?? [])],
-        files: ["**/*.js", "**/*.ts", "**/*.jsx", "**/*.tsx"],
-        ...config,
+        extends: [...nextConfig, ...(extendsConfig ?? [])],
+        files: ["**/*.js", "**/*.ts", "**/*.jsx", "**/*.tsx", ...(files ?? [])],
+        ...rest,
     }
 }

@@ -31,9 +31,11 @@ export const typescriptConfig = [
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function typescript(config) {
+    const { extends: extendsConfig, files, ...rest } = config ?? {}
+
     return {
-        extends: [...typescriptConfig, ...(config?.extends ?? [])],
-        files: ["**/*.js", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.cts", "**/*.mts"],
-        ...config,
+        extends: [...typescriptConfig, ...(extendsConfig ?? [])],
+        files: ["**/*.js", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.cts", "**/*.mts", ...(files ?? [])],
+        ...rest,
     }
 }

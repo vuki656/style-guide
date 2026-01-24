@@ -10,9 +10,11 @@ export const reactConfig = [reactPlugin, reactHooksPlugin]
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function react(config) {
+    const { extends: extendsConfig, files, ...rest } = config ?? {}
+
     return {
-        extends: [...reactConfig, ...(config?.extends ?? [])],
-        files: ["**/*.jsx", "**/*.tsx"],
-        ...config,
+        extends: [...reactConfig, ...(extendsConfig ?? [])],
+        files: ["**/*.jsx", "**/*.tsx", ...(files ?? [])],
+        ...rest,
     }
 }

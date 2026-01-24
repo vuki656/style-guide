@@ -9,8 +9,10 @@ export const vitestConfig = [vitestPlugin]
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function vitest(config) {
+    const { extends: extendsConfig, files, ...rest } = config ?? {}
+
     return {
-        extends: [...vitestConfig, ...(config?.extends ?? [])],
+        extends: [...vitestConfig, ...(extendsConfig ?? [])],
         files: [
             "**/*.test.js",
             "**/*.test.ts",
@@ -22,7 +24,8 @@ export function vitest(config) {
             "**/*.int.test.ts",
             "**/*.integration.test.js",
             "**/*.integration.test.ts",
+            ...(files ?? []),
         ],
-        ...config,
+        ...rest,
     }
 }

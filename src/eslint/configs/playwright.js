@@ -9,8 +9,10 @@ export const playwrightConfig = [playwrightPlugin]
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function playwright(config) {
+    const { extends: extendsConfig, files, ...rest } = config ?? {}
+
     return {
-        extends: [...playwrightConfig, ...(config?.extends ?? [])],
+        extends: [...playwrightConfig, ...(extendsConfig ?? [])],
         files: [
             "**/*.test.js",
             "**/*.test.ts",
@@ -22,7 +24,8 @@ export function playwright(config) {
             "**/*.int.test.ts",
             "**/*.integration.test.js",
             "**/*.integration.test.ts",
+            ...(files ?? []),
         ],
-        ...config,
+        ...rest,
     }
 }

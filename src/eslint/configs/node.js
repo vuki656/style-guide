@@ -10,9 +10,11 @@ export const nodeConfig = [nodeN, securityNode]
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function node(config) {
+    const { extends: extendsConfig, files, ...rest } = config ?? {}
+
     return {
-        extends: [...nodeConfig, ...(config?.extends ?? [])],
-        files: ["**/*.js", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.cts", "**/*.mts"],
-        ...config,
+        extends: [...nodeConfig, ...(extendsConfig ?? [])],
+        files: ["**/*.js", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.cts", "**/*.mts", ...(files ?? [])],
+        ...rest,
     }
 }

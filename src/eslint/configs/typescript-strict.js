@@ -37,9 +37,11 @@ export const typescriptStrictConfig = [
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function typescriptStrict(config) {
+    const { extends: extendsConfig, files, ...rest } = config ?? {}
+
     return {
-        extends: [...typescriptStrictConfig, ...(config?.extends ?? [])],
-        files: ["**/*.ts", "**/*.tsx", "**/*.cts", "**/*.mts"],
-        ...config,
+        extends: [...typescriptStrictConfig, ...(extendsConfig ?? [])],
+        files: ["**/*.ts", "**/*.tsx", "**/*.cts", "**/*.mts", ...(files ?? [])],
+        ...rest,
     }
 }
