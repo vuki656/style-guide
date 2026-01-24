@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.9.0](https://github.com/vuki656/style-guide/compare/v0.8.0...v0.9.0) (2026-01-24)
+
+### Features
+
+* more eslint default ignores ([ac94356](https://github.com/vuki656/style-guide/commit/ac94356f44cf4a925972eebeea8d3c886c1ff06f))
+* update stylelint generator to match others ([cf0eb88](https://github.com/vuki656/style-guide/commit/cf0eb880d12bc94b94a986b3e3f78c9ed6942c70))
+
 ## [0.8.0](https://github.com/vuki656/style-guide/compare/v0.7.0...v0.8.0) (2026-01-24)
 
 ### Features
