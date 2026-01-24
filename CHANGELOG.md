@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.10.0](https://github.com/vuki656/style-guide/compare/v0.9.0...v0.10.0) (2026-01-24)
+
+### Features
+
+* auto gen prettier ignore ([9b5900a](https://github.com/vuki656/style-guide/commit/9b5900a401ebd0dd22d272673a3b525cd105f9f4))
+
+### Bug Fixes
+
+* added scripts (cache knip and prettier only show warnings) ([2b3d887](https://github.com/vuki656/style-guide/commit/2b3d887cbf4bf4b561e2569dcd5855f3b98687cc))
+
 ## [0.9.0](https://github.com/vuki656/style-guide/compare/v0.8.0...v0.9.0) (2026-01-24)
 
 ### Features
