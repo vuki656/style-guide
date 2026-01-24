@@ -2,6 +2,7 @@ import plugin from "eslint-plugin-package-json"
 import jsoncParser from "jsonc-eslint-parser"
 
 import { noRestrictedDependencies } from "../rules/no-restricted-dependencies/no-restricted-dependencies.js"
+import { requireProperties } from "../rules/require-properties/require-properties.js"
 import { validEnginesNode } from "../rules/valid-engines-node/valid-engines-node.js"
 
 /** @type {import("@eslint/config-helpers").Config} */
@@ -13,6 +14,7 @@ export const packageJson = {
         dvukovic: {
             rules: {
                 "no-restricted-dependencies": noRestrictedDependencies,
+                "require-properties": requireProperties,
                 "valid-engines-node": validEnginesNode,
             },
         },
@@ -35,6 +37,7 @@ export const packageJson = {
                 ],
             },
         ],
+        "dvukovic/require-properties": ["error", { properties: ["volta.node"] }],
         "dvukovic/valid-engines-node": ["error", { versions: ["24"] }],
         "package-json/bin-name-casing": "error",
         "package-json/no-empty-fields": "error",

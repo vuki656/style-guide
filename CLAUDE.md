@@ -96,3 +96,7 @@ file. Test pattern: load config, lint sample code, verify results.
 
 Uses release-it with GitHub Actions. On push to master, CI runs lint + test, then release job
 publishes to npm with provenance.
+
+## Coding Style
+
+- No code comments in source files

@@ -111,6 +111,9 @@
     "engines": {
         "node": ">=24.0.0"
     },
+    "volta": {
+        "node": "24.4.1"
+    },
     "publishConfig": {
         "access": "public",
         "registry": "https://registry.npmjs.org"
