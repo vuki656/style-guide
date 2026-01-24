@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.5.1](https://github.com/vuki656/style-guide/compare/v0.5.0...v0.5.1) (2026-01-24)
+
+### Bug Fixes
+
+* type paths ([e2cd066](https://github.com/vuki656/style-guide/commit/e2cd0663e5610c843f84cf6ed54a4e22e47bddda))
+
 ## [0.5.0](https://github.com/vuki656/style-guide/compare/v0.4.1...v0.5.0) (2026-01-24)
 
 ### Bug Fixes
