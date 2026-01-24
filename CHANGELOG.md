@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.7.0](https://github.com/vuki656/style-guide/compare/v0.6.0...v0.7.0) (2026-01-24)
+
+### Features
+
+* add scripts to package json and knip ([d5f7de9](https://github.com/vuki656/style-guide/commit/d5f7de9258a5cfd7255e5b05fdd8d8d6d8f89cc6))
+
 ## [0.6.0](https://github.com/vuki656/style-guide/compare/v0.5.2...v0.6.0) (2026-01-24)
 
 ### Features
