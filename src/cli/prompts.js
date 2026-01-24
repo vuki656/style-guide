@@ -154,7 +154,7 @@ export async function promptESLintOptions() {
 
 export async function promptOverwrite(filename) {
     const overwrite = await clack.confirm({
-        initialValue: false,
+        initialValue: true,
         message: `${filename} already exists. Overwrite?`,
     })
 
@@ -180,17 +180,4 @@ export async function promptInstall(packageManager, packages) {
     }
 
     return install
-}
-
-export async function promptAddScripts() {
-    const addScripts = await clack.confirm({
-        initialValue: true,
-        message: "Add lint scripts to package.json?",
-    })
-
-    if (clack.isCancel(addScripts)) {
-        return false
-    }
-
-    return addScripts
 }

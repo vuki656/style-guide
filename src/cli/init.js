@@ -11,7 +11,6 @@ import { generatePrettierConfig } from "./generators/prettier.js"
 import { generateScripts } from "./generators/scripts.js"
 import { generateStylelintConfig } from "./generators/stylelint.js"
 import {
-    promptAddScripts,
     promptESLintOptions,
     promptInstall,
     promptOverwrite,
@@ -114,14 +113,12 @@ async function writeConfigFile(filename, content) {
         if (!overwrite) {
             clack.log.info(`Skipped ${filename}`)
 
-            return false
+            return
         }
     }
 
     await writeFile(filename, content)
     clack.log.success(`Created ${filename}`)
-
-    return true
 }
 
 async function updatePackageJsonScripts(tools, packageManager) {
@@ -167,7 +164,6 @@ export async function runInit() {
         eslintOptions = await promptESLintOptions()
     }
 
-    const shouldAddScripts = await promptAddScripts()
     const packageManager = detectPackageManager()
 
     await installPackages(tools, packageManager)
@@ -215,7 +211,5 @@ export async function runInit() {
         await writeConfigFile(filename, content)
     }
 
-    if (shouldAddScripts) {
-        await updatePackageJsonScripts(tools, packageManager)
-    }
+    await updatePackageJsonScripts(tools, packageManager)
 }
