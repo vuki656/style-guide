@@ -1,9 +1,9 @@
 export default {
     git: {
-        commitMessage: "chore(release): ${version} [skip-ci]",
-        tagName: "v${version}",
-        requireCleanWorkingDir: true,
+        commitMessage: "chore(release): ${version} [skip ci]",
         requireBranch: "master",
+        requireCleanWorkingDir: true,
+        tagName: "v${version}",
     },
     github: {
         release: true,
@@ -15,21 +15,21 @@ export default {
     },
     plugins: {
         "@release-it/conventional-changelog": {
-            infile: "CHANGELOG.md",
             header: "# Changelog\n\nAll notable changes to this project will be documented in this file.\n",
+            infile: "CHANGELOG.md",
             preset: {
                 name: "conventionalcommits",
                 types: [
-                    { type: "feat", section: "Features" },
-                    { type: "fix", section: "Bug Fixes" },
-                    { type: "refactor", section: "Code Refactoring" },
-                    { type: "perf", section: "Performance Improvements" },
-                    { type: "docs", section: "Documentation", hidden: true },
-                    { type: "style", section: "Styles", hidden: true },
-                    { type: "test", section: "Tests", hidden: true },
-                    { type: "build", section: "Build System", hidden: true },
-                    { type: "ci", section: "CI/CD", hidden: true },
-                    { type: "chore", section: "Chores", hidden: true },
+                    { section: "Features", type: "feat" },
+                    { section: "Bug Fixes", type: "fix" },
+                    { section: "Code Refactoring", type: "refactor" },
+                    { section: "Performance Improvements", type: "perf" },
+                    { hidden: true, section: "Documentation", type: "docs" },
+                    { hidden: true, section: "Styles", type: "style" },
+                    { hidden: true, section: "Tests", type: "test" },
+                    { hidden: true, section: "Build System", type: "build" },
+                    { hidden: true, section: "CI/CD", type: "ci" },
+                    { hidden: true, section: "Chores", type: "chore" },
                 ],
             },
             whatBump: (commits) => {
@@ -39,19 +39,18 @@ export default {
 
                 for (const commit of commits) {
                     if (commit.notes && commit.notes.length > 0) {
-                        const hasBreaking = commit.notes.some(
-                            (note) =>
-                                note.title === "BREAKING CHANGE" || note.title === "BREAKING-CHANGE"
-                        )
+                        const hasBreaking = commit.notes.some((note) => {
+                            return note.title === "BREAKING CHANGE"
+                        })
 
                         if (hasBreaking) {
-                            breakings += 1
+                            breakings = breakings + 1
                             level = 0
                         }
                     }
 
                     if (commit.type === "feat" || commit.type === "refactor") {
-                        features += 1
+                        features = features + 1
 
                         if (level === 2) {
                             level = 1

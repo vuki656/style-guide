@@ -32,7 +32,12 @@ export function packageJson(config) {
  * @returns {import("@eslint/config-helpers").ConfigWithExtends[]}
  */
 export function packageJsonWorkspace(config) {
-    const { workspacePatterns = DEFAULT_WORKSPACE_PATTERNS, extends: extendsConfig, files, ...rest } = config ?? {}
+    const {
+        extends: extendsConfig,
+        files,
+        workspacePatterns = DEFAULT_WORKSPACE_PATTERNS,
+        ...rest
+    } = config ?? {}
 
     return [
         {

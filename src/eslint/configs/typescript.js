@@ -35,7 +35,15 @@ export function typescript(config) {
 
     return {
         extends: [...typescriptConfig, ...(extendsConfig ?? [])],
-        files: ["**/*.js", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.cts", "**/*.mts", ...(files ?? [])],
+        files: [
+            "**/*.js",
+            "**/*.ts",
+            "**/*.tsx",
+            "**/*.cjs",
+            "**/*.cts",
+            "**/*.mts",
+            ...(files ?? []),
+        ],
         ...rest,
     }
 }

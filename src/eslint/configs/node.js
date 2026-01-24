@@ -14,7 +14,15 @@ export function node(config) {
 
     return {
         extends: [...nodeConfig, ...(extendsConfig ?? [])],
-        files: ["**/*.js", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.cts", "**/*.mts", ...(files ?? [])],
+        files: [
+            "**/*.js",
+            "**/*.cjs",
+            "**/*.mjs",
+            "**/*.ts",
+            "**/*.cts",
+            "**/*.mts",
+            ...(files ?? []),
+        ],
         ...rest,
     }
 }

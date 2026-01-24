@@ -23,7 +23,13 @@ export function storybook(config) {
 
     return {
         extends: [...storybookConfig, ...(extendsConfig ?? [])],
-        files: ["**/*.stories.js", "**/*.stories.ts", "**/*.stories.jsx", "**/*.stories.tsx", ...(files ?? [])],
+        files: [
+            "**/*.stories.js",
+            "**/*.stories.ts",
+            "**/*.stories.jsx",
+            "**/*.stories.tsx",
+            ...(files ?? []),
+        ],
         ...rest,
     }
 }
