@@ -12,7 +12,7 @@ export function generateScripts(tools, packageManager) {
     }
 
     if (tools.includes("prettier")) {
-        scripts["lint:prettier"] = "prettier --check --cache ."
+        scripts["lint:prettier"] = "prettier --log-level=warn --check --cache ."
         lintParts.push(`${runner} lint:prettier`)
         fixParts.push(`${runner} lint:prettier --write`)
     }
@@ -29,7 +29,7 @@ export function generateScripts(tools, packageManager) {
     }
 
     if (tools.includes("knip")) {
-        scripts["lint:knip"] = "knip"
+        scripts["lint:knip"] = "knip --cache"
         lintParts.push(`${runner} lint:knip`)
     }
 
