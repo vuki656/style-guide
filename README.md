@@ -18,7 +18,7 @@ This interactive CLI will:
 ## Manual Installation
 
 ```bash
-yarn add -D @dvukovic/style-guide eslint prettier stylelint cspell
+yarn add -D @dvukovic/style-guide eslint prettier stylelint cspell knip
 ```
 
 ## ESLint
@@ -115,6 +115,24 @@ const config = {
 export default config
 ```
 
+## Knip
+
+Create `knip.config.ts`:
+
+```ts
+import type { KnipConfig } from "knip"
+
+import { core } from "@dvukovic/style-guide/knip"
+
+const config: KnipConfig = {
+    ...core,
+    ignore: [],
+    ignoreDependencies: [...core.ignoreDependencies],
+}
+
+export default config
+```
+
 ## Scripts
 
 Add to your `package.json`:
@@ -122,11 +140,12 @@ Add to your `package.json`:
 ```json
 {
     "scripts": {
-        "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:stylelint && yarn lint:cspell",
+        "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:stylelint && yarn lint:cspell && yarn lint:knip",
         "lint:eslint": "eslint . --cache --concurrency=auto",
         "lint:prettier": "prettier --check --cache .",
         "lint:stylelint": "stylelint ./**/*.css --cache",
         "lint:cspell": "cspell --no-progress --no-summary --unique '**'",
+        "lint:knip": "knip",
         "lint:fix": "yarn lint:eslint --fix && yarn lint:prettier --write && yarn lint:stylelint --fix"
     }
 }

@@ -21,6 +21,10 @@
             "types": "./dist/eslint/index.d.ts",
             "default": "./src/eslint/index.js"
         },
+        "./knip": {
+            "types": "./dist/knip/index.d.ts",
+            "default": "./src/knip/index.js"
+        },
         "./prettier": {
             "types": "./dist/prettier/index.d.ts",
             "default": "./src/prettier/index.js"
@@ -36,16 +40,18 @@
         "src/cli",
         "src/cspell",
         "src/eslint",
+        "src/knip",
         "src/package-json",
         "src/prettier",
         "src/stylelint"
     ],
     "scripts": {
         "build": "tsc",
-        "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:stylelint && yarn lint:cspell",
+        "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:stylelint && yarn lint:cspell && yarn lint:knip",
         "lint:cspell": "cspell --no-progress --no-summary --unique '**'",
         "lint:eslint": "eslint . --cache --concurrency=auto",
-        "lint:fix": "yarn lint:eslint --fix && yarn lint:prettier --write && yarn lint:stylelint --fix && yarn lint:cspell",
+        "lint:fix": "yarn lint:eslint --fix && yarn lint:prettier --write && yarn lint:stylelint --fix && yarn lint:cspell && yarn lint:knip",
+        "lint:knip": "knip",
         "lint:prettier": "prettier --check --cache .",
         "lint:stylelint": "stylelint ./**/*.css --cache",
         "release": "release-it",
@@ -54,10 +60,8 @@
     "dependencies": {
         "@clack/prompts": "0.10.0",
         "@eslint-community/eslint-plugin-eslint-comments": "4.5.0",
-        "@eslint/compat": "2.0.0",
         "@eslint/config-helpers": "0.4.2",
         "@next/eslint-plugin-next": "16.1.0",
-        "@prettier/plugin-xml": "3.4.2",
         "@rimac-technology/eslint-plugin": "1.5.0",
         "@stylistic/eslint-plugin": "5.6.1",
         "@typescript-eslint/parser": "8.50.0",
@@ -96,12 +100,11 @@
         "typescript-eslint": "8.50.0"
     },
     "devDependencies": {
-        "@dvukovic/style-guide": "0.5.2",
         "@release-it/conventional-changelog": "10.0.4",
-        "@types/eslint": "9.6.1",
         "@types/node": "24.10.4",
         "cspell": "9.4.0",
         "eslint": "9.39.2",
+        "knip": "5.82.1",
         "prettier": "3.7.4",
         "release-it": "19.1.0",
         "stylelint": "16.26.1",
@@ -111,6 +114,7 @@
     "peerDependencies": {
         "cspell": "9",
         "eslint": "^9",
+        "knip": "5",
         "prettier": "3",
         "stylelint": "16"
     },
@@ -119,6 +123,9 @@
             "optional": true
         },
         "eslint": {
+            "optional": true
+        },
+        "knip": {
             "optional": true
         },
         "prettier": {

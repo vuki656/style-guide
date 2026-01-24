@@ -6,9 +6,12 @@ import * as clack from "@clack/prompts"
 
 import { generateCspellConfig } from "./generators/cspell.js"
 import { generateESLintConfig } from "./generators/eslint.js"
+import { generateKnipConfig } from "./generators/knip.js"
 import { generatePrettierConfig } from "./generators/prettier.js"
+import { generateScripts } from "./generators/scripts.js"
 import { generateStylelintConfig } from "./generators/stylelint.js"
 import {
+    promptAddScripts,
     promptESLintOptions,
     promptInstall,
     promptOverwrite,
@@ -18,6 +21,7 @@ import {
 const TOOL_PACKAGES = {
     cspell: "cspell",
     eslint: "eslint",
+    knip: "knip",
     prettier: "prettier",
     stylelint: "stylelint",
 }
@@ -70,14 +74,13 @@ function getMissingPackages(tools) {
     return missing
 }
 
-async function installPackages(tools) {
+async function installPackages(tools, packageManager) {
     const missingPackages = getMissingPackages(tools)
 
     if (missingPackages.length === 0) {
         return
     }
 
-    const packageManager = detectPackageManager()
     const shouldInstall = await promptInstall(packageManager, missingPackages)
 
     if (!shouldInstall) {
@@ -121,6 +124,40 @@ async function writeConfigFile(filename, content) {
     return true
 }
 
+async function updatePackageJsonScripts(tools, packageManager) {
+    const scripts = generateScripts(tools, packageManager)
+
+    if (Object.keys(scripts).length === 0) {
+        return
+    }
+
+    try {
+        const packageJsonContent = readFileSync("package.json", "utf8")
+        const packageJson = JSON.parse(packageJsonContent)
+
+        packageJson.scripts = {
+            ...packageJson.scripts,
+            ...scripts,
+        }
+
+        const sortedKeys = Object.keys(packageJson.scripts).sort((left, right) => {
+            return left.localeCompare(right)
+        })
+        const sortedScripts = {}
+
+        for (const key of sortedKeys) {
+            sortedScripts[key] = packageJson.scripts[key]
+        }
+
+        packageJson.scripts = sortedScripts
+
+        await writeFile("package.json", `${JSON.stringify(packageJson, null, 4)}\n`)
+        clack.log.success("Added scripts to package.json")
+    } catch {
+        clack.log.error("Failed to update package.json scripts")
+    }
+}
+
 export async function runInit() {
     const tools = await promptToolSelection()
 
@@ -130,7 +167,10 @@ export async function runInit() {
         eslintOptions = await promptESLintOptions()
     }
 
-    await installPackages(tools)
+    const shouldAddScripts = await promptAddScripts()
+    const packageManager = detectPackageManager()
+
+    await installPackages(tools, packageManager)
 
     const spinner = clack.spinner()
 
@@ -162,10 +202,20 @@ export async function runInit() {
         results.push({ content, filename: "cspell.config.js" })
     }
 
+    if (tools.includes("knip")) {
+        const content = generateKnipConfig()
+
+        results.push({ content, filename: "knip.config.ts" })
+    }
+
     spinner.stop("Configuration files generated")
 
     for (const { content, filename } of results) {
         // eslint-disable-next-line no-await-in-loop -- Sequential writes for user feedback
         await writeConfigFile(filename, content)
+    }
+
+    if (shouldAddScripts) {
+        await updatePackageJsonScripts(tools, packageManager)
     }
 }

@@ -1,4 +1,4 @@
-export function isExpressionOrIdentifierOrLiteral(node) {
+function isExpressionOrIdentifierOrLiteral(node) {
     if (node.type === "Identifier") {
         return true
     }

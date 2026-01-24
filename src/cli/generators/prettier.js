@@ -1,10 +1,10 @@
 export function generatePrettierConfig() {
     return `import type { Config } from "prettier"
 
-import prettierConfig from "@dvukovic/style-guide/prettier"
+import { core } from "@dvukovic/style-guide/prettier"
 
 const config: Config = {
-    ...prettierConfig,
+    ...core,
 }
 
 export default config
