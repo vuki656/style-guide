@@ -22,7 +22,7 @@
             "default": "./src/eslint/index.js"
         },
         "./knip": {
-            "types": "./dist/knip/index.d.ts",
+            "types": "./src/knip/index.d.ts",
             "default": "./src/knip/index.js"
         },
         "./prettier": {
