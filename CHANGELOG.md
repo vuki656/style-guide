@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.4.1](https://github.com/vuki656/style-guide/compare/v0.4.0...v0.4.1) (2026-01-24)
+
+### Bug Fixes
+
+* package json exports ([263ceed](https://github.com/vuki656/style-guide/commit/263ceed03f78b51d6cadf700bfa525d63e46fb17))
+
 ## [0.4.0](https://github.com/vuki656/style-guide/compare/0.3.121...v0.4.0) (2026-01-24)
 
 ### Features
