@@ -4,5 +4,6 @@ export default defineConfig({
     test: {
         globals: true,
         include: ["src/**/*.test.js"],
+        slowTestThreshold: 2000,
     },
 })
