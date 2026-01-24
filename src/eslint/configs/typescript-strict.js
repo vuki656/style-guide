@@ -1,5 +1,6 @@
 import typescriptEslint from "typescript-eslint"
 
+/** @type {import("@eslint/config-helpers").Config[]} */
 export const typescriptStrictConfig = [
     {
         plugins: {

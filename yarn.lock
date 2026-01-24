@@ -908,6 +908,7 @@ __metadata:
   dependencies:
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.5.0"
     "@eslint/compat": "npm:2.0.0"
+    "@eslint/config-helpers": "npm:0.4.2"
     "@next/eslint-plugin-next": "npm:16.1.0"
     "@prettier/plugin-xml": "npm:3.4.2"
     "@rimac-technology/eslint-plugin": "npm:1.5.0"
@@ -1262,7 +1263,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/config-helpers@npm:^0.4.2":
+"@eslint/config-helpers@npm:0.4.2, @eslint/config-helpers@npm:^0.4.2":
   version: 0.4.2
   resolution: "@eslint/config-helpers@npm:0.4.2"
   dependencies:

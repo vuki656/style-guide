@@ -11,26 +11,40 @@
         "name": "Domagoj Vukovic"
     },
     "type": "module",
+    "exports": {
+        "./src/cspell/dictionary.txt": "./src/cspell/dictionary.txt",
+        "./src/eslint/index.js": {
+            "types": "./dist/src/eslint/index.d.ts",
+            "default": "./src/eslint/index.js"
+        },
+        "./src/package-json/index.js": "./src/package-json/index.js",
+        "./src/prettier/index.js": "./src/prettier/index.js",
+        "./src/stylelint/index.js": "./src/stylelint/index.js"
+    },
     "files": [
-        "src/eslint",
+        "dist",
         "src/cspell",
+        "src/eslint",
+        "src/package-json",
         "src/prettier",
-        "src/stylelint",
-        "src/package-json"
+        "src/stylelint"
     ],
     "scripts": {
+        "build": "tsc",
         "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:stylelint && yarn lint:cspell",
         "lint:cspell": "cspell --no-progress --no-summary --unique '**'",
         "lint:eslint": "eslint . --cache --concurrency=auto",
         "lint:fix": "yarn lint:eslint --fix && yarn lint:prettier --write && yarn lint:stylelint --fix && yarn lint:cspell",
         "lint:prettier": "prettier --check --cache .",
         "lint:stylelint": "stylelint ./**/*.css --cache",
+        "prepublishOnly": "yarn build",
         "release": "release-it",
         "test": "vitest run"
     },
     "dependencies": {
         "@eslint-community/eslint-plugin-eslint-comments": "4.5.0",
         "@eslint/compat": "2.0.0",
+        "@eslint/config-helpers": "0.4.2",
         "@next/eslint-plugin-next": "16.1.0",
         "@prettier/plugin-xml": "3.4.2",
         "@rimac-technology/eslint-plugin": "1.5.0",

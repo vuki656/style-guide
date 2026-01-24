@@ -39,7 +39,7 @@ export const coreConfig = [
 export function core(config) {
     return {
         extends: [...coreConfig, ...(config?.extends ?? [])],
-        files: ["**/*.js", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.tsx"],
+        files: ["**/*.js", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.tsx", ...(config?.files ?? [])],
         ...config,
     }
 }

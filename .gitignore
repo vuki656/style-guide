@@ -13,3 +13,4 @@ node_modules
 # Generated
 .eslintcache
 .stylelintcache
+dist

@@ -8,7 +8,7 @@ import {
 } from "./src/eslint/index.js"
 
 export default customDefineConfig(
-    ["node_modules"],
+    ["dist", "node_modules"],
     [
         core(),
         node(),
