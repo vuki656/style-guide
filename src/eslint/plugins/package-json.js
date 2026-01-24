@@ -24,17 +24,18 @@ export const packageJson = {
         "dvukovic/no-restricted-dependencies": [
             "error",
             {
-                packages: [
+                dependencies: [
                     "@types/*",
                     "cspell",
                     "eslint",
+                    "lambda",
                     "lodash",
-                    "npm-package-json-lint",
                     "prettier",
                     "ramda",
                     "stylelint",
                     "typeorm",
                 ],
+                peerDependencies: ["@types/*"],
             },
         ],
         "dvukovic/require-properties": ["error", { properties: ["volta.node"] }],
