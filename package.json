@@ -12,7 +12,11 @@
     },
     "type": "module",
     "exports": {
-        "./cspell/dictionary.txt": "./src/cspell/dictionary.txt",
+        "./cspell": {
+            "types": "./dist/cspell/index.d.ts",
+            "default": "./src/cspell/index.js"
+        },
+        "./cspell/base.txt": "./src/cspell/base.txt",
         "./eslint": {
             "types": "./dist/eslint/index.d.ts",
             "default": "./src/eslint/index.js"
@@ -26,8 +30,10 @@
             "default": "./src/stylelint/index.js"
         }
     },
+    "bin": "./src/cli/index.js",
     "files": [
         "dist",
+        "src/cli",
         "src/cspell",
         "src/eslint",
         "src/package-json",
@@ -46,6 +52,7 @@
         "test": "vitest run"
     },
     "dependencies": {
+        "@clack/prompts": "0.10.0",
         "@eslint-community/eslint-plugin-eslint-comments": "4.5.0",
         "@eslint/compat": "2.0.0",
         "@eslint/config-helpers": "0.4.2",
@@ -89,6 +96,7 @@
         "typescript-eslint": "8.50.0"
     },
     "devDependencies": {
+        "@dvukovic/style-guide": "0.5.2",
         "@release-it/conventional-changelog": "10.0.4",
         "@types/eslint": "9.6.1",
         "@types/node": "24.10.4",
