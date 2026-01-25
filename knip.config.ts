@@ -5,6 +5,7 @@ import { core } from "./src/knip/index.js"
 const config: KnipConfig = {
     ...core,
     ignore: [],
+    ignoreFiles: ["scripts/changelog-report.ts", "scripts/changelog-report.types.ts"],
     ignoreDependencies: [
         "stylelint-no-unused-selectors",
         "stylelint-order",
@@ -12,6 +13,8 @@ const config: KnipConfig = {
         "eslint",
         "prettier",
         "stylelint",
+        "semver",
+        "@types/semver",
     ],
 }
 

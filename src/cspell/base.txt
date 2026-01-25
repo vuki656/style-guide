@@ -141,3 +141,4 @@ nuqs
 volta
 timeslot
 blackhill
+rcompare

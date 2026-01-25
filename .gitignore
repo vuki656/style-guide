@@ -14,3 +14,4 @@ node_modules
 .eslintcache
 .stylelintcache
 dist
+PACKAGE_UPDATES.md

@@ -93,6 +93,7 @@ export const vitest = {
         "@vitest/valid-expect": "error",
         "@vitest/valid-expect-in-promise": "error",
         "@vitest/valid-title": "error",
+        "@vitest/vitest/prefer-mock-return-shorthand": "error",
         "@vitest/warn-todo": "warn",
     },
 }

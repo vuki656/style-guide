@@ -6,6 +6,7 @@ export const playwright = {
         playwright: plugin,
     },
     rules: {
+        "playwright/enforce-consistent-spacing-between-blocks": "error",
         "playwright/expect-expect": "error",
         "playwright/max-expects": ["error", { max: 15 }],
         "playwright/max-nested-describe": ["error", { max: 4 }],

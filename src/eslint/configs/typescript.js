@@ -3,6 +3,7 @@ import tseslint from "typescript-eslint"
 import { typescriptEslint } from "../plugins/typescript-eslint.js"
 import { typescriptSortKeys } from "../plugins/typescript-sort-keys.js"
 
+/** @type {import("eslint").Linter.Config[]} */
 export const typescriptConfig = [
     {
         files: ["**/*.js", "**/*.ts", "**/*.tsx", "**/*.cjs"],
