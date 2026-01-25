@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.12.0](https://github.com/vuki656/style-guide/compare/v0.11.0...v0.12.0) (2026-01-25)
+
+### Features
+
+* add new jest, vitest and playwright rules ([6cc4b44](https://github.com/vuki656/style-guide/commit/6cc4b44047a81b9cd95ed67d6c3952b82f55cd16))
+
 ## [0.11.0](https://github.com/vuki656/style-guide/compare/v0.10.3...v0.11.0) (2026-01-25)
 
 ### Features
