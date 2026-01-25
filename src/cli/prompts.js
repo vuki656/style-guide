@@ -81,11 +81,25 @@ export async function promptESLintOptions() {
     }
 
     let includeNode = framework === "none"
+    let includeAws = false
 
-    if (framework !== "none") {
+    if (framework === "none") {
+        const awsBackend = await clack.confirm({
+            initialValue: false,
+            message: "Do you use AWS (CDK, SST, SDK)?",
+        })
+
+        if (clack.isCancel(awsBackend)) {
+            clack.cancel("Setup cancelled.")
+
+            throw new SetupCancelledError()
+        }
+
+        includeAws = awsBackend
+    } else if (framework === "next") {
         const nodeBackend = await clack.confirm({
             initialValue: false,
-            message: "Do you have a Node.js backend?",
+            message: "Do you have Node.js API routes?",
         })
 
         if (clack.isCancel(nodeBackend)) {
@@ -95,6 +109,21 @@ export async function promptESLintOptions() {
         }
 
         includeNode = nodeBackend
+
+        if (nodeBackend) {
+            const awsBackend = await clack.confirm({
+                initialValue: false,
+                message: "Do your API routes use AWS (CDK, SST, SDK)?",
+            })
+
+            if (clack.isCancel(awsBackend)) {
+                clack.cancel("Setup cancelled.")
+
+                throw new SetupCancelledError()
+            }
+
+            includeAws = awsBackend
+        }
     }
 
     const testing = await clack.multiselect({
@@ -144,6 +173,7 @@ export async function promptESLintOptions() {
     return {
         extras,
         framework,
+        includeAws,
         includeNode,
         isMonorepo,
         language,

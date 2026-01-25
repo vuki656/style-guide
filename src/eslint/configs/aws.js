@@ -1,21 +1,20 @@
-import { nodeN } from "../plugins/n.js"
-import { securityNode } from "../plugins/security-node.js"
+import { sonarjsAws } from "../plugins/sonarjs-aws.js"
 
-export const nodeConfig = [nodeN, securityNode]
+export const awsConfig = [sonarjsAws]
 
 /**
- * Node.js ESLint configuration
+ * AWS infrastructure ESLint configuration for CDK, SST, and AWS SDK
  *
  * @param {import("@eslint/config-helpers").ConfigWithExtends & { onlyFiles?: string[] }} [config]
  *   - Additional config
  *
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
-export function node(config) {
+export function aws(config) {
     const { extends: extendsConfig, files, onlyFiles, ...rest } = config ?? {}
 
     return {
-        extends: [...nodeConfig, ...(extendsConfig ?? [])],
+        extends: [...awsConfig, ...(extendsConfig ?? [])],
         files: onlyFiles ?? [
             "**/*.js",
             "**/*.cjs",

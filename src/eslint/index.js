@@ -29,6 +29,7 @@ export function customDefineConfig(ignores, configs = []) {
     )
 }
 
+export * from "./configs/aws.js"
 export * from "./configs/core.js"
 export * from "./configs/jest.js"
 export * from "./configs/mobx.js"

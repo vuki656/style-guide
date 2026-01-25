@@ -5,15 +5,17 @@ export const mobxConfig = [mobxPlugin]
 /**
  * MobX state management configuration
  *
- * @param {import("@eslint/config-helpers").ConfigWithExtends} [config] - Additional config
+ * @param {import("@eslint/config-helpers").ConfigWithExtends & { onlyFiles?: string[] }} [config]
+ *   - Additional config
+ *
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function mobx(config) {
-    const { extends: extendsConfig, files, ...rest } = config ?? {}
+    const { extends: extendsConfig, files, onlyFiles, ...rest } = config ?? {}
 
     return {
         extends: [...mobxConfig, ...(extendsConfig ?? [])],
-        files: ["**/*.js", "**/*.ts", "**/*.jsx", "**/*.tsx", ...(files ?? [])],
+        files: onlyFiles ?? ["**/*.js", "**/*.ts", "**/*.jsx", "**/*.tsx", ...(files ?? [])],
         ...rest,
     }
 }

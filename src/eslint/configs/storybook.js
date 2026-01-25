@@ -3,7 +3,9 @@ import { storybook as storybookPlugin } from "../plugins/storybook.js"
 /**
  * Storybook ESLint configuration with relaxed rules for story files
  *
- * @param {import("@eslint/config-helpers").ConfigWithExtends} [config] - Additional config
+ * @param {import("@eslint/config-helpers").ConfigWithExtends & { onlyFiles?: string[] }} [config]
+ *   - Additional config
+ *
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function storybook(config) {
@@ -19,11 +21,11 @@ export function storybook(config) {
             },
         },
     ]
-    const { extends: extendsConfig, files, ...rest } = config ?? {}
+    const { extends: extendsConfig, files, onlyFiles, ...rest } = config ?? {}
 
     return {
         extends: [...storybookConfig, ...(extendsConfig ?? [])],
-        files: [
+        files: onlyFiles ?? [
             "**/*.stories.js",
             "**/*.stories.ts",
             "**/*.stories.jsx",

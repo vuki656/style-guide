@@ -33,15 +33,17 @@ export const coreConfig = [
 /**
  * Core ESLint configuration with essential rules and plugins
  *
- * @param {import("@eslint/config-helpers").ConfigWithExtends} [config] - Additional config
+ * @param {import("@eslint/config-helpers").ConfigWithExtends & { onlyFiles?: string[] }} [config]
+ *   - Additional config
+ *
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function core(config) {
-    const { extends: extendsConfig, files, ...rest } = config ?? {}
+    const { extends: extendsConfig, files, onlyFiles, ...rest } = config ?? {}
 
     return {
         extends: [...coreConfig, ...(extendsConfig ?? [])],
-        files: [
+        files: onlyFiles ?? [
             "**/*.js",
             ".*.js",
             "**/*.cjs",

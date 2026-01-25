@@ -3,16 +3,18 @@ import { jest as jestPlugin } from "../plugins/jest.js"
 /**
  * Jest testing framework configuration
  *
- * @param {import("@eslint/config-helpers").ConfigWithExtends} [config] - Additional config
+ * @param {import("@eslint/config-helpers").ConfigWithExtends & { onlyFiles?: string[] }} [config]
+ *   - Additional config
+ *
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function jest(config) {
     const jestConfig = [jestPlugin]
-    const { extends: extendsConfig, files, ...rest } = config ?? {}
+    const { extends: extendsConfig, files, onlyFiles, ...rest } = config ?? {}
 
     return {
         extends: [...jestConfig, ...(extendsConfig ?? [])],
-        files: [
+        files: onlyFiles ?? [
             "**/*.test.js",
             "**/*.test.ts",
             "**/*.spec.js",

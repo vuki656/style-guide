@@ -7,15 +7,15 @@ export const packageJsonConfigs = [packageJsonRules]
 /**
  * Package.json ESLint configuration
  *
- * @param {import("@eslint/config-helpers").ConfigWithExtends} [config]
+ * @param {import("@eslint/config-helpers").ConfigWithExtends & { onlyFiles?: string[] }} [config]
  * @returns {import("@eslint/config-helpers").ConfigWithExtends}
  */
 export function packageJson(config) {
-    const { extends: extendsConfig, files, ...rest } = config ?? {}
+    const { extends: extendsConfig, files, onlyFiles, ...rest } = config ?? {}
 
     return {
         extends: [...packageJsonConfigs, ...(extendsConfig ?? [])],
-        files: ["**/package.json", ...(files ?? [])],
+        files: onlyFiles ?? ["**/package.json", ...(files ?? [])],
         ...rest,
     }
 }

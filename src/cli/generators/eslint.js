@@ -1,5 +1,14 @@
 export function generateESLintConfig(options) {
-    const { extras, framework, includeNode, isMonorepo, language, strictMode, testing } = options
+    const {
+        extras,
+        framework,
+        includeAws,
+        includeNode,
+        isMonorepo,
+        language,
+        strictMode,
+        testing,
+    } = options
 
     const imports = ["core", "customDefineConfig"]
     const configs = ["core()"]
@@ -29,7 +38,22 @@ export function generateESLintConfig(options) {
 
     if (includeNode) {
         imports.push("node")
-        configs.push("node()")
+
+        if (framework === "next") {
+            configs.push('node({ onlyFiles: ["**/api/**/*.ts", "**/app/api/**/*.ts"] })')
+        } else {
+            configs.push("node()")
+        }
+    }
+
+    if (includeAws) {
+        imports.push("aws")
+
+        if (framework === "next") {
+            configs.push('aws({ onlyFiles: ["**/api/**/*.ts", "**/app/api/**/*.ts"] })')
+        } else {
+            configs.push("aws()")
+        }
     }
 
     if (testing.includes("jest")) {
