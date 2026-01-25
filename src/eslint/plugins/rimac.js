@@ -7,6 +7,5 @@ export const rimac = {
     },
     rules: {
         "@rimac-technology/class-element-sorting": "error",
-        "@rimac-technology/document-todos": ["error", { url: "http" }],
     },
 }

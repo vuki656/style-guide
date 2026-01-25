@@ -1,2 +1,1 @@
 - [ ] Use new plugin for sorting https://perfectionist.dev/ and remove rimac
-- [ ] See if you can split out some configs like aws rules
