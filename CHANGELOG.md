@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.10.3](https://github.com/vuki656/style-guide/compare/v0.10.2...v0.10.3) (2026-01-25)
+
+### Bug Fixes
+
+* don't include aws rules by default ([05857dc](https://github.com/vuki656/style-guide/commit/05857dcb5d6ae37d0cec8346791df7b03f000ea6))
+
 ## [0.10.2](https://github.com/vuki656/style-guide/compare/v0.10.1...v0.10.2) (2026-01-24)
 
 ### Bug Fixes
