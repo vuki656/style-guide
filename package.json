@@ -43,7 +43,9 @@
         "src/knip",
         "src/package-json",
         "src/prettier",
-        "src/stylelint"
+        "src/stylelint",
+        "!**/*.test.js",
+        "!**/*.test.ts"
     ],
     "scripts": {
         "build": "tsc --project tsconfig.build.json",
