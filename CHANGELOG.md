@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.14.2](https://github.com/vuki656/style-guide/compare/v0.14.1...v0.14.2) (2026-01-31)
+
+### Bug Fixes
+
+* don't pack tests ([c47cf12](https://github.com/vuki656/style-guide/commit/c47cf127d74aec461703d1db6d38cc61c1c101e9))
+
 ## [0.14.1](https://github.com/vuki656/style-guide/compare/v0.14.0...v0.14.1) (2026-01-31)
 
 ### Bug Fixes
