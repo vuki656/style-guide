@@ -12,10 +12,11 @@
         "moduleResolution": "bundler",
         "noUncheckedIndexedAccess": true,
         "outDir": "dist",
+        "rootDir": "src",
         "skipLibCheck": true,
         "strict": true,
         "target": "ES2022",
         "types": ["vitest/globals"]
     },
-    "include": ["scripts", "src"]
+    "include": ["src"]
 }

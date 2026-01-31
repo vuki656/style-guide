@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { defineConfig, globalIgnores } from "eslint/config"
 
 /**

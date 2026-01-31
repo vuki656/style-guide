@@ -5,7 +5,8 @@
       "Bash(npm view:*)",
       "Bash(tree:*)",
       "WebFetch(domain:docs.volta.sh)",
-      "Bash(git -C /home/vuki/Projects/personal/style-guide status --short)"
+      "Bash(git -C /home/vuki/Projects/personal/style-guide status --short)",
+      "Bash(npm ls:*)"
     ]
   }
 }

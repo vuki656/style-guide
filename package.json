@@ -46,7 +46,7 @@
         "src/stylelint"
     ],
     "scripts": {
-        "build": "tsc",
+        "build": "tsc --project tsconfig.build.json",
         "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:stylelint && yarn lint:cspell && yarn lint:knip",
         "lint:cspell": "cspell --no-progress --no-summary --unique '**'",
         "lint:eslint": "eslint . --cache --concurrency=auto",
