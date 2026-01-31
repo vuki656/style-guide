@@ -109,6 +109,7 @@
         "prettier": "3.8.1",
         "release-it": "19.2.4",
         "semver": "7.7.3",
+        "storybook": "10.2.3",
         "stylelint": "16.26.1",
         "typescript": "5.9.3",
         "vitest": "4.0.18"

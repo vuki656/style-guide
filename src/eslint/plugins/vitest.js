@@ -65,6 +65,7 @@ export const vitest = {
         "@vitest/prefer-hooks-on-top": "error",
         "@vitest/prefer-lowercase-title": "error",
         "@vitest/prefer-mock-promise-shorthand": "error",
+        "@vitest/prefer-mock-return-shorthand": "error",
         "@vitest/prefer-spy-on": "error",
         "@vitest/prefer-strict-boolean-matchers": "error",
         "@vitest/prefer-strict-equal": "error",
@@ -75,7 +76,6 @@ export const vitest = {
         "@vitest/prefer-todo": "error",
         "@vitest/prefer-vi-mocked": "error",
         "@vitest/require-awaited-expect-poll": "error",
-        "@vitest/require-import-vi-mock": "error",
         "@vitest/require-mock-type-parameters": [
             "error",
             {
@@ -93,7 +93,6 @@ export const vitest = {
         "@vitest/valid-expect": "error",
         "@vitest/valid-expect-in-promise": "error",
         "@vitest/valid-title": "error",
-        "@vitest/vitest/prefer-mock-return-shorthand": "error",
         "@vitest/warn-todo": "warn",
     },
 }
