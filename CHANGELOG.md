@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.13.0](https://github.com/vuki656/style-guide/compare/v0.12.0...v0.13.0) (2026-01-31)
+
+### Code Refactoring
+
+* cleaner setup ([4983d5a](https://github.com/vuki656/style-guide/commit/4983d5a0b56a5b53afdc2c47363cbc7a935f47fc))
+
 ## [0.12.0](https://github.com/vuki656/style-guide/compare/v0.11.0...v0.12.0) (2026-01-25)
 
 ### Features
