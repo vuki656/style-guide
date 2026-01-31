@@ -1,1 +1,3 @@
 - [ ] Use new plugin for sorting https://perfectionist.dev/ and remove rimac
+- [ ] Prevent cross module import rule
+- [ ] Use Error.isError instead of instanceof

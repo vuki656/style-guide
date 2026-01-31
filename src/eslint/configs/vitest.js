@@ -5,17 +5,17 @@ export const vitestConfig = [vitestPlugin]
 /**
  * Vitest testing framework configuration
  *
- * @param {import("@eslint/config-helpers").ConfigWithExtends & { onlyFiles?: string[] }} [config]
+ * @param {import("@eslint/config-helpers").ConfigWithExtends & { additionalFiles?: string[] }} [config]
  *   - Additional config
  *
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function vitest(config) {
-    const { extends: extendsConfig, files, onlyFiles, ...rest } = config ?? {}
+    const { additionalFiles, extends: extendsConfig, files, ...rest } = config ?? {}
 
     return {
         extends: [...vitestConfig, ...(extendsConfig ?? [])],
-        files: onlyFiles ?? [
+        files: files ?? [
             "**/*.test.js",
             "**/*.test.ts",
             "**/*.spec.js",
@@ -26,7 +26,7 @@ export function vitest(config) {
             "**/*.int.test.ts",
             "**/*.integration.test.js",
             "**/*.integration.test.ts",
-            ...(files ?? []),
+            ...(additionalFiles ?? []),
         ],
         ...rest,
     }

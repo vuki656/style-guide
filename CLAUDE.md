@@ -46,10 +46,11 @@ Configs use a factory function pattern:
 export const coreConfig = [plugin1, plugin2, ...]  // Raw config array
 
 export function core(config) {                      // Factory function
+    const { additionalFiles, extends: extendsConfig, files, ...rest } = config ?? {}
     return {
-        extends: [...coreConfig, ...(config?.extends ?? [])],
-        files: ["**/*.js", "**/*.ts", ...],
-        ...config,  // Allow user overrides
+        extends: [...coreConfig, ...(extendsConfig ?? [])],
+        files: files ?? ["**/*.js", "**/*.ts", ..., ...(additionalFiles ?? [])],
+        ...rest,
     }
 }
 ```
@@ -79,7 +80,7 @@ export const pluginName = {
 
 `src/eslint/index.js` exports:
 
-- `customDefineConfig(ignores, configs)` - Wrapper for ESLint's defineConfig
+- `customDefineConfig({ configs, ignores, defaultIgnores })` - Wrapper for ESLint's defineConfig
 - All config factory functions
 
 ### Custom ESLint Rules

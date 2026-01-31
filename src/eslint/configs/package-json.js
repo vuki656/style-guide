@@ -7,15 +7,15 @@ export const packageJsonConfigs = [packageJsonRules]
 /**
  * Package.json ESLint configuration
  *
- * @param {import("@eslint/config-helpers").ConfigWithExtends & { onlyFiles?: string[] }} [config]
+ * @param {import("@eslint/config-helpers").ConfigWithExtends & { additionalFiles?: string[] }} [config]
  * @returns {import("@eslint/config-helpers").ConfigWithExtends}
  */
 export function packageJson(config) {
-    const { extends: extendsConfig, files, onlyFiles, ...rest } = config ?? {}
+    const { additionalFiles, extends: extendsConfig, files, ...rest } = config ?? {}
 
     return {
         extends: [...packageJsonConfigs, ...(extendsConfig ?? [])],
-        files: onlyFiles ?? ["**/package.json", ...(files ?? [])],
+        files: files ?? ["**/package.json", ...(additionalFiles ?? [])],
         ...rest,
     }
 }
@@ -28,13 +28,16 @@ export function packageJson(config) {
  * - Root package.json: all rules including volta.node requirement
  * - Nested packages: same rules but no volta.node requirement
  *
- * @param {{ workspacePatterns?: string[] } & import("@eslint/config-helpers").ConfigWithExtends} [config]
+ * @param {{
+ *     workspacePatterns?: string[]
+ *     additionalFiles?: string[]
+ * } & import("@eslint/config-helpers").ConfigWithExtends} [config]
  * @returns {import("@eslint/config-helpers").ConfigWithExtends[]}
  */
 export function packageJsonWorkspace(config) {
     const {
+        additionalFiles,
         extends: extendsConfig,
-        files,
         workspacePatterns = DEFAULT_WORKSPACE_PATTERNS,
         ...rest
     } = config ?? {}
@@ -42,7 +45,7 @@ export function packageJsonWorkspace(config) {
     return [
         {
             extends: [...packageJsonConfigs, ...(extendsConfig ?? [])],
-            files: ["package.json", ...(files ?? [])],
+            files: ["package.json", ...(additionalFiles ?? [])],
             ...rest,
         },
         {

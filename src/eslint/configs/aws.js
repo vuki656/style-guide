@@ -5,24 +5,24 @@ export const awsConfig = [sonarjsAws]
 /**
  * AWS infrastructure ESLint configuration for CDK, SST, and AWS SDK
  *
- * @param {import("@eslint/config-helpers").ConfigWithExtends & { onlyFiles?: string[] }} [config]
+ * @param {import("@eslint/config-helpers").ConfigWithExtends & { additionalFiles?: string[] }} [config]
  *   - Additional config
  *
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function aws(config) {
-    const { extends: extendsConfig, files, onlyFiles, ...rest } = config ?? {}
+    const { additionalFiles, extends: extendsConfig, files, ...rest } = config ?? {}
 
     return {
         extends: [...awsConfig, ...(extendsConfig ?? [])],
-        files: onlyFiles ?? [
+        files: files ?? [
             "**/*.js",
             "**/*.cjs",
             "**/*.mjs",
             "**/*.ts",
             "**/*.cts",
             "**/*.mts",
-            ...(files ?? []),
+            ...(additionalFiles ?? []),
         ],
         ...rest,
     }

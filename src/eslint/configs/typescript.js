@@ -28,24 +28,24 @@ export const typescriptConfig = [
 /**
  * TypeScript ESLint configuration with parser setup and rules
  *
- * @param {import("@eslint/config-helpers").ConfigWithExtends & { onlyFiles?: string[] }} [config]
+ * @param {import("@eslint/config-helpers").ConfigWithExtends & { additionalFiles?: string[] }} [config]
  *   - Additional config
  *
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function typescript(config) {
-    const { extends: extendsConfig, files, onlyFiles, ...rest } = config ?? {}
+    const { additionalFiles, extends: extendsConfig, files, ...rest } = config ?? {}
 
     return {
         extends: [...typescriptConfig, ...(extendsConfig ?? [])],
-        files: onlyFiles ?? [
+        files: files ?? [
             "**/*.js",
             "**/*.ts",
             "**/*.tsx",
             "**/*.cjs",
             "**/*.cts",
             "**/*.mts",
-            ...(files ?? []),
+            ...(additionalFiles ?? []),
         ],
         ...rest,
     }

@@ -33,17 +33,17 @@ export const typescriptStrictConfig = [
 /**
  * Strict TypeScript ESLint configuration with additional safety rules
  *
- * @param {import("@eslint/config-helpers").ConfigWithExtends & { onlyFiles?: string[] }} [config]
+ * @param {import("@eslint/config-helpers").ConfigWithExtends & { additionalFiles?: string[] }} [config]
  *   - Additional config
  *
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function typescriptStrict(config) {
-    const { extends: extendsConfig, files, onlyFiles, ...rest } = config ?? {}
+    const { additionalFiles, extends: extendsConfig, files, ...rest } = config ?? {}
 
     return {
         extends: [...typescriptStrictConfig, ...(extendsConfig ?? [])],
-        files: onlyFiles ?? ["**/*.ts", "**/*.tsx", "**/*.cts", "**/*.mts", ...(files ?? [])],
+        files: files ?? ["**/*.ts", "**/*.tsx", "**/*.cts", "**/*.mts", ...(additionalFiles ?? [])],
         ...rest,
     }
 }

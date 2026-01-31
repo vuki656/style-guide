@@ -12,7 +12,7 @@ export function generateESLintConfig(options) {
 
     const imports = ["core", "customDefineConfig"]
     const configs = ["core()"]
-    const ignores = ["dist", "node_modules"]
+    const ignores = ["dist"]
 
     if (language === "typescript") {
         imports.push("typescript")
@@ -33,14 +33,14 @@ export function generateESLintConfig(options) {
     if (framework === "next") {
         imports.push("next")
         configs.push("next()")
-        ignores.push(".next", "out")
+        ignores.push("out")
     }
 
     if (includeNode) {
         imports.push("node")
 
         if (framework === "next") {
-            configs.push('node({ onlyFiles: ["**/api/**/*.ts", "**/app/api/**/*.ts"] })')
+            configs.push('node({ files: ["**/api/**/*.ts", "**/app/api/**/*.ts"] })')
         } else {
             configs.push("node()")
         }
@@ -50,7 +50,7 @@ export function generateESLintConfig(options) {
         imports.push("aws")
 
         if (framework === "next") {
-            configs.push('aws({ onlyFiles: ["**/api/**/*.ts", "**/app/api/**/*.ts"] })')
+            configs.push('aws({ files: ["**/api/**/*.ts", "**/app/api/**/*.ts"] })')
         } else {
             configs.push("aws()")
         }
@@ -83,7 +83,7 @@ export function generateESLintConfig(options) {
 
     if (isMonorepo) {
         imports.push("packageJsonWorkspace")
-        configs.push("...packageJsonWorkspace()")
+        configs.push("packageJsonWorkspace()")
     } else {
         imports.push("packageJson")
         configs.push("packageJson()")
@@ -91,14 +91,14 @@ export function generateESLintConfig(options) {
 
     const importStatement = `import {\n    ${imports.join(",\n    ")},\n} from "@dvukovic/style-guide/eslint"`
 
-    const ignoresArray = `["${ignores.join('", "')}"]`
     const configsArray = `[\n        ${configs.join(",\n        ")},\n    ]`
+    const ignoresArray = `["${ignores.join('", "')}"]`
 
     return `${importStatement}
 
-export default customDefineConfig(
-    ${ignoresArray},
-    ${configsArray},
-)
+export default customDefineConfig({
+    configs: ${configsArray},
+    ignores: ${ignoresArray},
+})
 `
 }

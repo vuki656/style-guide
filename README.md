@@ -28,7 +28,10 @@ Create `eslint.config.js`:
 ```js
 import { customDefineConfig, core, typescript } from "@dvukovic/style-guide/eslint"
 
-export default customDefineConfig(["dist", "build"], [core(), typescript()])
+export default customDefineConfig({
+    configs: [core(), typescript()],
+    ignores: ["dist", "build"],
+})
 ```
 
 ### Available Configs
@@ -54,9 +57,8 @@ Each factory function accepts a config parameter to extend or override settings:
 ```js
 import { customDefineConfig, core, typescript } from "@dvukovic/style-guide/eslint"
 
-export default customDefineConfig(
-    ["dist"],
-    [
+export default customDefineConfig({
+    configs: [
         core(),
         typescript({
             rules: {
@@ -64,7 +66,8 @@ export default customDefineConfig(
             },
         }),
     ],
-)
+    ignores: ["dist"],
+})
 ```
 
 ## Prettier

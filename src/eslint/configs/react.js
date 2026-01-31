@@ -6,17 +6,17 @@ export const reactConfig = [reactPlugin, reactHooksPlugin]
 /**
  * React framework configuration
  *
- * @param {import("@eslint/config-helpers").ConfigWithExtends & { onlyFiles?: string[] }} [config]
+ * @param {import("@eslint/config-helpers").ConfigWithExtends & { additionalFiles?: string[] }} [config]
  *   - Additional config
  *
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
 export function react(config) {
-    const { extends: extendsConfig, files, onlyFiles, ...rest } = config ?? {}
+    const { additionalFiles, extends: extendsConfig, files, ...rest } = config ?? {}
 
     return {
         extends: [...reactConfig, ...(extendsConfig ?? [])],
-        files: onlyFiles ?? ["**/*.jsx", "**/*.tsx", ...(files ?? [])],
+        files: files ?? ["**/*.jsx", "**/*.tsx", ...(additionalFiles ?? [])],
         ...rest,
     }
 }

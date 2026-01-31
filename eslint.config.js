@@ -7,9 +7,8 @@ import {
     packageJson,
 } from "./src/eslint/index.js"
 
-export default customDefineConfig(
-    ["dist", "node_modules"],
-    [
+export default customDefineConfig({
+    configs: [
         core(),
         node(),
         typescript(),
@@ -20,4 +19,5 @@ export default customDefineConfig(
             },
         }),
     ],
-)
+    ignores: ["dist"],
+})
