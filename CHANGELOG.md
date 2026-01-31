@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.14.1](https://github.com/vuki656/style-guide/compare/v0.14.0...v0.14.1) (2026-01-31)
+
+### Bug Fixes
+
+* build types correctly ([ab37cb8](https://github.com/vuki656/style-guide/commit/ab37cb8befdb1bcea0da9794ad48e6a6db225dc4))
+* ignore scripts folder ([76918cd](https://github.com/vuki656/style-guide/commit/76918cd51a4a9e2a8b847f4fb23cf49f72559f3f))
+
 ## [0.14.0](https://github.com/vuki656/style-guide/compare/v0.13.0...v0.14.0) (2026-01-31)
 
 ### Features
