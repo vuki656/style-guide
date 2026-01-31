@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.14.0](https://github.com/vuki656/style-guide/compare/v0.13.0...v0.14.0) (2026-01-31)
+
+### Features
+
+* proper tests to validate all configs are runnable ([3bead1e](https://github.com/vuki656/style-guide/commit/3bead1e6b2f40da6b93a6a5c4f336b8d873a4e6c))
+
 ## [0.13.0](https://github.com/vuki656/style-guide/compare/v0.12.0...v0.13.0) (2026-01-31)
 
 ### Code Refactoring
