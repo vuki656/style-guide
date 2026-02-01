@@ -47,6 +47,8 @@ export default customDefineConfig({
 - `playwright()` - Playwright e2e testing
 - `mobx()` - MobX state management
 - `storybook()` - Storybook
+- `tanstackQuery()` - TanStack Query
+- `turbo()` - Turborepo
 - `packageJson()` - package.json linting
 - `packageJsonWorkspace()` - package.json linting for monorepos
 

@@ -142,3 +142,4 @@ volta
 timeslot
 blackhill
 rcompare
+turborepo

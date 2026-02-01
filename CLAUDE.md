@@ -74,6 +74,8 @@ export const pluginName = {
 - `jest()` / `vitest()` / `playwright()` - Testing frameworks
 - `mobx()` - MobX state management
 - `storybook()` - Storybook stories
+- `tanstackQuery()` - TanStack Query rules
+- `turbo()` - Turborepo rules
 - `packageJson()` - package.json linting
 
 ### Main Entry Point

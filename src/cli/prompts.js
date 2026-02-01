@@ -147,6 +147,8 @@ export async function promptESLintOptions() {
         options: [
             { label: "MobX", value: "mobx" },
             { label: "Storybook", value: "storybook" },
+            { label: "TanStack Query", value: "tanstackQuery" },
+            { label: "Turbo", value: "turbo" },
         ],
         required: false,
     })

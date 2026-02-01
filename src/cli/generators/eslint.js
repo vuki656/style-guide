@@ -81,6 +81,16 @@ export function generateESLintConfig(options) {
         configs.push("storybook()")
     }
 
+    if (extras.includes("tanstackQuery")) {
+        imports.push("tanstackQuery")
+        configs.push("tanstackQuery()")
+    }
+
+    if (extras.includes("turbo")) {
+        imports.push("turbo")
+        configs.push("turbo()")
+    }
+
     if (isMonorepo) {
         imports.push("packageJsonWorkspace")
         configs.push("packageJsonWorkspace()")
