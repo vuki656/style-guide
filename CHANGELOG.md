@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.15.0](https://github.com/vuki656/style-guide/compare/v0.14.2...v0.15.0) (2026-02-01)
+
+### Features
+
+* add tubro and tanstack configs ([ebeea15](https://github.com/vuki656/style-guide/commit/ebeea157b06f5977d5fef7a2322f97c6617dfe4d))
+
 ## [0.14.2](https://github.com/vuki656/style-guide/compare/v0.14.1...v0.14.2) (2026-01-31)
 
 ### Bug Fixes
