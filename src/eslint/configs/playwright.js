@@ -1,3 +1,4 @@
+import { TEST_FILES } from "../file-patterns.js"
 import { playwright as playwrightPlugin } from "../plugins/playwright.js"
 
 export const playwrightConfig = [playwrightPlugin]
@@ -15,19 +16,7 @@ export function playwright(config) {
 
     return {
         extends: [...playwrightConfig, ...(extendsConfig ?? [])],
-        files: files ?? [
-            "**/*.test.js",
-            "**/*.test.ts",
-            "**/*.spec.js",
-            "**/*.spec.ts",
-            "**/*.unit.test.js",
-            "**/*.unit.test.ts",
-            "**/*.int.test.js",
-            "**/*.int.test.ts",
-            "**/*.integration.test.js",
-            "**/*.integration.test.ts",
-            ...(additionalFiles ?? []),
-        ],
+        files: files ?? [...TEST_FILES, ...(additionalFiles ?? [])],
         ...rest,
     }
 }

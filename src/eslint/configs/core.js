@@ -1,3 +1,4 @@
+import { ALL_JS_TS_FILES } from "../file-patterns.js"
 import { baseline } from "../plugins/baseline.js"
 import { dvukovic } from "../plugins/dvukovic.js"
 import { eslint } from "../plugins/eslint.js"
@@ -43,15 +44,7 @@ export function core(config) {
 
     return {
         extends: [...coreConfig, ...(extendsConfig ?? [])],
-        files: files ?? [
-            "**/*.js",
-            ".*.js",
-            "**/*.cjs",
-            "**/*.mjs",
-            "**/*.ts",
-            "**/*.tsx",
-            ...(additionalFiles ?? []),
-        ],
+        files: files ?? [".*.js", ...ALL_JS_TS_FILES, ...(additionalFiles ?? [])],
         ...rest,
     }
 }

@@ -1,21 +1,21 @@
 import { ALL_JS_TS_FILES } from "../file-patterns.js"
-import { mobx as mobxPlugin } from "../plugins/mobx.js"
+import { tanstackQuery as tanstackQueryPlugin } from "../plugins/tanstack-query.js"
 
-export const mobxConfig = [mobxPlugin]
+export const tanstackQueryConfig = [tanstackQueryPlugin]
 
 /**
- * MobX state management configuration
+ * TanStack Query configuration
  *
  * @param {import("@eslint/config-helpers").ConfigWithExtends & { additionalFiles?: string[] }} [config]
  *   - Additional config
  *
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
-export function mobx(config) {
+export function tanstackQuery(config) {
     const { additionalFiles, extends: extendsConfig, files, ...rest } = config ?? {}
 
     return {
-        extends: [...mobxConfig, ...(extendsConfig ?? [])],
+        extends: [...tanstackQueryConfig, ...(extendsConfig ?? [])],
         files: files ?? [...ALL_JS_TS_FILES, "**/*.jsx", ...(additionalFiles ?? [])],
         ...rest,
     }

@@ -1,3 +1,4 @@
+import { REACT_FILES } from "../file-patterns.js"
 import { react as reactPlugin } from "../plugins/react.js"
 import { reactHooks as reactHooksPlugin } from "../plugins/react-hooks.js"
 
@@ -16,7 +17,7 @@ export function react(config) {
 
     return {
         extends: [...reactConfig, ...(extendsConfig ?? [])],
-        files: files ?? ["**/*.jsx", "**/*.tsx", ...(additionalFiles ?? [])],
+        files: files ?? [...REACT_FILES, ...(additionalFiles ?? [])],
         ...rest,
     }
 }

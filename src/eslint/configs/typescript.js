@@ -1,5 +1,6 @@
 import tseslint from "typescript-eslint"
 
+import { ALL_JS_TS_FILES, TS_FILES } from "../file-patterns.js"
 import { typescriptEslint } from "../plugins/typescript-eslint.js"
 import { typescriptSortKeys } from "../plugins/typescript-sort-keys.js"
 
@@ -16,11 +17,11 @@ export const typescriptConfig = [
         },
     },
     {
-        files: ["**/*.ts", "**/*.tsx"],
+        files: [...TS_FILES, "**/*.tsx"],
         ...typescriptEslint,
     },
     {
-        files: ["**/*.ts", "**/*.tsx"],
+        files: [...TS_FILES, "**/*.tsx"],
         ...typescriptSortKeys,
     },
 ]
@@ -38,15 +39,7 @@ export function typescript(config) {
 
     return {
         extends: [...typescriptConfig, ...(extendsConfig ?? [])],
-        files: files ?? [
-            "**/*.js",
-            "**/*.ts",
-            "**/*.tsx",
-            "**/*.cjs",
-            "**/*.cts",
-            "**/*.mts",
-            ...(additionalFiles ?? []),
-        ],
+        files: files ?? [...ALL_JS_TS_FILES, ...(additionalFiles ?? [])],
         ...rest,
     }
 }

@@ -1,3 +1,4 @@
+import { NODE_FILES } from "../file-patterns.js"
 import { sonarjsAws } from "../plugins/sonarjs-aws.js"
 
 export const awsConfig = [sonarjsAws]
@@ -15,15 +16,7 @@ export function aws(config) {
 
     return {
         extends: [...awsConfig, ...(extendsConfig ?? [])],
-        files: files ?? [
-            "**/*.js",
-            "**/*.cjs",
-            "**/*.mjs",
-            "**/*.ts",
-            "**/*.cts",
-            "**/*.mts",
-            ...(additionalFiles ?? []),
-        ],
+        files: files ?? [...NODE_FILES, ...(additionalFiles ?? [])],
         ...rest,
     }
 }

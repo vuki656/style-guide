@@ -21,6 +21,8 @@ import { sortDestructureKeys } from "./sort-destructure-keys.js"
 import { sortKeysFix } from "./sort-keys-fix.js"
 import { storybook } from "./storybook.js"
 import { stylistic } from "./stylistic.js"
+import { tanstackQuery } from "./tanstack-query.js"
+import { turbo } from "./turbo.js"
 import { typescriptEslint } from "./typescript-eslint.js"
 import { typescriptSortKeys } from "./typescript-sort-keys.js"
 import { unicorn } from "./unicorn.js"
@@ -52,6 +54,8 @@ const allPlugins = {
     sortKeysFix,
     storybook,
     stylistic,
+    tanstackQuery,
+    turbo,
     typescriptEslint,
     typescriptSortKeys,
     unicorn,

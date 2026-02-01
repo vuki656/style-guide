@@ -1,3 +1,4 @@
+import { TEST_FILES } from "../file-patterns.js"
 import { vitest as vitestPlugin } from "../plugins/vitest.js"
 
 export const vitestConfig = [vitestPlugin]
@@ -15,19 +16,7 @@ export function vitest(config) {
 
     return {
         extends: [...vitestConfig, ...(extendsConfig ?? [])],
-        files: files ?? [
-            "**/*.test.js",
-            "**/*.test.ts",
-            "**/*.spec.js",
-            "**/*.spec.ts",
-            "**/*.unit.test.js",
-            "**/*.unit.test.ts",
-            "**/*.int.test.js",
-            "**/*.int.test.ts",
-            "**/*.integration.test.js",
-            "**/*.integration.test.ts",
-            ...(additionalFiles ?? []),
-        ],
+        files: files ?? [...TEST_FILES, ...(additionalFiles ?? [])],
         ...rest,
     }
 }

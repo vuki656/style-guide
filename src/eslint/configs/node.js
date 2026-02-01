@@ -1,3 +1,4 @@
+import { NODE_FILES } from "../file-patterns.js"
 import { nodeN } from "../plugins/n.js"
 import { securityNode } from "../plugins/security-node.js"
 
@@ -16,15 +17,7 @@ export function node(config) {
 
     return {
         extends: [...nodeConfig, ...(extendsConfig ?? [])],
-        files: files ?? [
-            "**/*.js",
-            "**/*.cjs",
-            "**/*.mjs",
-            "**/*.ts",
-            "**/*.cts",
-            "**/*.mts",
-            ...(additionalFiles ?? []),
-        ],
+        files: files ?? [...NODE_FILES, ...(additionalFiles ?? [])],
         ...rest,
     }
 }

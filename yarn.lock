@@ -960,6 +960,7 @@ __metadata:
     "@release-it/conventional-changelog": "npm:10.0.4"
     "@rimac-technology/eslint-plugin": "npm:1.5.0"
     "@stylistic/eslint-plugin": "npm:5.7.1"
+    "@tanstack/eslint-plugin-query": "npm:5.91.4"
     "@types/node": "npm:24.10.9"
     "@types/semver": "npm:7.7.1"
     "@typescript-eslint/parser": "npm:8.53.1"
@@ -982,6 +983,7 @@ __metadata:
     eslint-plugin-sort-destructure-keys: "npm:2.0.0"
     eslint-plugin-sort-keys-fix: "npm:1.1.2"
     eslint-plugin-storybook: "npm:10.2.0"
+    eslint-plugin-turbo: "npm:2.8.1"
     eslint-plugin-typescript-sort-keys: "npm:3.3.0"
     eslint-plugin-unicorn: "npm:62.0.0"
     eslint-plugin-unused-imports: "npm:4.3.0"
@@ -2616,6 +2618,21 @@ __metadata:
   peerDependencies:
     eslint: ">=9.0.0"
   checksum: 10c0/0f3b00162dbf3ae594b86ed468322e1e49ea8b2de1cdb95f589954457d26020ebde007da451e53c85e95108fc1d1461e0c7c355c39c7c124f71cc468dbe69104
+  languageName: node
+  linkType: hard
+
+"@tanstack/eslint-plugin-query@npm:5.91.4":
+  version: 5.91.4
+  resolution: "@tanstack/eslint-plugin-query@npm:5.91.4"
+  dependencies:
+    "@typescript-eslint/utils": "npm:^8.48.0"
+  peerDependencies:
+    eslint: ^8.57.0 || ^9.0.0
+    typescript: ^5.0.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 10c0/1627af7dcf5c70fac85db203f2ecc3d32de227729d447bb8d0a7a1cfa3441466060b2e440f22a85c2f9fa23ee5c5cd18dd0d470b673ca6a60d5bc191eb109a06
   languageName: node
   linkType: hard
 
@@ -5048,6 +5065,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv@npm:16.0.3":
+  version: 16.0.3
+  resolution: "dotenv@npm:16.0.3"
+  checksum: 10c0/109457ac5f9e930ca8066ea33887b6f839ab24d647a7a8b49ddcd1f32662e2c35591c5e5b9819063e430148a664d0927f0cbe60cf9575d89bc524f47ff7e78f0
+  languageName: node
+  linkType: hard
+
 "dotenv@npm:^17.2.3":
   version: 17.2.3
   resolution: "dotenv@npm:17.2.3"
@@ -5944,6 +5968,18 @@ __metadata:
     eslint: ">=8"
     storybook: ^10.2.0
   checksum: 10c0/aeb34c944f39baf17320854a23161b5f4f83f41ba425a8603672d59edf2397837c46549d720ee8d99a5cb5ce6361d719a78e1ac2dd27470136ba2ceb4e97a77b
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-turbo@npm:2.8.1":
+  version: 2.8.1
+  resolution: "eslint-plugin-turbo@npm:2.8.1"
+  dependencies:
+    dotenv: "npm:16.0.3"
+  peerDependencies:
+    eslint: ">6.6.0"
+    turbo: ">2.0.0"
+  checksum: 10c0/327d0c8a921833c0920211a5b93153e06f6183ad6bbe847d461ee38a76a31e65355f4a686e56c9b10d203038504637171af926215a76575a8d964481b5b19586
   languageName: node
   linkType: hard
 

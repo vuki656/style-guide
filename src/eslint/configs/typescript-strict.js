@@ -1,5 +1,7 @@
 import typescriptEslint from "typescript-eslint"
 
+import { TS_FILES } from "../file-patterns.js"
+
 /** @type {import("@eslint/config-helpers").Config[]} */
 export const typescriptStrictConfig = [
     {
@@ -43,7 +45,7 @@ export function typescriptStrict(config) {
 
     return {
         extends: [...typescriptStrictConfig, ...(extendsConfig ?? [])],
-        files: files ?? ["**/*.ts", "**/*.tsx", "**/*.cts", "**/*.mts", ...(additionalFiles ?? [])],
+        files: files ?? [...TS_FILES, "**/*.tsx", ...(additionalFiles ?? [])],
         ...rest,
     }
 }

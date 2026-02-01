@@ -1,3 +1,4 @@
+import { ALL_JS_TS_FILES } from "../file-patterns.js"
 import { next as nextPlugin } from "../plugins/next.js"
 
 export const nextConfig = [nextPlugin]
@@ -15,7 +16,7 @@ export function next(config) {
 
     return {
         extends: [...nextConfig, ...(extendsConfig ?? [])],
-        files: files ?? ["**/*.js", "**/*.ts", "**/*.jsx", "**/*.tsx", ...(additionalFiles ?? [])],
+        files: files ?? [...ALL_JS_TS_FILES, "**/*.jsx", ...(additionalFiles ?? [])],
         ...rest,
     }
 }

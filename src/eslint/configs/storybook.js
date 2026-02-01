@@ -1,3 +1,4 @@
+import { STORY_FILES } from "../file-patterns.js"
 import { storybook as storybookPlugin } from "../plugins/storybook.js"
 
 /**
@@ -25,13 +26,7 @@ export function storybook(config) {
 
     return {
         extends: [...storybookConfig, ...(extendsConfig ?? [])],
-        files: files ?? [
-            "**/*.stories.js",
-            "**/*.stories.ts",
-            "**/*.stories.jsx",
-            "**/*.stories.tsx",
-            ...(additionalFiles ?? []),
-        ],
+        files: files ?? [...STORY_FILES, ...(additionalFiles ?? [])],
         ...rest,
     }
 }
