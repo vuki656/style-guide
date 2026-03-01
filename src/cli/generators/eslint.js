@@ -31,6 +31,8 @@ export function generateESLintConfig(options) {
     }
 
     if (framework === "next") {
+        imports.push("react")
+        configs.push("react()")
         imports.push("next")
         configs.push("next()")
         ignores.push("out")
