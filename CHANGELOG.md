@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.17.0](https://github.com/vuki656/style-guide/compare/v0.16.0...v0.17.0) (2026-03-01)
+
+### Features
+
+* error is error check rule ([b9c7a71](https://github.com/vuki656/style-guide/commit/b9c7a713bb2e592fc81f7f531e305e49cec9ff07))
+
+### Bug Fixes
+
+* add cspell and knip to fix script on cli init ([beacdae](https://github.com/vuki656/style-guide/commit/beacdae789549831f3fd74e15e76d7753e7c75e7))
+* add react if nextjs selected in the cli ([4932522](https://github.com/vuki656/style-guide/commit/49325224998e1351413dd3d121d119394d985903))
+* lint ([afbfd52](https://github.com/vuki656/style-guide/commit/afbfd52ec5586069549fa5b336197e425ba50023))
+
 ## [0.16.0](https://github.com/vuki656/style-guide/compare/v0.15.0...v0.16.0) (2026-02-01)
 
 ### Features
