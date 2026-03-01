@@ -26,11 +26,13 @@ export function generateScripts(tools, packageManager) {
     if (tools.includes("cspell")) {
         scripts["lint:cspell"] = "cspell --no-progress --no-summary --unique '**'"
         lintParts.push(`${runner} lint:cspell`)
+        fixParts.push(`${runner} lint:cspell`)
     }
 
     if (tools.includes("knip")) {
         scripts["lint:knip"] = "knip --cache"
         lintParts.push(`${runner} lint:knip`)
+        fixParts.push(`${runner} lint:knip`)
     }
 
     if (lintParts.length > 0) {
