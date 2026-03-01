@@ -116,9 +116,7 @@ describe(RULE_ID, () => {
 
             const results = await eslintWithFix.lintText(code, { filePath: "test.js" })
 
-            expect(getFixedOutput(results)).toBe(
-                `if (!(Error.isError(error))) { throw error }\n`
-            )
+            expect(getFixedOutput(results)).toBe(`if (!(Error.isError(error))) { throw error }\n`)
         })
 
         test("fixes instanceof Error in ternary", async () => {
@@ -127,7 +125,7 @@ describe(RULE_ID, () => {
             const results = await eslintWithFix.lintText(code, { filePath: "test.js" })
 
             expect(getFixedOutput(results)).toBe(
-                `const result = Error.isError(error) ? "yes" : "no"\n`
+                `const result = Error.isError(error) ? "yes" : "no"\n`,
             )
         })
 
@@ -136,9 +134,7 @@ describe(RULE_ID, () => {
 
             const results = await eslintWithFix.lintText(code, { filePath: "test.js" })
 
-            expect(getFixedOutput(results)).toBe(
-                `const isError = Error.isError(foo || bar)\n`
-            )
+            expect(getFixedOutput(results)).toBe(`const isError = Error.isError(foo || bar)\n`)
         })
     })
 })
