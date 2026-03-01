@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.18.1](https://github.com/vuki656/style-guide/compare/v0.18.0...v0.18.1) (2026-03-01)
+
+### Bug Fixes
+
+* stylelint unused selectors handle variants file ([6c2edca](https://github.com/vuki656/style-guide/commit/6c2edca6a7596e233c32f9c9a783742e07168392))
+
 ## [0.18.0](https://github.com/vuki656/style-guide/compare/v0.17.0...v0.18.0) (2026-03-01)
 
 ### Features
