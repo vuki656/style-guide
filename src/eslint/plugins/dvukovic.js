@@ -1,6 +1,7 @@
 import { documentTodos } from "../rules/document-todos/document-todos.js"
 import { nextjsExportName } from "../rules/nextjs-export-name/nextjs-export-name.js"
 import { noCommentedOutCode } from "../rules/no-commented-out-code/no-commented-out-code.js"
+import { noCrossModuleImports } from "../rules/no-cross-module-imports/no-cross-module-imports.js"
 import { noInstanceofError } from "../rules/no-instanceof-error/no-instanceof-error.js"
 import { noT } from "../rules/no-t/no-t.js"
 
@@ -9,6 +10,7 @@ const dvukovicPlugin = {
         "document-todos": documentTodos,
         "nextjs-export-name": nextjsExportName,
         "no-commented-out-code": noCommentedOutCode,
+        "no-cross-module-imports": noCrossModuleImports,
         "no-instanceof-error": noInstanceofError,
         "no-t": noT,
     },
@@ -34,5 +36,6 @@ export const dvukovicNextjs = {
     },
     rules: {
         "dvukovic/nextjs-export-name": "error",
+        "dvukovic/no-cross-module-imports": "error",
     },
 }
