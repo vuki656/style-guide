@@ -1,3 +1,4 @@
 - [ ] Use new plugin for sorting https://perfectionist.dev/ and remove rimac
 - [ ] Prevent cross module import rule
-- [ ] Use Error.isError instead of instanceof
+- [ ] Cspell and knip aren't added in the fix script
+- [ ] Enforce layout and page name in nextjs app router
