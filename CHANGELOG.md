@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.18.0](https://github.com/vuki656/style-guide/compare/v0.17.0...v0.18.0) (2026-03-01)
+
+### Features
+
+* nextjs app files component naming rule ([7ce70e1](https://github.com/vuki656/style-guide/commit/7ce70e144ac47d92c4ea7ba919b42aea038788ae))
+* nextjs no cross module import rule ([34ce106](https://github.com/vuki656/style-guide/commit/34ce106e91b82afa17b6e3561cba1c339b3086c2))
+
 ## [0.17.0](https://github.com/vuki656/style-guide/compare/v0.16.0...v0.17.0) (2026-03-01)
 
 ### Features
