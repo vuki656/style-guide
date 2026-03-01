@@ -1,7 +1,8 @@
 import { ALL_JS_TS_FILES } from "../file-patterns.js"
+import { dvukovicNextjs } from "../plugins/dvukovic.js"
 import { next as nextPlugin } from "../plugins/next.js"
 
-export const nextConfig = [nextPlugin]
+export const nextConfig = [nextPlugin, dvukovicNextjs]
 
 /**
  * Next.js framework configuration
