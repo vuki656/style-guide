@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.19.1](https://github.com/vuki656/style-guide/compare/v0.19.0...v0.19.1) (2026-03-03)
+
+### Bug Fixes
+
+* bump vitest plugin to fix broken rules ([4eeae6f](https://github.com/vuki656/style-guide/commit/4eeae6f9d7e04c0ed0196675e7ab429e91e50486))
+
 ## [0.19.0](https://github.com/vuki656/style-guide/compare/v0.18.1...v0.19.0) (2026-03-03)
 
 ### Features
