@@ -1,12 +1,12 @@
-import stylelintNoUnusedSelectors from "../plugins/no-unused-selectors.js"
 import stylelintOrder from "../plugins/order.js"
 import stylelint from "../plugins/stylelint.js"
+import noUnusedSelectors from "../rules/no-unused-selectors/no-unused-selectors.js"
 
 /** @type {import("stylelint").Config} */
 const config = {
     allowEmptyInput: true,
     defaultSeverity: "error",
-    plugins: ["stylelint-order", "stylelint-no-unused-selectors"],
+    plugins: ["stylelint-order", noUnusedSelectors],
     reportDescriptionlessDisables: true,
     reportInvalidScopeDisables: true,
     reportNeedlessDisables: true,
@@ -14,7 +14,7 @@ const config = {
     rules: {
         ...stylelint.rules,
         ...stylelintOrder.rules,
-        ...stylelintNoUnusedSelectors.rules,
+        "dvukovic/no-unused-selectors": true,
     },
 }
 

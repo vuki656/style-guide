@@ -4,7 +4,7 @@ import { core } from "./src/cspell/index.js"
 const config = {
     ...core,
     ignorePaths: [...core.ignorePaths, "./src/cspell/base.txt"],
-    ignoreWords: [],
+    ignoreWords: ["atrule"],
 }
 
 export default config

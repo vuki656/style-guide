@@ -4,10 +4,9 @@ import { core } from "./src/knip/index.js"
 
 const config: KnipConfig = {
     ...core,
-    ignore: [],
+    ignore: ["src/stylelint/rules/no-unused-selectors/fixtures/**/*"],
     ignoreFiles: ["scripts/changelog-report.ts", "scripts/changelog-report.types.ts"],
     ignoreDependencies: [
-        "stylelint-no-unused-selectors",
         "stylelint-order",
         "cspell",
         "eslint",

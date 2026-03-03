@@ -91,6 +91,8 @@
         "eslint-plugin-unused-imports": "4.3.0",
         "globals": "17.1.0",
         "jsonc-eslint-parser": "2.4.2",
+        "postcss-resolve-nested-selector": "0.1.6",
+        "postcss-selector-parser": "7.1.1",
         "prettier-plugin-embed": "0.5.1",
         "prettier-plugin-jsdoc": "1.8.0",
         "prettier-plugin-packagejson": "3.0.0",
@@ -99,7 +101,6 @@
         "prettier-plugin-sql": "0.19.2",
         "prettier-plugin-tailwindcss": "0.7.2",
         "prettier-plugin-toml": "2.0.6",
-        "stylelint-no-unused-selectors": "1.0.40",
         "stylelint-order": "7.0.1",
         "typescript-eslint": "8.53.1"
     },
@@ -123,7 +124,8 @@
         "eslint": "^9",
         "knip": "5",
         "prettier": "3",
-        "stylelint": "16"
+        "stylelint": "16",
+        "typescript": "5"
     },
     "peerDependenciesMeta": {
         "cspell": {
@@ -140,9 +142,12 @@
         },
         "stylelint": {
             "optional": true
+        },
+        "typescript": {
+            "optional": true
         }
     },
-    "packageManager": "yarn@4.12.0",
+    "packageManager": "yarn@4.13.0",
     "engines": {
         "node": ">=24.0.0"
     },

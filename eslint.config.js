@@ -19,5 +19,5 @@ export default customDefineConfig({
             },
         }),
     ],
-    ignores: ["dist", "scripts"],
+    ignores: ["dist", "scripts", "**/fixtures/**"],
 })
