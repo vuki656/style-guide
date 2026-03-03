@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.19.0](https://github.com/vuki656/style-guide/compare/v0.18.1...v0.19.0) (2026-03-03)
+
+### Features
+
+* custom unused styles stylelint rule ([6a6bc0a](https://github.com/vuki656/style-guide/commit/6a6bc0a4711b36edf3b1ec60f01b078a013e1bb4))
+
 ## [0.18.1](https://github.com/vuki656/style-guide/compare/v0.18.0...v0.18.1) (2026-03-01)
 
 ### Bug Fixes
