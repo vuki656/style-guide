@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.19.2](https://github.com/vuki656/style-guide/compare/v0.19.1...v0.19.2) (2026-03-04)
+
+### Bug Fixes
+
+* remove unicorn string raw rule ([34616ec](https://github.com/vuki656/style-guide/commit/34616ec490f94998efd27fdd8116bd3f42743352))
+
 ## [0.19.1](https://github.com/vuki656/style-guide/compare/v0.19.0...v0.19.1) (2026-03-03)
 
 ### Bug Fixes
