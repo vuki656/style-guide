@@ -17,6 +17,7 @@ export function storybook(config) {
                 "no-console": "off",
                 "react-hooks/rules-of-hooks": "off",
                 "react/no-array-index-key": "off",
+                "react/no-multi-comp": "off",
                 "security-node/detect-crlf": "off",
                 "unicorn/consistent-function-scoping": "off",
             },
