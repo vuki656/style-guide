@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.20.0](https://github.com/vuki656/style-guide/compare/v0.19.2...v0.20.0) (2026-03-12)
+
+### Features
+
+* ignore react multi comp in stories ([eab5838](https://github.com/vuki656/style-guide/commit/eab583892c2a45513b2c7b692eca3cd3db213f98))
+
 ## [0.19.2](https://github.com/vuki656/style-guide/compare/v0.19.1...v0.19.2) (2026-03-04)
 
 ### Bug Fixes
