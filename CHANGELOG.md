@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.20.1](https://github.com/vuki656/style-guide/compare/v0.20.0...v0.20.1) (2026-03-14)
+
+### Bug Fixes
+
+* ignore bun test as implicit dep ([8465b28](https://github.com/vuki656/style-guide/commit/8465b28bfa64549f21e1a8ceda05f63fcbd48acc))
+
 ## [0.20.0](https://github.com/vuki656/style-guide/compare/v0.19.2...v0.20.0) (2026-03-12)
 
 ### Features
