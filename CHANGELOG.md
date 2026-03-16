@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.20.2](https://github.com/vuki656/style-guide/compare/v0.20.1...v0.20.2) (2026-03-16)
+
+### Bug Fixes
+
+* nextjs file name rule error shadow ([fa2029e](https://github.com/vuki656/style-guide/commit/fa2029eb7b1a521c3cbf2480c1e55d765d63cdc3))
+
 ## [0.20.1](https://github.com/vuki656/style-guide/compare/v0.20.0...v0.20.1) (2026-03-14)
 
 ### Bug Fixes
