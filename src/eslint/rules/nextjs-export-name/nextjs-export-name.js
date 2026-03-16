@@ -4,7 +4,7 @@ const SPECIAL_FILES = new Map([
     ["page", "Page"],
     ["layout", "Layout"],
     ["loading", "Loading"],
-    ["error", "Error"],
+    ["error", "ErrorBoundary"],
     ["not-found", "NotFound"],
     ["template", "Template"],
     ["default", "Default"],

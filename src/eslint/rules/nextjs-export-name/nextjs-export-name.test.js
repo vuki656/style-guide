@@ -57,6 +57,14 @@ describe(RULE_ID, () => {
             expect(getErrors(results)).toHaveLength(1)
         })
 
+        test("detects misnamed default export in error.tsx", async () => {
+            const code = `export default function Foo() { return null }\n`
+
+            const results = await eslint.lintText(code, { filePath: "app/error.tsx" })
+
+            expect(getErrors(results)).toHaveLength(1)
+        })
+
         test("detects misnamed default export in global-error.tsx", async () => {
             const code = `export default function Foo() { return null }\n`
 
@@ -115,6 +123,14 @@ describe(RULE_ID, () => {
             expect(getErrors(results)).toHaveLength(0)
         })
 
+        test("allows correctly named default export in error.tsx", async () => {
+            const code = `export default function ErrorBoundary() { return null }\n`
+
+            const results = await eslint.lintText(code, { filePath: "app/error.tsx" })
+
+            expect(getErrors(results)).toHaveLength(0)
+        })
+
         test("allows any default export name in non-special files", async () => {
             const code = `export default function Anything() { return null }\n`
 
@@ -158,6 +174,16 @@ describe(RULE_ID, () => {
 
             expect(getFixedOutput(results)).toBe(
                 `export default function NotFound() { return null }\n`,
+            )
+        })
+
+        test("renames misnamed default export in error.tsx", async () => {
+            const code = `export default function Foo() { return null }\n`
+
+            const results = await eslintWithFix.lintText(code, { filePath: "app/error.tsx" })
+
+            expect(getFixedOutput(results)).toBe(
+                `export default function ErrorBoundary() { return null }\n`,
             )
         })
 
