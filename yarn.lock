@@ -939,6 +939,7 @@ __metadata:
     "@vitest/eslint-plugin": "npm:1.6.9"
     cspell: "npm:9.6.0"
     eslint: "npm:9.39.2"
+    eslint-plugin-array-func: "npm:5.1.1"
     eslint-plugin-baseline-js: "npm:0.4.2"
     eslint-plugin-import-x: "npm:4.16.1"
     eslint-plugin-jest: "npm:29.12.1"
@@ -5573,6 +5574,15 @@ __metadata:
     unrs-resolver:
       optional: true
   checksum: 10c0/07851103443b70af681c5988e2702e681ff9b956e055e11d4bd9b2322847fa0d9e8da50c18fc7cb1165106b043f34fbd0384d7011c239465c4645c52132e56f3
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-array-func@npm:5.1.1":
+  version: 5.1.1
+  resolution: "eslint-plugin-array-func@npm:5.1.1"
+  peerDependencies:
+    eslint: ">=8.51.0"
+  checksum: 10c0/4d9f18f8dac14ae0e3a506d6a9de068bff4998c047b4b1b55e2e572a60f8b6928f7d6dc2388f5f57ee81d16d1525a9e643969b31cf196884ad8032ede2f501dc
   languageName: node
   linkType: hard
 

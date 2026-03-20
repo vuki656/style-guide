@@ -1,4 +1,5 @@
 import { ALL_JS_TS_FILES } from "../file-patterns.js"
+import { arrayFunction } from "../plugins/array-function.js"
 import { baseline } from "../plugins/baseline.js"
 import { dvukovic } from "../plugins/dvukovic.js"
 import { eslint } from "../plugins/eslint.js"
@@ -15,6 +16,7 @@ import { unicorn } from "../plugins/unicorn.js"
 import { unusedImports } from "../plugins/unused-imports.js"
 
 export const coreConfig = [
+    arrayFunction,
     baseline,
     eslint,
     eslintComments,
