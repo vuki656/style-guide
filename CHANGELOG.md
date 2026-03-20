@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.21.0](https://github.com/vuki656/style-guide/compare/v0.20.2...v0.21.0) (2026-03-20)
+
+### Features
+
+* add array func plugin ([cf92240](https://github.com/vuki656/style-guide/commit/cf92240973e5a84aaee9077909b89c36c4c97fab))
+
 ## [0.20.2](https://github.com/vuki656/style-guide/compare/v0.20.1...v0.20.2) (2026-03-16)
 
 ### Bug Fixes
