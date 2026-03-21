@@ -1,5 +1,5 @@
 import plugin from "eslint-plugin-package-json"
-import jsoncParser from "jsonc-eslint-parser"
+import * as jsoncParser from "jsonc-eslint-parser"
 
 import { noRestrictedDependencies } from "../rules/no-restricted-dependencies/no-restricted-dependencies.js"
 import { requireProperties } from "../rules/require-properties/require-properties.js"
@@ -66,6 +66,7 @@ export const packageJson = {
         "package-json/unique-dependencies": "error",
         "package-json/valid-author": "error",
         "package-json/valid-bin": "error",
+        "package-json/valid-bugs": "error",
         "package-json/valid-bundleDependencies": "error",
         "package-json/valid-config": "error",
         "package-json/valid-contributors": "error",
@@ -73,10 +74,12 @@ export const packageJson = {
         "package-json/valid-dependencies": "error",
         "package-json/valid-description": "error",
         "package-json/valid-devDependencies": "error",
+        "package-json/valid-devEngines": "error",
         "package-json/valid-directories": "error",
         "package-json/valid-engines": "error",
         "package-json/valid-exports": "error",
         "package-json/valid-files": "error",
+        "package-json/valid-funding": "error",
         "package-json/valid-homepage": "error",
         "package-json/valid-keywords": "error",
         "package-json/valid-license": "error",
@@ -87,6 +90,7 @@ export const packageJson = {
         "package-json/valid-optionalDependencies": "error",
         "package-json/valid-os": "error",
         "package-json/valid-package-definition": "error",
+        "package-json/valid-packageManager": "error",
         "package-json/valid-peerDependencies": "error",
         "package-json/valid-private": "error",
         "package-json/valid-publishConfig": "error",

@@ -1,5 +1,5 @@
 import { ESLint } from "eslint"
-import jsoncParser from "jsonc-eslint-parser"
+import * as jsoncParser from "jsonc-eslint-parser"
 
 import { validEnginesNode } from "./valid-engines-node.js"
 

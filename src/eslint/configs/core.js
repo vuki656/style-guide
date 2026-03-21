@@ -13,6 +13,11 @@ import { unicorn } from "../plugins/unicorn.js"
 import { unusedImports } from "../plugins/unused-imports.js"
 
 export const coreConfig = [
+    {
+        linterOptions: {
+            reportUnusedDisableDirectives: "error",
+        },
+    },
     arrayFunction,
     baseline,
     eslint,

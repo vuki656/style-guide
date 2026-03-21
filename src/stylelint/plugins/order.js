@@ -1,6 +1,7 @@
 /** @type {import("stylelint").Config} */
 const plugin = {
     rules: {
+        "order/custom-properties-alphabetical-order": true,
         "order/order": [
             "custom-properties",
             "dollar-variables",

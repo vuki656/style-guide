@@ -8,6 +8,7 @@ const command = process.argv[2]
 
 if (command === "init") {
     intro("@dvukovic/style-guide")
+    // eslint-disable-next-line baseline-js/use-baseline -- Node.js CLI, not browser code
     await runInit()
     outro("Configuration complete!")
 } else {
