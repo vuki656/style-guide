@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.22.0](https://github.com/vuki656/style-guide/compare/v0.21.0...v0.22.0) (2026-03-21)
+
+### Features
+
+* use perfectionist for sorting ([2d29e1d](https://github.com/vuki656/style-guide/commit/2d29e1d493d70967ea2f72e71a1c8ca58ced8d0b))
+
 ## [0.21.0](https://github.com/vuki656/style-guide/compare/v0.20.2...v0.21.0) (2026-03-20)
 
 ### Features
