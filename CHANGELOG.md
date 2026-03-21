@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.23.0](https://github.com/vuki656/style-guide/compare/v0.22.0...v0.23.0) (2026-03-21)
+
+### Features
+
+* claude update command ([c030146](https://github.com/vuki656/style-guide/commit/c03014650a47761d3edfbf1432d0b7243268f7aa))
+* update plugins and add new rules ([f63dd3d](https://github.com/vuki656/style-guide/commit/f63dd3d493e83c77ce2565901e6507a88b4e2dfd))
+
 ## [0.22.0](https://github.com/vuki656/style-guide/compare/v0.21.0...v0.22.0) (2026-03-21)
 
 ### Features
