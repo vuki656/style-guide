@@ -1,6 +1,6 @@
 import { REACT_FILES } from "../file-patterns.js"
-import { react as reactPlugin } from "../plugins/react.js"
 import { reactHooks as reactHooksPlugin } from "../plugins/react-hooks.js"
+import { react as reactPlugin } from "../plugins/react.js"
 
 export const reactConfig = [reactPlugin, reactHooksPlugin]
 

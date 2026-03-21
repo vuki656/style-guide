@@ -3,13 +3,6 @@ export const noT = {
         const [{ prefix = "" } = {}] = context.options
 
         return {
-            "TSTypeParameter > Identifier[name=/^.$/]"(node) {
-                context.report({
-                    data: { name: node.name },
-                    messageId: "forbidden",
-                    node,
-                })
-            },
             "TSTypeParameter > Identifier[name=/^.{2,}$/]"(node) {
                 if (prefix && !node.name.startsWith(prefix)) {
                     context.report({
@@ -18,6 +11,13 @@ export const noT = {
                         node,
                     })
                 }
+            },
+            "TSTypeParameter > Identifier[name=/^.$/]"(node) {
+                context.report({
+                    data: { name: node.name },
+                    messageId: "forbidden",
+                    node,
+                })
             },
         }
     },

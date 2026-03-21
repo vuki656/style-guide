@@ -6,7 +6,6 @@ export const stylistic = {
         "@stylistic": plugin,
     },
     rules: {
-        "@stylistic/lines-between-class-members": ["error", "always"],
         "@stylistic/padding-line-between-statements": [
             "error",
             {

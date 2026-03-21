@@ -14,6 +14,7 @@ const config: KnipConfig = {
         "stylelint",
         "semver",
         "@types/semver",
+        "@typescript-eslint/parser",
     ],
 }
 
