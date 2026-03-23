@@ -23,7 +23,7 @@ export function playwright(config) {
 
     return {
         extends: [...playwrightConfig, ...(extendsConfig ?? [])],
-        files: files ?? [...TEST_FILES, ...(additionalFiles ?? [])],
+        files: files ?? [...TEST_FILES, "**/*.page.ts", "**/*.page.js", ...(additionalFiles ?? [])],
         ...rest,
     }
 }
