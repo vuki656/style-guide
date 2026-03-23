@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.24.1](https://github.com/vuki656/style-guide/compare/v0.24.0...v0.24.1) (2026-03-23)
+
+### Bug Fixes
+
+* add missing page files for playwright tests ([c73bb08](https://github.com/vuki656/style-guide/commit/c73bb0800808fddd674856cbd70c7900ce76bd66))
+
 ## [0.24.0](https://github.com/vuki656/style-guide/compare/v0.23.0...v0.24.0) (2026-03-23)
 
 ### Features
