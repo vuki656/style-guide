@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.24.0](https://github.com/vuki656/style-guide/compare/v0.23.0...v0.24.0) (2026-03-23)
+
+### Features
+
+* disable loop await rule for playwright tests ([b21f66c](https://github.com/vuki656/style-guide/commit/b21f66c81653ee5c9a0e71a0d988f53506ae280d))
+
 ## [0.23.0](https://github.com/vuki656/style-guide/compare/v0.22.0...v0.23.0) (2026-03-21)
 
 ### Features
