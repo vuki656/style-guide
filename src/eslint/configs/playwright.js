@@ -1,7 +1,14 @@
 import { TEST_FILES } from "../file-patterns.js"
 import { playwright as playwrightPlugin } from "../plugins/playwright.js"
 
-export const playwrightConfig = [playwrightPlugin]
+export const playwrightConfig = [
+    playwrightPlugin,
+    {
+        rules: {
+            "no-await-in-loop": "off",
+        },
+    },
+]
 
 /**
  * Playwright testing configuration
