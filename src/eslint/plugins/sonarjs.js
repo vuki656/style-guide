@@ -7,7 +7,6 @@ export const sonarjs = {
     },
     rules: {
         "sonarjs/anchor-precedence": "error",
-        "sonarjs/argument-type": "error",
         "sonarjs/arguments-order": "error",
         "sonarjs/arguments-usage": "error",
         "sonarjs/array-callback-without-return": "error",
