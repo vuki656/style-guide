@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.24.2](https://github.com/vuki656/style-guide/compare/v0.24.1...v0.24.2) (2026-04-18)
+
+### Bug Fixes
+
+* remove sonar argument type rule ([2fdb08e](https://github.com/vuki656/style-guide/commit/2fdb08edf9139ad1c89fff079461bea1b268e01e))
+
 ## [0.24.1](https://github.com/vuki656/style-guide/compare/v0.24.0...v0.24.1) (2026-03-23)
 
 ### Bug Fixes
