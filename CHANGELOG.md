@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.24.3](https://github.com/vuki656/style-guide/compare/v0.24.2...v0.24.3) (2026-04-18)
+
+### Bug Fixes
+
+* remove sonar useless string operations rule ([586a364](https://github.com/vuki656/style-guide/commit/586a364f223550e4eb38061d04a27b1ac853e5af))
+
 ## [0.24.2](https://github.com/vuki656/style-guide/compare/v0.24.1...v0.24.2) (2026-04-18)
 
 ### Bug Fixes
