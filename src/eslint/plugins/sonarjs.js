@@ -201,7 +201,6 @@ export const sonarjs = {
         "sonarjs/updated-const-var": "error",
         "sonarjs/updated-loop-counter": "error",
         "sonarjs/use-type-alias": "error",
-        "sonarjs/useless-string-operation": "error",
         "sonarjs/values-not-convertible-to-numbers": "error",
         "sonarjs/variable-name": "error",
         "sonarjs/void-use": "error",
