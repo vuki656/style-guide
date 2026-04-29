@@ -8,7 +8,6 @@ export const importX = {
     rules: {
         "import-x/default": "error",
         "import-x/export": "error",
-        "import-x/exports-last": "error",
         "import-x/first": "error",
         "import-x/newline-after-import": "error",
         "import-x/no-absolute-path": "error",

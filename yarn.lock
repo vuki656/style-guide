@@ -1036,7 +1036,7 @@ __metadata:
     typescript-eslint: "npm:8.57.1"
     vitest: "npm:4.1.0"
   peerDependencies:
-    cspell: 9
+    cspell: 10
     eslint: ^9
     knip: ">=5"
     prettier: 3
