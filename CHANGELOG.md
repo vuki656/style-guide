@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.25.0](https://github.com/vuki656/style-guide/compare/v0.24.3...v0.25.0) (2026-04-29)
+
+### Features
+
+* remove exports last rule ([9174ca1](https://github.com/vuki656/style-guide/commit/9174ca1748f11151bf1b4b550c4d675ebd1ad937))
+
+### Bug Fixes
+
+* cspell peer dep version ([110a987](https://github.com/vuki656/style-guide/commit/110a9878febfc7a2bf1eae087f3296f0bbfad0e2))
+
 ## [0.24.3](https://github.com/vuki656/style-guide/compare/v0.24.2...v0.24.3) (2026-04-18)
 
 ### Bug Fixes
