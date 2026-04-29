@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.26.0](https://github.com/vuki656/style-guide/compare/v0.25.0...v0.26.0) (2026-04-29)
+
+### Features
+
+* ignore server only for no implicit deps ([67499ea](https://github.com/vuki656/style-guide/commit/67499ea22084411f6e22ea0c8ffa0534d45e31d2))
+
 ## [0.25.0](https://github.com/vuki656/style-guide/compare/v0.24.3...v0.25.0) (2026-04-29)
 
 ### Features
