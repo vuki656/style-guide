@@ -104,7 +104,7 @@ export const sonarjs = {
         "sonarjs/no-identical-functions": "error",
         "sonarjs/no-ignored-exceptions": "error",
         "sonarjs/no-ignored-return": "error",
-        "sonarjs/no-implicit-dependencies": ["error", { whitelist: ["bun:test"] }],
+        "sonarjs/no-implicit-dependencies": ["error", { whitelist: ["bun:test", "server-only"] }],
         "sonarjs/no-implicit-global": "error",
         "sonarjs/no-in-misuse": "error",
         "sonarjs/no-incomplete-assertions": "error",
