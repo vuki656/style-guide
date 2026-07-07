@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.27.0](https://github.com/vuki656/style-guide/compare/v0.26.0...v0.27.0) (2026-07-07)
+
+### Features
+
+* ignore top level describe lowercase for vitest ([1d81a4a](https://github.com/vuki656/style-guide/commit/1d81a4aa8dd02b492517fe60156de1081889474c))
+
 ## [0.26.0](https://github.com/vuki656/style-guide/compare/v0.25.0...v0.26.0) (2026-04-29)
 
 ### Features
