@@ -63,7 +63,7 @@ export const vitest = {
         "@vitest/prefer-expect-resolves": "error",
         "@vitest/prefer-hooks-in-order": "error",
         "@vitest/prefer-hooks-on-top": "error",
-        "@vitest/prefer-lowercase-title": "error",
+        "@vitest/prefer-lowercase-title": ["error", { ignoreTopLevelDescribe: true }],
         "@vitest/prefer-mock-promise-shorthand": "error",
         "@vitest/prefer-mock-return-shorthand": "error",
         "@vitest/prefer-spy-on": "error",
