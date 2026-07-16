@@ -17,13 +17,13 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: corepack enable
-            - uses: actions/checkout@v4
-            - uses: actions/setup-node@v4
+            - uses: actions/checkout@v7
+            - uses: actions/setup-node@v7
               with:
                   node-version: ${{ env.NODE_VERSION }}
                   cache: yarn
             - name: Cache linters
-              uses: actions/cache@v4
+              uses: actions/cache@v6
               with:
                   path: |
                       .eslintcache
@@ -40,8 +40,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: corepack enable
-            - uses: actions/checkout@v4
-            - uses: actions/setup-node@v4
+            - uses: actions/checkout@v7
+            - uses: actions/setup-node@v7
               with:
                   node-version: ${{ env.NODE_VERSION }}
                   cache: yarn
@@ -57,10 +57,10 @@ jobs:
             id-token: write
         steps:
             - run: corepack enable
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v7
               with:
                   fetch-depth: 0
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v7
               with:
                   registry-url: https://registry.npmjs.org
                   node-version: ${{ env.NODE_VERSION }}
