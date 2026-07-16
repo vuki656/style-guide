@@ -1,9 +1,59 @@
 import plugin from "eslint-plugin-react"
 
+function shimRemovedContextMethods(rule) {
+    const create = rule.create
+
+    return {
+        ...rule,
+        create(context) {
+            const shimmedContext = new Proxy(context, {
+                get(target, property) {
+                    if (property === "getFilename") {
+                        return () => {
+                            return target.filename
+                        }
+                    }
+
+                    if (property === "getPhysicalFilename") {
+                        return () => {
+                            return target.physicalFilename
+                        }
+                    }
+
+                    if (property === "getCwd") {
+                        return () => {
+                            return target.cwd
+                        }
+                    }
+
+                    if (property === "getSourceCode") {
+                        return () => {
+                            return target.sourceCode
+                        }
+                    }
+
+                    return Reflect.get(target, property, target)
+                },
+            })
+
+            return create.call(rule, shimmedContext)
+        },
+    }
+}
+
+const shimmedPlugin = {
+    ...plugin,
+    rules: Object.fromEntries(
+        Object.entries(plugin.rules).map(([name, rule]) => {
+            return [name, shimRemovedContextMethods(rule)]
+        }),
+    ),
+}
+
 /** @type {import("@eslint/config-helpers").Config} */
 export const react = {
     plugins: {
-        react: plugin,
+        react: shimmedPlugin,
     },
     rules: {
         "react/boolean-prop-naming": "error",
