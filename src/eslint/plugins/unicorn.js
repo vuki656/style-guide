@@ -199,7 +199,6 @@ export const unicorn = {
         "unicorn/prefer-structured-clone": "error",
         "unicorn/prefer-switch": "error",
         "unicorn/prefer-ternary": "error",
-        "unicorn/prefer-top-level-await": "error",
         "unicorn/prefer-type-error": "error",
         "unicorn/prefer-url-can-parse": "error",
         "unicorn/prefer-url-href": "error",
