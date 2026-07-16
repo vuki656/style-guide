@@ -66,7 +66,7 @@ describe("dvukovic/document-todos", () => {
 
     test("allows FIXME with URL", async () => {
         const eslint = createEslint()
-        const code = `// FIXME: broken feature http://jira.com/123\nconst y = 2\n`
+        const code = `// FIXME: broken feature https://jira.com/123\nconst y = 2\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
         const errors = results[0]?.messages.filter((message) => {

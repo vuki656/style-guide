@@ -8,6 +8,7 @@ export const tanstackQuery = {
     rules: {
         "@tanstack/query/exhaustive-deps": "error",
         "@tanstack/query/no-rest-destructuring": "error",
+        "@tanstack/query/prefer-query-options": "error",
         "@tanstack/query/stable-query-client": "error",
     },
 }

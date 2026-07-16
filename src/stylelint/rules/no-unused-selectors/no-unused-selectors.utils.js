@@ -400,10 +400,18 @@ function resolveDocumentPaths(cssPath, templates) {
 
     return templates.map((template) => {
         return template
-            .replaceAll("{cssDirectory}", variables.cssDirectory)
-            .replaceAll("{cssName}", variables.cssName)
-            .replaceAll("{cssBaseName}", variables.cssBaseName)
-            .replaceAll("{cssDirectoryName}", variables.cssDirectoryName)
+            .replaceAll("{cssDirectory}", () => {
+                return variables.cssDirectory
+            })
+            .replaceAll("{cssName}", () => {
+                return variables.cssName
+            })
+            .replaceAll("{cssBaseName}", () => {
+                return variables.cssBaseName
+            })
+            .replaceAll("{cssDirectoryName}", () => {
+                return variables.cssDirectoryName
+            })
     })
 }
 

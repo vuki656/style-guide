@@ -42,7 +42,7 @@ export function hasLabeledStatementBody(program) {
 }
 
 export function isRegionComment(content) {
-    return /\s*#(end)?region/.test(content)
+    return /^\s*#(end)?region/.test(content)
 }
 
 export function toBlocks(comments) {
@@ -52,7 +52,7 @@ export function toBlocks(comments) {
     for (const comment of comments) {
         if (comment.type === "Block") {
             blocks.push({
-                content: comment.value.replace(/^\s*\*/, "").replaceAll(/\n\s*\*/g, "\n"),
+                content: comment.value.replace(/^[^\S\n]*\*/, "").replaceAll(/\n[^\S\n]*\*/g, "\n"),
                 loc: { ...comment.loc },
             })
             prevLine = undefined
