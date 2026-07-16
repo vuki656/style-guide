@@ -87,7 +87,7 @@ async function installPackages(tools, packageManager) {
     }
 
     const packages = missingPackages.join(" ")
-    const installCmd =
+    const installCommand =
         packageManager === "npm"
             ? `npm install -D ${packages}`
             : `${packageManager} add -D ${packages}`
@@ -98,11 +98,11 @@ async function installPackages(tools, packageManager) {
 
     try {
         // eslint-disable-next-line sonarjs/os-command -- User-confirmed install command
-        execSync(installCmd, { stdio: "pipe" })
+        execSync(installCommand, { stdio: "pipe" })
         spinner.stop("Packages installed")
     } catch {
         spinner.stop("Failed to install. Please run manually:")
-        clack.log.info(`  ${installCmd}`)
+        clack.log.info(`  ${installCommand}`)
     }
 }
 
@@ -158,11 +158,7 @@ async function updatePackageJsonScripts(tools, packageManager) {
 export async function runInit() {
     const tools = await promptToolSelection()
 
-    let eslintOptions = null
-
-    if (tools.includes("eslint")) {
-        eslintOptions = await promptESLintOptions()
-    }
+    const eslintOptions = tools.includes("eslint") ? await promptESLintOptions() : null
 
     const packageManager = detectPackageManager()
 

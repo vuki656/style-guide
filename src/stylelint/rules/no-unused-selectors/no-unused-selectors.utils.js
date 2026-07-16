@@ -261,11 +261,7 @@ function collectUtilityCallReferences(node, context) {
     }
 
     const callee = node.expression
-    let functionName = null
-
-    if (ts.isIdentifier(callee)) {
-        functionName = callee.text
-    }
+    const functionName = ts.isIdentifier(callee) ? callee.text : null
 
     if (!functionName || !context.utilityFunctionIdentifiers.has(functionName)) {
         return

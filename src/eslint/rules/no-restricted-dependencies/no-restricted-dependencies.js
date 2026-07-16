@@ -53,12 +53,15 @@ export const noRestrictedDependencies = {
                     return
                 }
 
-                for (const dep of node.value.properties) {
-                    if (dep.key.type !== "JSONLiteral" || typeof dep.key.value !== "string") {
+                for (const dependency of node.value.properties) {
+                    if (
+                        dependency.key.type !== "JSONLiteral" ||
+                        typeof dependency.key.value !== "string"
+                    ) {
                         continue
                     }
 
-                    const packageName = dep.key.value
+                    const packageName = dependency.key.value
 
                     for (const pattern of patterns) {
                         if (matchesPattern(packageName, pattern)) {
@@ -69,7 +72,7 @@ export const noRestrictedDependencies = {
                                     pattern,
                                 },
                                 messageId: "restricted",
-                                node: dep.key,
+                                node: dependency.key,
                             })
                             break
                         }

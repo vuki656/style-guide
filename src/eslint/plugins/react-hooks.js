@@ -6,7 +6,6 @@ export const reactHooks = {
         "react-hooks": plugin,
     },
     rules: {
-        "react-hooks/component-hook-factories": "error",
         "react-hooks/config": "error",
         "react-hooks/error-boundaries": "error",
         "react-hooks/gating": "error",

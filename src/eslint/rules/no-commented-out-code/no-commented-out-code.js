@@ -12,7 +12,7 @@ import {
 export const noCommentedOutCode = {
     create(context) {
         const sourceCode = context.sourceCode
-        const parserOptions = { ...context.parserOptions, project: undefined }
+        const parserOptions = { ...context.languageOptions.parserOptions, project: undefined }
 
         function tryParse(content) {
             try {

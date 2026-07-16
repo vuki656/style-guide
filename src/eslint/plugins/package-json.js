@@ -89,7 +89,6 @@ export const packageJson = {
         "package-json/valid-name": "error",
         "package-json/valid-optionalDependencies": "error",
         "package-json/valid-os": "error",
-        "package-json/valid-package-definition": "error",
         "package-json/valid-packageManager": "error",
         "package-json/valid-peerDependencies": "error",
         "package-json/valid-private": "error",

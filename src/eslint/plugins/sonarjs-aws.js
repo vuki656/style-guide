@@ -20,7 +20,6 @@ export const sonarjsAws = {
         "sonarjs/aws-s3-bucket-granted-access": "error",
         "sonarjs/aws-s3-bucket-insecure-http": "error",
         "sonarjs/aws-s3-bucket-public-access": "error",
-        "sonarjs/aws-s3-bucket-server-encryption": "error",
         "sonarjs/aws-s3-bucket-versioning": "error",
         "sonarjs/aws-sagemaker-unencrypted-notebook": "error",
         "sonarjs/aws-sns-unencrypted-topics": "error",
