@@ -13,7 +13,6 @@ export const unicorn = {
         "unicorn/consistent-existence-index-check": "error",
         "unicorn/consistent-function-scoping": "error",
         "unicorn/consistent-json-file-read": "error",
-        "unicorn/custom-error-definition": "error",
         "unicorn/dom-node-dataset": "error",
         "unicorn/empty-brace-spaces": "error",
         "unicorn/error-message": "error",
