@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.30.0](https://github.com/vuki656/style-guide/compare/v0.29.0...v0.30.0) (2026-07-16)
+
+### Features
+
+* remove unicorn prefer top level await ([d17d2c3](https://github.com/vuki656/style-guide/commit/d17d2c35caf9fee13c6c53be08fb0fcb8d900ab0))
+
 ## [0.29.0](https://github.com/vuki656/style-guide/compare/v0.28.1...v0.29.0) (2026-07-16)
 
 ### Features
