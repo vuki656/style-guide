@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.28.0](https://github.com/vuki656/style-guide/compare/v0.27.0...v0.28.0) (2026-07-16)
+
+### Features
+
+* new no types in tsx rule ([b2ec95f](https://github.com/vuki656/style-guide/commit/b2ec95f734196ec5932f860a6f9105211754e689))
+* new rules ([6903f21](https://github.com/vuki656/style-guide/commit/6903f21afa0be40c1de4622ed9cfba561e26a512))
+* update everything ([085fe8e](https://github.com/vuki656/style-guide/commit/085fe8e8efcb7ff04b19fba661f2fb3d44ca561c))
+
 ## [0.27.0](https://github.com/vuki656/style-guide/compare/v0.26.0...v0.27.0) (2026-07-07)
 
 ### Features
