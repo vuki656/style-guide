@@ -4,6 +4,7 @@ import { noCommentedOutCode } from "../rules/no-commented-out-code/no-commented-
 import { noCrossModuleImports } from "../rules/no-cross-module-imports/no-cross-module-imports.js"
 import { noInstanceofError } from "../rules/no-instanceof-error/no-instanceof-error.js"
 import { noT } from "../rules/no-t/no-t.js"
+import { noTypesInTsx } from "../rules/no-types-in-tsx/no-types-in-tsx.js"
 
 const dvukovicPlugin = {
     rules: {
@@ -13,6 +14,7 @@ const dvukovicPlugin = {
         "no-cross-module-imports": noCrossModuleImports,
         "no-instanceof-error": noInstanceofError,
         "no-t": noT,
+        "no-types-in-tsx": noTypesInTsx,
     },
 }
 
@@ -37,5 +39,6 @@ export const dvukovicNextjs = {
     rules: {
         "dvukovic/nextjs-export-name": "error",
         "dvukovic/no-cross-module-imports": "error",
+        "dvukovic/no-types-in-tsx": "error",
     },
 }
