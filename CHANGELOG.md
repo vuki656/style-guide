@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.28.1](https://github.com/vuki656/style-guide/compare/v0.28.0...v0.28.1) (2026-07-16)
+
+### Bug Fixes
+
+* eslint react 9 compat ([a6d9ad6](https://github.com/vuki656/style-guide/commit/a6d9ad6d1e25fc56968a6c559779219d912167d3))
+
 ## [0.28.0](https://github.com/vuki656/style-guide/compare/v0.27.0...v0.28.0) (2026-07-16)
 
 ### Features
