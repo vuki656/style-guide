@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.29.0](https://github.com/vuki656/style-guide/compare/v0.28.1...v0.29.0) (2026-07-16)
+
+### Features
+
+* remove unicorn custom error definition rule ([88963cc](https://github.com/vuki656/style-guide/commit/88963cc6ae7243cd787144bd8d1f49b918e2b851))
+
 ## [0.28.1](https://github.com/vuki656/style-guide/compare/v0.28.0...v0.28.1) (2026-07-16)
 
 ### Bug Fixes
