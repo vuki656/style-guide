@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.31.0](https://github.com/vuki656/style-guide/compare/v0.30.1...v0.31.0) (2026-08-05)
+
+### Features
+
+* more granular class sorting ([6fab523](https://github.com/vuki656/style-guide/commit/6fab52337f57e2a033d89c19950e8c2c8c3afe79))
+
 ## [0.30.1](https://github.com/vuki656/style-guide/compare/v0.30.0...v0.30.1) (2026-07-16)
 
 ## [0.30.0](https://github.com/vuki656/style-guide/compare/v0.29.0...v0.30.0) (2026-07-16)
