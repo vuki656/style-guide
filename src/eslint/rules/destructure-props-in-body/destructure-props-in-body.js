@@ -1,4 +1,4 @@
-const WRAPPER_CALLEES = new Set(["forwardRef", "memo", "observer"])
+const WRAPPER_NAMES = new Set(["forwardRef", "memo", "observer"])
 
 const PROPS_NAME = "props"
 
@@ -28,7 +28,7 @@ function isComponent(node) {
     while (current.parent?.type === "CallExpression") {
         const callee = getCalleeName(current.parent.callee)
 
-        if (!callee || !WRAPPER_CALLEES.has(callee)) {
+        if (!callee || !WRAPPER_NAMES.has(callee)) {
             return false
         }
 
