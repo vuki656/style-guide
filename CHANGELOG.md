@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.32.0](https://github.com/vuki656/style-guide/compare/v0.31.0...v0.32.0) (2026-08-27)
+
+### Features
+
+* new destructure props in body rule ([d3ad2bf](https://github.com/vuki656/style-guide/commit/d3ad2bfdd382d4021d716bbdd01b257e8fb2d059))
+* new no inline prop types rule ([e2c963d](https://github.com/vuki656/style-guide/commit/e2c963d21e6c950f52e48ba568c35519b9e94d43))
+
+### Bug Fixes
+
+* rename constant flagged by cspell ([b98f20c](https://github.com/vuki656/style-guide/commit/b98f20c7d12ad68fd1a916f764cc2183b0535d7c))
+
 ## [0.31.0](https://github.com/vuki656/style-guide/compare/v0.30.1...v0.31.0) (2026-08-05)
 
 ### Features
