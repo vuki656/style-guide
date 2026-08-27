@@ -2,6 +2,7 @@ import { documentTodos } from "../rules/document-todos/document-todos.js"
 import { nextjsExportName } from "../rules/nextjs-export-name/nextjs-export-name.js"
 import { noCommentedOutCode } from "../rules/no-commented-out-code/no-commented-out-code.js"
 import { noCrossModuleImports } from "../rules/no-cross-module-imports/no-cross-module-imports.js"
+import { noInlinePropTypes } from "../rules/no-inline-prop-types/no-inline-prop-types.js"
 import { noInstanceofError } from "../rules/no-instanceof-error/no-instanceof-error.js"
 import { noT } from "../rules/no-t/no-t.js"
 import { noTypesInTsx } from "../rules/no-types-in-tsx/no-types-in-tsx.js"
@@ -12,6 +13,7 @@ const dvukovicPlugin = {
         "nextjs-export-name": nextjsExportName,
         "no-commented-out-code": noCommentedOutCode,
         "no-cross-module-imports": noCrossModuleImports,
+        "no-inline-prop-types": noInlinePropTypes,
         "no-instanceof-error": noInstanceofError,
         "no-t": noT,
         "no-types-in-tsx": noTypesInTsx,
@@ -39,6 +41,7 @@ export const dvukovicNextjs = {
     rules: {
         "dvukovic/nextjs-export-name": "error",
         "dvukovic/no-cross-module-imports": "error",
+        "dvukovic/no-inline-prop-types": "error",
         "dvukovic/no-types-in-tsx": "error",
     },
 }
