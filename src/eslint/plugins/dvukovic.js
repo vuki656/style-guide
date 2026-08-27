@@ -1,3 +1,4 @@
+import { destructurePropsInBody } from "../rules/destructure-props-in-body/destructure-props-in-body.js"
 import { documentTodos } from "../rules/document-todos/document-todos.js"
 import { nextjsExportName } from "../rules/nextjs-export-name/nextjs-export-name.js"
 import { noCommentedOutCode } from "../rules/no-commented-out-code/no-commented-out-code.js"
@@ -9,6 +10,7 @@ import { noTypesInTsx } from "../rules/no-types-in-tsx/no-types-in-tsx.js"
 
 const dvukovicPlugin = {
     rules: {
+        "destructure-props-in-body": destructurePropsInBody,
         "document-todos": documentTodos,
         "nextjs-export-name": nextjsExportName,
         "no-commented-out-code": noCommentedOutCode,
@@ -39,6 +41,7 @@ export const dvukovicNextjs = {
         dvukovic: dvukovicPlugin,
     },
     rules: {
+        "dvukovic/destructure-props-in-body": "error",
         "dvukovic/nextjs-export-name": "error",
         "dvukovic/no-cross-module-imports": "error",
         "dvukovic/no-inline-prop-types": "error",
