@@ -1,6 +1,16 @@
 import { TEST_FILES } from "../file-patterns.js"
 import { playwright as playwrightPlugin } from "../plugins/playwright.js"
 
+const PLAYWRIGHT_FILES = [
+    ...TEST_FILES,
+    "**/*.e2e.ts",
+    "**/*.e2e.js",
+    "**/*.page.ts",
+    "**/*.page.js",
+    "**/e2e/**/*.ts",
+    "**/e2e/**/*.js",
+]
+
 export const playwrightConfig = [
     playwrightPlugin,
     {
@@ -13,8 +23,12 @@ export const playwrightConfig = [
 /**
  * Playwright testing configuration
  *
- * @param {import("@eslint/config-helpers").ConfigWithExtends & { additionalFiles?: string[] }} [config]
- *   - Additional config
+ * @param {import("@eslint/config-helpers").ConfigWithExtends & {
+ *     additionalFiles?: string[]
+ *     assertFunctionNames?: string[]
+ * }} [config]
+ *   - Additional config. `assertFunctionNames` lists custom helpers that count as assertions for
+ *       `playwright/expect-expect`.
  *
  * @returns {import("@eslint/config-helpers").ConfigWithExtends} ESLint config
  */
@@ -23,7 +37,7 @@ export function playwright(config) {
 
     return {
         extends: [...playwrightConfig, ...(extendsConfig ?? [])],
-        files: files ?? [...TEST_FILES, "**/*.page.ts", "**/*.page.js", ...(additionalFiles ?? [])],
+        files: files ?? [...PLAYWRIGHT_FILES, ...(additionalFiles ?? [])],
         ...rest,
     }
 }

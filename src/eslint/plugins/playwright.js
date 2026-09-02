@@ -7,7 +7,7 @@ export const playwright = {
     },
     rules: {
         "playwright/consistent-spacing-between-blocks": "error",
-        "playwright/expect-expect": "error",
+        "playwright/expect-expect": ["error", { assertFunctionPatterns: ["^expect[A-Z]"] }],
         "playwright/max-expects": ["error", { max: 15 }],
         "playwright/max-nested-describe": ["error", { max: 4 }],
         "playwright/missing-playwright-await": "error",
