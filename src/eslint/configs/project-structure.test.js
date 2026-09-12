@@ -2,6 +2,7 @@ import {
     FILE_COMPOSITION,
     FILE_RULES,
     FOLDER_RULES,
+    folderStructure,
     projectStructure,
 } from "./project-structure.js"
 
@@ -15,6 +16,19 @@ describe("projectStructure", () => {
         const [composition] = projectStructure()
 
         expect(composition?.rules["project-structure/file-composition"][1]).toBe(FILE_COMPOSITION)
+    })
+
+    test("puts project folders in the container they were given for", () => {
+        const { structure } = folderStructure({ shared: [{ name: "theme" }] })
+
+        const src = structure.find((node) => {
+            return node.name === "src"
+        })
+        const shared = src.children.find((node) => {
+            return node.name === "shared"
+        })
+
+        expect(shared.children).toContainEqual({ name: "theme" })
     })
 
     test("leaves the file pattern to the project", () => {

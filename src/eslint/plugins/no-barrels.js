@@ -11,11 +11,11 @@ const AGGREGATE_LAYERS = [...CONTENT_LAYERS, ...SHARED_LAYERS, ...UI_LAYERS]
 const INDEX_SUFFIX = "(?:/index(?:\\.[cm]?[jt]sx?)?)?/?$"
 
 /**
- * Import patterns that reject aggregate barrels and current-directory barrels.
- * Spread these when a config adds its own `no-restricted-imports` options,
- * because ESLint replaces the rule's options instead of merging them.
+ * Import patterns that reject aggregate barrels and current-directory barrels. Spread these when a
+ * config adds its own `no-restricted-imports` options, because ESLint replaces the rule's options
+ * instead of merging them.
  *
- * @type {Array<{ message: string; regex: string }>}
+ * @type {{ message: string; regex: string }[]}
  */
 export const NO_BARREL_PATTERNS = [
     {

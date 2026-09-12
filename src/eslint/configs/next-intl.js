@@ -1,6 +1,8 @@
-import { ALL_JS_TS_FILES } from "../file-patterns.js"
+import { NO_BARREL_PATTERNS } from "../plugins/no-barrels.js"
 
 const DEFAULT_ALIAS = "@/i18n/navigation"
+
+const DEFAULT_FILES = ["src/**/*.{ts,tsx}", "e2e/**/*.{ts,tsx}"]
 
 const DEFAULT_GLOBAL_ERROR_FILES = ["**/global-error.tsx"]
 
@@ -8,7 +10,7 @@ const DEFAULT_GLOBAL_ERROR_FILES = ["**/global-error.tsx"]
  * Paths that force locale-aware navigation instead of the Next.js originals
  *
  * @param {string} [alias] - Module holding the next-intl navigation helpers
- * @returns {Array<{ importNames?: string[]; message: string; name: string }>} Restricted paths
+ * @returns {{ importNames?: string[]; message: string; name: string }[]} Restricted paths
  */
 export function nextIntlPaths(alias = DEFAULT_ALIAS) {
     return [
@@ -25,8 +27,8 @@ export function nextIntlPaths(alias = DEFAULT_ALIAS) {
 }
 
 /**
- * `usePathname` stays available in global errors, which render outside the
- * next-intl providers and have to read the raw locale prefix themselves.
+ * `usePathname` stays available in global errors, which render outside the next-intl providers and
+ * have to read the raw locale prefix themselves.
  *
  * @param {string} [alias] - Module holding the next-intl navigation helpers
  * @returns {{ importNames: string[]; message: string; name: string }} Restricted path
@@ -40,17 +42,16 @@ export function nextIntlPathnamePath(alias = DEFAULT_ALIAS) {
 }
 
 /**
- * next-intl navigation configuration. Pass `patterns` for any other
- * `no-restricted-imports` patterns the project needs, because ESLint replaces
- * the rule's options instead of merging them.
+ * Next-intl navigation configuration. Carries the barrel patterns too, because ESLint replaces a
+ * rule's options instead of merging them and both live in `no-restricted-imports`.
  *
  * @param {{
  *     additionalFiles?: string[]
- *     additionalPaths?: Array<{ importNames?: string[]; message: string; name: string }>
+ *     additionalPaths?: { importNames?: string[]; message: string; name: string }[]
  *     alias?: string
  *     files?: string[]
  *     globalErrorFiles?: string[]
- *     patterns?: Array<{ message: string; regex: string }>
+ *     patterns?: { message: string; regex: string }[]
  * }} [config]
  *   - Additional config
  *
@@ -63,10 +64,10 @@ export function nextIntl(config) {
         alias = DEFAULT_ALIAS,
         files,
         globalErrorFiles = DEFAULT_GLOBAL_ERROR_FILES,
-        patterns = [],
+        patterns = NO_BARREL_PATTERNS,
     } = config ?? {}
 
-    const targetFiles = files ?? [...ALL_JS_TS_FILES, ...(additionalFiles ?? [])]
+    const targetFiles = files ?? [...DEFAULT_FILES, ...(additionalFiles ?? [])]
     const paths = [...nextIntlPaths(alias), ...additionalPaths]
 
     return [

@@ -1,11 +1,10 @@
 import globals from "globals"
 
 /**
- * Selectors banned everywhere. Spread these when a config adds its own
- * `no-restricted-syntax` selectors, because ESLint replaces the rule's options
- * instead of merging them.
+ * Selectors banned everywhere. Spread these when a config adds its own `no-restricted-syntax`
+ * selectors, because ESLint replaces the rule's options instead of merging them.
  *
- * @type {Array<{ message: string; selector: string }>}
+ * @type {{ message: string; selector: string }[]}
  */
 export const RESTRICTED_SYNTAX = [
     {

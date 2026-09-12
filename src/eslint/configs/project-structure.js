@@ -1,8 +1,100 @@
+import { createFolderStructure } from "eslint-plugin-project-structure"
+
 import {
     FILE_COMPOSITION,
+    FOLDER_RULES,
     projectStructureParser,
     projectStructurePlugin,
 } from "../plugins/project-structure.js"
+
+/**
+ * The tree every project shares. Extra folders are passed per container, because only the project
+ * knows what else it keeps there.
+ *
+ * @param {{
+ *     constants?: object[]
+ *     ignorePatterns?: string[]
+ *     modules?: object[]
+ *     root?: object[]
+ *     shared?: object[]
+ *     src?: object[]
+ *     ui?: object[]
+ * }} [config]
+ *   - Folders this project adds
+ *
+ * @returns {object} Folder structure config
+ */
+export function folderStructure(config) {
+    const {
+        constants = [],
+        ignorePatterns = [],
+        modules = [],
+        root = [],
+        shared = [],
+        src = [],
+        ui = [],
+    } = config ?? {}
+
+    return createFolderStructure({
+        ignorePatterns,
+        longPathsInfo: false,
+        rules: { ...FOLDER_RULES },
+        structure: [
+            { name: "*" },
+            { children: [], name: "*" },
+            ...root,
+            { children: [{ name: "{camelCase}.ts" }], name: "scripts" },
+            {
+                children: [
+                    { name: "README.md" },
+                    { name: "fixtures.ts" },
+                    { children: [{ name: "{PascalCase}.ts" }], name: "(components|pages)" },
+                    { children: [{ name: "{camelCase}.ts" }], name: "(data|helpers)" },
+                ],
+                name: "e2e",
+            },
+            {
+                children: [
+                    { name: "(proxy|instrumentation|instrumentation-client).ts" },
+                    { children: [], name: "app" },
+                    ...src,
+                    {
+                        children: [
+                            { name: "env.ts" },
+                            { ruleId: "functionLayer" },
+                            { ruleId: "componentLayer" },
+                            { children: [{ ruleId: "hookFolder" }], name: "hooks" },
+                            {
+                                children: [{ name: "{camelCase}.ts" }, ...constants],
+                                name: "constants",
+                            },
+                            { children: [{ name: "{camelCase}.ts" }], name: "types" },
+                            { children: [{ name: "{camelCase}.schema.ts" }], name: "schemas" },
+                            { children: [{ name: "{camelCase}(.test)?.ts" }], name: "validations" },
+                            { children: [{ ruleId: "utilDomain" }], name: "utils" },
+                            ...shared,
+                        ],
+                        name: "shared",
+                    },
+                    {
+                        children: [{ ruleId: "componentLayer" }, ...modules],
+                        name: "modules",
+                    },
+                    {
+                        children: [
+                            { children: [{ ruleId: "componentLayer" }], name: "_client" },
+                            { ruleId: "componentLayer" },
+                            { ruleId: "functionLayer" },
+                            ...ui,
+                        ],
+                        name: "ui",
+                    },
+                ],
+                name: "src",
+            },
+        ],
+    })
+}
 
 /**
  * Wires the project-structure plugin. File composition is shared, the folder structure comes from
