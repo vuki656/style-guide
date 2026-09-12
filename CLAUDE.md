@@ -6,8 +6,8 @@ repository.
 ## Project Overview
 
 This is `@dvukovic/style-guide`, a personal style guide package providing shared ESLint, Prettier,
-Stylelint, and cspell configurations for JavaScript/TypeScript projects. Published to npm and
-consumed by other projects.
+Stylelint, cspell, Knip, jscpd and Lighthouse CI configurations for JavaScript/TypeScript projects.
+Published to npm and consumed by other projects.
 
 ## Commands
 
@@ -35,8 +35,13 @@ yarn vitest run src/eslint/configs/core.test.js
     - `plugins/` - Plugin wrappers that configure individual ESLint plugins
     - `rules/` - Custom ESLint rules (no-commented-out-code, no-t)
 - `src/prettier/` - Prettier configuration
-- `src/stylelint/` - Stylelint configuration
+- `src/stylelint/` - Stylelint configuration, including the `mantine` overrides
 - `src/cspell/` - Spell checking dictionary
+- `src/knip/` - Knip configuration
+- `src/jscpd/` - jscpd values, written to `.jscpd.json` by the CLI because jscpd reads JSON only
+- `src/lighthouse/` - Lighthouse CI configuration, CommonJS because lhci loads its config with
+  `require`
+- `src/cli/` - `init` and `check-dashes` commands
 
 ### ESLint Config Pattern
 
@@ -77,6 +82,24 @@ export const pluginName = {
 - `tanstackQuery()` - TanStack Query rules
 - `turbo()` - Turborepo rules
 - `packageJson()` - package.json linting
+- `nextIntl()` - Locale aware navigation, carrying the barrel import patterns
+- `noBarrels()` - Aggregate and current directory barrel imports
+
+ESLint replaces a rule's options instead of merging them, so anything a project needs to combine
+with its own options ships as a spreadable value rather than a config: `RESTRICTED_SYNTAX` and
+`NO_BARREL_PATTERNS`.
+
+### Project Structure
+
+`src/eslint/plugins/project-structure.js` holds the data (`FOLDER_RULES`, `FILE_RULES`,
+`FILE_COMPOSITION`, `FUNCTION_SUFFIXES`, `COMPONENT_SUFFIXES`) and
+`src/eslint/configs/project-structure.js` holds `projectStructure()` and `folderStructure()`. They
+have their own export path, `@dvukovic/style-guide/eslint/project-structure`, so projects that do
+not use them never load the plugin.
+
+`folderStructure()` returns the shared tree with extra children spliced into the container they were
+given for: `root`, `src`, `shared`, `constants`, `modules` and `ui`. A project keeps only the
+folders that are actually its own.
 
 ### Main Entry Point
 

@@ -143,3 +143,5 @@ timeslot
 blackhill
 rcompare
 turborepo
+lhci
+lighthouserc
