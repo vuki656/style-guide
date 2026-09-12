@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.34.0](https://github.com/vuki656/style-guide/compare/v0.33.0...v0.34.0) (2026-09-12)
+
+### Features
+
+* add check dashes command ([39c9dfe](https://github.com/vuki656/style-guide/commit/39c9dfef9f6d8d23ce9d69a92c61b35cfef3ae67))
+* add file composition rules ([7f88343](https://github.com/vuki656/style-guide/commit/7f88343d0c05a360435130b37bd9ad61d71ebc6d))
+* add jscpd config and generator ([a81496f](https://github.com/vuki656/style-guide/commit/a81496f1a382779b864f3d8ee83895b18079e159))
+* add lighthouse ci config ([798d68d](https://github.com/vuki656/style-guide/commit/798d68d1a87ad45f42f3b31a13bf1f18ca9ac088))
+* add mantine stylelint overrides ([463293d](https://github.com/vuki656/style-guide/commit/463293d3e276a6a0bec16aa882b25b131b517ddf))
+* add next intl navigation config ([b4db998](https://github.com/vuki656/style-guide/commit/b4db9982241b62726f495b7e0e851815774e0862))
+* add no barrels config ([56bd6b7](https://github.com/vuki656/style-guide/commit/56bd6b72a0661ac2b8812cb7b60681f237611909))
+* add project structure folder rules and config ([f4cb741](https://github.com/vuki656/style-guide/commit/f4cb741c87d403f69e65ab85f516ee9cc5155925))
+* export folder suffix patterns ([0224b34](https://github.com/vuki656/style-guide/commit/0224b343a86ea560abbc377e368da6d89e2e72f9))
+* export restricted syntax selectors and ban wildcard re-exports ([a491646](https://github.com/vuki656/style-guide/commit/a491646659f88283a34fa3598db1cddf2e400cff))
+* keep helpers out of component files ([58cb9cb](https://github.com/vuki656/style-guide/commit/58cb9cb2b356832b950fa51e5ec84317e796848b))
+* pad multiline declarations and translation hooks ([3640d66](https://github.com/vuki656/style-guide/commit/3640d66a706f046dea23ad3920cd37df76946988))
+* share the folder structure skeleton ([e6b63be](https://github.com/vuki656/style-guide/commit/e6b63be75daa058525f71f730a62682ef6475ab4))
+
+### Bug Fixes
+
+* resolve lint findings in new configs ([3c212fc](https://github.com/vuki656/style-guide/commit/3c212fc9df443577125f7de2a83ae848f7da668c))
+
+### Code Refactoring
+
+* shorten config doc comments ([9c518f3](https://github.com/vuki656/style-guide/commit/9c518f3373365e2b9f22b9110c91a9350c29d5de))
+* split project structure into plugin and config ([d97a76e](https://github.com/vuki656/style-guide/commit/d97a76eef860bbd58a410a13e7f9acee483c5908))
+
 ## [0.33.0](https://github.com/vuki656/style-guide/compare/v0.32.0...v0.33.0) (2026-09-02)
 
 ### Features
