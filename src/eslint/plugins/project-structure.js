@@ -4,10 +4,12 @@ import {
     projectStructurePlugin,
 } from "eslint-plugin-project-structure"
 
-const FUNCTION_SUFFIXES =
+/** Suffixes a function folder's files may carry */
+export const FUNCTION_SUFFIXES =
     "(types|constants|utils|errors|validation|data|test|utils.test|properties.test)"
 
-const COMPONENT_SUFFIXES =
+/** Suffixes a component folder's files may carry */
+export const COMPONENT_SUFFIXES =
     "(types|constants|utils|data|validation|docx|test|utils.test|validation.test|docx.test|render.test|e2e)"
 
 /**

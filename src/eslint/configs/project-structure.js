@@ -138,4 +138,10 @@ export function projectStructure(config) {
     return configs
 }
 
-export { FILE_COMPOSITION, FILE_RULES, FOLDER_RULES } from "../plugins/project-structure.js"
+export {
+    COMPONENT_SUFFIXES,
+    FILE_COMPOSITION,
+    FILE_RULES,
+    FOLDER_RULES,
+    FUNCTION_SUFFIXES,
+} from "../plugins/project-structure.js"
