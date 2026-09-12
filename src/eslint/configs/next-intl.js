@@ -27,8 +27,7 @@ export function nextIntlPaths(alias = DEFAULT_ALIAS) {
 }
 
 /**
- * `usePathname` stays available in global errors, which render outside the next-intl providers and
- * have to read the raw locale prefix themselves.
+ * Restricts `usePathname` everywhere except global errors
  *
  * @param {string} [alias] - Module holding the next-intl navigation helpers
  * @returns {{ importNames: string[]; message: string; name: string }} Restricted path
@@ -42,8 +41,7 @@ export function nextIntlPathnamePath(alias = DEFAULT_ALIAS) {
 }
 
 /**
- * Next-intl navigation configuration. Carries the barrel patterns too, because ESLint replaces a
- * rule's options instead of merging them and both live in `no-restricted-imports`.
+ * Next-intl navigation configuration
  *
  * @param {{
  *     additionalFiles?: string[]

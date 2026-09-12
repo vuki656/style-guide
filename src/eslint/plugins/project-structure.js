@@ -4,20 +4,13 @@ import {
     projectStructurePlugin,
 } from "eslint-plugin-project-structure"
 
-/** Suffixes a function folder's files may carry */
 export const FUNCTION_SUFFIXES =
     "(types|constants|utils|errors|validation|data|test|utils.test|properties.test)"
 
-/** Suffixes a component folder's files may carry */
 export const COMPONENT_SUFFIXES =
     "(types|constants|utils|data|validation|docx|test|utils.test|validation.test|docx.test|render.test|e2e)"
 
-/**
- * Reusable folder rules. Spread them into the `rules` of a `createFolderStructure` call and
- * reference them by `ruleId` in its `structure`, which stays with the project.
- *
- * @type {Record<string, object>}
- */
+/** @type {Record<string, object>} */
 export const FOLDER_RULES = {
     componentFolder: {
         children: [
@@ -59,12 +52,7 @@ const ALL_SELECTORS_SPECIFIED = {
 
 const TYPE_FORMAT = "{PascalCase}(Type|Props)"
 
-/**
- * Reusable file composition rules. Spread one into a `filesRules` entry alongside the `filePattern`
- * that selects the project's files.
- *
- * @type {Record<string, object>}
- */
+/** @type {Record<string, object>} */
 export const FILE_RULES = {
     componentFile: {
         allowOnlySpecifiedSelectors: ALL_SELECTORS_SPECIFIED,
@@ -105,7 +93,6 @@ export const FILE_RULES = {
     },
 }
 
-/** File composition covering every file kind in the folder rules */
 export const FILE_COMPOSITION = createFileComposition({
     filesRules: [
         {

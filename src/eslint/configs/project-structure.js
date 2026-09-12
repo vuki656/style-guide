@@ -8,8 +8,7 @@ import {
 } from "../plugins/project-structure.js"
 
 /**
- * The tree every project shares. Extra folders are passed per container, because only the project
- * knows what else it keeps there.
+ * Folder structure for the shared tree, extended per container
  *
  * @param {{
  *     constants?: object[]
@@ -97,8 +96,7 @@ export function folderStructure(config) {
 }
 
 /**
- * Wires the project-structure plugin. File composition is shared, the folder structure comes from
- * the project because only it knows its own tree.
+ * Project structure configuration
  *
  * @param {{
  *     fileComposition?: object

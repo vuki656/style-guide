@@ -1,11 +1,10 @@
 const ASSERTION = { aggregationMethod: "median" }
 
 /**
- * Lighthouse CI config for a static marketing site. URLs come from `SEO_LH_URLS`, and
- * `SEO_LH_INP=1` adds the interaction assertion, which only a page with interactive elements can
- * meet.
+ * Lighthouse CI configuration
  *
- * @param {{ inp?: boolean; urls?: string[] }} [config] - Run specific values
+ * @param {{ inp?: boolean; urls?: string[] }} [config] - Run specific values, read from SEO_LH_URLS
+ *   and SEO_LH_INP when omitted
  * @returns {object} Lighthouse CI config
  */
 function core(config) {
