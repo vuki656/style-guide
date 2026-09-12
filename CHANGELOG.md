@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.34.1](https://github.com/vuki656/style-guide/compare/v0.34.0...v0.34.1) (2026-09-12)
+
 ## [0.34.0](https://github.com/vuki656/style-guide/compare/v0.33.0...v0.34.0) (2026-09-12)
 
 ### Features
