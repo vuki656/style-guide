@@ -17,6 +17,7 @@ export async function promptToolSelection() {
             { label: "Stylelint", value: "stylelint" },
             { label: "CSpell", value: "cspell" },
             { label: "Knip", value: "knip" },
+            { label: "jscpd", value: "jscpd" },
         ],
         required: true,
     })

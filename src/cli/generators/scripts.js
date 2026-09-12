@@ -35,6 +35,12 @@ export function generateScripts(tools, packageManager) {
         fixParts.push(`${runner} lint:knip`)
     }
 
+    if (tools.includes("jscpd")) {
+        scripts["lint:jscpd"] = "jscpd"
+        lintParts.push(`${runner} lint:jscpd`)
+        fixParts.push(`${runner} lint:jscpd`)
+    }
+
     if (lintParts.length > 0) {
         scripts.lint = lintParts.join(" && ")
     }

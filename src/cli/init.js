@@ -6,6 +6,7 @@ import * as clack from "@clack/prompts"
 
 import { generateCspellConfig } from "./generators/cspell.js"
 import { generateESLintConfig } from "./generators/eslint.js"
+import { generateJscpdConfig } from "./generators/jscpd.js"
 import { generateKnipConfig } from "./generators/knip.js"
 import { generatePrettierConfig, generatePrettierIgnore } from "./generators/prettier.js"
 import { generateScripts } from "./generators/scripts.js"
@@ -20,6 +21,7 @@ import {
 const TOOL_PACKAGES = {
     cspell: "cspell",
     eslint: "eslint",
+    jscpd: "jscpd",
     knip: "knip",
     prettier: "prettier",
     stylelint: "stylelint",
@@ -201,6 +203,12 @@ export async function runInit() {
         const content = generateKnipConfig()
 
         results.push({ content, filename: "knip.config.ts" })
+    }
+
+    if (tools.includes("jscpd")) {
+        const content = generateJscpdConfig()
+
+        results.push({ content, filename: ".jscpd.json" })
     }
 
     spinner.stop("Configuration files generated")

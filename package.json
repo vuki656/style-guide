@@ -25,6 +25,10 @@
             "types": "./dist/eslint/configs/project-structure.d.ts",
             "default": "./src/eslint/configs/project-structure.js"
         },
+        "./jscpd": {
+            "types": "./dist/jscpd/index.d.ts",
+            "default": "./src/jscpd/index.js"
+        },
         "./knip": {
             "types": "./src/knip/index.d.ts",
             "default": "./src/knip/index.js"
@@ -44,6 +48,7 @@
         "src/cli",
         "src/cspell",
         "src/eslint",
+        "src/jscpd",
         "src/knip",
         "src/package-json",
         "src/prettier",
@@ -124,6 +129,7 @@
     "peerDependencies": {
         "cspell": "10",
         "eslint": "^9 || ^10",
+        "jscpd": ">=5",
         "knip": ">=5",
         "prettier": "3",
         "stylelint": ">=16",
@@ -134,6 +140,9 @@
             "optional": true
         },
         "eslint": {
+            "optional": true
+        },
+        "jscpd": {
             "optional": true
         },
         "knip": {
