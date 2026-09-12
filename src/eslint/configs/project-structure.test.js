@@ -1,10 +1,20 @@
-import { FILE_RULES, FOLDER_RULES, projectStructure } from "./project-structure.js"
+import {
+    FILE_COMPOSITION,
+    FILE_RULES,
+    FOLDER_RULES,
+    projectStructure,
+} from "./project-structure.js"
 
 describe("projectStructure", () => {
-    test("wires only the configs it was given", () => {
-        expect(projectStructure({ folderStructure: { structure: [] } })).toHaveLength(1)
-        expect(projectStructure({ fileComposition: { filesRules: [] } })).toHaveLength(1)
-        expect(projectStructure()).toHaveLength(0)
+    test("adds the folder structure only when the project supplies one", () => {
+        expect(projectStructure()).toHaveLength(1)
+        expect(projectStructure({ folderStructure: { structure: [] } })).toHaveLength(2)
+    })
+
+    test("uses the shared file composition by default", () => {
+        const [composition] = projectStructure()
+
+        expect(composition?.rules["project-structure/file-composition"][1]).toBe(FILE_COMPOSITION)
     })
 
     test("leaves the file pattern to the project", () => {

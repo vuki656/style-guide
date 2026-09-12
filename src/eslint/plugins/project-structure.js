@@ -1,4 +1,8 @@
-import { projectStructureParser, projectStructurePlugin } from "eslint-plugin-project-structure"
+import {
+    createFileComposition,
+    projectStructureParser,
+    projectStructurePlugin,
+} from "eslint-plugin-project-structure"
 
 const FUNCTION_SUFFIXES =
     "(types|constants|utils|errors|validation|data|test|utils.test|properties.test)"
@@ -7,9 +11,8 @@ const COMPONENT_SUFFIXES =
     "(types|constants|utils|data|validation|docx|test|utils.test|validation.test|docx.test|render.test|e2e)"
 
 /**
- * Reusable folder rules. Spread them into the `rules` of a
- * `createFolderStructure` call and reference them by `ruleId` in its
- * `structure`, which stays with the project.
+ * Reusable folder rules. Spread them into the `rules` of a `createFolderStructure` call and
+ * reference them by `ruleId` in its `structure`, which stays with the project.
  *
  * @type {Record<string, object>}
  */
@@ -55,8 +58,8 @@ const ALL_SELECTORS_SPECIFIED = {
 const TYPE_FORMAT = "{PascalCase}(Type|Props)"
 
 /**
- * Reusable file composition rules. Spread one into a `filesRules` entry
- * alongside the `filePattern` that selects the project's files.
+ * Reusable file composition rules. Spread one into a `filesRules` entry alongside the `filePattern`
+ * that selects the project's files.
  *
  * @type {Record<string, object>}
  */
@@ -100,44 +103,35 @@ export const FILE_RULES = {
     },
 }
 
-/**
- * Wires the project-structure plugin for a project's own folder structure and
- * file composition configs
- *
- * @param {{
- *     fileComposition?: object
- *     fileCompositionFiles?: string[]
- *     folderStructure?: object
- * }} [config]
- *   - Project configs
- *
- * @returns {import("@eslint/config-helpers").ConfigWithExtends[]} ESLint configs
- */
-export function projectStructure(config) {
-    const {
-        fileComposition,
-        fileCompositionFiles = ["src/**/*.{ts,tsx}"],
-        folderStructure,
-    } = config ?? {}
+/** File composition covering every file kind in the folder rules */
+export const FILE_COMPOSITION = createFileComposition({
+    filesRules: [
+        {
+            filePattern: [["src/**/*.tsx", "!(src/app/**)"]],
+            ...FILE_RULES.componentFile,
+        },
+        {
+            filePattern: ["src/**/*.types.ts", "src/shared/types/*.ts", "src/i18n/*.types.ts"],
+            ...FILE_RULES.typeFile,
+        },
+        {
+            filePattern: ["src/**/*.constants.ts", "src/shared/constants/*.ts"],
+            ...FILE_RULES.constantsFile,
+        },
+        {
+            filePattern: [
+                "src/**/*.utils.ts",
+                [
+                    "src/shared/{utils,helpers}/**/*.ts",
+                    "!(**/*.test.ts)",
+                    "!(**/index.ts)",
+                    "!(**/*.types.ts)",
+                    "!(**/*.constants.ts)",
+                ],
+            ],
+            ...FILE_RULES.utilsFile,
+        },
+    ],
+})
 
-    const configs = []
-
-    if (folderStructure) {
-        configs.push({
-            files: ["**"],
-            languageOptions: { parser: projectStructureParser },
-            plugins: { "project-structure": projectStructurePlugin },
-            rules: { "project-structure/folder-structure": ["error", folderStructure] },
-        })
-    }
-
-    if (fileComposition) {
-        configs.push({
-            files: fileCompositionFiles,
-            plugins: { "project-structure": projectStructurePlugin },
-            rules: { "project-structure/file-composition": ["error", fileComposition] },
-        })
-    }
-
-    return configs
-}
+export { projectStructureParser, projectStructurePlugin }

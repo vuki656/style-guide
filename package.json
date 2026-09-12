@@ -22,8 +22,8 @@
             "default": "./src/eslint/index.js"
         },
         "./eslint/project-structure": {
-            "types": "./dist/eslint/project-structure.d.ts",
-            "default": "./src/eslint/project-structure.js"
+            "types": "./dist/eslint/configs/project-structure.d.ts",
+            "default": "./src/eslint/configs/project-structure.js"
         },
         "./knip": {
             "types": "./src/knip/index.d.ts",
