@@ -33,6 +33,9 @@
             "types": "./src/knip/index.d.ts",
             "default": "./src/knip/index.js"
         },
+        "./lighthouse": {
+            "default": "./src/lighthouse/index.cjs"
+        },
         "./prettier": {
             "types": "./dist/prettier/index.d.ts",
             "default": "./src/prettier/index.js"
@@ -50,6 +53,7 @@
         "src/eslint",
         "src/jscpd",
         "src/knip",
+        "src/lighthouse",
         "src/package-json",
         "src/prettier",
         "src/stylelint",
