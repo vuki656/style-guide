@@ -1,5 +1,7 @@
 import plugin from "eslint-plugin-react"
 
+import { RESTRICTED_SYNTAX } from "./eslint.js"
+
 function shimRemovedContextMethods(rule) {
     const create = rule.create
 
@@ -56,6 +58,16 @@ export const react = {
         react: shimmedPlugin,
     },
     rules: {
+        "no-restricted-syntax": [
+            "error",
+            ...RESTRICTED_SYNTAX,
+            {
+                message:
+                    "Component files hold components only. Put helpers in the colocated .utils.ts, or in shared/utils if reusable.",
+                selector:
+                    "Program > VariableDeclaration > VariableDeclarator[id.name=/^[a-z]/][init.type=/^(ArrowFunctionExpression|FunctionExpression)$/]",
+            },
+        ],
         "react/boolean-prop-naming": "error",
         "react/button-has-type": "error",
         "react/checked-requires-onchange-or-readonly": "error",
