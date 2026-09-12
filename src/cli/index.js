@@ -2,6 +2,7 @@
 
 import { intro, outro } from "@clack/prompts"
 
+import { runCheckDashes } from "./checkDashes.js"
 import { runInit } from "./init.js"
 
 const command = process.argv[2]
@@ -11,11 +12,17 @@ if (command === "init") {
     // eslint-disable-next-line baseline-js/use-baseline -- Node.js CLI, not browser code
     await runInit()
     outro("Configuration complete!")
+} else if (command === "check-dashes") {
+    if (!runCheckDashes()) {
+        // eslint-disable-next-line n/no-process-exit -- CLI entry point
+        process.exit(1)
+    }
 } else {
-    process.stderr.write("Usage: style-guide init\n")
+    process.stderr.write("Usage: style-guide <command>\n")
     process.stderr.write("\n")
     process.stderr.write("Commands:\n")
-    process.stderr.write("  init    Initialize configuration files\n")
+    process.stderr.write("  init            Initialize configuration files\n")
+    process.stderr.write("  check-dashes    Find em and en dashes in messages and content\n")
     // eslint-disable-next-line n/no-process-exit -- CLI entry point
     process.exit(1)
 }
