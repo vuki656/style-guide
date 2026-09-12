@@ -46,6 +46,60 @@ export const FOLDER_RULES = {
     },
 }
 
+const ALL_SELECTORS_SPECIFIED = {
+    fileExport: true,
+    fileRoot: true,
+    nestedSelectors: false,
+}
+
+const TYPE_FORMAT = "{PascalCase}(Type|Props)"
+
+/**
+ * Reusable file composition rules. Spread one into a `filesRules` entry
+ * alongside the `filePattern` that selects the project's files.
+ *
+ * @type {Record<string, object>}
+ */
+export const FILE_RULES = {
+    componentFile: {
+        allowOnlySpecifiedSelectors: ALL_SELECTORS_SPECIFIED,
+        rootSelectorsLimits: [{ limit: 1, selector: ["arrowFunction", "function"] }],
+        rules: [
+            { format: "{FileName}", scope: "fileExport", selector: ["arrowFunction", "function"] },
+            { format: "{SNAKE_CASE}", scope: "fileRoot", selector: "variable" },
+        ],
+    },
+    constantsFile: {
+        allowOnlySpecifiedSelectors: ALL_SELECTORS_SPECIFIED,
+        rules: [
+            {
+                format: "{SNAKE_CASE}",
+                scope: "fileExport",
+                selector: ["variable", "variableExpression"],
+            },
+            {
+                format: "{SNAKE_CASE}",
+                scope: "fileRoot",
+                selector: ["variable", "variableExpression"],
+            },
+        ],
+    },
+    typeFile: {
+        allowOnlySpecifiedSelectors: ALL_SELECTORS_SPECIFIED,
+        rules: [
+            { format: TYPE_FORMAT, scope: "fileExport", selector: ["type", "interface"] },
+            { format: "{PascalCase}Type", scope: "fileRoot", selector: ["type", "interface"] },
+        ],
+    },
+    utilsFile: {
+        rules: [
+            { format: "{camelCase}", scope: "fileExport", selector: ["arrowFunction", "function"] },
+            { format: "{camelCase}", scope: "fileRoot", selector: ["arrowFunction", "function"] },
+            { format: ["{SNAKE_CASE}", "{camelCase}"], scope: "fileRoot", selector: "variable" },
+        ],
+    },
+}
+
 /**
  * Wires the project-structure plugin for a project's own folder structure and
  * file composition configs

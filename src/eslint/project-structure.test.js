@@ -1,10 +1,16 @@
-import { FOLDER_RULES, projectStructure } from "./project-structure.js"
+import { FILE_RULES, FOLDER_RULES, projectStructure } from "./project-structure.js"
 
 describe("projectStructure", () => {
     test("wires only the configs it was given", () => {
         expect(projectStructure({ folderStructure: { structure: [] } })).toHaveLength(1)
         expect(projectStructure({ fileComposition: { filesRules: [] } })).toHaveLength(1)
         expect(projectStructure()).toHaveLength(0)
+    })
+
+    test("leaves the file pattern to the project", () => {
+        for (const rule of Object.values(FILE_RULES)) {
+            expect(rule).not.toHaveProperty("filePattern")
+        }
     })
 
     test("resolves every rule referenced by another rule", () => {
