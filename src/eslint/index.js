@@ -27,6 +27,8 @@ export function customDefineConfig({ configs, defaultIgnores = true, ignores = [
     return defineConfig(globalIgnores([...defaultIgnorePatterns, ...ignores]), ...configs.flat())
 }
 
+export { RESTRICTED_SYNTAX } from "./plugins/eslint.js"
+
 export { aws } from "./configs/aws.js"
 export { core } from "./configs/core.js"
 export { jest } from "./configs/jest.js"

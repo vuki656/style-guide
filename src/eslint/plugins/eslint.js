@@ -1,5 +1,24 @@
 import globals from "globals"
 
+/**
+ * Selectors banned everywhere. Spread these when a config adds its own
+ * `no-restricted-syntax` selectors, because ESLint replaces the rule's options
+ * instead of merging them.
+ *
+ * @type {Array<{ message: string; selector: string }>}
+ */
+export const RESTRICTED_SYNTAX = [
+    {
+        message: "Use union types or const objects instead of enums.",
+        selector: "TSEnumDeclaration",
+    },
+    {
+        message:
+            "Use explicit named exports and export type declarations instead of wildcard re-exports.",
+        selector: "ExportAllDeclaration",
+    },
+]
+
 /** @type {import("@eslint/config-helpers").Config} */
 export const eslint = {
     languageOptions: {
@@ -100,13 +119,7 @@ export const eslint = {
         "no-proto": "error",
         "no-prototype-builtins": "error",
         "no-regex-spaces": "error",
-        "no-restricted-syntax": [
-            "error",
-            {
-                message: "Use union types or const objects instead of enums.",
-                selector: "TSEnumDeclaration",
-            },
-        ],
+        "no-restricted-syntax": ["error", ...RESTRICTED_SYNTAX],
         "no-return-assign": "error",
         "no-script-url": "error",
         "no-self-assign": "error",

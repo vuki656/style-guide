@@ -16,7 +16,7 @@ const eslint = new ESLint({
     overrideConfigFile: true,
 })
 
-describe("eslint no-enum", () => {
+describe("eslint no-restricted-syntax", () => {
     test("detects enum declarations", async () => {
         const code = `enum Status { Active, Inactive }\n`
         const results = await eslint.lintText(code, { filePath: "test.ts" })
@@ -27,6 +27,18 @@ describe("eslint no-enum", () => {
 
         expect(enumErrors?.length).toBe(1)
         expect(enumErrors?.[0]?.message).toContain("enum")
+    })
+
+    test("detects wildcard re-exports", async () => {
+        const code = `export * from "./other.js"\n`
+        const results = await eslint.lintText(code, { filePath: "test.ts" })
+
+        const wildcardErrors = results[0]?.messages.filter((message) => {
+            return message.ruleId === "no-restricted-syntax"
+        })
+
+        expect(wildcardErrors?.length).toBe(1)
+        expect(wildcardErrors?.[0]?.message).toContain("wildcard re-exports")
     })
 
     test("allows union types", async () => {
