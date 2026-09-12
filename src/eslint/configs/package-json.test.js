@@ -119,6 +119,7 @@ describe("packageJsonWorkspace", () => {
         const hasVoltaError = results[0]?.messages.some((message) => {
             return message.ruleId === "dvukovic/require-properties"
         })
+
         expect(hasVoltaError).toBe(true)
     })
 
@@ -149,6 +150,7 @@ describe("packageJsonWorkspace", () => {
         const hasVoltaError = results[0]?.messages.some((message) => {
             return message.ruleId === "dvukovic/require-properties"
         })
+
         expect(hasVoltaError).toBe(false)
     })
 })

@@ -89,6 +89,7 @@ async function installPackages(tools, packageManager) {
     }
 
     const packages = missingPackages.join(" ")
+
     const installCommand =
         packageManager === "npm"
             ? `npm install -D ${packages}`
@@ -142,6 +143,7 @@ async function updatePackageJsonScripts(tools, packageManager) {
         const sortedKeys = Object.keys(packageJson.scripts).sort((left, right) => {
             return left.localeCompare(right)
         })
+
         const sortedScripts = {}
 
         for (const key of sortedKeys) {

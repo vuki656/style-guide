@@ -15,10 +15,12 @@ export const documentTodos = {
                     const isTodo = comment.value.includes("TODO:")
                     const isFixme = comment.value.includes("FIXME:")
                     const hasLink = comment.value.includes(url.toLowerCase())
+
                     const startsWithTodo = comment.value
                         .trimStart()
                         .toLowerCase()
                         .startsWith("todo")
+
                     const startsWithFixme = comment.value
                         .trimStart()
                         .toLowerCase()

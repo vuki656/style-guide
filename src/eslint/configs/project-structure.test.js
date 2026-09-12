@@ -21,10 +21,11 @@ describe("projectStructure", () => {
     test("puts project folders in the container they were given for", () => {
         const { structure } = folderStructure({ shared: [{ name: "theme" }] })
 
-        const src = structure.find((node) => {
+        const source = structure.find((node) => {
             return node.name === "src"
         })
-        const shared = src.children.find((node) => {
+
+        const shared = source.children.find((node) => {
             return node.name === "shared"
         })
 

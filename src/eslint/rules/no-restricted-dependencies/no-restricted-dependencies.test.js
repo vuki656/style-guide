@@ -40,6 +40,7 @@ const getErrors = async (eslint, packageJson) => {
 describe("no-restricted-dependencies", () => {
     test("detects restricted package in dependencies", async () => {
         const eslint = createEslint({ dependencies: ["lodash"] })
+
         const packageJson = JSON.stringify(
             {
                 dependencies: {
@@ -59,6 +60,7 @@ describe("no-restricted-dependencies", () => {
 
     test("detects restricted package in devDependencies", async () => {
         const eslint = createEslint({ devDependencies: ["jest"] })
+
         const packageJson = JSON.stringify(
             {
                 devDependencies: {
@@ -77,6 +79,7 @@ describe("no-restricted-dependencies", () => {
 
     test("detects pattern with wildcard", async () => {
         const eslint = createEslint({ devDependencies: ["@types/*"] })
+
         const packageJson = JSON.stringify(
             {
                 devDependencies: {
@@ -96,6 +99,7 @@ describe("no-restricted-dependencies", () => {
 
     test("allows non-restricted packages", async () => {
         const eslint = createEslint({ dependencies: ["lodash"] })
+
         const packageJson = JSON.stringify(
             {
                 dependencies: {
@@ -114,6 +118,7 @@ describe("no-restricted-dependencies", () => {
 
     test("detects multiple restricted packages", async () => {
         const eslint = createEslint({ dependencies: ["lodash", "ramda", "underscore"] })
+
         const packageJson = JSON.stringify(
             {
                 dependencies: {
@@ -134,6 +139,7 @@ describe("no-restricted-dependencies", () => {
 
     test("handles empty options", async () => {
         const eslint = createEslint({})
+
         const packageJson = JSON.stringify(
             {
                 dependencies: {
@@ -152,6 +158,7 @@ describe("no-restricted-dependencies", () => {
 
     test("restricts @types/* in dependencies but allows in devDependencies", async () => {
         const eslint = createEslint({ dependencies: ["@types/*"] })
+
         const packageJson = JSON.stringify(
             {
                 dependencies: {
@@ -178,6 +185,7 @@ describe("no-restricted-dependencies", () => {
             dependencies: ["@types/*", "lodash"],
             devDependencies: ["jest"],
         })
+
         const packageJson = JSON.stringify(
             {
                 dependencies: {
@@ -201,6 +209,7 @@ describe("no-restricted-dependencies", () => {
 
     test("restricts in peerDependencies", async () => {
         const eslint = createEslint({ peerDependencies: ["react"] })
+
         const packageJson = JSON.stringify(
             {
                 name: "test",
@@ -219,6 +228,7 @@ describe("no-restricted-dependencies", () => {
 
     test("restricts in optionalDependencies", async () => {
         const eslint = createEslint({ optionalDependencies: ["fsevents"] })
+
         const packageJson = JSON.stringify(
             {
                 name: "test",

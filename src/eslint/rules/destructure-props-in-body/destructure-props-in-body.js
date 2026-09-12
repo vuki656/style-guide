@@ -66,9 +66,11 @@ function createFix(context, node, pattern) {
 
     return (fixer) => {
         const patternText = sourceCode.getText(pattern)
+
         const patternWithoutType = pattern.typeAnnotation
             ? patternText.slice(0, pattern.typeAnnotation.range[0] - pattern.range[0])
             : patternText
+
         const typeText = pattern.typeAnnotation ? sourceCode.getText(pattern.typeAnnotation) : ""
         const declaration = `const ${patternWithoutType} = ${PROPS_NAME}`
 

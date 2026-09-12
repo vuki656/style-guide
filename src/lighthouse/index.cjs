@@ -8,10 +8,11 @@ const ASSERTION = { aggregationMethod: "median" }
  * @returns {object} Lighthouse CI config
  */
 function core(config) {
-    const {
-        inp = process.env.SEO_LH_INP === "1",
-        urls = (process.env.SEO_LH_URLS ?? "").split(",").filter(Boolean),
-    } = config ?? {}
+    // eslint-disable-next-line n/no-process-env -- The run supplies its URLs through the environment
+    const { SEO_LH_INP, SEO_LH_URLS } = process.env
+
+    const { inp = SEO_LH_INP === "1", urls = (SEO_LH_URLS ?? "").split(",").filter(Boolean) } =
+        config ?? {}
 
     const assertions = {
         "categories:accessibility": ["error", { ...ASSERTION, minScore: 0.9 }],

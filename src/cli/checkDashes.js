@@ -20,22 +20,15 @@ function collectFiles(root, recursive, extensions) {
         .map((entry) => {
             return path.relative(process.cwd(), path.join(entry.parentPath, entry.name))
         })
-        .sort()
+        .sort((left, right) => {
+            return left.localeCompare(right)
+        })
 }
 
-/**
- * Finds em and en dashes in user facing text
- *
- * @param {{ trees?: { extensions: string[]; recursive: boolean; root: string }[] }} [config] -
- *   Trees to scan
- * @returns {string[]} Every hit as file:line: text
- */
-export function findDashes(config) {
-    const { trees = SCANNED_TREES } = config ?? {}
-
+function findDashes() {
     const hits = []
 
-    for (const tree of trees) {
+    for (const tree of SCANNED_TREES) {
         for (const file of collectFiles(tree.root, tree.recursive, tree.extensions)) {
             readFileSync(file, "utf8")
                 .split("\n")

@@ -12,7 +12,7 @@ const DEFAULT_GLOBAL_ERROR_FILES = ["**/global-error.tsx"]
  * @param {string} [alias] - Module holding the next-intl navigation helpers
  * @returns {{ importNames?: string[]; message: string; name: string }[]} Restricted paths
  */
-export function nextIntlPaths(alias = DEFAULT_ALIAS) {
+function nextIntlPaths(alias = DEFAULT_ALIAS) {
     return [
         {
             message: `Use Link from ${alias}.`,
@@ -32,7 +32,7 @@ export function nextIntlPaths(alias = DEFAULT_ALIAS) {
  * @param {string} [alias] - Module holding the next-intl navigation helpers
  * @returns {{ importNames: string[]; message: string; name: string }} Restricted path
  */
-export function nextIntlPathnamePath(alias = DEFAULT_ALIAS) {
+function nextIntlPathnamePath(alias = DEFAULT_ALIAS) {
     return {
         importNames: ["usePathname"],
         message: `Use usePathname from ${alias}; only global errors read raw locale prefixes.`,

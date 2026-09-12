@@ -30,6 +30,7 @@ const createEslint = (properties) => {
 describe("require-properties", () => {
     test("passes when all required properties exist", async () => {
         const eslint = createEslint(["name", "version"])
+
         const packageJson = JSON.stringify(
             {
                 name: "test",
@@ -40,6 +41,7 @@ describe("require-properties", () => {
         )
 
         const results = await eslint.lintText(packageJson, { filePath: "package.json" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "custom/require-properties"
         })
@@ -49,6 +51,7 @@ describe("require-properties", () => {
 
     test("fails when a required property is missing", async () => {
         const eslint = createEslint(["name", "version"])
+
         const packageJson = JSON.stringify(
             {
                 name: "test",
@@ -58,6 +61,7 @@ describe("require-properties", () => {
         )
 
         const results = await eslint.lintText(packageJson, { filePath: "package.json" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "custom/require-properties"
         })
@@ -68,6 +72,7 @@ describe("require-properties", () => {
 
     test("fails with multiple missing properties", async () => {
         const eslint = createEslint(["name", "version", "description"])
+
         const packageJson = JSON.stringify(
             {
                 name: "test",
@@ -77,6 +82,7 @@ describe("require-properties", () => {
         )
 
         const results = await eslint.lintText(packageJson, { filePath: "package.json" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "custom/require-properties"
         })
@@ -86,6 +92,7 @@ describe("require-properties", () => {
 
     test("passes with empty properties config", async () => {
         const eslint = createEslint([])
+
         const packageJson = JSON.stringify(
             {
                 name: "test",
@@ -95,6 +102,7 @@ describe("require-properties", () => {
         )
 
         const results = await eslint.lintText(packageJson, { filePath: "package.json" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "custom/require-properties"
         })
@@ -104,6 +112,7 @@ describe("require-properties", () => {
 
     test("supports dot notation for nested properties", async () => {
         const eslint = createEslint(["volta.node"])
+
         const packageJson = JSON.stringify(
             {
                 name: "test",
@@ -116,6 +125,7 @@ describe("require-properties", () => {
         )
 
         const results = await eslint.lintText(packageJson, { filePath: "package.json" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "custom/require-properties"
         })
@@ -125,6 +135,7 @@ describe("require-properties", () => {
 
     test("fails when nested property is missing", async () => {
         const eslint = createEslint(["volta.node"])
+
         const packageJson = JSON.stringify(
             {
                 name: "test",
@@ -135,6 +146,7 @@ describe("require-properties", () => {
         )
 
         const results = await eslint.lintText(packageJson, { filePath: "package.json" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "custom/require-properties"
         })
@@ -145,6 +157,7 @@ describe("require-properties", () => {
 
     test("fails when parent of nested property is missing", async () => {
         const eslint = createEslint(["volta.node"])
+
         const packageJson = JSON.stringify(
             {
                 name: "test",
@@ -154,6 +167,7 @@ describe("require-properties", () => {
         )
 
         const results = await eslint.lintText(packageJson, { filePath: "package.json" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "custom/require-properties"
         })

@@ -30,7 +30,7 @@ export function folderStructure(config) {
         modules = [],
         root = [],
         shared = [],
-        src = [],
+        src: source = [],
         ui = [],
     } = config ?? {}
 
@@ -56,7 +56,7 @@ export function folderStructure(config) {
                 children: [
                     { name: "(proxy|instrumentation|instrumentation-client).ts" },
                     { children: [], name: "app" },
-                    ...src,
+                    ...source,
                     {
                         children: [
                             { name: "env.ts" },
@@ -111,17 +111,17 @@ export function projectStructure(config) {
     const {
         fileComposition = FILE_COMPOSITION,
         fileCompositionFiles = ["src/**/*.{ts,tsx}"],
-        folderStructure,
+        folderStructure: structure,
     } = config ?? {}
 
     const configs = []
 
-    if (folderStructure) {
+    if (structure) {
         configs.push({
             files: ["**"],
             languageOptions: { parser: projectStructureParser },
             plugins: { "project-structure": projectStructurePlugin },
-            rules: { "project-structure/folder-structure": ["error", folderStructure] },
+            rules: { "project-structure/folder-structure": ["error", structure] },
         })
     }
 

@@ -6,7 +6,13 @@ const config: KnipConfig = {
     ...core,
     ignore: ["src/stylelint/rules/no-unused-selectors/fixtures/**/*"],
     ignoreFiles: [],
-    ignoreDependencies: ["stylelint-order", "semver", "@types/semver", "@typescript-eslint/parser"],
+    ignoreDependencies: [
+        "stylelint-order",
+        "semver",
+        "@types/semver",
+        "@typescript-eslint/parser",
+        "jscpd",
+    ],
 }
 
 export default config

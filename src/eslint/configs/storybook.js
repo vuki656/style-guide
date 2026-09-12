@@ -23,6 +23,7 @@ export function storybook(config) {
             },
         },
     ]
+
     const { additionalFiles, extends: extendsConfig, files, ...rest } = config ?? {}
 
     return {

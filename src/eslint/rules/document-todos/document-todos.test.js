@@ -33,6 +33,7 @@ describe("dvukovic/document-todos", () => {
         const code = `// TODO: fix this later\nconst y = 2\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/document-todos"
         })
@@ -45,6 +46,7 @@ describe("dvukovic/document-todos", () => {
         const code = `// FIXME: broken feature\nconst y = 2\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/document-todos"
         })
@@ -57,6 +59,7 @@ describe("dvukovic/document-todos", () => {
         const code = `// TODO: fix this later https://github.com/issue/1\nconst y = 2\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/document-todos"
         })
@@ -69,6 +72,7 @@ describe("dvukovic/document-todos", () => {
         const code = `// FIXME: broken feature https://jira.com/123\nconst y = 2\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/document-todos"
         })
@@ -81,6 +85,7 @@ describe("dvukovic/document-todos", () => {
         const code = `// This is a regular comment\nconst y = 2\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/document-todos"
         })
@@ -93,6 +98,7 @@ describe("dvukovic/document-todos", () => {
         const code = `// todo fix this later\nconst y = 2\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/document-todos"
         })
@@ -105,6 +111,7 @@ describe("dvukovic/document-todos", () => {
         const code = `// fixme broken feature\nconst y = 2\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/document-todos"
         })
@@ -117,6 +124,7 @@ describe("dvukovic/document-todos", () => {
         const code = `/* TODO: fix this later */\nconst y = 2\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/document-todos"
         })
@@ -129,6 +137,7 @@ describe("dvukovic/document-todos", () => {
         const code = `/* TODO: fix this https://example.com/issue/1 */\nconst y = 2\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/document-todos"
         })
@@ -141,6 +150,7 @@ describe("dvukovic/document-todos", () => {
         const code = `// TODO: fix this https://jira.example.com/PROJ-123\nconst y = 2\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/document-todos"
         })
@@ -153,6 +163,7 @@ describe("dvukovic/document-todos", () => {
         const code = `// TODO: fix this https://github.com/issue/1\nconst y = 2\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/document-todos"
         })
@@ -165,6 +176,7 @@ describe("dvukovic/document-todos", () => {
         const code = `// TODO: first issue\n// TODO: second issue\nconst y = 2\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/document-todos"
         })

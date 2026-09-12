@@ -121,6 +121,7 @@
         "@types/semver": "7.7.1",
         "cspell": "10.0.1",
         "eslint": "10.7.0",
+        "jscpd": "5.2.0",
         "knip": "6.26.0",
         "prettier": "3.9.5",
         "release-it": "20.2.1",

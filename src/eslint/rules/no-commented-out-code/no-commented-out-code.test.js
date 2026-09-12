@@ -21,6 +21,7 @@ describe("dvukovic/no-commented-out-code", () => {
         const code = `// const x = 1\nconst y = 2\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/no-commented-out-code"
         })
@@ -36,6 +37,7 @@ const y = 2
 `
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/no-commented-out-code"
         })
@@ -47,6 +49,7 @@ const y = 2
         const code = `/* const x = 1 */\nconst y = 2\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/no-commented-out-code"
         })
@@ -58,6 +61,7 @@ const y = 2
         const code = `// This is a regular comment\nconst y = 2\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/no-commented-out-code"
         })
@@ -69,6 +73,7 @@ const y = 2
         const code = `// TODO: fix this later\nconst y = 2\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/no-commented-out-code"
         })
@@ -80,6 +85,7 @@ const y = 2
         const code = `// #region\nconst y = 2\n// #endregion\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/no-commented-out-code"
         })

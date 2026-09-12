@@ -21,6 +21,7 @@ describe("dvukovic/no-t", () => {
         const code = `function foo<T>(arg: T): T { return arg }\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/no-t"
         })
@@ -32,6 +33,7 @@ describe("dvukovic/no-t", () => {
         const code = `type Entry<K, V> = { key: K; value: V }\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/no-t"
         })
@@ -43,6 +45,7 @@ describe("dvukovic/no-t", () => {
         const code = `function foo<Element>(arg: Element): Element { return arg }\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/no-t"
         })
@@ -54,6 +57,7 @@ describe("dvukovic/no-t", () => {
         const code = `type Entry<Key, Value> = { key: Key; value: Value }\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/no-t"
         })
@@ -65,6 +69,7 @@ describe("dvukovic/no-t", () => {
         const code = `interface Container<T> { value: T }\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/no-t"
         })
@@ -76,6 +81,7 @@ describe("dvukovic/no-t", () => {
         const code = `class Box<T> { constructor(public value: T) {} }\n`
 
         const results = await eslint.lintText(code, { filePath: "test.ts" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "dvukovic/no-t"
         })

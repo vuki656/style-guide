@@ -23,6 +23,7 @@ describe("playwright()", () => {
             overrideConfig: defineConfig(playwright()),
             overrideConfigFile: true,
         })
+
         const source = [
             'import { test } from "@playwright/test"',
             "",
@@ -33,6 +34,7 @@ describe("playwright()", () => {
             "})",
             "",
         ].join("\n")
+
         const results = await linter.lintText(source, { filePath: "tool.e2e.ts" })
 
         expect(

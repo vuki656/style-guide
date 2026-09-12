@@ -27,15 +27,13 @@ export function customDefineConfig({ configs, defaultIgnores = true, ignores = [
     return defineConfig(globalIgnores([...defaultIgnorePatterns, ...ignores]), ...configs.flat())
 }
 
-export { RESTRICTED_SYNTAX } from "./plugins/eslint.js"
-export { NO_BARREL_PATTERNS } from "./plugins/no-barrels.js"
-
 export { aws } from "./configs/aws.js"
 export { core } from "./configs/core.js"
+
 export { jest } from "./configs/jest.js"
 export { mobx } from "./configs/mobx.js"
-export { next } from "./configs/next.js"
 export { nextIntl } from "./configs/next-intl.js"
+export { next } from "./configs/next.js"
 export { noBarrels } from "./configs/no-barrels.js"
 export { node } from "./configs/node.js"
 export { packageJson, packageJsonWorkspace } from "./configs/package-json.js"
@@ -47,3 +45,5 @@ export { turbo } from "./configs/turbo.js"
 export { typescriptStrict } from "./configs/typescript-strict.js"
 export { typescript } from "./configs/typescript.js"
 export { vitest } from "./configs/vitest.js"
+export { RESTRICTED_SYNTAX } from "./plugins/eslint.js"
+export { NO_BARREL_PATTERNS } from "./plugins/no-barrels.js"

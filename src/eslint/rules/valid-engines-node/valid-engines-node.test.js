@@ -30,6 +30,7 @@ const createEslint = (versions) => {
 describe("valid-engines-node", () => {
     test("allows valid LTS version", async () => {
         const eslint = createEslint(["24"])
+
         const packageJson = JSON.stringify(
             {
                 engines: {
@@ -42,6 +43,7 @@ describe("valid-engines-node", () => {
         )
 
         const results = await eslint.lintText(packageJson, { filePath: "package.json" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "custom/valid-engines-node"
         })
@@ -51,6 +53,7 @@ describe("valid-engines-node", () => {
 
     test("allows version with just major number", async () => {
         const eslint = createEslint(["24"])
+
         const packageJson = JSON.stringify(
             {
                 engines: {
@@ -63,6 +66,7 @@ describe("valid-engines-node", () => {
         )
 
         const results = await eslint.lintText(packageJson, { filePath: "package.json" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "custom/valid-engines-node"
         })
@@ -72,6 +76,7 @@ describe("valid-engines-node", () => {
 
     test("rejects non-LTS version", async () => {
         const eslint = createEslint(["24"])
+
         const packageJson = JSON.stringify(
             {
                 engines: {
@@ -84,6 +89,7 @@ describe("valid-engines-node", () => {
         )
 
         const results = await eslint.lintText(packageJson, { filePath: "package.json" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "custom/valid-engines-node"
         })
@@ -94,6 +100,7 @@ describe("valid-engines-node", () => {
 
     test("rejects odd version numbers", async () => {
         const eslint = createEslint(["24"])
+
         const packageJson = JSON.stringify(
             {
                 engines: {
@@ -106,6 +113,7 @@ describe("valid-engines-node", () => {
         )
 
         const results = await eslint.lintText(packageJson, { filePath: "package.json" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "custom/valid-engines-node"
         })
@@ -115,6 +123,7 @@ describe("valid-engines-node", () => {
 
     test("handles missing engines field", async () => {
         const eslint = createEslint(["24"])
+
         const packageJson = JSON.stringify(
             {
                 name: "test",
@@ -124,6 +133,7 @@ describe("valid-engines-node", () => {
         )
 
         const results = await eslint.lintText(packageJson, { filePath: "package.json" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "custom/valid-engines-node"
         })
@@ -133,6 +143,7 @@ describe("valid-engines-node", () => {
 
     test("handles missing node in engines", async () => {
         const eslint = createEslint(["24"])
+
         const packageJson = JSON.stringify(
             {
                 engines: {
@@ -145,6 +156,7 @@ describe("valid-engines-node", () => {
         )
 
         const results = await eslint.lintText(packageJson, { filePath: "package.json" })
+
         const errors = results[0]?.messages.filter((message) => {
             return message.ruleId === "custom/valid-engines-node"
         })
