@@ -161,7 +161,7 @@ export const unicorn = {
         "unicorn/prefer-https": "error",
         "unicorn/prefer-import-meta-properties": "error",
         "unicorn/prefer-includes": "error",
-        "unicorn/prefer-iterator-concat": "error",
+        "unicorn/prefer-iterator-concat": "off",
         "unicorn/prefer-iterator-to-array": "error",
         "unicorn/prefer-keyboard-event-key": "error",
         "unicorn/prefer-logical-operator-over-ternary": "error",
