@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.36.0](https://github.com/vuki656/style-guide/compare/v0.35.0...v0.36.0) (2026-09-13)
+
+### Features
+
+* **eslint:** scripts may log values with newlines ([dd2373d](https://github.com/vuki656/style-guide/commit/dd2373de60b04cc7bfc41c5e1db18167ce5bc2d1))
+
 ## [0.35.0](https://github.com/vuki656/style-guide/compare/v0.34.1...v0.35.0) (2026-09-13)
 
 ### Features
