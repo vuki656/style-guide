@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.37.0](https://github.com/vuki656/style-guide/compare/v0.36.0...v0.37.0) (2026-09-13)
+
+### Features
+
+* **stylelint:** allow em for letter-spacing and mm for print margins ([5719c5c](https://github.com/vuki656/style-guide/commit/5719c5cd4bdcab6b43195be42d6939ea49054ecd))
+
 ## [0.36.0](https://github.com/vuki656/style-guide/compare/v0.35.0...v0.36.0) (2026-09-13)
 
 ### Features
