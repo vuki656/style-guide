@@ -13,6 +13,7 @@ export const nodeConfig = [
             "n/no-process-env": "off",
             "n/no-process-exit": "off",
             "no-console": "off",
+            "security-node/detect-crlf": "off",
             "unicorn/no-process-exit": "off",
         },
     },
