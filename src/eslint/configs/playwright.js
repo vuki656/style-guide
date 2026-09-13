@@ -1,8 +1,6 @@
-import { TEST_FILES } from "../file-patterns.js"
 import { playwright as playwrightPlugin } from "../plugins/playwright.js"
 
 const PLAYWRIGHT_FILES = [
-    ...TEST_FILES,
     "**/*.e2e.ts",
     "**/*.e2e.js",
     "**/*.page.ts",
