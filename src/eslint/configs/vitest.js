@@ -1,7 +1,14 @@
 import { TEST_FILES } from "../file-patterns.js"
 import { vitest as vitestPlugin } from "../plugins/vitest.js"
 
-export const vitestConfig = [vitestPlugin]
+export const vitestConfig = [
+    vitestPlugin,
+    {
+        rules: {
+            "unicorn/prefer-https": "off",
+        },
+    },
+]
 
 /**
  * Vitest testing framework configuration
