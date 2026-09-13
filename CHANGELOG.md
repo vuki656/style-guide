@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.35.0](https://github.com/vuki656/style-guide/compare/v0.34.1...v0.35.0) (2026-09-13)
+
+### Features
+
+* **eslint:** raise vitest max-expects to 8 ([477702a](https://github.com/vuki656/style-guide/commit/477702a8fd8e17f8b34d28b876e50f502501b72f))
+* **eslint:** scripts may print, read env and exit ([eb8533d](https://github.com/vuki656/style-guide/commit/eb8533da141cc181bea7d7ed76ed8a060483ea13))
+
+### Bug Fixes
+
+* **eslint:** allow http fixtures in vitest files ([fc2c794](https://github.com/vuki656/style-guide/commit/fc2c794fcc94a603b08cab257cdf5a8e1f58a6d9))
+* **eslint:** playwright rules only on e2e and page files, not unit tests ([5713cab](https://github.com/vuki656/style-guide/commit/5713caba2d581b7663833361d57015fa5753dce0))
+* **eslint:** turn off unicorn/prefer-iterator-concat, Iterator.concat is not in node or typescript yet ([0f1203f](https://github.com/vuki656/style-guide/commit/0f1203f8ead85c59e29b0b77c8da8a79b68fd459))
+
 ## [0.34.1](https://github.com/vuki656/style-guide/compare/v0.34.0...v0.34.1) (2026-09-12)
 
 ## [0.34.0](https://github.com/vuki656/style-guide/compare/v0.33.0...v0.34.0) (2026-09-12)
