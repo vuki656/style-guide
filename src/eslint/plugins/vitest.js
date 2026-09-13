@@ -29,7 +29,7 @@ export const vitest = {
                 assertFunctionNames: ["expect"],
             },
         ],
-        "@vitest/max-expects": ["error", { max: 5 }],
+        "@vitest/max-expects": ["error", { max: 8 }],
         "@vitest/max-nested-describe": ["error", { max: 2 }],
         "@vitest/no-alias-methods": "error",
         "@vitest/no-commented-out-tests": "error",
