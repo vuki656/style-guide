@@ -110,7 +110,6 @@ export const react = {
         ],
         "react/jsx-no-comment-textnodes": "error",
         "react/jsx-no-constructed-context-values": "error",
-        "react/jsx-no-leaked-render": ["error", { validStrategies: ["ternary"] }],
         "react/jsx-no-script-url": "error",
         "react/jsx-no-target-blank": "error",
         "react/jsx-no-useless-fragment": "error",
