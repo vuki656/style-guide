@@ -42,7 +42,7 @@ function core(config) {
                         mobile: true,
                         width: 412,
                     },
-                    throttlingMethod: "simulate",
+                    throttlingMethod: "devtools",
                 },
                 url: urls,
             },
