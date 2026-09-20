@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.37.2](https://github.com/vuki656/style-guide/compare/v0.37.1...v0.37.2) (2026-09-20)
+
+### Bug Fixes
+
+* lighthosue set throttling method to devtools ([74a612c](https://github.com/vuki656/style-guide/commit/74a612c9363a9cf1b8df4e9e20640e678e21a32a))
+
 ## [0.37.1](https://github.com/vuki656/style-guide/compare/v0.37.0...v0.37.1) (2026-09-20)
 
 ### Bug Fixes
