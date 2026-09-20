@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.37.1](https://github.com/vuki656/style-guide/compare/v0.37.0...v0.37.1) (2026-09-20)
+
+### Bug Fixes
+
+* remove unsupported eslint rules ([16022cf](https://github.com/vuki656/style-guide/commit/16022cf710b54895648bb3ef13fb52d6b475fa5e))
+
 ## [0.37.0](https://github.com/vuki656/style-guide/compare/v0.36.0...v0.37.0) (2026-09-13)
 
 ### Features
