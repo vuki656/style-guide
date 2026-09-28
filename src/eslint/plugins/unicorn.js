@@ -127,7 +127,7 @@ export const unicorn = {
         "unicorn/no-useless-switch-case": "error",
         "unicorn/no-useless-undefined": "error",
         "unicorn/no-zero-fractions": "error",
-        "unicorn/number-literal-case": "error",
+        "unicorn/number-literal-case": ["error", { hexadecimalValue: "lowercase" }],
         "unicorn/numeric-separators-style": "error",
         "unicorn/prefer-abort-signal-any": "error",
         "unicorn/prefer-abort-signal-timeout": "error",
