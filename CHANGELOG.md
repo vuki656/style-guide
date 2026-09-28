@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.37.3](https://github.com/vuki656/style-guide/compare/v0.37.2...v0.37.3) (2026-09-28)
+
+### Bug Fixes
+
+* make number literal case match prettier ([f138c50](https://github.com/vuki656/style-guide/commit/f138c5006361d3a094a29d676fc0669681375fee))
+
 ## [0.37.2](https://github.com/vuki656/style-guide/compare/v0.37.1...v0.37.2) (2026-09-20)
 
 ### Bug Fixes
