@@ -19,6 +19,12 @@ export const typescriptConfig = [
         files: [...TS_FILES, "**/*.tsx"],
         ...typescriptEslint,
     },
+    {
+        files: ["**/*.tsx"],
+        rules: {
+            "@typescript-eslint/promise-function-async": "off",
+        },
+    },
 ]
 
 /**
