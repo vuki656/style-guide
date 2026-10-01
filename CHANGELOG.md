@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.38.0](https://github.com/vuki656/style-guide/compare/v0.37.3...v0.38.0) (2026-10-01)
+
+### Features
+
+* add projectRoot and hooks, variants and stories files to project structure ([f78df2b](https://github.com/vuki656/style-guide/commit/f78df2bde22200bd08eeced07f3dbcafc3e3a96b))
+
+### Bug Fixes
+
+* turn off promise-function-async for tsx ([a2460e3](https://github.com/vuki656/style-guide/commit/a2460e3f4a1bb7c05f3f633999419cd94767e8e7))
+
 ## [0.37.3](https://github.com/vuki656/style-guide/compare/v0.37.2...v0.37.3) (2026-09-28)
 
 ### Bug Fixes
