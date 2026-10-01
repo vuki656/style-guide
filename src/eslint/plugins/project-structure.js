@@ -8,7 +8,7 @@ export const FUNCTION_SUFFIXES =
     "(types|constants|utils|errors|validation|data|test|utils.test|properties.test)"
 
 export const COMPONENT_SUFFIXES =
-    "(types|constants|utils|data|validation|docx|test|utils.test|validation.test|docx.test|render.test|e2e)"
+    "(types|constants|utils|data|validation|hooks|variants|docx|test|utils.test|validation.test|docx.test|render.test|e2e)"
 
 /** @type {Record<string, object>} */
 export const FOLDER_RULES = {
@@ -17,6 +17,7 @@ export const FOLDER_RULES = {
             { name: "index.ts" },
             { name: "{FolderName}.(ts|tsx)" },
             { name: `{FolderName}.${COMPONENT_SUFFIXES}.ts` },
+            { name: "{FolderName}.stories.tsx" },
             { name: "{FolderName}.module.css" },
             { ruleId: "componentFolder" },
         ],
@@ -96,7 +97,7 @@ export const FILE_RULES = {
 export const FILE_COMPOSITION = createFileComposition({
     filesRules: [
         {
-            filePattern: [["src/**/*.tsx", "!(src/app/**)"]],
+            filePattern: [["src/**/*.tsx", "!(src/app/**)", "!(**/*.stories.tsx)"]],
             ...FILE_RULES.componentFile,
         },
         {

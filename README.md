@@ -107,6 +107,13 @@ export default customDefineConfig({
 `modules` and `ui`. It also exports `FOLDER_RULES`, `FILE_RULES`, `FILE_COMPOSITION`,
 `FUNCTION_SUFFIXES` and `COMPONENT_SUFFIXES` for projects that assemble their own.
 
+In a monorepo, pass `projectRoot` (for example `projectRoot: "apps/web"`) to `projectStructure()`.
+The plugin resolves paths from the folder that holds its `node_modules`, so without it every path
+starts with `apps/` and nothing is checked.
+
+Component folders accept `X.hooks.ts`, `X.variants.ts` and `X.stories.tsx` next to the component;
+stories are left out of the one-component-per-file rule.
+
 ## Prettier
 
 Create `prettier.config.ts`:

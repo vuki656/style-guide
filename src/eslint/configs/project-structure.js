@@ -102,6 +102,7 @@ export function folderStructure(config) {
  *     fileComposition?: object
  *     fileCompositionFiles?: string[]
  *     folderStructure?: object
+ *     projectRoot?: string
  * }} [config]
  *   - Project configs
  *
@@ -112,6 +113,7 @@ export function projectStructure(config) {
         fileComposition = FILE_COMPOSITION,
         fileCompositionFiles = ["src/**/*.{ts,tsx}"],
         folderStructure: structure,
+        projectRoot,
     } = config ?? {}
 
     const configs = []
@@ -121,7 +123,12 @@ export function projectStructure(config) {
             files: ["**"],
             languageOptions: { parser: projectStructureParser },
             plugins: { "project-structure": projectStructurePlugin },
-            rules: { "project-structure/folder-structure": ["error", structure] },
+            rules: {
+                "project-structure/folder-structure": [
+                    "error",
+                    projectRoot ? { ...structure, projectRoot } : structure,
+                ],
+            },
         })
     }
 
@@ -129,7 +136,12 @@ export function projectStructure(config) {
         configs.push({
             files: fileCompositionFiles,
             plugins: { "project-structure": projectStructurePlugin },
-            rules: { "project-structure/file-composition": ["error", fileComposition] },
+            rules: {
+                "project-structure/file-composition": [
+                    "error",
+                    projectRoot ? { ...fileComposition, projectRoot } : fileComposition,
+                ],
+            },
         })
     }
 

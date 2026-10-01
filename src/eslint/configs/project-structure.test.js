@@ -49,4 +49,35 @@ describe("projectStructure", () => {
             expect(FOLDER_RULES[ruleId]).toBeDefined()
         }
     })
+
+    test("applies the project root to both rules", () => {
+        const [folders, composition] = projectStructure({
+            folderStructure: { structure: [] },
+            projectRoot: "apps/web",
+        })
+
+        expect(composition?.rules["project-structure/file-composition"][1]).toMatchObject({
+            projectRoot: "apps/web",
+        })
+        expect(folders?.rules["project-structure/folder-structure"][1]).toMatchObject({
+            projectRoot: "apps/web",
+        })
+    })
+
+    test("allows hooks, variants and stories files in a component folder", () => {
+        const names = FOLDER_RULES.componentFolder.children.map((child) => {
+            return child.name
+        })
+
+        expect(names).toContain("{FolderName}.stories.tsx")
+        expect(names.join(" ")).toMatch(/\|hooks\|variants\|/u)
+    })
+
+    test("keeps stories out of the one-component file rule", () => {
+        const [componentRule] = FILE_COMPOSITION.filesRules
+
+        expect(componentRule.filePattern).toStrictEqual([
+            ["src/**/*.tsx", "!(src/app/**)", "!(**/*.stories.tsx)"],
+        ])
+    })
 })
