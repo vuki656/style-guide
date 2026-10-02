@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.38.1](https://github.com/vuki656/style-guide/compare/v0.38.0...v0.38.1) (2026-10-02)
+
+### Bug Fixes
+
+* allow Error.isError in node and instanceof Error in react and next ([c683b83](https://github.com/vuki656/style-guide/commit/c683b83a1b7f344f549e2617fe8731ec271f98a2))
+
 ## [0.38.0](https://github.com/vuki656/style-guide/compare/v0.37.3...v0.38.0) (2026-10-01)
 
 ### Features
