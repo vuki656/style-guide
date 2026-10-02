@@ -9,3 +9,11 @@ export const baseline = {
         "baseline-js/use-baseline": ["error", { available: "widely" }],
     },
 }
+
+/** @type {import("@eslint/config-helpers").Config} */
+export const baselineNode = {
+    plugins: baseline.plugins,
+    rules: {
+        "baseline-js/use-baseline": "off",
+    },
+}

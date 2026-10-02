@@ -1,10 +1,12 @@
 import { NODE_FILES } from "../file-patterns.js"
+import { baselineNode } from "../plugins/baseline.js"
 import { nodeN } from "../plugins/n.js"
 import { securityNode } from "../plugins/security-node.js"
 
 const SCRIPT_FILES = ["scripts/**", "**/scripts/**"]
 
 export const nodeConfig = [
+    baselineNode,
     nodeN,
     securityNode,
     {

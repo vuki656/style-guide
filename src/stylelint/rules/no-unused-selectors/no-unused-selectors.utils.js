@@ -93,7 +93,7 @@ function addClassReferencesFromString(references, text) {
 }
 
 function getCallArguments(callExpression) {
-    return [...callExpression.arguments] // eslint-disable-line baseline-js/use-baseline -- TS AST node property, not Function.arguments
+    return [...callExpression.arguments]
 }
 
 function collectCssModuleImports(node, cssModuleIdentifiers) {

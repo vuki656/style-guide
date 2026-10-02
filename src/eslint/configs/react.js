@@ -1,8 +1,9 @@
 import { REACT_FILES } from "../file-patterns.js"
+import { browserErrors } from "../plugins/browser-errors.js"
 import { reactHooks as reactHooksPlugin } from "../plugins/react-hooks.js"
 import { react as reactPlugin } from "../plugins/react.js"
 
-export const reactConfig = [reactPlugin, reactHooksPlugin]
+export const reactConfig = [browserErrors, reactPlugin, reactHooksPlugin]
 
 /**
  * React framework configuration

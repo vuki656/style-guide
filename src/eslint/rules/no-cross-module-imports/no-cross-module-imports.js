@@ -59,12 +59,11 @@ export const noCrossModuleImports = {
 
         return {
             CallExpression(node) {
-                // eslint-disable-next-line baseline-js/use-baseline -- false positive: AST node property, not Function.arguments
                 if (node.callee.name !== "require" || node.arguments.length === 0) {
                     return
                 }
 
-                const argument = node.arguments[0] // eslint-disable-line baseline-js/use-baseline -- false positive: AST node property, not Function.arguments
+                const argument = node.arguments[0]
 
                 if (argument.type !== "Literal" || typeof argument.value !== "string") {
                     return
