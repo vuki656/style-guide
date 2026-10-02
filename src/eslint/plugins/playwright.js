@@ -22,6 +22,7 @@ export const playwright = {
         "playwright/no-force-option": "error",
         "playwright/no-get-by-title": "error",
         "playwright/no-nested-step": "error",
+        "playwright/no-networkidle": "error",
         "playwright/no-page-pause": "error",
         "playwright/no-skipped-test": ["error", { disallowFixme: true }],
         "playwright/no-slowed-test": "error",
@@ -30,6 +31,7 @@ export const playwright = {
         "playwright/no-unused-locators": "error",
         "playwright/no-useless-await": "error",
         "playwright/no-useless-not": "error",
+        "playwright/no-wait-for-navigation": "error",
         "playwright/no-wait-for-selector": "error",
         "playwright/no-wait-for-timeout": "error",
         "playwright/prefer-comparison-matcher": "error",
@@ -57,6 +59,7 @@ export const playwright = {
         "playwright/valid-describe-callback": "error",
         "playwright/valid-expect": "error",
         "playwright/valid-expect-in-promise": "error",
+        "playwright/valid-test-tags": "error",
         "playwright/valid-title": "error",
     },
 }

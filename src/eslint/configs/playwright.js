@@ -14,6 +14,7 @@ export const playwrightConfig = [
     {
         rules: {
             "no-await-in-loop": "off",
+            "no-empty-pattern": "off",
         },
     },
 ]

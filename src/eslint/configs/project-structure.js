@@ -47,6 +47,7 @@ export function folderStructure(config) {
                 children: [
                     { name: "README.md" },
                     { name: "fixtures.ts" },
+                    { name: "{camelCase}.setup.ts" },
                     { children: [{ name: "{PascalCase}.ts" }], name: "(components|pages)" },
                     { children: [{ name: "{camelCase}.ts" }], name: "(data|helpers)" },
                 ],

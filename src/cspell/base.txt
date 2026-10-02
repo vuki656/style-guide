@@ -145,3 +145,4 @@ rcompare
 turborepo
 lhci
 lighthouserc
+networkidle
