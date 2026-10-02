@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.39.0](https://github.com/vuki656/style-guide/compare/v0.38.1...v0.39.0) (2026-10-02)
+
+### Features
+
+* allow e2e setup files, empty fixture patterns and three more playwright rules ([bfb9857](https://github.com/vuki656/style-guide/commit/bfb985738f3f24c562e931c272a4f45c90665f16))
+
 ## [0.38.1](https://github.com/vuki656/style-guide/compare/v0.38.0...v0.38.1) (2026-10-02)
 
 ### Bug Fixes
