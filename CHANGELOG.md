@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.40.0](https://github.com/vuki656/style-guide/compare/v0.39.0...v0.40.0) (2026-10-07)
+
+### Features
+
+* allow node 26 in valid-engines-node ([9de8694](https://github.com/vuki656/style-guide/commit/9de8694afafbbd1c73b1fdeac7d26a5342b53271))
+
 ## [0.39.0](https://github.com/vuki656/style-guide/compare/v0.38.1...v0.39.0) (2026-10-02)
 
 ### Features
