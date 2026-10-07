@@ -1,4 +1,4 @@
-const DEFAULT_ALLOWED_VERSIONS = ["24"]
+const DEFAULT_ALLOWED_VERSIONS = ["24", "26"]
 
 /**
  * Extracts the major version number from a node engine string. Handles formats like ">=20",
