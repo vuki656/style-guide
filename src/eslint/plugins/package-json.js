@@ -39,7 +39,7 @@ export const packageJson = {
             },
         ],
         "dvukovic/require-properties": ["error", { properties: ["volta.node"] }],
-        "dvukovic/valid-engines-node": ["error", { versions: ["24"] }],
+        "dvukovic/valid-engines-node": "error",
         "package-json/bin-name-casing": "error",
         "package-json/no-empty-fields": "error",
         "package-json/no-redundant-files": "error",
