@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.40.1](https://github.com/vuki656/style-guide/compare/v0.40.0...v0.40.1) (2026-10-07)
+
+### Bug Fixes
+
+* use the default node versions in the package json config ([2ecb2fb](https://github.com/vuki656/style-guide/commit/2ecb2fbf81adf31bca6608d4bcfbc80ab8027ae7))
+
 ## [0.40.0](https://github.com/vuki656/style-guide/compare/v0.39.0...v0.40.0) (2026-10-07)
 
 ### Features
