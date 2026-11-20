@@ -1,10 +1,10 @@
-const CONTENT_LAYERS = ["content(?:/(?:tools|guides))?"]
+const CONTENT_LAYERS = ["content(?:/(?:articles|glossary|guides|services|tools))?"]
 
 const SHARED_LAYERS = [
-    "shared/(?:clients|constants|helpers|hooks|providers|schemas|types|validations|utils(?:/(?:string|date|form|number|banking|identification|validation|tool|route|seo|storage|document))?)",
+    "shared/(?:clients|constants|helpers|hooks|providers|schemas|types|validations|utils(?:/(?:agent|article|banking|claims|date|document|finance|form|guide|holidays|hub3|i18n|identification|inquiry|invoice|loan|number|refresh|route|seo|service|string|tax|tool|usage|validation))?)",
 ]
 
-const UI_LAYERS = ["ui/(?:_client/)?(?:components|documents|guide|print|docx|kit)"]
+const UI_LAYERS = ["ui/(?:_client/)?(?:components|documents|email|guide|kit|og)"]
 
 const AGGREGATE_LAYERS = [...CONTENT_LAYERS, ...SHARED_LAYERS, ...UI_LAYERS]
 

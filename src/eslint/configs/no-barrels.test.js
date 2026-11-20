@@ -22,6 +22,15 @@ describe("noBarrels", () => {
         expect(messages?.length).toBe(1)
     })
 
+    test.each(["@/shared/utils/tax", "@/content/glossary", "@/ui/_client/documents", "@/ui/og"])(
+        "rejects the %s layer barrel",
+        async (path) => {
+            const messages = await lint(`import { a } from "${path}"\n`)
+
+            expect(messages?.length).toBe(1)
+        },
+    )
+
     test("rejects a current directory barrel import", async () => {
         const messages = await lint(`import { a } from "."\n`)
 
