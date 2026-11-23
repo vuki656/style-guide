@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.40.2](https://github.com/vuki656/style-guide/compare/v0.40.1...v0.40.2) (2026-11-23)
+
+### Bug Fixes
+
+* barrel import layers match the current izracuni and liber-website folders ([97d2f32](https://github.com/vuki656/style-guide/commit/97d2f329c6a54387619eed99f1d5996df587b8c0))
+* report prefer-called-with without an autofix that writes an argument-less call ([18eb48d](https://github.com/vuki656/style-guide/commit/18eb48d0546b96eab962c5d82fffca7095228aa7))
+
 ## [0.40.1](https://github.com/vuki656/style-guide/compare/v0.40.0...v0.40.1) (2026-10-07)
 
 ### Bug Fixes
