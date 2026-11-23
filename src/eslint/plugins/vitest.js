@@ -1,9 +1,30 @@
 import plugin from "@vitest/eslint-plugin"
 
+const preferCalledWith = plugin.rules["prefer-called-with"]
+
+const preferCalledWithWithoutFix = {
+    ...preferCalledWith,
+    create: (context) => {
+        const reportWithoutFix = Object.create(context, {
+            report: {
+                value: (descriptor) => {
+                    context.report({ ...descriptor, fix: null })
+                },
+            },
+        })
+
+        return preferCalledWith.create(reportWithoutFix)
+    },
+    meta: { ...preferCalledWith.meta, fixable: undefined },
+}
+
 /** @type {import("@eslint/config-helpers").Config} */
 export const vitest = {
     plugins: {
-        "@vitest": plugin,
+        "@vitest": {
+            ...plugin,
+            rules: { ...plugin.rules, "prefer-called-with": preferCalledWithWithoutFix },
+        },
     },
     rules: {
         "@vitest/consistent-each-for": [
