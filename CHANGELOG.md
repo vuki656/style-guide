@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.41.0](https://github.com/vuki656/style-guide/compare/v0.40.2...v0.41.0) (2026-11-25)
+
+### Features
+
+* check src/ui for inline prop types and types in tsx files by default ([69f91cb](https://github.com/vuki656/style-guide/commit/69f91cb20e82571bc4b0908f91cbc3444aabaebd))
+* utils files export only camelCase functions ([e0230a9](https://github.com/vuki656/style-guide/commit/e0230a9c0fc0eb48453c7a94557a1b0fd9b9021c))
+
 ## [0.40.2](https://github.com/vuki656/style-guide/compare/v0.40.1...v0.40.2) (2026-11-23)
 
 ### Bug Fixes
