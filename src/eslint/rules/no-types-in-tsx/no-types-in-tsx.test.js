@@ -49,6 +49,16 @@ describe(RULE_ID, () => {
             expect(getErrors(results)).toHaveLength(1)
         })
 
+        test("flags a type alias declaration in a ui .tsx", async () => {
+            const code = `type FooProps = { a: string }\n`
+
+            const results = await eslint.lintText(code, {
+                filePath: "src/ui/kit/Foo/Foo.tsx",
+            })
+
+            expect(getErrors(results)).toHaveLength(1)
+        })
+
         test("flags an interface declaration in a module .tsx", async () => {
             const code = `interface FooProps { a: string }\n`
 

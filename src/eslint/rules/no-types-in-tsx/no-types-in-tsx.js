@@ -1,4 +1,4 @@
-const DEFAULT_DIRECTORIES = ["src/modules", "src/components"]
+const DEFAULT_DIRECTORIES = ["src/modules", "src/components", "src/ui"]
 
 function isInDirectories(filePath, directories) {
     const normalizedPath = filePath.replaceAll("\\", "/")

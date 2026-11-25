@@ -118,6 +118,16 @@ describe(RULE_ID, () => {
             expect(getErrors(results)).toHaveLength(1)
         })
 
+        test("flags a ui .tsx", async () => {
+            const code = `export const CostWarning = (props: { label: string }) => props.label\n`
+
+            const results = await eslint.lintText(code, {
+                filePath: "src/ui/kit/CostWarning/CostWarning.tsx",
+            })
+
+            expect(getErrors(results)).toHaveLength(1)
+        })
+
         test("reports the outer object type once when nested", async () => {
             const code = `export const Choice = (props: { item: { id: string } }) => props.item.id\n`
 

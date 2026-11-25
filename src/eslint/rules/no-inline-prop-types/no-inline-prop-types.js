@@ -1,4 +1,4 @@
-const DEFAULT_DIRECTORIES = ["src/modules", "src/components"]
+const DEFAULT_DIRECTORIES = ["src/modules", "src/components", "src/ui"]
 
 const FUNCTION_TYPES = new Set([
     "ArrowFunctionExpression",
