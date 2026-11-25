@@ -86,6 +86,7 @@ export const FILE_RULES = {
         ],
     },
     utilsFile: {
+        allowOnlySpecifiedSelectors: { ...ALL_SELECTORS_SPECIFIED, fileRoot: false },
         rules: [
             { format: "{camelCase}", scope: "fileExport", selector: ["arrowFunction", "function"] },
             { format: "{camelCase}", scope: "fileRoot", selector: ["arrowFunction", "function"] },
@@ -117,6 +118,9 @@ export const FILE_COMPOSITION = createFileComposition({
                     "!(**/index.ts)",
                     "!(**/*.types.ts)",
                     "!(**/*.constants.ts)",
+                    "!(**/*.errors.ts)",
+                    "!(**/*.validation.ts)",
+                    "!(**/*.data.ts)",
                 ],
             ],
             ...FILE_RULES.utilsFile,

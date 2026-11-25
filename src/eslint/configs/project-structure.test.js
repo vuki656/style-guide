@@ -1,3 +1,6 @@
+import { ESLint } from "eslint"
+import tseslint from "typescript-eslint"
+
 import {
     FILE_COMPOSITION,
     FILE_RULES,
@@ -5,6 +8,24 @@ import {
     folderStructure,
     projectStructure,
 } from "./project-structure.js"
+
+const compositionEslint = new ESLint({
+    overrideConfig: [
+        { files: ["**/*.ts"], languageOptions: { parser: tseslint.parser } },
+        ...projectStructure(),
+    ],
+    overrideConfigFile: true,
+})
+
+const lintComposition = async (code, filePath) => {
+    const results = await compositionEslint.lintText(code, { filePath })
+
+    return results[0]?.messages.filter((message) => {
+        return message.ruleId === "project-structure/file-composition"
+    })
+}
+
+const UTILS_FILE = "src/ui/components/PageHero/PageHero.utils.ts"
 
 describe("projectStructure", () => {
     test("adds the folder structure only when the project supplies one", () => {
@@ -79,5 +100,29 @@ describe("projectStructure", () => {
         expect(componentRule.filePattern).toStrictEqual([
             ["src/**/*.tsx", "!(src/app/**)", "!(**/*.stories.tsx)"],
         ])
+    })
+
+    test("rejects a SNAKE_CASE constant exported from a utils file", async () => {
+        const messages = await lintComposition(`export const DEFAULT_TITLE = "Title"\n`, UTILS_FILE)
+
+        expect(messages).toHaveLength(1)
+    })
+
+    test("allows a camelCase function exported from a utils file", async () => {
+        const messages = await lintComposition(
+            `const PREFIX = "a"\n\nexport const pageTitle = (title: string) => PREFIX + title\n\nexport function pageLabel(label: string) {\n    return label\n}\n`,
+            UTILS_FILE,
+        )
+
+        expect(messages).toHaveLength(0)
+    })
+
+    test("keeps error classes in a shared helper errors file out of the utils file rule", async () => {
+        const messages = await lintComposition(
+            `export class ApiFetchError extends Error {}\n`,
+            "src/shared/helpers/apiFetch/apiFetch.errors.ts",
+        )
+
+        expect(messages).toHaveLength(0)
     })
 })
